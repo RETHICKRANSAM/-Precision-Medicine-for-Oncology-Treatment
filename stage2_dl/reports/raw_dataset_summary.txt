@@ -1,0 +1,18 @@
+==================================================
+STAGE 02 DATASET RAW SUMMARY REPORT
+==================================================
+
+Raw Tabular File: data/raw/dl_raw_1000.csv
+  Total Rows: 1000
+  Total Columns: 35
+  Unique Patients: 196
+  Total Missing / Empty Cell Entries: 6887
+  Exact Duplicate Rows: 20
+
+PHYSICAL IMAGE INVENTORY:
+  Raw Images Discovered (data/raw/): 750
+  Pixel Converted Images (data/pixel_images/): 750
+  Histopathology Raw Images: 350
+  CT Scan Raw Images: 200
+  MRI Scan Raw Images: 200
+==================================================

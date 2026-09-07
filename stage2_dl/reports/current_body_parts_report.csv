@@ -1,0 +1,93 @@
+Body_Part,Cancer_Type,Image_Type,Number_of_Images,Number_of_Patients
+Brain,Breast Cancer,CT,7,2
+Brain,Colorectal Carcinoma,CT,15,4
+Brain,Melanoma,CT,2,1
+Brain,Non-Small Cell Lung Cancer,CT,16,5
+Brain,Prostate Adenocarcinoma,CT,4,1
+Brain,Breast Cancer,Histopathology,6,3
+Brain,Colorectal Carcinoma,Histopathology,12,6
+Brain,Melanoma,Histopathology,8,4
+Brain,Non-Small Cell Lung Cancer,Histopathology,20,10
+Brain,Prostate Adenocarcinoma,Histopathology,8,4
+Brain,Breast Cancer,MRI,6,2
+Brain,Colorectal Carcinoma,MRI,10,4
+Brain,Melanoma,MRI,3,1
+Brain,Non-Small Cell Lung Cancer,MRI,15,5
+Brain,Prostate Adenocarcinoma,MRI,2,1
+Breast,Colorectal Carcinoma,CT,4,1
+Breast,Prostate Adenocarcinoma,CT,6,2
+Breast,Breast Cancer,Histopathology,4,2
+Breast,Colorectal Carcinoma,Histopathology,4,2
+Breast,Melanoma,Histopathology,6,3
+Breast,Non-Small Cell Lung Cancer,Histopathology,4,2
+Breast,Prostate Adenocarcinoma,Histopathology,14,7
+Breast,Colorectal Carcinoma,MRI,4,1
+Breast,Prostate Adenocarcinoma,MRI,9,2
+Colon,Colorectal Carcinoma,CT,5,1
+Colon,Melanoma,CT,2,1
+Colon,Non-Small Cell Lung Cancer,CT,7,2
+Colon,Prostate Adenocarcinoma,CT,8,2
+Colon,Breast Cancer,Histopathology,4,2
+Colon,Colorectal Carcinoma,Histopathology,12,6
+Colon,Melanoma,Histopathology,6,3
+Colon,Non-Small Cell Lung Cancer,Histopathology,6,3
+Colon,Prostate Adenocarcinoma,Histopathology,9,5
+Colon,Colorectal Carcinoma,MRI,3,1
+Colon,Melanoma,MRI,5,1
+Colon,Non-Small Cell Lung Cancer,MRI,5,2
+Colon,Prostate Adenocarcinoma,MRI,9,3
+Liver,Colorectal Carcinoma,CT,5,1
+Liver,Melanoma,CT,5,1
+Liver,Non-Small Cell Lung Cancer,CT,8,3
+Liver,Prostate Adenocarcinoma,CT,7,2
+Liver,Breast Cancer,Histopathology,10,5
+Liver,Colorectal Carcinoma,Histopathology,6,3
+Liver,Melanoma,Histopathology,8,4
+Liver,Non-Small Cell Lung Cancer,Histopathology,12,6
+Liver,Prostate Adenocarcinoma,Histopathology,8,4
+Liver,Colorectal Carcinoma,MRI,4,1
+Liver,Melanoma,MRI,3,1
+Liver,Non-Small Cell Lung Cancer,MRI,13,3
+Liver,Prostate Adenocarcinoma,MRI,7,2
+Lung,Breast Cancer,CT,25,7
+Lung,Colorectal Carcinoma,CT,9,3
+Lung,Melanoma,CT,8,2
+Lung,Non-Small Cell Lung Cancer,CT,4,1
+Lung,Prostate Adenocarcinoma,CT,4,2
+Lung,Breast Cancer,Histopathology,22,11
+Lung,Colorectal Carcinoma,Histopathology,20,10
+Lung,Melanoma,Histopathology,15,8
+Lung,Non-Small Cell Lung Cancer,Histopathology,9,5
+Lung,Prostate Adenocarcinoma,Histopathology,20,10
+Lung,Breast Cancer,MRI,23,7
+Lung,Colorectal Carcinoma,MRI,11,3
+Lung,Melanoma,MRI,8,2
+Lung,Non-Small Cell Lung Cancer,MRI,4,1
+Lung,Prostate Adenocarcinoma,MRI,9,2
+Prostate,Colorectal Carcinoma,CT,5,1
+Prostate,Melanoma,CT,12,3
+Prostate,Non-Small Cell Lung Cancer,CT,8,2
+Prostate,Prostate Adenocarcinoma,CT,3,1
+Prostate,Breast Cancer,Histopathology,6,3
+Prostate,Colorectal Carcinoma,Histopathology,9,5
+Prostate,Melanoma,Histopathology,10,5
+Prostate,Non-Small Cell Lung Cancer,Histopathology,6,3
+Prostate,Prostate Adenocarcinoma,Histopathology,18,9
+Prostate,Colorectal Carcinoma,MRI,3,1
+Prostate,Melanoma,MRI,8,3
+Prostate,Non-Small Cell Lung Cancer,MRI,11,3
+Prostate,Prostate Adenocarcinoma,MRI,4,1
+Skin,Melanoma,CT,8,2
+Skin,Non-Small Cell Lung Cancer,CT,3,1
+Skin,Prostate Adenocarcinoma,CT,8,2
+Skin,Breast Cancer,Histopathology,8,4
+Skin,Colorectal Carcinoma,Histopathology,6,3
+Skin,Melanoma,Histopathology,10,5
+Skin,Non-Small Cell Lung Cancer,Histopathology,10,5
+Skin,Prostate Adenocarcinoma,Histopathology,10,5
+Skin,Melanoma,MRI,7,2
+Skin,Non-Small Cell Lung Cancer,MRI,4,1
+Skin,Prostate Adenocarcinoma,MRI,9,2
+Unknown,Unknown,CT,2,0
+Unknown,Unknown,Histopathology,4,0
+Unknown,Unknown,MRI,1,0

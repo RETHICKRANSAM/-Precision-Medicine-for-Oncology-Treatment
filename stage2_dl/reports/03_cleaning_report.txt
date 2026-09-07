@@ -1,0 +1,25 @@
+==================================================
+STAGE 02 DEEP LEARNING DATASET - CLEANING REPORT
+==================================================
+
+DISCLAIMER:
+This is a SYNTHETIC / MOCK oncology dataset for academic project development only.
+Do not use real patient data. Synthetic data is not real clinical data.
+
+Raw Input Records: 1000
+Duplicates Removed: 20
+Cleaned Tabular Records Saved: 980
+Processed Image Metadata Records: 346
+Processed Temporal Sequence Records: 980
+
+SUMMARY OF CLEANING OPERATIONS PERFORMED:
+1. Duplicate Removal: Identified and purged exact duplicate encounter rows.
+2. Categorical Standardization: Unified case and labels for Sex, Cancer_Stage, Histopathology_Label, Progression_Status, and Progression_Risk.
+3. Numeric Contamination Stripping: Regex extracted numerical values from text-contaminated strings ('cm3', 'copies/mL', 'slices', 'days', '%').
+4. Outlier & Range Validation: Corrected negative Age and negative Tumor_Volume values using median imputation.
+5. Date Format Normalization: Parsed mixed dates (MM/DD/YYYY, DD-MM-YYYY) into standardized ISO 8601 YYYY-MM-DD.
+6. Physical Image File Verification: Checked every image relative path on disk; cleared non-existent path references (e.g. HIMG99999.png).
+7. Longitudinal Sequence Sorting: Sorted data by Patient_ID and Biomarker_Timepoint_Days to preserve strict temporal order.
+8. Handoff Dataset Generation: Created specialized image_metadata.csv for CNN model and temporal_biomarker_sequences.csv for LSTM/Transformer model.
+
+STATUS: CLEANING COMPLETED SUCCESSFULLY

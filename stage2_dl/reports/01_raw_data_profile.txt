@@ -1,0 +1,64 @@
+==================================================
+STAGE 02 DEEP LEARNING DATASET - RAW PROFILE REPORT
+==================================================
+
+DISCLAIMER:
+This is a SYNTHETIC / MOCK oncology dataset for academic project development only.
+Do not use real patient data. Synthetic data is not real clinical data.
+
+Total Raw Records: 1000
+Total Columns: 35
+
+COLUMN SCHEMA:
+01. Patient_ID
+02. Encounter_ID
+03. Encounter_Date
+04. Cancer_Type
+05. Cancer_Stage
+06. Age
+07. Sex
+08. Organ_Site
+09. Histopathology_Image_ID
+10. Histopathology_Image_Path
+11. Tissue_Type
+12. Histopathology_Label
+13. Tumor_Grade
+14. Tumor_Margin_Status
+15. CT_Scan_ID
+16. CT_Scan_Path
+17. CT_Slice_Count
+18. MRI_Scan_ID
+19. MRI_Scan_Path
+20. MRI_Sequence_Type
+21. Tumor_Volume_cm3
+22. Biomarker_Timepoint_Days
+23. ctDNA_Level
+24. Protein_Marker
+25. Protein_Marker_Level
+26. Tumor_Growth_Rate
+27. Treatment_Drug
+28. Treatment_Response
+29. Progression_Status
+30. Progression_Risk
+31. Image_Quality
+32. Annotation_Status
+33. Clinical_Notes
+34. Image_Source
+35. Image_Label_Confidence
+
+SYNTHETIC IMAGE GENERATION SUMMARY:
+Histopathology Images: 350 files across 5 classes (benign, malignant, atypical, necrotic, inflammatory)
+CT Scans: 200 files across 3 classes (normal, tumor, progression)
+MRI Scans: 200 files across 5 sequences (T1, T2, FLAIR, DWI, ADC)
+Total Image Files Generated: 750
+Image Visual Format: Pixelated Block Mosaic Grid Format (matching reference media_1788762674591.png)
+
+INTENTIONAL RAW DATA QUALITY FLAWS INTRODUCED:
+- Duplicate Rows: Exactly 20 duplicate encounters
+- Categorical Flaws: Inconsistent case (male/M/Male, stage i/Stage I, malignant/MALIGNANT)
+- Contaminated Numerics: Text suffixes embedded ('cm3', 'copies/mL', 'slices', 'days', '%')
+- Irregular Date Formats: Mixed YYYY-MM-DD, MM/DD/YYYY, DD-MM-YYYY, YYYY/MM/DD
+- Invalid/Outlier Values: Negative Age (-5), Outlier Age (145), Negative Tumor Volume (-15.2)
+- Broken Image References: Non-existent image paths (HIMG99999.png, CT_missing.png, MRI_corrupt.png.txt)
+- Missing Values: Empty strings, N/A, null, and None scattered across columns
+- Unsorted Sequences: Timepoint days unordered for sequence models

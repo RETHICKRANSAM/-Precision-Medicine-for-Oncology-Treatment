@@ -1,0 +1,9 @@
+Body_Part,Histopathology,CT,MRI,Total_Images
+Lung,86,50,55,191
+Brain,54,44,36,134
+Prostate,49,28,26,103
+Liver,44,25,27,96
+Skin,44,19,20,83
+Colon,37,22,22,81
+Breast,32,10,13,55
+Unknown,4,2,1,7

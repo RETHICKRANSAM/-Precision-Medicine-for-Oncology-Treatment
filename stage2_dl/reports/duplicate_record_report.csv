@@ -1,0 +1,21 @@
+Record_ID,Duplicate_Type,Action,Reason
+ENC10574,EXACT_ROW_DUPLICATE,PURGE_FROM_PROCESSED,Identical encounter values across all columns
+ENC10374,EXACT_ROW_DUPLICATE,PURGE_FROM_PROCESSED,Identical encounter values across all columns
+ENC10134,EXACT_ROW_DUPLICATE,PURGE_FROM_PROCESSED,Identical encounter values across all columns
+ENC10739,EXACT_ROW_DUPLICATE,PURGE_FROM_PROCESSED,Identical encounter values across all columns
+ENC10909,EXACT_ROW_DUPLICATE,PURGE_FROM_PROCESSED,Identical encounter values across all columns
+ENC10478,EXACT_ROW_DUPLICATE,PURGE_FROM_PROCESSED,Identical encounter values across all columns
+ENC10038,EXACT_ROW_DUPLICATE,PURGE_FROM_PROCESSED,Identical encounter values across all columns
+ENC10154,EXACT_ROW_DUPLICATE,PURGE_FROM_PROCESSED,Identical encounter values across all columns
+ENC10331,EXACT_ROW_DUPLICATE,PURGE_FROM_PROCESSED,Identical encounter values across all columns
+ENC10376,EXACT_ROW_DUPLICATE,PURGE_FROM_PROCESSED,Identical encounter values across all columns
+ENC10956,EXACT_ROW_DUPLICATE,PURGE_FROM_PROCESSED,Identical encounter values across all columns
+ENC10920,EXACT_ROW_DUPLICATE,PURGE_FROM_PROCESSED,Identical encounter values across all columns
+ENC10715,EXACT_ROW_DUPLICATE,PURGE_FROM_PROCESSED,Identical encounter values across all columns
+ENC10110,EXACT_ROW_DUPLICATE,PURGE_FROM_PROCESSED,Identical encounter values across all columns
+ENC10901,EXACT_ROW_DUPLICATE,PURGE_FROM_PROCESSED,Identical encounter values across all columns
+ENC10468,EXACT_ROW_DUPLICATE,PURGE_FROM_PROCESSED,Identical encounter values across all columns
+ENC10400,EXACT_ROW_DUPLICATE,PURGE_FROM_PROCESSED,Identical encounter values across all columns
+ENC10558,EXACT_ROW_DUPLICATE,PURGE_FROM_PROCESSED,Identical encounter values across all columns
+ENC10172,EXACT_ROW_DUPLICATE,PURGE_FROM_PROCESSED,Identical encounter values across all columns
+ENC10651,EXACT_ROW_DUPLICATE,PURGE_FROM_PROCESSED,Identical encounter values across all columns

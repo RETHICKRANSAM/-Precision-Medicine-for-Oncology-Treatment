@@ -1,0 +1,751 @@
+Image_ID,Original_Path,Pixel_Image_Path,Original_Format,Output_Format,Width,Height,Color_Mode,Channels,Pixel_Array_Shape,Pixel_Min,Pixel_Max,Pixel_Mean,Pixel_Std,Original_File_Size,Output_File_Size,Conversion_Status
+CT00001,data/raw/ct_images/normal/CT00001.png,data/pixel_images/ct/normal/CT00001.png,PNG,PNG,256,256,L,1,"(256, 256)",16.0,236.0,55.38,39.86,1986,1986,SUCCESS
+CT00002,data/raw/ct_images/normal/CT00002.png,data/pixel_images/ct/normal/CT00002.png,PNG,PNG,256,256,L,1,"(256, 256)",14.0,236.0,53.61,40.72,2056,2056,SUCCESS
+CT00003,data/raw/ct_images/normal/CT00003.png,data/pixel_images/ct/normal/CT00003.png,PNG,PNG,256,256,L,1,"(256, 256)",16.0,231.0,53.78,38.56,1990,1990,SUCCESS
+CT00004,data/raw/ct_images/normal/CT00004.png,data/pixel_images/ct/normal/CT00004.png,PNG,PNG,256,256,L,1,"(256, 256)",14.0,229.0,54.79,41.35,1999,1999,SUCCESS
+CT00005,data/raw/ct_images/normal/CT00005.png,data/pixel_images/ct/normal/CT00005.png,PNG,PNG,256,256,L,1,"(256, 256)",16.0,228.0,54.11,39.32,2039,2039,SUCCESS
+CT00006,data/raw/ct_images/normal/CT00006.png,data/pixel_images/ct/normal/CT00006.png,PNG,PNG,256,256,L,1,"(256, 256)",16.0,221.0,53.35,38.02,1978,1978,SUCCESS
+CT00007,data/raw/ct_images/normal/CT00007.png,data/pixel_images/ct/normal/CT00007.png,PNG,PNG,256,256,L,1,"(256, 256)",14.0,233.0,55.89,42.3,2016,2016,SUCCESS
+CT00008,data/raw/ct_images/normal/CT00008.png,data/pixel_images/ct/normal/CT00008.png,PNG,PNG,256,256,L,1,"(256, 256)",15.0,237.0,53.09,39.64,2051,2051,SUCCESS
+CT00009,data/raw/ct_images/normal/CT00009.png,data/pixel_images/ct/normal/CT00009.png,PNG,PNG,256,256,L,1,"(256, 256)",18.0,238.0,56.8,40.02,2036,2036,SUCCESS
+CT00010,data/raw/ct_images/normal/CT00010.png,data/pixel_images/ct/normal/CT00010.png,PNG,PNG,256,256,L,1,"(256, 256)",16.0,222.0,53.5,38.1,1996,1996,SUCCESS
+CT00011,data/raw/ct_images/normal/CT00011.png,data/pixel_images/ct/normal/CT00011.png,PNG,PNG,256,256,L,1,"(256, 256)",13.0,224.0,52.27,39.93,2008,2008,SUCCESS
+CT00012,data/raw/ct_images/normal/CT00012.png,data/pixel_images/ct/normal/CT00012.png,PNG,PNG,256,256,L,1,"(256, 256)",16.0,227.0,53.91,39.12,2049,2049,SUCCESS
+CT00013,data/raw/ct_images/normal/CT00013.png,data/pixel_images/ct/normal/CT00013.png,PNG,PNG,256,256,L,1,"(256, 256)",15.0,237.0,56.3,42.33,2077,2077,SUCCESS
+CT00014,data/raw/ct_images/normal/CT00014.png,data/pixel_images/ct/normal/CT00014.png,PNG,PNG,256,256,L,1,"(256, 256)",17.0,234.0,53.87,38.22,2021,2021,SUCCESS
+CT00015,data/raw/ct_images/normal/CT00015.png,data/pixel_images/ct/normal/CT00015.png,PNG,PNG,256,256,L,1,"(256, 256)",13.0,230.0,53.07,40.78,2025,2025,SUCCESS
+CT00016,data/raw/ct_images/normal/CT00016.png,data/pixel_images/ct/normal/CT00016.png,PNG,PNG,256,256,L,1,"(256, 256)",12.0,221.0,52.26,40.89,2030,2030,SUCCESS
+CT00017,data/raw/ct_images/normal/CT00017.png,data/pixel_images/ct/normal/CT00017.png,PNG,PNG,256,256,L,1,"(256, 256)",16.0,237.0,54.49,39.82,2039,2039,SUCCESS
+CT00018,data/raw/ct_images/normal/CT00018.png,data/pixel_images/ct/normal/CT00018.png,PNG,PNG,256,256,L,1,"(256, 256)",12.0,222.0,53.02,41.85,2070,2070,SUCCESS
+CT00019,data/raw/ct_images/normal/CT00019.png,data/pixel_images/ct/normal/CT00019.png,PNG,PNG,256,256,L,1,"(256, 256)",14.0,230.0,54.41,40.75,2001,2001,SUCCESS
+CT00020,data/raw/ct_images/normal/CT00020.png,data/pixel_images/ct/normal/CT00020.png,PNG,PNG,256,256,L,1,"(256, 256)",12.0,226.0,53.51,41.82,2032,2032,SUCCESS
+CT00021,data/raw/ct_images/normal/CT00021.png,data/pixel_images/ct/normal/CT00021.png,PNG,PNG,256,256,L,1,"(256, 256)",17.0,240.0,55.56,40.17,2045,2045,SUCCESS
+CT00022,data/raw/ct_images/normal/CT00022.png,data/pixel_images/ct/normal/CT00022.png,PNG,PNG,256,256,L,1,"(256, 256)",16.0,237.0,56.56,41.43,2060,2060,SUCCESS
+CT00023,data/raw/ct_images/normal/CT00023.png,data/pixel_images/ct/normal/CT00023.png,PNG,PNG,256,256,L,1,"(256, 256)",13.0,224.0,52.31,40.26,2041,2041,SUCCESS
+CT00024,data/raw/ct_images/normal/CT00024.png,data/pixel_images/ct/normal/CT00024.png,PNG,PNG,256,256,L,1,"(256, 256)",18.0,223.0,56.03,39.18,2028,2028,SUCCESS
+CT00025,data/raw/ct_images/normal/CT00025.png,data/pixel_images/ct/normal/CT00025.png,PNG,PNG,256,256,L,1,"(256, 256)",16.0,239.0,56.23,40.96,2022,2022,SUCCESS
+CT00026,data/raw/ct_images/normal/CT00026.png,data/pixel_images/ct/normal/CT00026.png,PNG,PNG,256,256,L,1,"(256, 256)",16.0,239.0,56.35,41.14,2012,2012,SUCCESS
+CT00027,data/raw/ct_images/normal/CT00027.png,data/pixel_images/ct/normal/CT00027.png,PNG,PNG,256,256,L,1,"(256, 256)",16.0,237.0,54.35,39.64,2035,2035,SUCCESS
+CT00028,data/raw/ct_images/normal/CT00028.png,data/pixel_images/ct/normal/CT00028.png,PNG,PNG,256,256,L,1,"(256, 256)",14.0,231.0,54.11,40.67,1999,1999,SUCCESS
+CT00029,data/raw/ct_images/normal/CT00029.png,data/pixel_images/ct/normal/CT00029.png,PNG,PNG,256,256,L,1,"(256, 256)",16.0,222.0,55.65,40.56,2033,2033,SUCCESS
+CT00030,data/raw/ct_images/normal/CT00030.png,data/pixel_images/ct/normal/CT00030.png,PNG,PNG,256,256,L,1,"(256, 256)",18.0,220.0,56.15,39.33,2050,2050,SUCCESS
+CT00031,data/raw/ct_images/normal/CT00031.png,data/pixel_images/ct/normal/CT00031.png,PNG,PNG,256,256,L,1,"(256, 256)",18.0,234.0,55.44,38.76,2023,2023,SUCCESS
+CT00032,data/raw/ct_images/normal/CT00032.png,data/pixel_images/ct/normal/CT00032.png,PNG,PNG,256,256,L,1,"(256, 256)",13.0,235.0,52.27,40.22,2022,2022,SUCCESS
+CT00033,data/raw/ct_images/normal/CT00033.png,data/pixel_images/ct/normal/CT00033.png,PNG,PNG,256,256,L,1,"(256, 256)",16.0,239.0,56.46,41.29,2016,2016,SUCCESS
+CT00034,data/raw/ct_images/normal/CT00034.png,data/pixel_images/ct/normal/CT00034.png,PNG,PNG,256,256,L,1,"(256, 256)",13.0,222.0,52.91,40.37,2004,2004,SUCCESS
+CT00035,data/raw/ct_images/normal/CT00035.png,data/pixel_images/ct/normal/CT00035.png,PNG,PNG,256,256,L,1,"(256, 256)",13.0,226.0,53.59,41.39,2045,2045,SUCCESS
+CT00036,data/raw/ct_images/normal/CT00036.png,data/pixel_images/ct/normal/CT00036.png,PNG,PNG,256,256,L,1,"(256, 256)",13.0,237.0,53.49,40.97,1998,1998,SUCCESS
+CT00037,data/raw/ct_images/normal/CT00037.png,data/pixel_images/ct/normal/CT00037.png,PNG,PNG,256,256,L,1,"(256, 256)",16.0,239.0,54.88,39.92,2032,2032,SUCCESS
+CT00038,data/raw/ct_images/normal/CT00038.png,data/pixel_images/ct/normal/CT00038.png,PNG,PNG,256,256,L,1,"(256, 256)",18.0,227.0,56.78,39.81,2024,2024,SUCCESS
+CT00039,data/raw/ct_images/normal/CT00039.png,data/pixel_images/ct/normal/CT00039.png,PNG,PNG,256,256,L,1,"(256, 256)",18.0,233.0,57.24,40.14,2022,2022,SUCCESS
+CT00040,data/raw/ct_images/normal/CT00040.png,data/pixel_images/ct/normal/CT00040.png,PNG,PNG,256,256,L,1,"(256, 256)",16.0,234.0,56.36,40.91,2014,2014,SUCCESS
+CT00041,data/raw/ct_images/normal/CT00041.png,data/pixel_images/ct/normal/CT00041.png,PNG,PNG,256,256,L,1,"(256, 256)",15.0,240.0,55.99,41.65,2032,2032,SUCCESS
+CT00042,data/raw/ct_images/normal/CT00042.png,data/pixel_images/ct/normal/CT00042.png,PNG,PNG,256,256,L,1,"(256, 256)",17.0,232.0,55.83,39.67,2033,2033,SUCCESS
+CT00043,data/raw/ct_images/normal/CT00043.png,data/pixel_images/ct/normal/CT00043.png,PNG,PNG,256,256,L,1,"(256, 256)",13.0,226.0,53.02,40.85,2035,2035,SUCCESS
+CT00044,data/raw/ct_images/normal/CT00044.png,data/pixel_images/ct/normal/CT00044.png,PNG,PNG,256,256,L,1,"(256, 256)",16.0,224.0,55.65,40.01,1984,1984,SUCCESS
+CT00045,data/raw/ct_images/normal/CT00045.png,data/pixel_images/ct/normal/CT00045.png,PNG,PNG,256,256,L,1,"(256, 256)",17.0,234.0,55.65,39.86,2018,2018,SUCCESS
+CT00046,data/raw/ct_images/normal/CT00046.png,data/pixel_images/ct/normal/CT00046.png,PNG,PNG,256,256,L,1,"(256, 256)",18.0,229.0,58.07,40.93,2039,2039,SUCCESS
+CT00047,data/raw/ct_images/normal/CT00047.png,data/pixel_images/ct/normal/CT00047.png,PNG,PNG,256,256,L,1,"(256, 256)",15.0,236.0,53.91,40.26,2059,2059,SUCCESS
+CT00048,data/raw/ct_images/normal/CT00048.png,data/pixel_images/ct/normal/CT00048.png,PNG,PNG,256,256,L,1,"(256, 256)",18.0,236.0,57.21,39.94,2028,2028,SUCCESS
+CT00049,data/raw/ct_images/normal/CT00049.png,data/pixel_images/ct/normal/CT00049.png,PNG,PNG,256,256,L,1,"(256, 256)",12.0,231.0,53.73,42.25,2022,2022,SUCCESS
+CT00050,data/raw/ct_images/normal/CT00050.png,data/pixel_images/ct/normal/CT00050.png,PNG,PNG,256,256,L,1,"(256, 256)",15.0,237.0,54.94,40.54,2023,2023,SUCCESS
+CT00051,data/raw/ct_images/normal/CT00051.png,data/pixel_images/ct/normal/CT00051.png,PNG,PNG,256,256,L,1,"(256, 256)",18.0,224.0,57.01,39.55,2014,2014,SUCCESS
+CT00052,data/raw/ct_images/normal/CT00052.png,data/pixel_images/ct/normal/CT00052.png,PNG,PNG,256,256,L,1,"(256, 256)",15.0,235.0,55.77,41.57,2027,2027,SUCCESS
+CT00053,data/raw/ct_images/normal/CT00053.png,data/pixel_images/ct/normal/CT00053.png,PNG,PNG,256,256,L,1,"(256, 256)",13.0,231.0,52.0,40.1,2012,2012,SUCCESS
+CT00054,data/raw/ct_images/normal/CT00054.png,data/pixel_images/ct/normal/CT00054.png,PNG,PNG,256,256,L,1,"(256, 256)",12.0,232.0,53.39,42.18,2073,2073,SUCCESS
+CT00055,data/raw/ct_images/normal/CT00055.png,data/pixel_images/ct/normal/CT00055.png,PNG,PNG,256,256,L,1,"(256, 256)",18.0,227.0,55.6,38.74,2041,2041,SUCCESS
+CT00056,data/raw/ct_images/normal/CT00056.png,data/pixel_images/ct/normal/CT00056.png,PNG,PNG,256,256,L,1,"(256, 256)",15.0,240.0,54.71,41.1,2061,2061,SUCCESS
+CT00057,data/raw/ct_images/normal/CT00057.png,data/pixel_images/ct/normal/CT00057.png,PNG,PNG,256,256,L,1,"(256, 256)",12.0,230.0,51.56,40.14,2007,2007,SUCCESS
+CT00058,data/raw/ct_images/normal/CT00058.png,data/pixel_images/ct/normal/CT00058.png,PNG,PNG,256,256,L,1,"(256, 256)",12.0,235.0,52.67,41.35,2035,2035,SUCCESS
+CT00059,data/raw/ct_images/normal/CT00059.png,data/pixel_images/ct/normal/CT00059.png,PNG,PNG,256,256,L,1,"(256, 256)",17.0,227.0,56.57,40.82,2054,2054,SUCCESS
+CT00060,data/raw/ct_images/normal/CT00060.png,data/pixel_images/ct/normal/CT00060.png,PNG,PNG,256,256,L,1,"(256, 256)",18.0,224.0,56.5,39.71,2057,2057,SUCCESS
+CT00061,data/raw/ct_images/normal/CT00061.png,data/pixel_images/ct/normal/CT00061.png,PNG,PNG,256,256,L,1,"(256, 256)",17.0,235.0,56.81,40.77,2042,2042,SUCCESS
+CT00062,data/raw/ct_images/normal/CT00062.png,data/pixel_images/ct/normal/CT00062.png,PNG,PNG,256,256,L,1,"(256, 256)",15.0,228.0,54.38,40.47,2052,2052,SUCCESS
+CT00063,data/raw/ct_images/normal/CT00063.png,data/pixel_images/ct/normal/CT00063.png,PNG,PNG,256,256,L,1,"(256, 256)",17.0,232.0,54.87,39.12,2020,2020,SUCCESS
+CT00064,data/raw/ct_images/normal/CT00064.png,data/pixel_images/ct/normal/CT00064.png,PNG,PNG,256,256,L,1,"(256, 256)",14.0,239.0,56.15,42.74,2010,2010,SUCCESS
+CT00065,data/raw/ct_images/normal/CT00065.png,data/pixel_images/ct/normal/CT00065.png,PNG,PNG,256,256,L,1,"(256, 256)",18.0,220.0,56.72,39.62,2045,2045,SUCCESS
+CT00136,data/raw/ct_images/progression/CT00136.png,data/pixel_images/ct/progression/CT00136.png,PNG,PNG,256,256,L,1,"(256, 256)",14.0,234.0,62.94,55.25,2398,2398,SUCCESS
+CT00137,data/raw/ct_images/progression/CT00137.png,data/pixel_images/ct/progression/CT00137.png,PNG,PNG,256,256,L,1,"(256, 256)",12.0,237.0,60.63,57.28,2387,2387,SUCCESS
+CT00138,data/raw/ct_images/progression/CT00138.png,data/pixel_images/ct/progression/CT00138.png,PNG,PNG,256,256,L,1,"(256, 256)",16.0,221.0,64.46,55.14,2339,2339,SUCCESS
+CT00139,data/raw/ct_images/progression/CT00139.png,data/pixel_images/ct/progression/CT00139.png,PNG,PNG,256,256,L,1,"(256, 256)",14.0,226.0,60.95,55.66,2405,2405,SUCCESS
+CT00140,data/raw/ct_images/progression/CT00140.png,data/pixel_images/ct/progression/CT00140.png,PNG,PNG,256,256,L,1,"(256, 256)",17.0,229.0,66.74,56.31,2351,2351,SUCCESS
+CT00141,data/raw/ct_images/progression/CT00141.png,data/pixel_images/ct/progression/CT00141.png,PNG,PNG,256,256,L,1,"(256, 256)",12.0,230.0,59.19,53.35,2344,2344,SUCCESS
+CT00142,data/raw/ct_images/progression/CT00142.png,data/pixel_images/ct/progression/CT00142.png,PNG,PNG,256,256,L,1,"(256, 256)",14.0,228.0,63.42,57.42,2357,2357,SUCCESS
+CT00143,data/raw/ct_images/progression/CT00143.png,data/pixel_images/ct/progression/CT00143.png,PNG,PNG,256,256,L,1,"(256, 256)",14.0,237.0,59.48,52.86,2326,2326,SUCCESS
+CT00144,data/raw/ct_images/progression/CT00144.png,data/pixel_images/ct/progression/CT00144.png,PNG,PNG,256,256,L,1,"(256, 256)",18.0,234.0,60.65,49.79,2355,2355,SUCCESS
+CT00145,data/raw/ct_images/progression/CT00145.png,data/pixel_images/ct/progression/CT00145.png,PNG,PNG,256,256,L,1,"(256, 256)",15.0,240.0,62.86,54.09,2370,2370,SUCCESS
+CT00146,data/raw/ct_images/progression/CT00146.png,data/pixel_images/ct/progression/CT00146.png,PNG,PNG,256,256,L,1,"(256, 256)",17.0,230.0,64.63,54.8,2371,2371,SUCCESS
+CT00147,data/raw/ct_images/progression/CT00147.png,data/pixel_images/ct/progression/CT00147.png,PNG,PNG,256,256,L,1,"(256, 256)",14.0,220.0,64.25,56.49,2355,2355,SUCCESS
+CT00148,data/raw/ct_images/progression/CT00148.png,data/pixel_images/ct/progression/CT00148.png,PNG,PNG,256,256,L,1,"(256, 256)",14.0,230.0,62.31,56.37,2412,2412,SUCCESS
+CT00149,data/raw/ct_images/progression/CT00149.png,data/pixel_images/ct/progression/CT00149.png,PNG,PNG,256,256,L,1,"(256, 256)",15.0,230.0,64.98,59.56,2351,2351,SUCCESS
+CT00150,data/raw/ct_images/progression/CT00150.png,data/pixel_images/ct/progression/CT00150.png,PNG,PNG,256,256,L,1,"(256, 256)",18.0,236.0,61.73,51.15,2409,2409,SUCCESS
+CT00151,data/raw/ct_images/progression/CT00151.png,data/pixel_images/ct/progression/CT00151.png,PNG,PNG,256,256,L,1,"(256, 256)",17.0,240.0,65.14,55.87,2327,2327,SUCCESS
+CT00152,data/raw/ct_images/progression/CT00152.png,data/pixel_images/ct/progression/CT00152.png,PNG,PNG,256,256,L,1,"(256, 256)",15.0,230.0,62.08,54.3,2347,2347,SUCCESS
+CT00153,data/raw/ct_images/progression/CT00153.png,data/pixel_images/ct/progression/CT00153.png,PNG,PNG,256,256,L,1,"(256, 256)",13.0,236.0,59.05,52.61,2358,2358,SUCCESS
+CT00154,data/raw/ct_images/progression/CT00154.png,data/pixel_images/ct/progression/CT00154.png,PNG,PNG,256,256,L,1,"(256, 256)",17.0,226.0,64.58,56.52,2438,2438,SUCCESS
+CT00155,data/raw/ct_images/progression/CT00155.png,data/pixel_images/ct/progression/CT00155.png,PNG,PNG,256,256,L,1,"(256, 256)",17.0,240.0,64.37,55.13,2370,2370,SUCCESS
+CT00156,data/raw/ct_images/progression/CT00156.png,data/pixel_images/ct/progression/CT00156.png,PNG,PNG,256,256,L,1,"(256, 256)",14.0,236.0,64.95,59.05,2399,2399,SUCCESS
+CT00157,data/raw/ct_images/progression/CT00157.png,data/pixel_images/ct/progression/CT00157.png,PNG,PNG,256,256,L,1,"(256, 256)",18.0,224.0,64.67,53.5,2409,2409,SUCCESS
+CT00158,data/raw/ct_images/progression/CT00158.png,data/pixel_images/ct/progression/CT00158.png,PNG,PNG,256,256,L,1,"(256, 256)",17.0,223.0,61.6,49.89,2369,2369,SUCCESS
+CT00159,data/raw/ct_images/progression/CT00159.png,data/pixel_images/ct/progression/CT00159.png,PNG,PNG,256,256,L,1,"(256, 256)",15.0,221.0,61.26,52.43,2345,2345,SUCCESS
+CT00160,data/raw/ct_images/progression/CT00160.png,data/pixel_images/ct/progression/CT00160.png,PNG,PNG,256,256,L,1,"(256, 256)",18.0,232.0,64.33,53.32,2382,2382,SUCCESS
+CT00161,data/raw/ct_images/progression/CT00161.png,data/pixel_images/ct/progression/CT00161.png,PNG,PNG,256,256,L,1,"(256, 256)",18.0,229.0,65.98,54.34,2430,2430,SUCCESS
+CT00162,data/raw/ct_images/progression/CT00162.png,data/pixel_images/ct/progression/CT00162.png,PNG,PNG,256,256,L,1,"(256, 256)",17.0,235.0,65.81,55.48,2318,2318,SUCCESS
+CT00163,data/raw/ct_images/progression/CT00163.png,data/pixel_images/ct/progression/CT00163.png,PNG,PNG,256,256,L,1,"(256, 256)",18.0,226.0,64.35,55.33,2351,2351,SUCCESS
+CT00164,data/raw/ct_images/progression/CT00164.png,data/pixel_images/ct/progression/CT00164.png,PNG,PNG,256,256,L,1,"(256, 256)",14.0,223.0,61.17,53.41,2349,2349,SUCCESS
+CT00165,data/raw/ct_images/progression/CT00165.png,data/pixel_images/ct/progression/CT00165.png,PNG,PNG,256,256,L,1,"(256, 256)",15.0,228.0,61.01,52.6,2355,2355,SUCCESS
+CT00166,data/raw/ct_images/progression/CT00166.png,data/pixel_images/ct/progression/CT00166.png,PNG,PNG,256,256,L,1,"(256, 256)",16.0,228.0,63.29,54.69,2382,2382,SUCCESS
+CT00167,data/raw/ct_images/progression/CT00167.png,data/pixel_images/ct/progression/CT00167.png,PNG,PNG,256,256,L,1,"(256, 256)",12.0,232.0,62.6,59.05,2386,2386,SUCCESS
+CT00168,data/raw/ct_images/progression/CT00168.png,data/pixel_images/ct/progression/CT00168.png,PNG,PNG,256,256,L,1,"(256, 256)",16.0,238.0,62.14,54.19,2373,2373,SUCCESS
+CT00169,data/raw/ct_images/progression/CT00169.png,data/pixel_images/ct/progression/CT00169.png,PNG,PNG,256,256,L,1,"(256, 256)",13.0,220.0,61.89,56.97,2393,2393,SUCCESS
+CT00170,data/raw/ct_images/progression/CT00170.png,data/pixel_images/ct/progression/CT00170.png,PNG,PNG,256,256,L,1,"(256, 256)",15.0,233.0,62.58,54.92,2329,2329,SUCCESS
+CT00171,data/raw/ct_images/progression/CT00171.png,data/pixel_images/ct/progression/CT00171.png,PNG,PNG,256,256,L,1,"(256, 256)",17.0,234.0,63.22,53.88,2338,2338,SUCCESS
+CT00172,data/raw/ct_images/progression/CT00172.png,data/pixel_images/ct/progression/CT00172.png,PNG,PNG,256,256,L,1,"(256, 256)",13.0,229.0,58.86,52.57,2338,2338,SUCCESS
+CT00173,data/raw/ct_images/progression/CT00173.png,data/pixel_images/ct/progression/CT00173.png,PNG,PNG,256,256,L,1,"(256, 256)",15.0,232.0,61.31,52.72,2380,2380,SUCCESS
+CT00174,data/raw/ct_images/progression/CT00174.png,data/pixel_images/ct/progression/CT00174.png,PNG,PNG,256,256,L,1,"(256, 256)",16.0,234.0,63.02,54.23,2398,2398,SUCCESS
+CT00175,data/raw/ct_images/progression/CT00175.png,data/pixel_images/ct/progression/CT00175.png,PNG,PNG,256,256,L,1,"(256, 256)",18.0,235.0,66.04,57.01,2324,2324,SUCCESS
+CT00176,data/raw/ct_images/progression/CT00176.png,data/pixel_images/ct/progression/CT00176.png,PNG,PNG,256,256,L,1,"(256, 256)",16.0,227.0,61.52,53.44,2299,2299,SUCCESS
+CT00177,data/raw/ct_images/progression/CT00177.png,data/pixel_images/ct/progression/CT00177.png,PNG,PNG,256,256,L,1,"(256, 256)",18.0,222.0,61.24,49.56,2341,2341,SUCCESS
+CT00178,data/raw/ct_images/progression/CT00178.png,data/pixel_images/ct/progression/CT00178.png,PNG,PNG,256,256,L,1,"(256, 256)",14.0,221.0,63.34,56.25,2372,2372,SUCCESS
+CT00179,data/raw/ct_images/progression/CT00179.png,data/pixel_images/ct/progression/CT00179.png,PNG,PNG,256,256,L,1,"(256, 256)",12.0,231.0,60.17,54.24,2388,2388,SUCCESS
+CT00180,data/raw/ct_images/progression/CT00180.png,data/pixel_images/ct/progression/CT00180.png,PNG,PNG,256,256,L,1,"(256, 256)",13.0,221.0,61.72,55.67,2354,2354,SUCCESS
+CT00181,data/raw/ct_images/progression/CT00181.png,data/pixel_images/ct/progression/CT00181.png,PNG,PNG,256,256,L,1,"(256, 256)",12.0,227.0,60.74,54.23,2442,2442,SUCCESS
+CT00182,data/raw/ct_images/progression/CT00182.png,data/pixel_images/ct/progression/CT00182.png,PNG,PNG,256,256,L,1,"(256, 256)",18.0,223.0,64.25,53.86,2391,2391,SUCCESS
+CT00183,data/raw/ct_images/progression/CT00183.png,data/pixel_images/ct/progression/CT00183.png,PNG,PNG,256,256,L,1,"(256, 256)",17.0,221.0,63.3,53.74,2396,2396,SUCCESS
+CT00184,data/raw/ct_images/progression/CT00184.png,data/pixel_images/ct/progression/CT00184.png,PNG,PNG,256,256,L,1,"(256, 256)",12.0,234.0,60.45,53.35,2349,2349,SUCCESS
+CT00185,data/raw/ct_images/progression/CT00185.png,data/pixel_images/ct/progression/CT00185.png,PNG,PNG,256,256,L,1,"(256, 256)",18.0,234.0,64.24,55.14,2367,2367,SUCCESS
+CT00186,data/raw/ct_images/progression/CT00186.png,data/pixel_images/ct/progression/CT00186.png,PNG,PNG,256,256,L,1,"(256, 256)",18.0,234.0,60.57,49.0,2381,2381,SUCCESS
+CT00187,data/raw/ct_images/progression/CT00187.png,data/pixel_images/ct/progression/CT00187.png,PNG,PNG,256,256,L,1,"(256, 256)",16.0,226.0,60.78,51.67,2379,2379,SUCCESS
+CT00188,data/raw/ct_images/progression/CT00188.png,data/pixel_images/ct/progression/CT00188.png,PNG,PNG,256,256,L,1,"(256, 256)",12.0,230.0,62.36,59.13,2404,2404,SUCCESS
+CT00189,data/raw/ct_images/progression/CT00189.png,data/pixel_images/ct/progression/CT00189.png,PNG,PNG,256,256,L,1,"(256, 256)",15.0,230.0,65.3,59.29,2437,2437,SUCCESS
+CT00190,data/raw/ct_images/progression/CT00190.png,data/pixel_images/ct/progression/CT00190.png,PNG,PNG,256,256,L,1,"(256, 256)",14.0,220.0,61.98,54.42,2407,2407,SUCCESS
+CT00191,data/raw/ct_images/progression/CT00191.png,data/pixel_images/ct/progression/CT00191.png,PNG,PNG,256,256,L,1,"(256, 256)",14.0,222.0,61.31,52.31,2374,2374,SUCCESS
+CT00192,data/raw/ct_images/progression/CT00192.png,data/pixel_images/ct/progression/CT00192.png,PNG,PNG,256,256,L,1,"(256, 256)",13.0,226.0,63.67,58.06,2366,2366,SUCCESS
+CT00193,data/raw/ct_images/progression/CT00193.png,data/pixel_images/ct/progression/CT00193.png,PNG,PNG,256,256,L,1,"(256, 256)",16.0,233.0,63.57,56.19,2392,2392,SUCCESS
+CT00194,data/raw/ct_images/progression/CT00194.png,data/pixel_images/ct/progression/CT00194.png,PNG,PNG,256,256,L,1,"(256, 256)",18.0,223.0,60.96,49.54,2339,2339,SUCCESS
+CT00195,data/raw/ct_images/progression/CT00195.png,data/pixel_images/ct/progression/CT00195.png,PNG,PNG,256,256,L,1,"(256, 256)",17.0,225.0,63.91,55.14,2351,2351,SUCCESS
+CT00196,data/raw/ct_images/progression/CT00196.png,data/pixel_images/ct/progression/CT00196.png,PNG,PNG,256,256,L,1,"(256, 256)",17.0,237.0,59.92,49.39,2358,2358,SUCCESS
+CT00197,data/raw/ct_images/progression/CT00197.png,data/pixel_images/ct/progression/CT00197.png,PNG,PNG,256,256,L,1,"(256, 256)",12.0,227.0,59.81,55.2,2358,2358,SUCCESS
+CT00198,data/raw/ct_images/progression/CT00198.png,data/pixel_images/ct/progression/CT00198.png,PNG,PNG,256,256,L,1,"(256, 256)",16.0,225.0,64.67,55.26,2380,2380,SUCCESS
+CT00199,data/raw/ct_images/progression/CT00199.png,data/pixel_images/ct/progression/CT00199.png,PNG,PNG,256,256,L,1,"(256, 256)",16.0,229.0,63.19,53.87,2401,2401,SUCCESS
+CT00200,data/raw/ct_images/progression/CT00200.png,data/pixel_images/ct/progression/CT00200.png,PNG,PNG,256,256,L,1,"(256, 256)",14.0,231.0,62.1,54.43,2359,2359,SUCCESS
+CT00066,data/raw/ct_images/tumor/CT00066.png,data/pixel_images/ct/tumor/CT00066.png,PNG,PNG,256,256,L,1,"(256, 256)",16.0,226.0,57.87,44.88,2157,2157,SUCCESS
+CT00067,data/raw/ct_images/tumor/CT00067.png,data/pixel_images/ct/tumor/CT00067.png,PNG,PNG,256,256,L,1,"(256, 256)",12.0,221.0,54.98,45.61,2178,2178,SUCCESS
+CT00068,data/raw/ct_images/tumor/CT00068.png,data/pixel_images/ct/tumor/CT00068.png,PNG,PNG,256,256,L,1,"(256, 256)",15.0,226.0,57.99,45.34,2161,2161,SUCCESS
+CT00069,data/raw/ct_images/tumor/CT00069.png,data/pixel_images/ct/tumor/CT00069.png,PNG,PNG,256,256,L,1,"(256, 256)",14.0,240.0,58.22,47.77,2192,2192,SUCCESS
+CT00070,data/raw/ct_images/tumor/CT00070.png,data/pixel_images/ct/tumor/CT00070.png,PNG,PNG,256,256,L,1,"(256, 256)",15.0,236.0,57.82,46.03,2157,2157,SUCCESS
+CT00071,data/raw/ct_images/tumor/CT00071.png,data/pixel_images/ct/tumor/CT00071.png,PNG,PNG,256,256,L,1,"(256, 256)",13.0,229.0,56.45,46.44,2163,2163,SUCCESS
+CT00072,data/raw/ct_images/tumor/CT00072.png,data/pixel_images/ct/tumor/CT00072.png,PNG,PNG,256,256,L,1,"(256, 256)",17.0,236.0,58.36,44.87,2195,2195,SUCCESS
+CT00073,data/raw/ct_images/tumor/CT00073.png,data/pixel_images/ct/tumor/CT00073.png,PNG,PNG,256,256,L,1,"(256, 256)",14.0,223.0,57.24,46.87,2189,2189,SUCCESS
+CT00074,data/raw/ct_images/tumor/CT00074.png,data/pixel_images/ct/tumor/CT00074.png,PNG,PNG,256,256,L,1,"(256, 256)",13.0,227.0,54.14,43.6,2127,2127,SUCCESS
+CT00075,data/raw/ct_images/tumor/CT00075.png,data/pixel_images/ct/tumor/CT00075.png,PNG,PNG,256,256,L,1,"(256, 256)",15.0,238.0,56.08,44.41,2127,2127,SUCCESS
+CT00076,data/raw/ct_images/tumor/CT00076.png,data/pixel_images/ct/tumor/CT00076.png,PNG,PNG,256,256,L,1,"(256, 256)",13.0,240.0,56.62,47.47,2163,2163,SUCCESS
+CT00077,data/raw/ct_images/tumor/CT00077.png,data/pixel_images/ct/tumor/CT00077.png,PNG,PNG,256,256,L,1,"(256, 256)",14.0,232.0,56.2,45.24,2145,2145,SUCCESS
+CT00078,data/raw/ct_images/tumor/CT00078.png,data/pixel_images/ct/tumor/CT00078.png,PNG,PNG,256,256,L,1,"(256, 256)",12.0,221.0,54.87,45.9,2152,2152,SUCCESS
+CT00079,data/raw/ct_images/tumor/CT00079.png,data/pixel_images/ct/tumor/CT00079.png,PNG,PNG,256,256,L,1,"(256, 256)",12.0,220.0,56.4,47.18,2215,2215,SUCCESS
+CT00080,data/raw/ct_images/tumor/CT00080.png,data/pixel_images/ct/tumor/CT00080.png,PNG,PNG,256,256,L,1,"(256, 256)",13.0,234.0,57.9,47.77,2152,2152,SUCCESS
+CT00081,data/raw/ct_images/tumor/CT00081.png,data/pixel_images/ct/tumor/CT00081.png,PNG,PNG,256,256,L,1,"(256, 256)",18.0,233.0,59.96,44.75,2143,2143,SUCCESS
+CT00082,data/raw/ct_images/tumor/CT00082.png,data/pixel_images/ct/tumor/CT00082.png,PNG,PNG,256,256,L,1,"(256, 256)",18.0,225.0,59.35,44.58,2170,2170,SUCCESS
+CT00083,data/raw/ct_images/tumor/CT00083.png,data/pixel_images/ct/tumor/CT00083.png,PNG,PNG,256,256,L,1,"(256, 256)",15.0,226.0,56.82,46.41,2203,2203,SUCCESS
+CT00084,data/raw/ct_images/tumor/CT00084.png,data/pixel_images/ct/tumor/CT00084.png,PNG,PNG,256,256,L,1,"(256, 256)",15.0,239.0,56.19,45.23,2210,2210,SUCCESS
+CT00085,data/raw/ct_images/tumor/CT00085.png,data/pixel_images/ct/tumor/CT00085.png,PNG,PNG,256,256,L,1,"(256, 256)",17.0,220.0,57.66,43.18,2138,2138,SUCCESS
+CT00086,data/raw/ct_images/tumor/CT00086.png,data/pixel_images/ct/tumor/CT00086.png,PNG,PNG,256,256,L,1,"(256, 256)",15.0,239.0,58.58,46.72,2199,2199,SUCCESS
+CT00087,data/raw/ct_images/tumor/CT00087.png,data/pixel_images/ct/tumor/CT00087.png,PNG,PNG,256,256,L,1,"(256, 256)",13.0,240.0,55.98,45.32,2134,2134,SUCCESS
+CT00088,data/raw/ct_images/tumor/CT00088.png,data/pixel_images/ct/tumor/CT00088.png,PNG,PNG,256,256,L,1,"(256, 256)",13.0,230.0,57.06,46.41,2161,2161,SUCCESS
+CT00089,data/raw/ct_images/tumor/CT00089.png,data/pixel_images/ct/tumor/CT00089.png,PNG,PNG,256,256,L,1,"(256, 256)",14.0,235.0,57.04,46.1,2187,2187,SUCCESS
+CT00090,data/raw/ct_images/tumor/CT00090.png,data/pixel_images/ct/tumor/CT00090.png,PNG,PNG,256,256,L,1,"(256, 256)",13.0,239.0,54.47,43.73,2122,2122,SUCCESS
+CT00091,data/raw/ct_images/tumor/CT00091.png,data/pixel_images/ct/tumor/CT00091.png,PNG,PNG,256,256,L,1,"(256, 256)",16.0,229.0,57.57,44.73,2170,2170,SUCCESS
+CT00092,data/raw/ct_images/tumor/CT00092.png,data/pixel_images/ct/tumor/CT00092.png,PNG,PNG,256,256,L,1,"(256, 256)",12.0,236.0,56.74,47.11,2146,2146,SUCCESS
+CT00093,data/raw/ct_images/tumor/CT00093.png,data/pixel_images/ct/tumor/CT00093.png,PNG,PNG,256,256,L,1,"(256, 256)",18.0,237.0,59.96,45.4,2186,2186,SUCCESS
+CT00094,data/raw/ct_images/tumor/CT00094.png,data/pixel_images/ct/tumor/CT00094.png,PNG,PNG,256,256,L,1,"(256, 256)",18.0,238.0,57.97,43.45,2133,2133,SUCCESS
+CT00095,data/raw/ct_images/tumor/CT00095.png,data/pixel_images/ct/tumor/CT00095.png,PNG,PNG,256,256,L,1,"(256, 256)",13.0,240.0,58.35,47.84,2198,2198,SUCCESS
+CT00096,data/raw/ct_images/tumor/CT00096.png,data/pixel_images/ct/tumor/CT00096.png,PNG,PNG,256,256,L,1,"(256, 256)",16.0,226.0,58.76,46.15,2229,2229,SUCCESS
+CT00097,data/raw/ct_images/tumor/CT00097.png,data/pixel_images/ct/tumor/CT00097.png,PNG,PNG,256,256,L,1,"(256, 256)",18.0,222.0,60.14,46.19,2225,2225,SUCCESS
+CT00098,data/raw/ct_images/tumor/CT00098.png,data/pixel_images/ct/tumor/CT00098.png,PNG,PNG,256,256,L,1,"(256, 256)",15.0,234.0,58.63,45.9,2143,2143,SUCCESS
+CT00099,data/raw/ct_images/tumor/CT00099.png,data/pixel_images/ct/tumor/CT00099.png,PNG,PNG,256,256,L,1,"(256, 256)",13.0,228.0,57.08,47.33,2164,2164,SUCCESS
+CT00100,data/raw/ct_images/tumor/CT00100.png,data/pixel_images/ct/tumor/CT00100.png,PNG,PNG,256,256,L,1,"(256, 256)",18.0,234.0,60.79,45.36,2164,2164,SUCCESS
+CT00101,data/raw/ct_images/tumor/CT00101.png,data/pixel_images/ct/tumor/CT00101.png,PNG,PNG,256,256,L,1,"(256, 256)",15.0,237.0,55.05,43.05,2152,2152,SUCCESS
+CT00102,data/raw/ct_images/tumor/CT00102.png,data/pixel_images/ct/tumor/CT00102.png,PNG,PNG,256,256,L,1,"(256, 256)",16.0,235.0,56.36,43.34,2159,2159,SUCCESS
+CT00103,data/raw/ct_images/tumor/CT00103.png,data/pixel_images/ct/tumor/CT00103.png,PNG,PNG,256,256,L,1,"(256, 256)",17.0,231.0,59.33,45.42,2185,2185,SUCCESS
+CT00104,data/raw/ct_images/tumor/CT00104.png,data/pixel_images/ct/tumor/CT00104.png,PNG,PNG,256,256,L,1,"(256, 256)",17.0,235.0,57.71,45.33,2183,2183,SUCCESS
+CT00105,data/raw/ct_images/tumor/CT00105.png,data/pixel_images/ct/tumor/CT00105.png,PNG,PNG,256,256,L,1,"(256, 256)",14.0,239.0,58.3,47.61,2208,2208,SUCCESS
+CT00106,data/raw/ct_images/tumor/CT00106.png,data/pixel_images/ct/tumor/CT00106.png,PNG,PNG,256,256,L,1,"(256, 256)",18.0,231.0,59.49,44.74,2201,2201,SUCCESS
+CT00107,data/raw/ct_images/tumor/CT00107.png,data/pixel_images/ct/tumor/CT00107.png,PNG,PNG,256,256,L,1,"(256, 256)",17.0,227.0,58.45,44.99,2152,2152,SUCCESS
+CT00108,data/raw/ct_images/tumor/CT00108.png,data/pixel_images/ct/tumor/CT00108.png,PNG,PNG,256,256,L,1,"(256, 256)",14.0,224.0,56.78,45.03,2176,2176,SUCCESS
+CT00109,data/raw/ct_images/tumor/CT00109.png,data/pixel_images/ct/tumor/CT00109.png,PNG,PNG,256,256,L,1,"(256, 256)",15.0,224.0,57.41,44.25,2120,2120,SUCCESS
+CT00110,data/raw/ct_images/tumor/CT00110.png,data/pixel_images/ct/tumor/CT00110.png,PNG,PNG,256,256,L,1,"(256, 256)",14.0,224.0,57.93,46.74,2163,2163,SUCCESS
+CT00111,data/raw/ct_images/tumor/CT00111.png,data/pixel_images/ct/tumor/CT00111.png,PNG,PNG,256,256,L,1,"(256, 256)",13.0,228.0,56.52,45.57,2158,2158,SUCCESS
+CT00112,data/raw/ct_images/tumor/CT00112.png,data/pixel_images/ct/tumor/CT00112.png,PNG,PNG,256,256,L,1,"(256, 256)",14.0,228.0,55.36,44.0,2165,2165,SUCCESS
+CT00113,data/raw/ct_images/tumor/CT00113.png,data/pixel_images/ct/tumor/CT00113.png,PNG,PNG,256,256,L,1,"(256, 256)",13.0,234.0,56.84,46.85,2164,2164,SUCCESS
+CT00114,data/raw/ct_images/tumor/CT00114.png,data/pixel_images/ct/tumor/CT00114.png,PNG,PNG,256,256,L,1,"(256, 256)",12.0,230.0,56.26,45.98,2170,2170,SUCCESS
+CT00115,data/raw/ct_images/tumor/CT00115.png,data/pixel_images/ct/tumor/CT00115.png,PNG,PNG,256,256,L,1,"(256, 256)",12.0,239.0,54.13,45.4,2178,2178,SUCCESS
+CT00116,data/raw/ct_images/tumor/CT00116.png,data/pixel_images/ct/tumor/CT00116.png,PNG,PNG,256,256,L,1,"(256, 256)",14.0,232.0,55.58,44.3,2157,2157,SUCCESS
+CT00117,data/raw/ct_images/tumor/CT00117.png,data/pixel_images/ct/tumor/CT00117.png,PNG,PNG,256,256,L,1,"(256, 256)",13.0,235.0,56.96,46.19,2153,2153,SUCCESS
+CT00118,data/raw/ct_images/tumor/CT00118.png,data/pixel_images/ct/tumor/CT00118.png,PNG,PNG,256,256,L,1,"(256, 256)",18.0,225.0,60.2,45.63,2206,2206,SUCCESS
+CT00119,data/raw/ct_images/tumor/CT00119.png,data/pixel_images/ct/tumor/CT00119.png,PNG,PNG,256,256,L,1,"(256, 256)",15.0,227.0,57.54,45.63,2175,2175,SUCCESS
+CT00120,data/raw/ct_images/tumor/CT00120.png,data/pixel_images/ct/tumor/CT00120.png,PNG,PNG,256,256,L,1,"(256, 256)",14.0,221.0,57.38,44.86,2150,2150,SUCCESS
+CT00121,data/raw/ct_images/tumor/CT00121.png,data/pixel_images/ct/tumor/CT00121.png,PNG,PNG,256,256,L,1,"(256, 256)",13.0,229.0,56.98,46.13,2138,2138,SUCCESS
+CT00122,data/raw/ct_images/tumor/CT00122.png,data/pixel_images/ct/tumor/CT00122.png,PNG,PNG,256,256,L,1,"(256, 256)",12.0,229.0,57.86,48.74,2226,2226,SUCCESS
+CT00123,data/raw/ct_images/tumor/CT00123.png,data/pixel_images/ct/tumor/CT00123.png,PNG,PNG,256,256,L,1,"(256, 256)",12.0,226.0,56.09,46.2,2159,2159,SUCCESS
+CT00124,data/raw/ct_images/tumor/CT00124.png,data/pixel_images/ct/tumor/CT00124.png,PNG,PNG,256,256,L,1,"(256, 256)",12.0,224.0,56.18,47.36,2206,2206,SUCCESS
+CT00125,data/raw/ct_images/tumor/CT00125.png,data/pixel_images/ct/tumor/CT00125.png,PNG,PNG,256,256,L,1,"(256, 256)",12.0,233.0,56.93,47.58,2188,2188,SUCCESS
+CT00126,data/raw/ct_images/tumor/CT00126.png,data/pixel_images/ct/tumor/CT00126.png,PNG,PNG,256,256,L,1,"(256, 256)",15.0,231.0,56.42,44.08,2163,2163,SUCCESS
+CT00127,data/raw/ct_images/tumor/CT00127.png,data/pixel_images/ct/tumor/CT00127.png,PNG,PNG,256,256,L,1,"(256, 256)",12.0,234.0,55.59,46.46,2181,2181,SUCCESS
+CT00128,data/raw/ct_images/tumor/CT00128.png,data/pixel_images/ct/tumor/CT00128.png,PNG,PNG,256,256,L,1,"(256, 256)",15.0,231.0,56.77,43.78,2139,2139,SUCCESS
+CT00129,data/raw/ct_images/tumor/CT00129.png,data/pixel_images/ct/tumor/CT00129.png,PNG,PNG,256,256,L,1,"(256, 256)",16.0,238.0,59.13,46.02,2191,2191,SUCCESS
+CT00130,data/raw/ct_images/tumor/CT00130.png,data/pixel_images/ct/tumor/CT00130.png,PNG,PNG,256,256,L,1,"(256, 256)",17.0,230.0,59.85,45.22,2140,2140,SUCCESS
+CT00131,data/raw/ct_images/tumor/CT00131.png,data/pixel_images/ct/tumor/CT00131.png,PNG,PNG,256,256,L,1,"(256, 256)",14.0,233.0,56.55,46.56,2202,2202,SUCCESS
+CT00132,data/raw/ct_images/tumor/CT00132.png,data/pixel_images/ct/tumor/CT00132.png,PNG,PNG,256,256,L,1,"(256, 256)",16.0,234.0,57.3,43.78,2173,2173,SUCCESS
+CT00133,data/raw/ct_images/tumor/CT00133.png,data/pixel_images/ct/tumor/CT00133.png,PNG,PNG,256,256,L,1,"(256, 256)",17.0,235.0,60.16,47.02,2229,2229,SUCCESS
+CT00134,data/raw/ct_images/tumor/CT00134.png,data/pixel_images/ct/tumor/CT00134.png,PNG,PNG,256,256,L,1,"(256, 256)",12.0,222.0,54.35,44.78,2146,2146,SUCCESS
+CT00135,data/raw/ct_images/tumor/CT00135.png,data/pixel_images/ct/tumor/CT00135.png,PNG,PNG,256,256,L,1,"(256, 256)",13.0,229.0,57.56,47.58,2188,2188,SUCCESS
+HIMG00141,data/raw/histopathology_images/atypical/HIMG00141.png,data/pixel_images/histopathology/atypical/HIMG00141.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,240.0,185.56,45.31,9208,9208,SUCCESS
+HIMG00142,data/raw/histopathology_images/atypical/HIMG00142.png,data/pixel_images/histopathology/atypical/HIMG00142.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,249.0,185.11,46.18,9356,9356,SUCCESS
+HIMG00143,data/raw/histopathology_images/atypical/HIMG00143.png,data/pixel_images/histopathology/atypical/HIMG00143.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,248.0,185.53,46.71,9397,9397,SUCCESS
+HIMG00144,data/raw/histopathology_images/atypical/HIMG00144.png,data/pixel_images/histopathology/atypical/HIMG00144.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,247.0,187.42,46.48,9279,9279,SUCCESS
+HIMG00145,data/raw/histopathology_images/atypical/HIMG00145.png,data/pixel_images/histopathology/atypical/HIMG00145.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,240.0,186.89,43.68,9075,9075,SUCCESS
+HIMG00146,data/raw/histopathology_images/atypical/HIMG00146.png,data/pixel_images/histopathology/atypical/HIMG00146.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,249.0,187.33,47.04,9279,9279,SUCCESS
+HIMG00147,data/raw/histopathology_images/atypical/HIMG00147.png,data/pixel_images/histopathology/atypical/HIMG00147.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,245.0,189.64,44.55,9209,9209,SUCCESS
+HIMG00148,data/raw/histopathology_images/atypical/HIMG00148.png,data/pixel_images/histopathology/atypical/HIMG00148.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,239.0,184.09,45.31,9315,9315,SUCCESS
+HIMG00149,data/raw/histopathology_images/atypical/HIMG00149.png,data/pixel_images/histopathology/atypical/HIMG00149.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,243.0,185.95,47.5,9391,9391,SUCCESS
+HIMG00150,data/raw/histopathology_images/atypical/HIMG00150.png,data/pixel_images/histopathology/atypical/HIMG00150.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,241.0,186.08,46.37,9125,9125,SUCCESS
+HIMG00151,data/raw/histopathology_images/atypical/HIMG00151.png,data/pixel_images/histopathology/atypical/HIMG00151.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,243.0,184.67,46.59,9446,9446,SUCCESS
+HIMG00152,data/raw/histopathology_images/atypical/HIMG00152.png,data/pixel_images/histopathology/atypical/HIMG00152.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,249.0,187.65,44.23,9233,9233,SUCCESS
+HIMG00153,data/raw/histopathology_images/atypical/HIMG00153.png,data/pixel_images/histopathology/atypical/HIMG00153.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,246.0,186.01,45.41,9331,9331,SUCCESS
+HIMG00154,data/raw/histopathology_images/atypical/HIMG00154.png,data/pixel_images/histopathology/atypical/HIMG00154.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,240.0,185.57,44.49,9153,9153,SUCCESS
+HIMG00155,data/raw/histopathology_images/atypical/HIMG00155.png,data/pixel_images/histopathology/atypical/HIMG00155.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,240.0,186.1,46.83,9412,9412,SUCCESS
+HIMG00156,data/raw/histopathology_images/atypical/HIMG00156.png,data/pixel_images/histopathology/atypical/HIMG00156.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,241.0,186.66,46.96,9253,9253,SUCCESS
+HIMG00157,data/raw/histopathology_images/atypical/HIMG00157.png,data/pixel_images/histopathology/atypical/HIMG00157.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,240.0,186.02,45.81,9313,9313,SUCCESS
+HIMG00158,data/raw/histopathology_images/atypical/HIMG00158.png,data/pixel_images/histopathology/atypical/HIMG00158.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,244.0,186.63,47.5,9272,9272,SUCCESS
+HIMG00159,data/raw/histopathology_images/atypical/HIMG00159.png,data/pixel_images/histopathology/atypical/HIMG00159.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,239.0,184.46,46.48,9299,9299,SUCCESS
+HIMG00160,data/raw/histopathology_images/atypical/HIMG00160.png,data/pixel_images/histopathology/atypical/HIMG00160.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,240.0,187.13,44.39,9173,9173,SUCCESS
+HIMG00161,data/raw/histopathology_images/atypical/HIMG00161.png,data/pixel_images/histopathology/atypical/HIMG00161.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,245.0,188.16,45.96,9003,9003,SUCCESS
+HIMG00162,data/raw/histopathology_images/atypical/HIMG00162.png,data/pixel_images/histopathology/atypical/HIMG00162.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,240.0,188.73,43.75,9181,9181,SUCCESS
+HIMG00163,data/raw/histopathology_images/atypical/HIMG00163.png,data/pixel_images/histopathology/atypical/HIMG00163.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,242.0,187.24,44.21,9142,9142,SUCCESS
+HIMG00164,data/raw/histopathology_images/atypical/HIMG00164.png,data/pixel_images/histopathology/atypical/HIMG00164.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,245.0,187.75,45.49,9358,9358,SUCCESS
+HIMG00165,data/raw/histopathology_images/atypical/HIMG00165.png,data/pixel_images/histopathology/atypical/HIMG00165.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,240.0,185.46,46.83,9169,9169,SUCCESS
+HIMG00166,data/raw/histopathology_images/atypical/HIMG00166.png,data/pixel_images/histopathology/atypical/HIMG00166.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,248.0,186.93,45.92,9295,9295,SUCCESS
+HIMG00167,data/raw/histopathology_images/atypical/HIMG00167.png,data/pixel_images/histopathology/atypical/HIMG00167.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,240.0,185.93,45.47,9356,9356,SUCCESS
+HIMG00168,data/raw/histopathology_images/atypical/HIMG00168.png,data/pixel_images/histopathology/atypical/HIMG00168.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,241.0,184.47,46.96,9381,9381,SUCCESS
+HIMG00169,data/raw/histopathology_images/atypical/HIMG00169.png,data/pixel_images/histopathology/atypical/HIMG00169.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,250.0,186.22,46.4,9483,9483,SUCCESS
+HIMG00170,data/raw/histopathology_images/atypical/HIMG00170.png,data/pixel_images/histopathology/atypical/HIMG00170.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,248.0,185.91,46.61,9555,9555,SUCCESS
+HIMG00171,data/raw/histopathology_images/atypical/HIMG00171.png,data/pixel_images/histopathology/atypical/HIMG00171.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,240.0,184.7,46.16,9374,9374,SUCCESS
+HIMG00172,data/raw/histopathology_images/atypical/HIMG00172.png,data/pixel_images/histopathology/atypical/HIMG00172.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,240.0,184.64,46.34,9434,9434,SUCCESS
+HIMG00173,data/raw/histopathology_images/atypical/HIMG00173.png,data/pixel_images/histopathology/atypical/HIMG00173.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,240.0,186.56,44.6,9331,9331,SUCCESS
+HIMG00174,data/raw/histopathology_images/atypical/HIMG00174.png,data/pixel_images/histopathology/atypical/HIMG00174.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,240.0,185.18,45.03,9135,9135,SUCCESS
+HIMG00175,data/raw/histopathology_images/atypical/HIMG00175.png,data/pixel_images/histopathology/atypical/HIMG00175.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,240.0,185.38,45.52,9421,9421,SUCCESS
+HIMG00176,data/raw/histopathology_images/atypical/HIMG00176.png,data/pixel_images/histopathology/atypical/HIMG00176.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,240.0,183.77,46.64,9484,9484,SUCCESS
+HIMG00177,data/raw/histopathology_images/atypical/HIMG00177.png,data/pixel_images/histopathology/atypical/HIMG00177.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,244.0,186.62,45.84,9378,9378,SUCCESS
+HIMG00178,data/raw/histopathology_images/atypical/HIMG00178.png,data/pixel_images/histopathology/atypical/HIMG00178.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,240.0,184.65,45.74,9321,9321,SUCCESS
+HIMG00179,data/raw/histopathology_images/atypical/HIMG00179.png,data/pixel_images/histopathology/atypical/HIMG00179.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,239.0,185.46,44.64,9353,9353,SUCCESS
+HIMG00180,data/raw/histopathology_images/atypical/HIMG00180.png,data/pixel_images/histopathology/atypical/HIMG00180.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,250.0,183.82,46.78,9388,9388,SUCCESS
+HIMG00181,data/raw/histopathology_images/atypical/HIMG00181.png,data/pixel_images/histopathology/atypical/HIMG00181.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,246.0,187.14,46.61,9448,9448,SUCCESS
+HIMG00182,data/raw/histopathology_images/atypical/HIMG00182.png,data/pixel_images/histopathology/atypical/HIMG00182.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,241.0,187.94,47.34,9192,9192,SUCCESS
+HIMG00183,data/raw/histopathology_images/atypical/HIMG00183.png,data/pixel_images/histopathology/atypical/HIMG00183.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,250.0,185.58,47.38,9316,9316,SUCCESS
+HIMG00184,data/raw/histopathology_images/atypical/HIMG00184.png,data/pixel_images/histopathology/atypical/HIMG00184.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,242.0,185.15,46.88,9308,9308,SUCCESS
+HIMG00185,data/raw/histopathology_images/atypical/HIMG00185.png,data/pixel_images/histopathology/atypical/HIMG00185.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,240.0,188.79,46.53,9277,9277,SUCCESS
+HIMG00186,data/raw/histopathology_images/atypical/HIMG00186.png,data/pixel_images/histopathology/atypical/HIMG00186.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,248.0,186.02,45.81,9257,9257,SUCCESS
+HIMG00187,data/raw/histopathology_images/atypical/HIMG00187.png,data/pixel_images/histopathology/atypical/HIMG00187.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,239.0,184.81,46.35,9209,9209,SUCCESS
+HIMG00188,data/raw/histopathology_images/atypical/HIMG00188.png,data/pixel_images/histopathology/atypical/HIMG00188.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,250.0,188.28,48.38,9340,9340,SUCCESS
+HIMG00189,data/raw/histopathology_images/atypical/HIMG00189.png,data/pixel_images/histopathology/atypical/HIMG00189.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,240.0,185.54,45.93,9150,9150,SUCCESS
+HIMG00190,data/raw/histopathology_images/atypical/HIMG00190.png,data/pixel_images/histopathology/atypical/HIMG00190.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,240.0,185.87,44.28,9425,9425,SUCCESS
+HIMG00191,data/raw/histopathology_images/atypical/HIMG00191.png,data/pixel_images/histopathology/atypical/HIMG00191.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,249.0,189.38,47.62,9107,9107,SUCCESS
+HIMG00192,data/raw/histopathology_images/atypical/HIMG00192.png,data/pixel_images/histopathology/atypical/HIMG00192.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,239.0,183.84,46.32,9295,9295,SUCCESS
+HIMG00193,data/raw/histopathology_images/atypical/HIMG00193.png,data/pixel_images/histopathology/atypical/HIMG00193.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,250.0,186.61,46.45,9555,9555,SUCCESS
+HIMG00194,data/raw/histopathology_images/atypical/HIMG00194.png,data/pixel_images/histopathology/atypical/HIMG00194.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,250.0,189.43,46.66,9230,9230,SUCCESS
+HIMG00195,data/raw/histopathology_images/atypical/HIMG00195.png,data/pixel_images/histopathology/atypical/HIMG00195.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,241.0,185.4,47.0,9359,9359,SUCCESS
+HIMG00196,data/raw/histopathology_images/atypical/HIMG00196.png,data/pixel_images/histopathology/atypical/HIMG00196.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,240.0,187.15,44.66,9337,9337,SUCCESS
+HIMG00197,data/raw/histopathology_images/atypical/HIMG00197.png,data/pixel_images/histopathology/atypical/HIMG00197.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,240.0,183.55,44.47,9308,9308,SUCCESS
+HIMG00198,data/raw/histopathology_images/atypical/HIMG00198.png,data/pixel_images/histopathology/atypical/HIMG00198.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,239.0,185.64,47.56,9266,9266,SUCCESS
+HIMG00199,data/raw/histopathology_images/atypical/HIMG00199.png,data/pixel_images/histopathology/atypical/HIMG00199.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,241.0,186.21,47.02,9470,9470,SUCCESS
+HIMG00200,data/raw/histopathology_images/atypical/HIMG00200.png,data/pixel_images/histopathology/atypical/HIMG00200.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,246.0,185.27,47.48,9275,9275,SUCCESS
+HIMG00201,data/raw/histopathology_images/atypical/HIMG00201.png,data/pixel_images/histopathology/atypical/HIMG00201.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,240.0,184.27,44.4,9232,9232,SUCCESS
+HIMG00202,data/raw/histopathology_images/atypical/HIMG00202.png,data/pixel_images/histopathology/atypical/HIMG00202.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,241.0,186.31,43.99,9319,9319,SUCCESS
+HIMG00203,data/raw/histopathology_images/atypical/HIMG00203.png,data/pixel_images/histopathology/atypical/HIMG00203.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,248.0,186.67,46.18,9236,9236,SUCCESS
+HIMG00204,data/raw/histopathology_images/atypical/HIMG00204.png,data/pixel_images/histopathology/atypical/HIMG00204.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,239.0,184.8,47.05,9329,9329,SUCCESS
+HIMG00205,data/raw/histopathology_images/atypical/HIMG00205.png,data/pixel_images/histopathology/atypical/HIMG00205.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,239.0,187.18,45.05,9223,9223,SUCCESS
+HIMG00206,data/raw/histopathology_images/atypical/HIMG00206.png,data/pixel_images/histopathology/atypical/HIMG00206.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,241.0,184.66,46.35,9645,9645,SUCCESS
+HIMG00207,data/raw/histopathology_images/atypical/HIMG00207.png,data/pixel_images/histopathology/atypical/HIMG00207.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,240.0,185.11,44.76,9244,9244,SUCCESS
+HIMG00208,data/raw/histopathology_images/atypical/HIMG00208.png,data/pixel_images/histopathology/atypical/HIMG00208.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,239.0,184.71,44.82,9207,9207,SUCCESS
+HIMG00209,data/raw/histopathology_images/atypical/HIMG00209.png,data/pixel_images/histopathology/atypical/HIMG00209.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,243.0,187.13,45.45,9391,9391,SUCCESS
+HIMG00210,data/raw/histopathology_images/atypical/HIMG00210.png,data/pixel_images/histopathology/atypical/HIMG00210.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",15.0,240.0,183.72,45.83,9332,9332,SUCCESS
+HIMG00001,data/raw/histopathology_images/benign/HIMG00001.png,data/pixel_images/histopathology/benign/HIMG00001.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",23.0,250.0,196.82,35.57,8679,8679,SUCCESS
+HIMG00002,data/raw/histopathology_images/benign/HIMG00002.png,data/pixel_images/histopathology/benign/HIMG00002.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",24.0,246.0,197.48,33.89,8264,8264,SUCCESS
+HIMG00003,data/raw/histopathology_images/benign/HIMG00003.png,data/pixel_images/histopathology/benign/HIMG00003.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",23.0,241.0,199.11,34.18,8712,8712,SUCCESS
+HIMG00004,data/raw/histopathology_images/benign/HIMG00004.png,data/pixel_images/histopathology/benign/HIMG00004.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",24.0,244.0,196.17,36.02,8739,8739,SUCCESS
+HIMG00005,data/raw/histopathology_images/benign/HIMG00005.png,data/pixel_images/histopathology/benign/HIMG00005.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",23.0,246.0,199.34,35.65,8655,8655,SUCCESS
+HIMG00006,data/raw/histopathology_images/benign/HIMG00006.png,data/pixel_images/histopathology/benign/HIMG00006.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",23.0,240.0,195.8,34.09,8414,8414,SUCCESS
+HIMG00007,data/raw/histopathology_images/benign/HIMG00007.png,data/pixel_images/histopathology/benign/HIMG00007.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",23.0,240.0,197.23,34.69,8748,8748,SUCCESS
+HIMG00008,data/raw/histopathology_images/benign/HIMG00008.png,data/pixel_images/histopathology/benign/HIMG00008.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",23.0,240.0,196.36,34.75,8573,8573,SUCCESS
+HIMG00009,data/raw/histopathology_images/benign/HIMG00009.png,data/pixel_images/histopathology/benign/HIMG00009.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",23.0,240.0,198.23,34.08,8578,8578,SUCCESS
+HIMG00010,data/raw/histopathology_images/benign/HIMG00010.png,data/pixel_images/histopathology/benign/HIMG00010.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",23.0,240.0,197.18,34.86,8613,8613,SUCCESS
+HIMG00011,data/raw/histopathology_images/benign/HIMG00011.png,data/pixel_images/histopathology/benign/HIMG00011.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",24.0,240.0,198.34,33.1,8752,8752,SUCCESS
+HIMG00012,data/raw/histopathology_images/benign/HIMG00012.png,data/pixel_images/histopathology/benign/HIMG00012.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",23.0,243.0,196.19,36.14,8642,8642,SUCCESS
+HIMG00013,data/raw/histopathology_images/benign/HIMG00013.png,data/pixel_images/histopathology/benign/HIMG00013.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",23.0,240.0,196.01,34.85,8694,8694,SUCCESS
+HIMG00014,data/raw/histopathology_images/benign/HIMG00014.png,data/pixel_images/histopathology/benign/HIMG00014.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",23.0,240.0,196.25,34.27,8672,8672,SUCCESS
+HIMG00015,data/raw/histopathology_images/benign/HIMG00015.png,data/pixel_images/histopathology/benign/HIMG00015.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",23.0,240.0,197.84,33.52,8491,8491,SUCCESS
+HIMG00016,data/raw/histopathology_images/benign/HIMG00016.png,data/pixel_images/histopathology/benign/HIMG00016.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",23.0,240.0,197.44,34.73,8716,8716,SUCCESS
+HIMG00017,data/raw/histopathology_images/benign/HIMG00017.png,data/pixel_images/histopathology/benign/HIMG00017.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",24.0,240.0,200.03,34.84,8579,8579,SUCCESS
+HIMG00018,data/raw/histopathology_images/benign/HIMG00018.png,data/pixel_images/histopathology/benign/HIMG00018.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",23.0,240.0,196.5,32.8,8669,8669,SUCCESS
+HIMG00019,data/raw/histopathology_images/benign/HIMG00019.png,data/pixel_images/histopathology/benign/HIMG00019.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",24.0,240.0,197.7,33.6,8554,8554,SUCCESS
+HIMG00020,data/raw/histopathology_images/benign/HIMG00020.png,data/pixel_images/histopathology/benign/HIMG00020.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",27.0,243.0,198.11,34.89,8486,8486,SUCCESS
+HIMG00021,data/raw/histopathology_images/benign/HIMG00021.png,data/pixel_images/histopathology/benign/HIMG00021.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",23.0,240.0,198.53,33.75,8666,8666,SUCCESS
+HIMG00022,data/raw/histopathology_images/benign/HIMG00022.png,data/pixel_images/histopathology/benign/HIMG00022.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",22.0,242.0,197.33,34.17,8640,8640,SUCCESS
+HIMG00023,data/raw/histopathology_images/benign/HIMG00023.png,data/pixel_images/histopathology/benign/HIMG00023.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",25.0,247.0,201.18,35.0,8931,8931,SUCCESS
+HIMG00024,data/raw/histopathology_images/benign/HIMG00024.png,data/pixel_images/histopathology/benign/HIMG00024.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",23.0,241.0,198.21,35.01,8800,8800,SUCCESS
+HIMG00025,data/raw/histopathology_images/benign/HIMG00025.png,data/pixel_images/histopathology/benign/HIMG00025.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",25.0,240.0,196.85,34.51,8595,8595,SUCCESS
+HIMG00026,data/raw/histopathology_images/benign/HIMG00026.png,data/pixel_images/histopathology/benign/HIMG00026.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",23.0,240.0,197.03,34.02,8449,8449,SUCCESS
+HIMG00027,data/raw/histopathology_images/benign/HIMG00027.png,data/pixel_images/histopathology/benign/HIMG00027.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",23.0,240.0,197.97,33.2,8518,8518,SUCCESS
+HIMG00028,data/raw/histopathology_images/benign/HIMG00028.png,data/pixel_images/histopathology/benign/HIMG00028.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",24.0,240.0,198.09,34.78,8720,8720,SUCCESS
+HIMG00029,data/raw/histopathology_images/benign/HIMG00029.png,data/pixel_images/histopathology/benign/HIMG00029.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",35.0,249.0,198.88,35.83,8783,8783,SUCCESS
+HIMG00030,data/raw/histopathology_images/benign/HIMG00030.png,data/pixel_images/histopathology/benign/HIMG00030.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",23.0,248.0,199.13,35.34,8739,8739,SUCCESS
+HIMG00031,data/raw/histopathology_images/benign/HIMG00031.png,data/pixel_images/histopathology/benign/HIMG00031.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",23.0,240.0,196.1,34.06,8670,8670,SUCCESS
+HIMG00032,data/raw/histopathology_images/benign/HIMG00032.png,data/pixel_images/histopathology/benign/HIMG00032.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",22.0,245.0,197.75,35.05,8670,8670,SUCCESS
+HIMG00033,data/raw/histopathology_images/benign/HIMG00033.png,data/pixel_images/histopathology/benign/HIMG00033.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",24.0,241.0,198.79,34.24,8385,8385,SUCCESS
+HIMG00034,data/raw/histopathology_images/benign/HIMG00034.png,data/pixel_images/histopathology/benign/HIMG00034.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",24.0,246.0,198.09,35.62,8697,8697,SUCCESS
+HIMG00035,data/raw/histopathology_images/benign/HIMG00035.png,data/pixel_images/histopathology/benign/HIMG00035.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",23.0,250.0,197.45,34.74,8505,8505,SUCCESS
+HIMG00036,data/raw/histopathology_images/benign/HIMG00036.png,data/pixel_images/histopathology/benign/HIMG00036.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",23.0,249.0,197.72,35.42,8509,8509,SUCCESS
+HIMG00037,data/raw/histopathology_images/benign/HIMG00037.png,data/pixel_images/histopathology/benign/HIMG00037.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",25.0,243.0,198.25,32.04,8700,8700,SUCCESS
+HIMG00038,data/raw/histopathology_images/benign/HIMG00038.png,data/pixel_images/histopathology/benign/HIMG00038.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",24.0,245.0,197.34,34.59,8699,8699,SUCCESS
+HIMG00039,data/raw/histopathology_images/benign/HIMG00039.png,data/pixel_images/histopathology/benign/HIMG00039.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",23.0,249.0,198.89,35.64,8819,8819,SUCCESS
+HIMG00040,data/raw/histopathology_images/benign/HIMG00040.png,data/pixel_images/histopathology/benign/HIMG00040.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",23.0,239.0,198.85,34.14,8641,8641,SUCCESS
+HIMG00041,data/raw/histopathology_images/benign/HIMG00041.png,data/pixel_images/histopathology/benign/HIMG00041.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",23.0,241.0,196.9,34.37,8817,8817,SUCCESS
+HIMG00042,data/raw/histopathology_images/benign/HIMG00042.png,data/pixel_images/histopathology/benign/HIMG00042.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",23.0,240.0,197.95,34.09,8661,8661,SUCCESS
+HIMG00043,data/raw/histopathology_images/benign/HIMG00043.png,data/pixel_images/histopathology/benign/HIMG00043.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",23.0,244.0,197.71,33.99,8449,8449,SUCCESS
+HIMG00044,data/raw/histopathology_images/benign/HIMG00044.png,data/pixel_images/histopathology/benign/HIMG00044.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",24.0,250.0,197.26,33.93,8715,8715,SUCCESS
+HIMG00045,data/raw/histopathology_images/benign/HIMG00045.png,data/pixel_images/histopathology/benign/HIMG00045.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",23.0,239.0,197.51,33.85,8519,8519,SUCCESS
+HIMG00046,data/raw/histopathology_images/benign/HIMG00046.png,data/pixel_images/histopathology/benign/HIMG00046.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",23.0,250.0,199.35,35.12,8705,8705,SUCCESS
+HIMG00047,data/raw/histopathology_images/benign/HIMG00047.png,data/pixel_images/histopathology/benign/HIMG00047.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",24.0,240.0,198.63,33.77,8373,8373,SUCCESS
+HIMG00048,data/raw/histopathology_images/benign/HIMG00048.png,data/pixel_images/histopathology/benign/HIMG00048.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",24.0,240.0,194.61,34.4,8635,8635,SUCCESS
+HIMG00049,data/raw/histopathology_images/benign/HIMG00049.png,data/pixel_images/histopathology/benign/HIMG00049.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",22.0,245.0,200.29,34.6,8826,8826,SUCCESS
+HIMG00050,data/raw/histopathology_images/benign/HIMG00050.png,data/pixel_images/histopathology/benign/HIMG00050.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",27.0,245.0,196.08,35.84,8712,8712,SUCCESS
+HIMG00051,data/raw/histopathology_images/benign/HIMG00051.png,data/pixel_images/histopathology/benign/HIMG00051.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",24.0,246.0,198.33,35.07,8929,8929,SUCCESS
+HIMG00052,data/raw/histopathology_images/benign/HIMG00052.png,data/pixel_images/histopathology/benign/HIMG00052.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",23.0,240.0,197.21,33.71,8617,8617,SUCCESS
+HIMG00053,data/raw/histopathology_images/benign/HIMG00053.png,data/pixel_images/histopathology/benign/HIMG00053.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",23.0,240.0,197.23,34.18,8596,8596,SUCCESS
+HIMG00054,data/raw/histopathology_images/benign/HIMG00054.png,data/pixel_images/histopathology/benign/HIMG00054.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",23.0,248.0,198.18,35.62,8578,8578,SUCCESS
+HIMG00055,data/raw/histopathology_images/benign/HIMG00055.png,data/pixel_images/histopathology/benign/HIMG00055.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",23.0,244.0,198.78,35.21,8779,8779,SUCCESS
+HIMG00056,data/raw/histopathology_images/benign/HIMG00056.png,data/pixel_images/histopathology/benign/HIMG00056.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",23.0,245.0,198.32,34.5,8409,8409,SUCCESS
+HIMG00057,data/raw/histopathology_images/benign/HIMG00057.png,data/pixel_images/histopathology/benign/HIMG00057.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",23.0,247.0,197.14,35.25,8793,8793,SUCCESS
+HIMG00058,data/raw/histopathology_images/benign/HIMG00058.png,data/pixel_images/histopathology/benign/HIMG00058.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",23.0,248.0,196.77,35.63,8656,8656,SUCCESS
+HIMG00059,data/raw/histopathology_images/benign/HIMG00059.png,data/pixel_images/histopathology/benign/HIMG00059.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",23.0,240.0,198.36,35.64,8936,8936,SUCCESS
+HIMG00060,data/raw/histopathology_images/benign/HIMG00060.png,data/pixel_images/histopathology/benign/HIMG00060.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",24.0,240.0,198.74,33.57,8680,8680,SUCCESS
+HIMG00061,data/raw/histopathology_images/benign/HIMG00061.png,data/pixel_images/histopathology/benign/HIMG00061.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",23.0,244.0,197.35,32.73,8537,8537,SUCCESS
+HIMG00062,data/raw/histopathology_images/benign/HIMG00062.png,data/pixel_images/histopathology/benign/HIMG00062.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",24.0,244.0,196.86,34.83,8652,8652,SUCCESS
+HIMG00063,data/raw/histopathology_images/benign/HIMG00063.png,data/pixel_images/histopathology/benign/HIMG00063.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",28.0,246.0,198.6,35.68,8709,8709,SUCCESS
+HIMG00064,data/raw/histopathology_images/benign/HIMG00064.png,data/pixel_images/histopathology/benign/HIMG00064.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",23.0,240.0,197.67,34.01,8797,8797,SUCCESS
+HIMG00065,data/raw/histopathology_images/benign/HIMG00065.png,data/pixel_images/histopathology/benign/HIMG00065.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",24.0,240.0,198.5,33.22,8515,8515,SUCCESS
+HIMG00066,data/raw/histopathology_images/benign/HIMG00066.png,data/pixel_images/histopathology/benign/HIMG00066.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",23.0,250.0,199.02,35.36,8770,8770,SUCCESS
+HIMG00067,data/raw/histopathology_images/benign/HIMG00067.png,data/pixel_images/histopathology/benign/HIMG00067.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",24.0,247.0,198.45,34.74,8812,8812,SUCCESS
+HIMG00068,data/raw/histopathology_images/benign/HIMG00068.png,data/pixel_images/histopathology/benign/HIMG00068.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",24.0,248.0,197.77,34.85,8621,8621,SUCCESS
+HIMG00069,data/raw/histopathology_images/benign/HIMG00069.png,data/pixel_images/histopathology/benign/HIMG00069.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",23.0,240.0,197.54,35.11,8645,8645,SUCCESS
+HIMG00070,data/raw/histopathology_images/benign/HIMG00070.png,data/pixel_images/histopathology/benign/HIMG00070.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",23.0,240.0,195.94,35.57,8717,8717,SUCCESS
+HIMG00281,data/raw/histopathology_images/inflammatory/HIMG00281.png,data/pixel_images/histopathology/inflammatory/HIMG00281.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,241.0,176.18,51.87,10127,10127,SUCCESS
+HIMG00282,data/raw/histopathology_images/inflammatory/HIMG00282.png,data/pixel_images/histopathology/inflammatory/HIMG00282.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,244.0,174.72,53.56,10304,10304,SUCCESS
+HIMG00283,data/raw/histopathology_images/inflammatory/HIMG00283.png,data/pixel_images/histopathology/inflammatory/HIMG00283.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,246.0,177.58,52.43,10297,10297,SUCCESS
+HIMG00284,data/raw/histopathology_images/inflammatory/HIMG00284.png,data/pixel_images/histopathology/inflammatory/HIMG00284.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,249.0,175.64,54.12,10270,10270,SUCCESS
+HIMG00285,data/raw/histopathology_images/inflammatory/HIMG00285.png,data/pixel_images/histopathology/inflammatory/HIMG00285.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,243.0,177.55,53.29,10043,10043,SUCCESS
+HIMG00286,data/raw/histopathology_images/inflammatory/HIMG00286.png,data/pixel_images/histopathology/inflammatory/HIMG00286.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,240.0,175.64,53.24,10124,10124,SUCCESS
+HIMG00287,data/raw/histopathology_images/inflammatory/HIMG00287.png,data/pixel_images/histopathology/inflammatory/HIMG00287.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,245.0,176.0,54.12,10118,10118,SUCCESS
+HIMG00288,data/raw/histopathology_images/inflammatory/HIMG00288.png,data/pixel_images/histopathology/inflammatory/HIMG00288.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,240.0,173.79,54.84,10146,10146,SUCCESS
+HIMG00289,data/raw/histopathology_images/inflammatory/HIMG00289.png,data/pixel_images/histopathology/inflammatory/HIMG00289.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,240.0,177.11,52.1,10151,10151,SUCCESS
+HIMG00290,data/raw/histopathology_images/inflammatory/HIMG00290.png,data/pixel_images/histopathology/inflammatory/HIMG00290.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,244.0,179.06,51.46,10185,10185,SUCCESS
+HIMG00291,data/raw/histopathology_images/inflammatory/HIMG00291.png,data/pixel_images/histopathology/inflammatory/HIMG00291.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,239.0,176.37,52.38,10141,10141,SUCCESS
+HIMG00292,data/raw/histopathology_images/inflammatory/HIMG00292.png,data/pixel_images/histopathology/inflammatory/HIMG00292.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,242.0,178.35,54.37,10150,10150,SUCCESS
+HIMG00293,data/raw/histopathology_images/inflammatory/HIMG00293.png,data/pixel_images/histopathology/inflammatory/HIMG00293.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,242.0,176.85,54.72,10089,10089,SUCCESS
+HIMG00294,data/raw/histopathology_images/inflammatory/HIMG00294.png,data/pixel_images/histopathology/inflammatory/HIMG00294.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,244.0,175.71,54.06,10227,10227,SUCCESS
+HIMG00295,data/raw/histopathology_images/inflammatory/HIMG00295.png,data/pixel_images/histopathology/inflammatory/HIMG00295.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,240.0,173.92,52.73,10117,10117,SUCCESS
+HIMG00296,data/raw/histopathology_images/inflammatory/HIMG00296.png,data/pixel_images/histopathology/inflammatory/HIMG00296.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,243.0,174.34,55.15,10232,10232,SUCCESS
+HIMG00297,data/raw/histopathology_images/inflammatory/HIMG00297.png,data/pixel_images/histopathology/inflammatory/HIMG00297.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,240.0,174.57,52.95,10333,10333,SUCCESS
+HIMG00298,data/raw/histopathology_images/inflammatory/HIMG00298.png,data/pixel_images/histopathology/inflammatory/HIMG00298.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,242.0,176.38,53.63,10101,10101,SUCCESS
+HIMG00299,data/raw/histopathology_images/inflammatory/HIMG00299.png,data/pixel_images/histopathology/inflammatory/HIMG00299.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",11.0,240.0,177.36,52.39,10271,10271,SUCCESS
+HIMG00300,data/raw/histopathology_images/inflammatory/HIMG00300.png,data/pixel_images/histopathology/inflammatory/HIMG00300.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,241.0,174.66,54.37,10097,10097,SUCCESS
+HIMG00301,data/raw/histopathology_images/inflammatory/HIMG00301.png,data/pixel_images/histopathology/inflammatory/HIMG00301.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,243.0,178.63,52.94,10198,10198,SUCCESS
+HIMG00302,data/raw/histopathology_images/inflammatory/HIMG00302.png,data/pixel_images/histopathology/inflammatory/HIMG00302.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,246.0,178.4,53.37,10032,10032,SUCCESS
+HIMG00303,data/raw/histopathology_images/inflammatory/HIMG00303.png,data/pixel_images/histopathology/inflammatory/HIMG00303.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,240.0,176.03,52.47,10247,10247,SUCCESS
+HIMG00304,data/raw/histopathology_images/inflammatory/HIMG00304.png,data/pixel_images/histopathology/inflammatory/HIMG00304.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,240.0,174.52,52.74,10045,10045,SUCCESS
+HIMG00305,data/raw/histopathology_images/inflammatory/HIMG00305.png,data/pixel_images/histopathology/inflammatory/HIMG00305.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,239.0,176.15,52.11,10111,10111,SUCCESS
+HIMG00306,data/raw/histopathology_images/inflammatory/HIMG00306.png,data/pixel_images/histopathology/inflammatory/HIMG00306.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,240.0,176.68,53.68,10215,10215,SUCCESS
+HIMG00307,data/raw/histopathology_images/inflammatory/HIMG00307.png,data/pixel_images/histopathology/inflammatory/HIMG00307.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,247.0,174.31,53.48,10197,10197,SUCCESS
+HIMG00308,data/raw/histopathology_images/inflammatory/HIMG00308.png,data/pixel_images/histopathology/inflammatory/HIMG00308.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,240.0,176.12,50.93,10193,10193,SUCCESS
+HIMG00309,data/raw/histopathology_images/inflammatory/HIMG00309.png,data/pixel_images/histopathology/inflammatory/HIMG00309.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,249.0,176.33,54.92,10152,10152,SUCCESS
+HIMG00310,data/raw/histopathology_images/inflammatory/HIMG00310.png,data/pixel_images/histopathology/inflammatory/HIMG00310.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,239.0,176.07,52.57,10220,10220,SUCCESS
+HIMG00311,data/raw/histopathology_images/inflammatory/HIMG00311.png,data/pixel_images/histopathology/inflammatory/HIMG00311.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,240.0,175.64,51.27,10109,10109,SUCCESS
+HIMG00312,data/raw/histopathology_images/inflammatory/HIMG00312.png,data/pixel_images/histopathology/inflammatory/HIMG00312.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,240.0,174.97,53.18,10333,10333,SUCCESS
+HIMG00313,data/raw/histopathology_images/inflammatory/HIMG00313.png,data/pixel_images/histopathology/inflammatory/HIMG00313.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,240.0,175.21,51.1,10083,10083,SUCCESS
+HIMG00314,data/raw/histopathology_images/inflammatory/HIMG00314.png,data/pixel_images/histopathology/inflammatory/HIMG00314.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,245.0,174.21,54.02,10077,10077,SUCCESS
+HIMG00315,data/raw/histopathology_images/inflammatory/HIMG00315.png,data/pixel_images/histopathology/inflammatory/HIMG00315.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,240.0,175.81,53.47,10137,10137,SUCCESS
+HIMG00316,data/raw/histopathology_images/inflammatory/HIMG00316.png,data/pixel_images/histopathology/inflammatory/HIMG00316.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,241.0,175.69,55.1,10043,10043,SUCCESS
+HIMG00317,data/raw/histopathology_images/inflammatory/HIMG00317.png,data/pixel_images/histopathology/inflammatory/HIMG00317.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",11.0,240.0,177.28,53.0,10102,10102,SUCCESS
+HIMG00318,data/raw/histopathology_images/inflammatory/HIMG00318.png,data/pixel_images/histopathology/inflammatory/HIMG00318.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,240.0,177.27,51.5,10081,10081,SUCCESS
+HIMG00319,data/raw/histopathology_images/inflammatory/HIMG00319.png,data/pixel_images/histopathology/inflammatory/HIMG00319.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,240.0,176.26,53.39,10128,10128,SUCCESS
+HIMG00320,data/raw/histopathology_images/inflammatory/HIMG00320.png,data/pixel_images/histopathology/inflammatory/HIMG00320.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,244.0,175.46,54.6,10323,10323,SUCCESS
+HIMG00321,data/raw/histopathology_images/inflammatory/HIMG00321.png,data/pixel_images/histopathology/inflammatory/HIMG00321.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,248.0,174.76,53.71,10155,10155,SUCCESS
+HIMG00322,data/raw/histopathology_images/inflammatory/HIMG00322.png,data/pixel_images/histopathology/inflammatory/HIMG00322.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,245.0,176.54,52.43,10001,10001,SUCCESS
+HIMG00323,data/raw/histopathology_images/inflammatory/HIMG00323.png,data/pixel_images/histopathology/inflammatory/HIMG00323.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,240.0,175.27,52.84,10220,10220,SUCCESS
+HIMG00324,data/raw/histopathology_images/inflammatory/HIMG00324.png,data/pixel_images/histopathology/inflammatory/HIMG00324.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,246.0,175.5,53.86,10122,10122,SUCCESS
+HIMG00325,data/raw/histopathology_images/inflammatory/HIMG00325.png,data/pixel_images/histopathology/inflammatory/HIMG00325.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,240.0,175.35,51.35,10070,10070,SUCCESS
+HIMG00326,data/raw/histopathology_images/inflammatory/HIMG00326.png,data/pixel_images/histopathology/inflammatory/HIMG00326.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,240.0,176.9,52.91,10095,10095,SUCCESS
+HIMG00327,data/raw/histopathology_images/inflammatory/HIMG00327.png,data/pixel_images/histopathology/inflammatory/HIMG00327.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,240.0,175.22,53.93,10235,10235,SUCCESS
+HIMG00328,data/raw/histopathology_images/inflammatory/HIMG00328.png,data/pixel_images/histopathology/inflammatory/HIMG00328.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,239.0,175.41,51.88,9935,9935,SUCCESS
+HIMG00329,data/raw/histopathology_images/inflammatory/HIMG00329.png,data/pixel_images/histopathology/inflammatory/HIMG00329.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,241.0,176.02,55.51,10059,10059,SUCCESS
+HIMG00330,data/raw/histopathology_images/inflammatory/HIMG00330.png,data/pixel_images/histopathology/inflammatory/HIMG00330.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,249.0,178.92,54.21,10118,10118,SUCCESS
+HIMG00331,data/raw/histopathology_images/inflammatory/HIMG00331.png,data/pixel_images/histopathology/inflammatory/HIMG00331.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,239.0,173.88,52.23,10098,10098,SUCCESS
+HIMG00332,data/raw/histopathology_images/inflammatory/HIMG00332.png,data/pixel_images/histopathology/inflammatory/HIMG00332.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,240.0,176.43,52.28,10275,10275,SUCCESS
+HIMG00333,data/raw/histopathology_images/inflammatory/HIMG00333.png,data/pixel_images/histopathology/inflammatory/HIMG00333.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,239.0,175.85,51.31,10190,10190,SUCCESS
+HIMG00334,data/raw/histopathology_images/inflammatory/HIMG00334.png,data/pixel_images/histopathology/inflammatory/HIMG00334.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,250.0,177.36,53.16,10149,10149,SUCCESS
+HIMG00335,data/raw/histopathology_images/inflammatory/HIMG00335.png,data/pixel_images/histopathology/inflammatory/HIMG00335.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,240.0,176.77,52.84,9996,9996,SUCCESS
+HIMG00336,data/raw/histopathology_images/inflammatory/HIMG00336.png,data/pixel_images/histopathology/inflammatory/HIMG00336.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,247.0,177.09,54.27,10068,10068,SUCCESS
+HIMG00337,data/raw/histopathology_images/inflammatory/HIMG00337.png,data/pixel_images/histopathology/inflammatory/HIMG00337.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,248.0,179.85,52.28,10260,10260,SUCCESS
+HIMG00338,data/raw/histopathology_images/inflammatory/HIMG00338.png,data/pixel_images/histopathology/inflammatory/HIMG00338.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,243.0,176.03,53.67,9891,9891,SUCCESS
+HIMG00339,data/raw/histopathology_images/inflammatory/HIMG00339.png,data/pixel_images/histopathology/inflammatory/HIMG00339.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,240.0,173.83,53.88,10151,10151,SUCCESS
+HIMG00340,data/raw/histopathology_images/inflammatory/HIMG00340.png,data/pixel_images/histopathology/inflammatory/HIMG00340.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,247.0,177.65,53.47,10101,10101,SUCCESS
+HIMG00341,data/raw/histopathology_images/inflammatory/HIMG00341.png,data/pixel_images/histopathology/inflammatory/HIMG00341.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,244.0,176.87,54.22,10122,10122,SUCCESS
+HIMG00342,data/raw/histopathology_images/inflammatory/HIMG00342.png,data/pixel_images/histopathology/inflammatory/HIMG00342.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,239.0,175.47,55.06,10107,10107,SUCCESS
+HIMG00343,data/raw/histopathology_images/inflammatory/HIMG00343.png,data/pixel_images/histopathology/inflammatory/HIMG00343.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,240.0,174.58,53.67,10205,10205,SUCCESS
+HIMG00344,data/raw/histopathology_images/inflammatory/HIMG00344.png,data/pixel_images/histopathology/inflammatory/HIMG00344.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,240.0,173.58,53.08,10238,10238,SUCCESS
+HIMG00345,data/raw/histopathology_images/inflammatory/HIMG00345.png,data/pixel_images/histopathology/inflammatory/HIMG00345.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,240.0,178.19,54.31,10073,10073,SUCCESS
+HIMG00346,data/raw/histopathology_images/inflammatory/HIMG00346.png,data/pixel_images/histopathology/inflammatory/HIMG00346.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,239.0,175.43,53.26,10208,10208,SUCCESS
+HIMG00347,data/raw/histopathology_images/inflammatory/HIMG00347.png,data/pixel_images/histopathology/inflammatory/HIMG00347.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,240.0,176.32,52.82,10004,10004,SUCCESS
+HIMG00348,data/raw/histopathology_images/inflammatory/HIMG00348.png,data/pixel_images/histopathology/inflammatory/HIMG00348.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,246.0,176.74,53.96,10149,10149,SUCCESS
+HIMG00349,data/raw/histopathology_images/inflammatory/HIMG00349.png,data/pixel_images/histopathology/inflammatory/HIMG00349.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,245.0,176.21,53.06,10055,10055,SUCCESS
+HIMG00350,data/raw/histopathology_images/inflammatory/HIMG00350.png,data/pixel_images/histopathology/inflammatory/HIMG00350.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",10.0,247.0,177.23,52.92,10166,10166,SUCCESS
+HIMG00071,data/raw/histopathology_images/malignant/HIMG00071.png,data/pixel_images/histopathology/malignant/HIMG00071.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,240.0,159.77,57.27,10161,10161,SUCCESS
+HIMG00072,data/raw/histopathology_images/malignant/HIMG00072.png,data/pixel_images/histopathology/malignant/HIMG00072.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,246.0,162.24,57.71,10130,10130,SUCCESS
+HIMG00073,data/raw/histopathology_images/malignant/HIMG00073.png,data/pixel_images/histopathology/malignant/HIMG00073.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,240.0,159.1,57.12,10149,10149,SUCCESS
+HIMG00074,data/raw/histopathology_images/malignant/HIMG00074.png,data/pixel_images/histopathology/malignant/HIMG00074.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,240.0,160.14,56.89,10068,10068,SUCCESS
+HIMG00075,data/raw/histopathology_images/malignant/HIMG00075.png,data/pixel_images/histopathology/malignant/HIMG00075.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,247.0,156.59,56.92,9995,9995,SUCCESS
+HIMG00076,data/raw/histopathology_images/malignant/HIMG00076.png,data/pixel_images/histopathology/malignant/HIMG00076.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,240.0,157.67,57.84,10185,10185,SUCCESS
+HIMG00077,data/raw/histopathology_images/malignant/HIMG00077.png,data/pixel_images/histopathology/malignant/HIMG00077.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,240.0,158.92,55.65,10101,10101,SUCCESS
+HIMG00078,data/raw/histopathology_images/malignant/HIMG00078.png,data/pixel_images/histopathology/malignant/HIMG00078.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,240.0,160.86,58.52,9951,9951,SUCCESS
+HIMG00079,data/raw/histopathology_images/malignant/HIMG00079.png,data/pixel_images/histopathology/malignant/HIMG00079.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,246.0,156.51,58.36,10280,10280,SUCCESS
+HIMG00080,data/raw/histopathology_images/malignant/HIMG00080.png,data/pixel_images/histopathology/malignant/HIMG00080.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,239.0,157.82,58.6,10107,10107,SUCCESS
+HIMG00081,data/raw/histopathology_images/malignant/HIMG00081.png,data/pixel_images/histopathology/malignant/HIMG00081.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,250.0,159.13,60.16,10201,10201,SUCCESS
+HIMG00082,data/raw/histopathology_images/malignant/HIMG00082.png,data/pixel_images/histopathology/malignant/HIMG00082.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,240.0,159.22,57.49,10000,10000,SUCCESS
+HIMG00083,data/raw/histopathology_images/malignant/HIMG00083.png,data/pixel_images/histopathology/malignant/HIMG00083.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,240.0,161.51,57.68,10050,10050,SUCCESS
+HIMG00084,data/raw/histopathology_images/malignant/HIMG00084.png,data/pixel_images/histopathology/malignant/HIMG00084.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,244.0,158.58,58.56,10163,10163,SUCCESS
+HIMG00085,data/raw/histopathology_images/malignant/HIMG00085.png,data/pixel_images/histopathology/malignant/HIMG00085.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,240.0,159.77,58.87,10165,10165,SUCCESS
+HIMG00086,data/raw/histopathology_images/malignant/HIMG00086.png,data/pixel_images/histopathology/malignant/HIMG00086.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,243.0,159.67,57.34,10035,10035,SUCCESS
+HIMG00087,data/raw/histopathology_images/malignant/HIMG00087.png,data/pixel_images/histopathology/malignant/HIMG00087.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,247.0,161.55,57.39,9972,9972,SUCCESS
+HIMG00088,data/raw/histopathology_images/malignant/HIMG00088.png,data/pixel_images/histopathology/malignant/HIMG00088.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,245.0,155.49,59.29,10191,10191,SUCCESS
+HIMG00089,data/raw/histopathology_images/malignant/HIMG00089.png,data/pixel_images/histopathology/malignant/HIMG00089.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,246.0,157.46,58.12,10058,10058,SUCCESS
+HIMG00090,data/raw/histopathology_images/malignant/HIMG00090.png,data/pixel_images/histopathology/malignant/HIMG00090.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,240.0,158.34,57.54,10064,10064,SUCCESS
+HIMG00091,data/raw/histopathology_images/malignant/HIMG00091.png,data/pixel_images/histopathology/malignant/HIMG00091.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,247.0,158.21,58.27,10200,10200,SUCCESS
+HIMG00092,data/raw/histopathology_images/malignant/HIMG00092.png,data/pixel_images/histopathology/malignant/HIMG00092.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,240.0,159.92,57.39,10232,10232,SUCCESS
+HIMG00093,data/raw/histopathology_images/malignant/HIMG00093.png,data/pixel_images/histopathology/malignant/HIMG00093.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,247.0,162.5,58.51,9981,9981,SUCCESS
+HIMG00094,data/raw/histopathology_images/malignant/HIMG00094.png,data/pixel_images/histopathology/malignant/HIMG00094.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,250.0,159.86,57.5,10198,10198,SUCCESS
+HIMG00095,data/raw/histopathology_images/malignant/HIMG00095.png,data/pixel_images/histopathology/malignant/HIMG00095.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,240.0,158.02,57.71,10201,10201,SUCCESS
+HIMG00096,data/raw/histopathology_images/malignant/HIMG00096.png,data/pixel_images/histopathology/malignant/HIMG00096.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,246.0,161.64,58.69,10065,10065,SUCCESS
+HIMG00097,data/raw/histopathology_images/malignant/HIMG00097.png,data/pixel_images/histopathology/malignant/HIMG00097.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,248.0,159.97,57.83,9990,9990,SUCCESS
+HIMG00098,data/raw/histopathology_images/malignant/HIMG00098.png,data/pixel_images/histopathology/malignant/HIMG00098.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,240.0,158.97,59.33,10094,10094,SUCCESS
+HIMG00099,data/raw/histopathology_images/malignant/HIMG00099.png,data/pixel_images/histopathology/malignant/HIMG00099.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,242.0,156.68,56.89,10164,10164,SUCCESS
+HIMG00100,data/raw/histopathology_images/malignant/HIMG00100.png,data/pixel_images/histopathology/malignant/HIMG00100.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,250.0,162.17,59.68,10266,10266,SUCCESS
+HIMG00101,data/raw/histopathology_images/malignant/HIMG00101.png,data/pixel_images/histopathology/malignant/HIMG00101.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,250.0,156.85,59.72,10244,10244,SUCCESS
+HIMG00102,data/raw/histopathology_images/malignant/HIMG00102.png,data/pixel_images/histopathology/malignant/HIMG00102.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,245.0,157.09,57.5,10186,10186,SUCCESS
+HIMG00103,data/raw/histopathology_images/malignant/HIMG00103.png,data/pixel_images/histopathology/malignant/HIMG00103.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,239.0,156.32,56.81,10198,10198,SUCCESS
+HIMG00104,data/raw/histopathology_images/malignant/HIMG00104.png,data/pixel_images/histopathology/malignant/HIMG00104.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,240.0,159.37,56.82,10110,10110,SUCCESS
+HIMG00105,data/raw/histopathology_images/malignant/HIMG00105.png,data/pixel_images/histopathology/malignant/HIMG00105.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,241.0,159.27,57.7,10212,10212,SUCCESS
+HIMG00106,data/raw/histopathology_images/malignant/HIMG00106.png,data/pixel_images/histopathology/malignant/HIMG00106.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,243.0,159.21,58.66,10023,10023,SUCCESS
+HIMG00107,data/raw/histopathology_images/malignant/HIMG00107.png,data/pixel_images/histopathology/malignant/HIMG00107.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,241.0,159.54,58.15,10215,10215,SUCCESS
+HIMG00108,data/raw/histopathology_images/malignant/HIMG00108.png,data/pixel_images/histopathology/malignant/HIMG00108.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,242.0,158.67,57.11,10128,10128,SUCCESS
+HIMG00109,data/raw/histopathology_images/malignant/HIMG00109.png,data/pixel_images/histopathology/malignant/HIMG00109.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,242.0,158.54,57.28,10199,10199,SUCCESS
+HIMG00110,data/raw/histopathology_images/malignant/HIMG00110.png,data/pixel_images/histopathology/malignant/HIMG00110.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,238.0,160.32,57.02,10070,10070,SUCCESS
+HIMG00111,data/raw/histopathology_images/malignant/HIMG00111.png,data/pixel_images/histopathology/malignant/HIMG00111.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,239.0,156.98,57.2,10165,10165,SUCCESS
+HIMG00112,data/raw/histopathology_images/malignant/HIMG00112.png,data/pixel_images/histopathology/malignant/HIMG00112.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,240.0,159.73,58.41,10267,10267,SUCCESS
+HIMG00113,data/raw/histopathology_images/malignant/HIMG00113.png,data/pixel_images/histopathology/malignant/HIMG00113.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,242.0,159.32,55.95,10207,10207,SUCCESS
+HIMG00114,data/raw/histopathology_images/malignant/HIMG00114.png,data/pixel_images/histopathology/malignant/HIMG00114.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,240.0,157.98,58.07,9974,9974,SUCCESS
+HIMG00115,data/raw/histopathology_images/malignant/HIMG00115.png,data/pixel_images/histopathology/malignant/HIMG00115.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,240.0,159.26,56.74,10063,10063,SUCCESS
+HIMG00116,data/raw/histopathology_images/malignant/HIMG00116.png,data/pixel_images/histopathology/malignant/HIMG00116.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,240.0,156.92,58.74,10118,10118,SUCCESS
+HIMG00117,data/raw/histopathology_images/malignant/HIMG00117.png,data/pixel_images/histopathology/malignant/HIMG00117.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,249.0,158.15,59.0,10371,10371,SUCCESS
+HIMG00118,data/raw/histopathology_images/malignant/HIMG00118.png,data/pixel_images/histopathology/malignant/HIMG00118.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,241.0,160.35,57.27,10194,10194,SUCCESS
+HIMG00119,data/raw/histopathology_images/malignant/HIMG00119.png,data/pixel_images/histopathology/malignant/HIMG00119.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,245.0,161.24,58.93,10050,10050,SUCCESS
+HIMG00120,data/raw/histopathology_images/malignant/HIMG00120.png,data/pixel_images/histopathology/malignant/HIMG00120.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,240.0,159.99,57.17,9864,9864,SUCCESS
+HIMG00121,data/raw/histopathology_images/malignant/HIMG00121.png,data/pixel_images/histopathology/malignant/HIMG00121.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,250.0,161.79,58.5,10013,10013,SUCCESS
+HIMG00122,data/raw/histopathology_images/malignant/HIMG00122.png,data/pixel_images/histopathology/malignant/HIMG00122.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,239.0,156.36,56.81,10188,10188,SUCCESS
+HIMG00123,data/raw/histopathology_images/malignant/HIMG00123.png,data/pixel_images/histopathology/malignant/HIMG00123.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,240.0,156.74,59.01,10085,10085,SUCCESS
+HIMG00124,data/raw/histopathology_images/malignant/HIMG00124.png,data/pixel_images/histopathology/malignant/HIMG00124.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,247.0,157.2,58.95,10154,10154,SUCCESS
+HIMG00125,data/raw/histopathology_images/malignant/HIMG00125.png,data/pixel_images/histopathology/malignant/HIMG00125.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,245.0,162.19,56.31,9866,9866,SUCCESS
+HIMG00126,data/raw/histopathology_images/malignant/HIMG00126.png,data/pixel_images/histopathology/malignant/HIMG00126.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,240.0,158.89,57.49,10016,10016,SUCCESS
+HIMG00127,data/raw/histopathology_images/malignant/HIMG00127.png,data/pixel_images/histopathology/malignant/HIMG00127.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,240.0,156.41,55.59,10177,10177,SUCCESS
+HIMG00128,data/raw/histopathology_images/malignant/HIMG00128.png,data/pixel_images/histopathology/malignant/HIMG00128.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,241.0,158.07,57.32,10206,10206,SUCCESS
+HIMG00129,data/raw/histopathology_images/malignant/HIMG00129.png,data/pixel_images/histopathology/malignant/HIMG00129.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,245.0,158.33,57.19,10218,10218,SUCCESS
+HIMG00130,data/raw/histopathology_images/malignant/HIMG00130.png,data/pixel_images/histopathology/malignant/HIMG00130.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,243.0,159.54,58.54,10138,10138,SUCCESS
+HIMG00131,data/raw/histopathology_images/malignant/HIMG00131.png,data/pixel_images/histopathology/malignant/HIMG00131.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,245.0,156.83,56.85,10262,10262,SUCCESS
+HIMG00132,data/raw/histopathology_images/malignant/HIMG00132.png,data/pixel_images/histopathology/malignant/HIMG00132.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,240.0,162.61,57.37,10174,10174,SUCCESS
+HIMG00133,data/raw/histopathology_images/malignant/HIMG00133.png,data/pixel_images/histopathology/malignant/HIMG00133.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,246.0,159.76,58.57,10200,10200,SUCCESS
+HIMG00134,data/raw/histopathology_images/malignant/HIMG00134.png,data/pixel_images/histopathology/malignant/HIMG00134.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,249.0,160.2,58.58,10098,10098,SUCCESS
+HIMG00135,data/raw/histopathology_images/malignant/HIMG00135.png,data/pixel_images/histopathology/malignant/HIMG00135.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,240.0,159.56,56.6,10162,10162,SUCCESS
+HIMG00136,data/raw/histopathology_images/malignant/HIMG00136.png,data/pixel_images/histopathology/malignant/HIMG00136.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,240.0,159.77,57.28,10079,10079,SUCCESS
+HIMG00137,data/raw/histopathology_images/malignant/HIMG00137.png,data/pixel_images/histopathology/malignant/HIMG00137.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,245.0,156.77,58.16,10308,10308,SUCCESS
+HIMG00138,data/raw/histopathology_images/malignant/HIMG00138.png,data/pixel_images/histopathology/malignant/HIMG00138.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,240.0,162.91,56.68,10026,10026,SUCCESS
+HIMG00139,data/raw/histopathology_images/malignant/HIMG00139.png,data/pixel_images/histopathology/malignant/HIMG00139.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,240.0,160.87,57.03,10164,10164,SUCCESS
+HIMG00140,data/raw/histopathology_images/malignant/HIMG00140.png,data/pixel_images/histopathology/malignant/HIMG00140.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",5.0,247.0,158.52,57.58,10254,10254,SUCCESS
+HIMG00211,data/raw/histopathology_images/necrotic/HIMG00211.png,data/pixel_images/histopathology/necrotic/HIMG00211.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,223.0,195.97,19.87,6588,6588,SUCCESS
+HIMG00212,data/raw/histopathology_images/necrotic/HIMG00212.png,data/pixel_images/histopathology/necrotic/HIMG00212.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,222.0,196.54,18.93,6323,6323,SUCCESS
+HIMG00213,data/raw/histopathology_images/necrotic/HIMG00213.png,data/pixel_images/histopathology/necrotic/HIMG00213.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,223.0,196.43,19.39,6406,6406,SUCCESS
+HIMG00214,data/raw/histopathology_images/necrotic/HIMG00214.png,data/pixel_images/histopathology/necrotic/HIMG00214.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,224.0,197.09,19.43,6583,6583,SUCCESS
+HIMG00215,data/raw/histopathology_images/necrotic/HIMG00215.png,data/pixel_images/histopathology/necrotic/HIMG00215.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,219.0,195.01,18.66,6512,6512,SUCCESS
+HIMG00216,data/raw/histopathology_images/necrotic/HIMG00216.png,data/pixel_images/histopathology/necrotic/HIMG00216.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,219.0,195.26,18.33,6721,6721,SUCCESS
+HIMG00217,data/raw/histopathology_images/necrotic/HIMG00217.png,data/pixel_images/histopathology/necrotic/HIMG00217.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,220.0,196.75,18.07,6313,6313,SUCCESS
+HIMG00218,data/raw/histopathology_images/necrotic/HIMG00218.png,data/pixel_images/histopathology/necrotic/HIMG00218.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,216.0,194.84,17.18,6432,6432,SUCCESS
+HIMG00219,data/raw/histopathology_images/necrotic/HIMG00219.png,data/pixel_images/histopathology/necrotic/HIMG00219.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,223.0,196.33,19.46,6404,6404,SUCCESS
+HIMG00220,data/raw/histopathology_images/necrotic/HIMG00220.png,data/pixel_images/histopathology/necrotic/HIMG00220.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,218.0,195.46,17.87,6411,6411,SUCCESS
+HIMG00221,data/raw/histopathology_images/necrotic/HIMG00221.png,data/pixel_images/histopathology/necrotic/HIMG00221.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,217.0,195.45,17.4,6341,6341,SUCCESS
+HIMG00222,data/raw/histopathology_images/necrotic/HIMG00222.png,data/pixel_images/histopathology/necrotic/HIMG00222.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,215.0,194.48,17.15,6452,6452,SUCCESS
+HIMG00223,data/raw/histopathology_images/necrotic/HIMG00223.png,data/pixel_images/histopathology/necrotic/HIMG00223.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,216.0,194.24,17.66,6503,6503,SUCCESS
+HIMG00224,data/raw/histopathology_images/necrotic/HIMG00224.png,data/pixel_images/histopathology/necrotic/HIMG00224.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,219.0,195.85,17.81,6450,6450,SUCCESS
+HIMG00225,data/raw/histopathology_images/necrotic/HIMG00225.png,data/pixel_images/histopathology/necrotic/HIMG00225.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,217.0,194.75,17.88,6379,6379,SUCCESS
+HIMG00226,data/raw/histopathology_images/necrotic/HIMG00226.png,data/pixel_images/histopathology/necrotic/HIMG00226.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,216.0,195.11,17.1,6276,6276,SUCCESS
+HIMG00227,data/raw/histopathology_images/necrotic/HIMG00227.png,data/pixel_images/histopathology/necrotic/HIMG00227.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,220.0,195.76,18.51,6467,6467,SUCCESS
+HIMG00228,data/raw/histopathology_images/necrotic/HIMG00228.png,data/pixel_images/histopathology/necrotic/HIMG00228.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,224.0,197.16,19.73,6232,6232,SUCCESS
+HIMG00229,data/raw/histopathology_images/necrotic/HIMG00229.png,data/pixel_images/histopathology/necrotic/HIMG00229.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,219.0,196.51,17.68,6204,6204,SUCCESS
+HIMG00230,data/raw/histopathology_images/necrotic/HIMG00230.png,data/pixel_images/histopathology/necrotic/HIMG00230.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,220.0,196.16,18.3,6356,6356,SUCCESS
+HIMG00231,data/raw/histopathology_images/necrotic/HIMG00231.png,data/pixel_images/histopathology/necrotic/HIMG00231.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,219.0,196.11,17.81,6434,6434,SUCCESS
+HIMG00232,data/raw/histopathology_images/necrotic/HIMG00232.png,data/pixel_images/histopathology/necrotic/HIMG00232.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,223.0,196.8,19.16,6456,6456,SUCCESS
+HIMG00233,data/raw/histopathology_images/necrotic/HIMG00233.png,data/pixel_images/histopathology/necrotic/HIMG00233.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,219.0,195.8,18.32,6344,6344,SUCCESS
+HIMG00234,data/raw/histopathology_images/necrotic/HIMG00234.png,data/pixel_images/histopathology/necrotic/HIMG00234.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,223.0,196.79,19.43,6208,6208,SUCCESS
+HIMG00235,data/raw/histopathology_images/necrotic/HIMG00235.png,data/pixel_images/histopathology/necrotic/HIMG00235.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,222.0,196.87,18.76,6307,6307,SUCCESS
+HIMG00236,data/raw/histopathology_images/necrotic/HIMG00236.png,data/pixel_images/histopathology/necrotic/HIMG00236.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,222.0,196.68,18.9,6365,6365,SUCCESS
+HIMG00237,data/raw/histopathology_images/necrotic/HIMG00237.png,data/pixel_images/histopathology/necrotic/HIMG00237.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,222.0,196.24,19.25,6442,6442,SUCCESS
+HIMG00238,data/raw/histopathology_images/necrotic/HIMG00238.png,data/pixel_images/histopathology/necrotic/HIMG00238.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,219.0,195.66,18.21,6367,6367,SUCCESS
+HIMG00239,data/raw/histopathology_images/necrotic/HIMG00239.png,data/pixel_images/histopathology/necrotic/HIMG00239.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,223.0,197.67,18.74,6373,6373,SUCCESS
+HIMG00240,data/raw/histopathology_images/necrotic/HIMG00240.png,data/pixel_images/histopathology/necrotic/HIMG00240.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,223.0,196.88,19.42,6280,6280,SUCCESS
+HIMG00241,data/raw/histopathology_images/necrotic/HIMG00241.png,data/pixel_images/histopathology/necrotic/HIMG00241.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,222.0,196.57,19.02,6495,6495,SUCCESS
+HIMG00242,data/raw/histopathology_images/necrotic/HIMG00242.png,data/pixel_images/histopathology/necrotic/HIMG00242.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,217.0,195.31,17.54,6307,6307,SUCCESS
+HIMG00243,data/raw/histopathology_images/necrotic/HIMG00243.png,data/pixel_images/histopathology/necrotic/HIMG00243.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,218.0,195.86,17.54,6356,6356,SUCCESS
+HIMG00244,data/raw/histopathology_images/necrotic/HIMG00244.png,data/pixel_images/histopathology/necrotic/HIMG00244.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,218.0,194.75,18.33,6434,6434,SUCCESS
+HIMG00245,data/raw/histopathology_images/necrotic/HIMG00245.png,data/pixel_images/histopathology/necrotic/HIMG00245.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,220.0,196.22,18.16,6411,6411,SUCCESS
+HIMG00246,data/raw/histopathology_images/necrotic/HIMG00246.png,data/pixel_images/histopathology/necrotic/HIMG00246.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,216.0,194.19,17.95,6478,6478,SUCCESS
+HIMG00247,data/raw/histopathology_images/necrotic/HIMG00247.png,data/pixel_images/histopathology/necrotic/HIMG00247.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,217.0,195.99,16.97,6347,6347,SUCCESS
+HIMG00248,data/raw/histopathology_images/necrotic/HIMG00248.png,data/pixel_images/histopathology/necrotic/HIMG00248.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,217.0,194.86,17.7,6579,6579,SUCCESS
+HIMG00249,data/raw/histopathology_images/necrotic/HIMG00249.png,data/pixel_images/histopathology/necrotic/HIMG00249.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,222.0,196.27,19.09,6523,6523,SUCCESS
+HIMG00250,data/raw/histopathology_images/necrotic/HIMG00250.png,data/pixel_images/histopathology/necrotic/HIMG00250.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,220.0,195.95,18.38,6358,6358,SUCCESS
+HIMG00251,data/raw/histopathology_images/necrotic/HIMG00251.png,data/pixel_images/histopathology/necrotic/HIMG00251.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,219.0,195.73,18.22,6263,6263,SUCCESS
+HIMG00252,data/raw/histopathology_images/necrotic/HIMG00252.png,data/pixel_images/histopathology/necrotic/HIMG00252.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,215.0,194.61,17.01,6493,6493,SUCCESS
+HIMG00253,data/raw/histopathology_images/necrotic/HIMG00253.png,data/pixel_images/histopathology/necrotic/HIMG00253.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,217.0,195.54,17.35,6396,6396,SUCCESS
+HIMG00254,data/raw/histopathology_images/necrotic/HIMG00254.png,data/pixel_images/histopathology/necrotic/HIMG00254.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,222.0,196.66,18.89,6278,6278,SUCCESS
+HIMG00255,data/raw/histopathology_images/necrotic/HIMG00255.png,data/pixel_images/histopathology/necrotic/HIMG00255.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,217.0,195.45,17.53,6336,6336,SUCCESS
+HIMG00256,data/raw/histopathology_images/necrotic/HIMG00256.png,data/pixel_images/histopathology/necrotic/HIMG00256.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,218.0,195.24,18.3,6312,6312,SUCCESS
+HIMG00257,data/raw/histopathology_images/necrotic/HIMG00257.png,data/pixel_images/histopathology/necrotic/HIMG00257.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,220.0,195.92,18.41,6374,6374,SUCCESS
+HIMG00258,data/raw/histopathology_images/necrotic/HIMG00258.png,data/pixel_images/histopathology/necrotic/HIMG00258.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,220.0,195.73,18.71,6258,6258,SUCCESS
+HIMG00259,data/raw/histopathology_images/necrotic/HIMG00259.png,data/pixel_images/histopathology/necrotic/HIMG00259.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,223.0,196.32,19.32,6575,6575,SUCCESS
+HIMG00260,data/raw/histopathology_images/necrotic/HIMG00260.png,data/pixel_images/histopathology/necrotic/HIMG00260.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,225.0,197.63,19.52,6407,6407,SUCCESS
+HIMG00261,data/raw/histopathology_images/necrotic/HIMG00261.png,data/pixel_images/histopathology/necrotic/HIMG00261.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,223.0,196.76,19.37,6397,6397,SUCCESS
+HIMG00262,data/raw/histopathology_images/necrotic/HIMG00262.png,data/pixel_images/histopathology/necrotic/HIMG00262.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,222.0,196.91,18.66,6367,6367,SUCCESS
+HIMG00263,data/raw/histopathology_images/necrotic/HIMG00263.png,data/pixel_images/histopathology/necrotic/HIMG00263.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,224.0,196.44,19.72,6625,6625,SUCCESS
+HIMG00264,data/raw/histopathology_images/necrotic/HIMG00264.png,data/pixel_images/histopathology/necrotic/HIMG00264.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,221.0,196.77,18.39,6333,6333,SUCCESS
+HIMG00265,data/raw/histopathology_images/necrotic/HIMG00265.png,data/pixel_images/histopathology/necrotic/HIMG00265.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,224.0,197.09,19.43,6327,6327,SUCCESS
+HIMG00266,data/raw/histopathology_images/necrotic/HIMG00266.png,data/pixel_images/histopathology/necrotic/HIMG00266.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,218.0,195.49,17.96,6316,6316,SUCCESS
+HIMG00267,data/raw/histopathology_images/necrotic/HIMG00267.png,data/pixel_images/histopathology/necrotic/HIMG00267.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,218.0,195.42,17.82,6372,6372,SUCCESS
+HIMG00268,data/raw/histopathology_images/necrotic/HIMG00268.png,data/pixel_images/histopathology/necrotic/HIMG00268.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,216.0,196.0,16.61,6229,6229,SUCCESS
+HIMG00269,data/raw/histopathology_images/necrotic/HIMG00269.png,data/pixel_images/histopathology/necrotic/HIMG00269.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,223.0,196.71,19.47,6258,6258,SUCCESS
+HIMG00270,data/raw/histopathology_images/necrotic/HIMG00270.png,data/pixel_images/histopathology/necrotic/HIMG00270.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,224.0,197.08,19.44,6482,6482,SUCCESS
+HIMG00271,data/raw/histopathology_images/necrotic/HIMG00271.png,data/pixel_images/histopathology/necrotic/HIMG00271.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,217.0,195.4,17.41,6348,6348,SUCCESS
+HIMG00272,data/raw/histopathology_images/necrotic/HIMG00272.png,data/pixel_images/histopathology/necrotic/HIMG00272.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,225.0,197.85,19.54,6337,6337,SUCCESS
+HIMG00273,data/raw/histopathology_images/necrotic/HIMG00273.png,data/pixel_images/histopathology/necrotic/HIMG00273.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,221.0,196.28,18.64,6491,6491,SUCCESS
+HIMG00274,data/raw/histopathology_images/necrotic/HIMG00274.png,data/pixel_images/histopathology/necrotic/HIMG00274.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,222.0,196.53,18.89,6437,6437,SUCCESS
+HIMG00275,data/raw/histopathology_images/necrotic/HIMG00275.png,data/pixel_images/histopathology/necrotic/HIMG00275.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,216.0,195.4,16.83,6297,6297,SUCCESS
+HIMG00276,data/raw/histopathology_images/necrotic/HIMG00276.png,data/pixel_images/histopathology/necrotic/HIMG00276.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,223.0,197.41,18.8,6406,6406,SUCCESS
+HIMG00277,data/raw/histopathology_images/necrotic/HIMG00277.png,data/pixel_images/histopathology/necrotic/HIMG00277.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,221.0,195.67,19.0,6516,6516,SUCCESS
+HIMG00278,data/raw/histopathology_images/necrotic/HIMG00278.png,data/pixel_images/histopathology/necrotic/HIMG00278.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,218.0,195.2,18.27,6277,6277,SUCCESS
+HIMG00279,data/raw/histopathology_images/necrotic/HIMG00279.png,data/pixel_images/histopathology/necrotic/HIMG00279.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,219.0,195.31,18.45,6432,6432,SUCCESS
+HIMG00280,data/raw/histopathology_images/necrotic/HIMG00280.png,data/pixel_images/histopathology/necrotic/HIMG00280.png,PNG,PNG,256,256,RGB,3,"(256, 256, 3)",140.0,223.0,196.83,19.11,6349,6349,SUCCESS
+MRI00161,data/raw/mri_images/ADC/MRI00161.png,data/pixel_images/mri/ADC/MRI00161.png,PNG,PNG,256,256,L,1,"(256, 256)",6.0,216.0,65.52,65.65,1696,1696,SUCCESS
+MRI00162,data/raw/mri_images/ADC/MRI00162.png,data/pixel_images/mri/ADC/MRI00162.png,PNG,PNG,256,256,L,1,"(256, 256)",9.0,219.0,70.03,66.07,1633,1633,SUCCESS
+MRI00163,data/raw/mri_images/ADC/MRI00163.png,data/pixel_images/mri/ADC/MRI00163.png,PNG,PNG,256,256,L,1,"(256, 256)",14.0,224.0,73.54,65.66,1686,1686,SUCCESS
+MRI00164,data/raw/mri_images/ADC/MRI00164.png,data/pixel_images/mri/ADC/MRI00164.png,PNG,PNG,256,256,L,1,"(256, 256)",14.0,224.0,74.84,66.01,1664,1664,SUCCESS
+MRI00165,data/raw/mri_images/ADC/MRI00165.png,data/pixel_images/mri/ADC/MRI00165.png,PNG,PNG,256,256,L,1,"(256, 256)",8.0,218.0,68.65,65.94,1671,1671,SUCCESS
+MRI00166,data/raw/mri_images/ADC/MRI00166.png,data/pixel_images/mri/ADC/MRI00166.png,PNG,PNG,256,256,L,1,"(256, 256)",4.0,214.0,64.65,65.97,1648,1648,SUCCESS
+MRI00167,data/raw/mri_images/ADC/MRI00167.png,data/pixel_images/mri/ADC/MRI00167.png,PNG,PNG,256,256,L,1,"(256, 256)",7.0,217.0,67.65,65.92,1659,1659,SUCCESS
+MRI00168,data/raw/mri_images/ADC/MRI00168.png,data/pixel_images/mri/ADC/MRI00168.png,PNG,PNG,256,256,L,1,"(256, 256)",13.0,223.0,71.99,65.37,1679,1679,SUCCESS
+MRI00169,data/raw/mri_images/ADC/MRI00169.png,data/pixel_images/mri/ADC/MRI00169.png,PNG,PNG,256,256,L,1,"(256, 256)",13.0,223.0,74.04,66.06,1633,1633,SUCCESS
+MRI00170,data/raw/mri_images/ADC/MRI00170.png,data/pixel_images/mri/ADC/MRI00170.png,PNG,PNG,256,256,L,1,"(256, 256)",11.0,221.0,70.2,65.38,1698,1698,SUCCESS
+MRI00171,data/raw/mri_images/ADC/MRI00171.png,data/pixel_images/mri/ADC/MRI00171.png,PNG,PNG,256,256,L,1,"(256, 256)",11.0,221.0,70.72,65.56,1655,1655,SUCCESS
+MRI00172,data/raw/mri_images/ADC/MRI00172.png,data/pixel_images/mri/ADC/MRI00172.png,PNG,PNG,256,256,L,1,"(256, 256)",14.0,224.0,75.18,66.04,1651,1651,SUCCESS
+MRI00173,data/raw/mri_images/ADC/MRI00173.png,data/pixel_images/mri/ADC/MRI00173.png,PNG,PNG,256,256,L,1,"(256, 256)",11.0,221.0,71.03,65.78,1696,1696,SUCCESS
+MRI00174,data/raw/mri_images/ADC/MRI00174.png,data/pixel_images/mri/ADC/MRI00174.png,PNG,PNG,256,256,L,1,"(256, 256)",12.0,222.0,71.03,65.48,1671,1671,SUCCESS
+MRI00175,data/raw/mri_images/ADC/MRI00175.png,data/pixel_images/mri/ADC/MRI00175.png,PNG,PNG,256,256,L,1,"(256, 256)",7.0,217.0,67.85,66.0,1666,1666,SUCCESS
+MRI00176,data/raw/mri_images/ADC/MRI00176.png,data/pixel_images/mri/ADC/MRI00176.png,PNG,PNG,256,256,L,1,"(256, 256)",11.0,221.0,70.47,65.48,1690,1690,SUCCESS
+MRI00177,data/raw/mri_images/ADC/MRI00177.png,data/pixel_images/mri/ADC/MRI00177.png,PNG,PNG,256,256,L,1,"(256, 256)",16.0,226.0,76.22,65.8,1675,1675,SUCCESS
+MRI00178,data/raw/mri_images/ADC/MRI00178.png,data/pixel_images/mri/ADC/MRI00178.png,PNG,PNG,256,256,L,1,"(256, 256)",13.0,223.0,73.24,65.85,1676,1676,SUCCESS
+MRI00179,data/raw/mri_images/ADC/MRI00179.png,data/pixel_images/mri/ADC/MRI00179.png,PNG,PNG,256,256,L,1,"(256, 256)",9.0,219.0,68.79,65.72,1707,1707,SUCCESS
+MRI00180,data/raw/mri_images/ADC/MRI00180.png,data/pixel_images/mri/ADC/MRI00180.png,PNG,PNG,256,256,L,1,"(256, 256)",5.0,215.0,64.3,65.6,1702,1702,SUCCESS
+MRI00181,data/raw/mri_images/ADC/MRI00181.png,data/pixel_images/mri/ADC/MRI00181.png,PNG,PNG,256,256,L,1,"(256, 256)",5.0,215.0,65.45,65.9,1657,1657,SUCCESS
+MRI00182,data/raw/mri_images/ADC/MRI00182.png,data/pixel_images/mri/ADC/MRI00182.png,PNG,PNG,256,256,L,1,"(256, 256)",6.0,216.0,65.54,65.65,1670,1670,SUCCESS
+MRI00183,data/raw/mri_images/ADC/MRI00183.png,data/pixel_images/mri/ADC/MRI00183.png,PNG,PNG,256,256,L,1,"(256, 256)",8.0,218.0,68.85,66.02,1664,1664,SUCCESS
+MRI00184,data/raw/mri_images/ADC/MRI00184.png,data/pixel_images/mri/ADC/MRI00184.png,PNG,PNG,256,256,L,1,"(256, 256)",5.0,215.0,65.02,65.43,1631,1631,SUCCESS
+MRI00185,data/raw/mri_images/ADC/MRI00185.png,data/pixel_images/mri/ADC/MRI00185.png,PNG,PNG,256,256,L,1,"(256, 256)",13.0,223.0,73.65,65.89,1633,1633,SUCCESS
+MRI00186,data/raw/mri_images/ADC/MRI00186.png,data/pixel_images/mri/ADC/MRI00186.png,PNG,PNG,256,256,L,1,"(256, 256)",14.0,224.0,74.6,65.86,1634,1634,SUCCESS
+MRI00187,data/raw/mri_images/ADC/MRI00187.png,data/pixel_images/mri/ADC/MRI00187.png,PNG,PNG,256,256,L,1,"(256, 256)",7.0,217.0,68.04,66.06,1676,1676,SUCCESS
+MRI00188,data/raw/mri_images/ADC/MRI00188.png,data/pixel_images/mri/ADC/MRI00188.png,PNG,PNG,256,256,L,1,"(256, 256)",13.0,223.0,73.22,65.84,1671,1671,SUCCESS
+MRI00189,data/raw/mri_images/ADC/MRI00189.png,data/pixel_images/mri/ADC/MRI00189.png,PNG,PNG,256,256,L,1,"(256, 256)",13.0,223.0,74.21,66.09,1654,1654,SUCCESS
+MRI00190,data/raw/mri_images/ADC/MRI00190.png,data/pixel_images/mri/ADC/MRI00190.png,PNG,PNG,256,256,L,1,"(256, 256)",15.0,225.0,75.85,66.0,1657,1657,SUCCESS
+MRI00191,data/raw/mri_images/ADC/MRI00191.png,data/pixel_images/mri/ADC/MRI00191.png,PNG,PNG,256,256,L,1,"(256, 256)",10.0,220.0,70.03,65.74,1662,1662,SUCCESS
+MRI00192,data/raw/mri_images/ADC/MRI00192.png,data/pixel_images/mri/ADC/MRI00192.png,PNG,PNG,256,256,L,1,"(256, 256)",16.0,226.0,76.83,66.01,1653,1653,SUCCESS
+MRI00193,data/raw/mri_images/ADC/MRI00193.png,data/pixel_images/mri/ADC/MRI00193.png,PNG,PNG,256,256,L,1,"(256, 256)",13.0,223.0,73.84,65.99,1670,1670,SUCCESS
+MRI00194,data/raw/mri_images/ADC/MRI00194.png,data/pixel_images/mri/ADC/MRI00194.png,PNG,PNG,256,256,L,1,"(256, 256)",15.0,225.0,75.17,65.69,1658,1658,SUCCESS
+MRI00195,data/raw/mri_images/ADC/MRI00195.png,data/pixel_images/mri/ADC/MRI00195.png,PNG,PNG,256,256,L,1,"(256, 256)",15.0,225.0,75.26,65.87,1678,1678,SUCCESS
+MRI00196,data/raw/mri_images/ADC/MRI00196.png,data/pixel_images/mri/ADC/MRI00196.png,PNG,PNG,256,256,L,1,"(256, 256)",15.0,225.0,75.66,65.98,1654,1654,SUCCESS
+MRI00197,data/raw/mri_images/ADC/MRI00197.png,data/pixel_images/mri/ADC/MRI00197.png,PNG,PNG,256,256,L,1,"(256, 256)",6.0,216.0,67.0,65.98,1625,1625,SUCCESS
+MRI00198,data/raw/mri_images/ADC/MRI00198.png,data/pixel_images/mri/ADC/MRI00198.png,PNG,PNG,256,256,L,1,"(256, 256)",12.0,222.0,72.02,65.78,1689,1689,SUCCESS
+MRI00199,data/raw/mri_images/ADC/MRI00199.png,data/pixel_images/mri/ADC/MRI00199.png,PNG,PNG,256,256,L,1,"(256, 256)",4.0,214.0,63.7,65.55,1667,1667,SUCCESS
+MRI00200,data/raw/mri_images/ADC/MRI00200.png,data/pixel_images/mri/ADC/MRI00200.png,PNG,PNG,256,256,L,1,"(256, 256)",5.0,215.0,64.38,65.33,1637,1637,SUCCESS
+MRI00121,data/raw/mri_images/DWI/MRI00121.png,data/pixel_images/mri/DWI/MRI00121.png,PNG,PNG,256,256,L,1,"(256, 256)",7.0,247.0,34.79,40.92,1543,1543,SUCCESS
+MRI00122,data/raw/mri_images/DWI/MRI00122.png,data/pixel_images/mri/DWI/MRI00122.png,PNG,PNG,256,256,L,1,"(256, 256)",12.0,252.0,36.9,32.18,1496,1496,SUCCESS
+MRI00123,data/raw/mri_images/DWI/MRI00123.png,data/pixel_images/mri/DWI/MRI00123.png,PNG,PNG,256,256,L,1,"(256, 256)",15.0,255.0,42.71,40.79,1574,1574,SUCCESS
+MRI00124,data/raw/mri_images/DWI/MRI00124.png,data/pixel_images/mri/DWI/MRI00124.png,PNG,PNG,256,256,L,1,"(256, 256)",12.0,252.0,36.9,32.18,1510,1510,SUCCESS
+MRI00125,data/raw/mri_images/DWI/MRI00125.png,data/pixel_images/mri/DWI/MRI00125.png,PNG,PNG,256,256,L,1,"(256, 256)",15.0,255.0,40.5,34.23,1516,1516,SUCCESS
+MRI00126,data/raw/mri_images/DWI/MRI00126.png,data/pixel_images/mri/DWI/MRI00126.png,PNG,PNG,256,256,L,1,"(256, 256)",16.0,255.0,41.19,33.13,1478,1478,SUCCESS
+MRI00127,data/raw/mri_images/DWI/MRI00127.png,data/pixel_images/mri/DWI/MRI00127.png,PNG,PNG,256,256,L,1,"(256, 256)",6.0,246.0,33.34,39.72,1526,1526,SUCCESS
+MRI00128,data/raw/mri_images/DWI/MRI00128.png,data/pixel_images/mri/DWI/MRI00128.png,PNG,PNG,256,256,L,1,"(256, 256)",16.0,255.0,43.67,40.64,1531,1531,SUCCESS
+MRI00129,data/raw/mri_images/DWI/MRI00129.png,data/pixel_images/mri/DWI/MRI00129.png,PNG,PNG,256,256,L,1,"(256, 256)",10.0,250.0,36.16,36.39,1528,1528,SUCCESS
+MRI00130,data/raw/mri_images/DWI/MRI00130.png,data/pixel_images/mri/DWI/MRI00130.png,PNG,PNG,256,256,L,1,"(256, 256)",12.0,252.0,38.16,36.37,1531,1531,SUCCESS
+MRI00131,data/raw/mri_images/DWI/MRI00131.png,data/pixel_images/mri/DWI/MRI00131.png,PNG,PNG,256,256,L,1,"(256, 256)",11.0,251.0,38.73,40.86,1570,1570,SUCCESS
+MRI00132,data/raw/mri_images/DWI/MRI00132.png,data/pixel_images/mri/DWI/MRI00132.png,PNG,PNG,256,256,L,1,"(256, 256)",9.0,249.0,37.18,42.1,1522,1522,SUCCESS
+MRI00133,data/raw/mri_images/DWI/MRI00133.png,data/pixel_images/mri/DWI/MRI00133.png,PNG,PNG,256,256,L,1,"(256, 256)",13.0,253.0,40.38,39.72,1541,1541,SUCCESS
+MRI00134,data/raw/mri_images/DWI/MRI00134.png,data/pixel_images/mri/DWI/MRI00134.png,PNG,PNG,256,256,L,1,"(256, 256)",4.0,244.0,30.19,36.4,1535,1535,SUCCESS
+MRI00135,data/raw/mri_images/DWI/MRI00135.png,data/pixel_images/mri/DWI/MRI00135.png,PNG,PNG,256,256,L,1,"(256, 256)",5.0,245.0,31.91,38.59,1546,1546,SUCCESS
+MRI00136,data/raw/mri_images/DWI/MRI00136.png,data/pixel_images/mri/DWI/MRI00136.png,PNG,PNG,256,256,L,1,"(256, 256)",13.0,253.0,38.19,33.24,1509,1509,SUCCESS
+MRI00137,data/raw/mri_images/DWI/MRI00137.png,data/pixel_images/mri/DWI/MRI00137.png,PNG,PNG,256,256,L,1,"(256, 256)",16.0,255.0,40.85,31.94,1514,1514,SUCCESS
+MRI00138,data/raw/mri_images/DWI/MRI00138.png,data/pixel_images/mri/DWI/MRI00138.png,PNG,PNG,256,256,L,1,"(256, 256)",14.0,254.0,42.15,41.99,1576,1576,SUCCESS
+MRI00139,data/raw/mri_images/DWI/MRI00139.png,data/pixel_images/mri/DWI/MRI00139.png,PNG,PNG,256,256,L,1,"(256, 256)",9.0,249.0,37.16,42.13,1570,1570,SUCCESS
+MRI00140,data/raw/mri_images/DWI/MRI00140.png,data/pixel_images/mri/DWI/MRI00140.png,PNG,PNG,256,256,L,1,"(256, 256)",4.0,244.0,29.19,33.11,1499,1499,SUCCESS
+MRI00141,data/raw/mri_images/DWI/MRI00141.png,data/pixel_images/mri/DWI/MRI00141.png,PNG,PNG,256,256,L,1,"(256, 256)",4.0,244.0,29.84,35.31,1520,1520,SUCCESS
+MRI00142,data/raw/mri_images/DWI/MRI00142.png,data/pixel_images/mri/DWI/MRI00142.png,PNG,PNG,256,256,L,1,"(256, 256)",9.0,249.0,37.59,43.23,1575,1575,SUCCESS
+MRI00143,data/raw/mri_images/DWI/MRI00143.png,data/pixel_images/mri/DWI/MRI00143.png,PNG,PNG,256,256,L,1,"(256, 256)",14.0,254.0,38.9,32.15,1491,1491,SUCCESS
+MRI00144,data/raw/mri_images/DWI/MRI00144.png,data/pixel_images/mri/DWI/MRI00144.png,PNG,PNG,256,256,L,1,"(256, 256)",10.0,250.0,35.49,34.21,1516,1516,SUCCESS
+MRI00145,data/raw/mri_images/DWI/MRI00145.png,data/pixel_images/mri/DWI/MRI00145.png,PNG,PNG,256,256,L,1,"(256, 256)",4.0,244.0,29.51,34.16,1503,1503,SUCCESS
+MRI00146,data/raw/mri_images/DWI/MRI00146.png,data/pixel_images/mri/DWI/MRI00146.png,PNG,PNG,256,256,L,1,"(256, 256)",14.0,254.0,40.55,37.5,1543,1543,SUCCESS
+MRI00147,data/raw/mri_images/DWI/MRI00147.png,data/pixel_images/mri/DWI/MRI00147.png,PNG,PNG,256,256,L,1,"(256, 256)",6.0,246.0,32.98,38.55,1511,1511,SUCCESS
+MRI00148,data/raw/mri_images/DWI/MRI00148.png,data/pixel_images/mri/DWI/MRI00148.png,PNG,PNG,256,256,L,1,"(256, 256)",13.0,253.0,41.59,43.18,1570,1570,SUCCESS
+MRI00149,data/raw/mri_images/DWI/MRI00149.png,data/pixel_images/mri/DWI/MRI00149.png,PNG,PNG,256,256,L,1,"(256, 256)",10.0,250.0,38.17,42.13,1558,1558,SUCCESS
+MRI00150,data/raw/mri_images/DWI/MRI00150.png,data/pixel_images/mri/DWI/MRI00150.png,PNG,PNG,256,256,L,1,"(256, 256)",5.0,245.0,33.59,43.21,1586,1586,SUCCESS
+MRI00151,data/raw/mri_images/DWI/MRI00151.png,data/pixel_images/mri/DWI/MRI00151.png,PNG,PNG,256,256,L,1,"(256, 256)",11.0,251.0,39.59,43.22,1577,1577,SUCCESS
+MRI00152,data/raw/mri_images/DWI/MRI00152.png,data/pixel_images/mri/DWI/MRI00152.png,PNG,PNG,256,256,L,1,"(256, 256)",6.0,246.0,32.18,36.39,1540,1540,SUCCESS
+MRI00153,data/raw/mri_images/DWI/MRI00153.png,data/pixel_images/mri/DWI/MRI00153.png,PNG,PNG,256,256,L,1,"(256, 256)",9.0,249.0,36.75,40.95,1549,1549,SUCCESS
+MRI00154,data/raw/mri_images/DWI/MRI00154.png,data/pixel_images/mri/DWI/MRI00154.png,PNG,PNG,256,256,L,1,"(256, 256)",13.0,253.0,40.3,39.71,1564,1564,SUCCESS
+MRI00155,data/raw/mri_images/DWI/MRI00155.png,data/pixel_images/mri/DWI/MRI00155.png,PNG,PNG,256,256,L,1,"(256, 256)",5.0,245.0,32.31,39.74,1566,1566,SUCCESS
+MRI00156,data/raw/mri_images/DWI/MRI00156.png,data/pixel_images/mri/DWI/MRI00156.png,PNG,PNG,256,256,L,1,"(256, 256)",4.0,244.0,31.79,41.05,1539,1539,SUCCESS
+MRI00157,data/raw/mri_images/DWI/MRI00157.png,data/pixel_images/mri/DWI/MRI00157.png,PNG,PNG,256,256,L,1,"(256, 256)",11.0,251.0,39.16,42.07,1597,1597,SUCCESS
+MRI00158,data/raw/mri_images/DWI/MRI00158.png,data/pixel_images/mri/DWI/MRI00158.png,PNG,PNG,256,256,L,1,"(256, 256)",6.0,246.0,30.9,32.13,1467,1467,SUCCESS
+MRI00159,data/raw/mri_images/DWI/MRI00159.png,data/pixel_images/mri/DWI/MRI00159.png,PNG,PNG,256,256,L,1,"(256, 256)",11.0,251.0,37.55,37.42,1507,1507,SUCCESS
+MRI00160,data/raw/mri_images/DWI/MRI00160.png,data/pixel_images/mri/DWI/MRI00160.png,PNG,PNG,256,256,L,1,"(256, 256)",8.0,248.0,34.94,38.67,1554,1554,SUCCESS
+MRI00081,data/raw/mri_images/FLAIR/MRI00081.png,data/pixel_images/mri/FLAIR/MRI00081.png,PNG,PNG,256,256,L,1,"(256, 256)",12.0,242.0,51.83,49.06,1615,1615,SUCCESS
+MRI00082,data/raw/mri_images/FLAIR/MRI00082.png,data/pixel_images/mri/FLAIR/MRI00082.png,PNG,PNG,256,256,L,1,"(256, 256)",13.0,243.0,51.11,45.37,1610,1610,SUCCESS
+MRI00083,data/raw/mri_images/FLAIR/MRI00083.png,data/pixel_images/mri/FLAIR/MRI00083.png,PNG,PNG,256,256,L,1,"(256, 256)",16.0,246.0,55.08,47.45,1621,1621,SUCCESS
+MRI00084,data/raw/mri_images/FLAIR/MRI00084.png,data/pixel_images/mri/FLAIR/MRI00084.png,PNG,PNG,256,256,L,1,"(256, 256)",5.0,235.0,44.03,47.6,1668,1668,SUCCESS
+MRI00085,data/raw/mri_images/FLAIR/MRI00085.png,data/pixel_images/mri/FLAIR/MRI00085.png,PNG,PNG,256,256,L,1,"(256, 256)",12.0,242.0,49.09,42.76,1578,1578,SUCCESS
+MRI00086,data/raw/mri_images/FLAIR/MRI00086.png,data/pixel_images/mri/FLAIR/MRI00086.png,PNG,PNG,256,256,L,1,"(256, 256)",5.0,235.0,43.66,46.71,1626,1626,SUCCESS
+MRI00087,data/raw/mri_images/FLAIR/MRI00087.png,data/pixel_images/mri/FLAIR/MRI00087.png,PNG,PNG,256,256,L,1,"(256, 256)",11.0,241.0,51.26,49.82,1620,1620,SUCCESS
+MRI00088,data/raw/mri_images/FLAIR/MRI00088.png,data/pixel_images/mri/FLAIR/MRI00088.png,PNG,PNG,256,256,L,1,"(256, 256)",4.0,234.0,43.16,47.38,1577,1577,SUCCESS
+MRI00089,data/raw/mri_images/FLAIR/MRI00089.png,data/pixel_images/mri/FLAIR/MRI00089.png,PNG,PNG,256,256,L,1,"(256, 256)",10.0,240.0,49.67,49.08,1659,1659,SUCCESS
+MRI00090,data/raw/mri_images/FLAIR/MRI00090.png,data/pixel_images/mri/FLAIR/MRI00090.png,PNG,PNG,256,256,L,1,"(256, 256)",6.0,236.0,45.72,49.01,1596,1596,SUCCESS
+MRI00091,data/raw/mri_images/FLAIR/MRI00091.png,data/pixel_images/mri/FLAIR/MRI00091.png,PNG,PNG,256,256,L,1,"(256, 256)",10.0,240.0,47.57,44.02,1640,1640,SUCCESS
+MRI00092,data/raw/mri_images/FLAIR/MRI00092.png,data/pixel_images/mri/FLAIR/MRI00092.png,PNG,PNG,256,256,L,1,"(256, 256)",14.0,244.0,51.3,43.33,1626,1626,SUCCESS
+MRI00093,data/raw/mri_images/FLAIR/MRI00093.png,data/pixel_images/mri/FLAIR/MRI00093.png,PNG,PNG,256,256,L,1,"(256, 256)",8.0,238.0,45.31,43.34,1583,1583,SUCCESS
+MRI00094,data/raw/mri_images/FLAIR/MRI00094.png,data/pixel_images/mri/FLAIR/MRI00094.png,PNG,PNG,256,256,L,1,"(256, 256)",11.0,241.0,48.84,44.65,1611,1611,SUCCESS
+MRI00095,data/raw/mri_images/FLAIR/MRI00095.png,data/pixel_images/mri/FLAIR/MRI00095.png,PNG,PNG,256,256,L,1,"(256, 256)",8.0,238.0,46.75,46.77,1622,1622,SUCCESS
+MRI00096,data/raw/mri_images/FLAIR/MRI00096.png,data/pixel_images/mri/FLAIR/MRI00096.png,PNG,PNG,256,256,L,1,"(256, 256)",6.0,236.0,45.36,48.38,1634,1634,SUCCESS
+MRI00097,data/raw/mri_images/FLAIR/MRI00097.png,data/pixel_images/mri/FLAIR/MRI00097.png,PNG,PNG,256,256,L,1,"(256, 256)",10.0,240.0,49.59,48.34,1603,1603,SUCCESS
+MRI00098,data/raw/mri_images/FLAIR/MRI00098.png,data/pixel_images/mri/FLAIR/MRI00098.png,PNG,PNG,256,256,L,1,"(256, 256)",4.0,234.0,41.32,43.41,1569,1569,SUCCESS
+MRI00099,data/raw/mri_images/FLAIR/MRI00099.png,data/pixel_images/mri/FLAIR/MRI00099.png,PNG,PNG,256,256,L,1,"(256, 256)",8.0,238.0,47.61,48.17,1594,1594,SUCCESS
+MRI00100,data/raw/mri_images/FLAIR/MRI00100.png,data/pixel_images/mri/FLAIR/MRI00100.png,PNG,PNG,256,256,L,1,"(256, 256)",11.0,241.0,50.37,48.41,1663,1663,SUCCESS
+MRI00101,data/raw/mri_images/FLAIR/MRI00101.png,data/pixel_images/mri/FLAIR/MRI00101.png,PNG,PNG,256,256,L,1,"(256, 256)",9.0,239.0,47.35,45.98,1639,1639,SUCCESS
+MRI00102,data/raw/mri_images/FLAIR/MRI00102.png,data/pixel_images/mri/FLAIR/MRI00102.png,PNG,PNG,256,256,L,1,"(256, 256)",7.0,237.0,46.1,47.44,1594,1594,SUCCESS
+MRI00103,data/raw/mri_images/FLAIR/MRI00103.png,data/pixel_images/mri/FLAIR/MRI00103.png,PNG,PNG,256,256,L,1,"(256, 256)",6.0,236.0,43.08,42.71,1568,1568,SUCCESS
+MRI00104,data/raw/mri_images/FLAIR/MRI00104.png,data/pixel_images/mri/FLAIR/MRI00104.png,PNG,PNG,256,256,L,1,"(256, 256)",8.0,238.0,48.41,49.69,1626,1626,SUCCESS
+MRI00105,data/raw/mri_images/FLAIR/MRI00105.png,data/pixel_images/mri/FLAIR/MRI00105.png,PNG,PNG,256,256,L,1,"(256, 256)",6.0,236.0,45.34,48.31,1640,1640,SUCCESS
+MRI00106,data/raw/mri_images/FLAIR/MRI00106.png,data/pixel_images/mri/FLAIR/MRI00106.png,PNG,PNG,256,256,L,1,"(256, 256)",6.0,236.0,44.35,45.98,1616,1616,SUCCESS
+MRI00107,data/raw/mri_images/FLAIR/MRI00107.png,data/pixel_images/mri/FLAIR/MRI00107.png,PNG,PNG,256,256,L,1,"(256, 256)",8.0,238.0,46.86,46.66,1595,1595,SUCCESS
+MRI00108,data/raw/mri_images/FLAIR/MRI00108.png,data/pixel_images/mri/FLAIR/MRI00108.png,PNG,PNG,256,256,L,1,"(256, 256)",5.0,235.0,43.36,46.0,1622,1622,SUCCESS
+MRI00109,data/raw/mri_images/FLAIR/MRI00109.png,data/pixel_images/mri/FLAIR/MRI00109.png,PNG,PNG,256,256,L,1,"(256, 256)",8.0,238.0,46.41,45.96,1589,1589,SUCCESS
+MRI00110,data/raw/mri_images/FLAIR/MRI00110.png,data/pixel_images/mri/FLAIR/MRI00110.png,PNG,PNG,256,256,L,1,"(256, 256)",9.0,239.0,46.08,42.72,1564,1564,SUCCESS
+MRI00111,data/raw/mri_images/FLAIR/MRI00111.png,data/pixel_images/mri/FLAIR/MRI00111.png,PNG,PNG,256,256,L,1,"(256, 256)",9.0,239.0,46.6,43.96,1586,1586,SUCCESS
+MRI00112,data/raw/mri_images/FLAIR/MRI00112.png,data/pixel_images/mri/FLAIR/MRI00112.png,PNG,PNG,256,256,L,1,"(256, 256)",9.0,239.0,48.15,47.41,1626,1626,SUCCESS
+MRI00113,data/raw/mri_images/FLAIR/MRI00113.png,data/pixel_images/mri/FLAIR/MRI00113.png,PNG,PNG,256,256,L,1,"(256, 256)",8.0,238.0,45.11,42.83,1563,1563,SUCCESS
+MRI00114,data/raw/mri_images/FLAIR/MRI00114.png,data/pixel_images/mri/FLAIR/MRI00114.png,PNG,PNG,256,256,L,1,"(256, 256)",7.0,237.0,46.94,48.96,1582,1582,SUCCESS
+MRI00115,data/raw/mri_images/FLAIR/MRI00115.png,data/pixel_images/mri/FLAIR/MRI00115.png,PNG,PNG,256,256,L,1,"(256, 256)",16.0,246.0,54.65,46.7,1639,1639,SUCCESS
+MRI00116,data/raw/mri_images/FLAIR/MRI00116.png,data/pixel_images/mri/FLAIR/MRI00116.png,PNG,PNG,256,256,L,1,"(256, 256)",12.0,242.0,51.67,49.05,1639,1639,SUCCESS
+MRI00117,data/raw/mri_images/FLAIR/MRI00117.png,data/pixel_images/mri/FLAIR/MRI00117.png,PNG,PNG,256,256,L,1,"(256, 256)",8.0,238.0,48.04,49.01,1611,1611,SUCCESS
+MRI00118,data/raw/mri_images/FLAIR/MRI00118.png,data/pixel_images/mri/FLAIR/MRI00118.png,PNG,PNG,256,256,L,1,"(256, 256)",12.0,242.0,49.12,42.86,1614,1614,SUCCESS
+MRI00119,data/raw/mri_images/FLAIR/MRI00119.png,data/pixel_images/mri/FLAIR/MRI00119.png,PNG,PNG,256,256,L,1,"(256, 256)",6.0,236.0,45.52,48.26,1592,1592,SUCCESS
+MRI00120,data/raw/mri_images/FLAIR/MRI00120.png,data/pixel_images/mri/FLAIR/MRI00120.png,PNG,PNG,256,256,L,1,"(256, 256)",14.0,244.0,53.74,49.05,1618,1618,SUCCESS
+MRI00001,data/raw/mri_images/T1/MRI00001.png,data/pixel_images/mri/T1/MRI00001.png,PNG,PNG,256,256,L,1,"(256, 256)",15.0,115.0,58.63,47.13,1579,1579,SUCCESS
+MRI00002,data/raw/mri_images/T1/MRI00002.png,data/pixel_images/mri/T1/MRI00002.png,PNG,PNG,256,256,L,1,"(256, 256)",4.0,104.0,47.35,46.95,1650,1650,SUCCESS
+MRI00003,data/raw/mri_images/T1/MRI00003.png,data/pixel_images/mri/T1/MRI00003.png,PNG,PNG,256,256,L,1,"(256, 256)",13.0,113.0,56.54,47.08,1612,1612,SUCCESS
+MRI00004,data/raw/mri_images/T1/MRI00004.png,data/pixel_images/mri/T1/MRI00004.png,PNG,PNG,256,256,L,1,"(256, 256)",6.0,106.0,49.84,47.34,1585,1585,SUCCESS
+MRI00005,data/raw/mri_images/T1/MRI00005.png,data/pixel_images/mri/T1/MRI00005.png,PNG,PNG,256,256,L,1,"(256, 256)",5.0,105.0,48.55,47.02,1599,1599,SUCCESS
+MRI00006,data/raw/mri_images/T1/MRI00006.png,data/pixel_images/mri/T1/MRI00006.png,PNG,PNG,256,256,L,1,"(256, 256)",10.0,110.0,53.43,47.0,1598,1598,SUCCESS
+MRI00007,data/raw/mri_images/T1/MRI00007.png,data/pixel_images/mri/T1/MRI00007.png,PNG,PNG,256,256,L,1,"(256, 256)",12.0,112.0,55.83,47.31,1618,1618,SUCCESS
+MRI00008,data/raw/mri_images/T1/MRI00008.png,data/pixel_images/mri/T1/MRI00008.png,PNG,PNG,256,256,L,1,"(256, 256)",14.0,114.0,57.53,47.07,1632,1632,SUCCESS
+MRI00009,data/raw/mri_images/T1/MRI00009.png,data/pixel_images/mri/T1/MRI00009.png,PNG,PNG,256,256,L,1,"(256, 256)",7.0,107.0,50.84,47.26,1595,1595,SUCCESS
+MRI00010,data/raw/mri_images/T1/MRI00010.png,data/pixel_images/mri/T1/MRI00010.png,PNG,PNG,256,256,L,1,"(256, 256)",14.0,114.0,57.41,47.0,1593,1593,SUCCESS
+MRI00011,data/raw/mri_images/T1/MRI00011.png,data/pixel_images/mri/T1/MRI00011.png,PNG,PNG,256,256,L,1,"(256, 256)",16.0,116.0,59.9,47.36,1624,1624,SUCCESS
+MRI00012,data/raw/mri_images/T1/MRI00012.png,data/pixel_images/mri/T1/MRI00012.png,PNG,PNG,256,256,L,1,"(256, 256)",14.0,114.0,57.28,46.85,1613,1613,SUCCESS
+MRI00013,data/raw/mri_images/T1/MRI00013.png,data/pixel_images/mri/T1/MRI00013.png,PNG,PNG,256,256,L,1,"(256, 256)",8.0,108.0,51.74,47.25,1584,1584,SUCCESS
+MRI00014,data/raw/mri_images/T1/MRI00014.png,data/pixel_images/mri/T1/MRI00014.png,PNG,PNG,256,256,L,1,"(256, 256)",14.0,114.0,57.97,47.39,1580,1580,SUCCESS
+MRI00015,data/raw/mri_images/T1/MRI00015.png,data/pixel_images/mri/T1/MRI00015.png,PNG,PNG,256,256,L,1,"(256, 256)",5.0,105.0,48.9,47.38,1620,1620,SUCCESS
+MRI00016,data/raw/mri_images/T1/MRI00016.png,data/pixel_images/mri/T1/MRI00016.png,PNG,PNG,256,256,L,1,"(256, 256)",14.0,114.0,57.43,46.96,1607,1607,SUCCESS
+MRI00017,data/raw/mri_images/T1/MRI00017.png,data/pixel_images/mri/T1/MRI00017.png,PNG,PNG,256,256,L,1,"(256, 256)",10.0,110.0,53.75,47.26,1615,1615,SUCCESS
+MRI00018,data/raw/mri_images/T1/MRI00018.png,data/pixel_images/mri/T1/MRI00018.png,PNG,PNG,256,256,L,1,"(256, 256)",10.0,110.0,53.79,47.3,1571,1571,SUCCESS
+MRI00019,data/raw/mri_images/T1/MRI00019.png,data/pixel_images/mri/T1/MRI00019.png,PNG,PNG,256,256,L,1,"(256, 256)",8.0,108.0,51.32,46.93,1585,1585,SUCCESS
+MRI00020,data/raw/mri_images/T1/MRI00020.png,data/pixel_images/mri/T1/MRI00020.png,PNG,PNG,256,256,L,1,"(256, 256)",10.0,110.0,53.76,47.24,1580,1580,SUCCESS
+MRI00021,data/raw/mri_images/T1/MRI00021.png,data/pixel_images/mri/T1/MRI00021.png,PNG,PNG,256,256,L,1,"(256, 256)",9.0,109.0,52.83,47.31,1609,1609,SUCCESS
+MRI00022,data/raw/mri_images/T1/MRI00022.png,data/pixel_images/mri/T1/MRI00022.png,PNG,PNG,256,256,L,1,"(256, 256)",15.0,115.0,58.8,47.27,1593,1593,SUCCESS
+MRI00023,data/raw/mri_images/T1/MRI00023.png,data/pixel_images/mri/T1/MRI00023.png,PNG,PNG,256,256,L,1,"(256, 256)",4.0,104.0,47.36,46.96,1630,1630,SUCCESS
+MRI00024,data/raw/mri_images/T1/MRI00024.png,data/pixel_images/mri/T1/MRI00024.png,PNG,PNG,256,256,L,1,"(256, 256)",9.0,109.0,52.53,47.07,1610,1610,SUCCESS
+MRI00025,data/raw/mri_images/T1/MRI00025.png,data/pixel_images/mri/T1/MRI00025.png,PNG,PNG,256,256,L,1,"(256, 256)",4.0,104.0,47.69,47.18,1581,1581,SUCCESS
+MRI00026,data/raw/mri_images/T1/MRI00026.png,data/pixel_images/mri/T1/MRI00026.png,PNG,PNG,256,256,L,1,"(256, 256)",14.0,114.0,57.9,47.37,1574,1574,SUCCESS
+MRI00027,data/raw/mri_images/T1/MRI00027.png,data/pixel_images/mri/T1/MRI00027.png,PNG,PNG,256,256,L,1,"(256, 256)",16.0,116.0,59.61,47.12,1594,1594,SUCCESS
+MRI00028,data/raw/mri_images/T1/MRI00028.png,data/pixel_images/mri/T1/MRI00028.png,PNG,PNG,256,256,L,1,"(256, 256)",16.0,116.0,59.91,47.35,1573,1573,SUCCESS
+MRI00029,data/raw/mri_images/T1/MRI00029.png,data/pixel_images/mri/T1/MRI00029.png,PNG,PNG,256,256,L,1,"(256, 256)",5.0,105.0,48.71,47.24,1590,1590,SUCCESS
+MRI00030,data/raw/mri_images/T1/MRI00030.png,data/pixel_images/mri/T1/MRI00030.png,PNG,PNG,256,256,L,1,"(256, 256)",15.0,115.0,58.95,47.42,1603,1603,SUCCESS
+MRI00031,data/raw/mri_images/T1/MRI00031.png,data/pixel_images/mri/T1/MRI00031.png,PNG,PNG,256,256,L,1,"(256, 256)",12.0,112.0,56.02,47.45,1581,1581,SUCCESS
+MRI00032,data/raw/mri_images/T1/MRI00032.png,data/pixel_images/mri/T1/MRI00032.png,PNG,PNG,256,256,L,1,"(256, 256)",15.0,115.0,58.87,47.3,1590,1590,SUCCESS
+MRI00033,data/raw/mri_images/T1/MRI00033.png,data/pixel_images/mri/T1/MRI00033.png,PNG,PNG,256,256,L,1,"(256, 256)",5.0,105.0,48.36,46.94,1624,1624,SUCCESS
+MRI00034,data/raw/mri_images/T1/MRI00034.png,data/pixel_images/mri/T1/MRI00034.png,PNG,PNG,256,256,L,1,"(256, 256)",13.0,113.0,56.71,47.23,1603,1603,SUCCESS
+MRI00035,data/raw/mri_images/T1/MRI00035.png,data/pixel_images/mri/T1/MRI00035.png,PNG,PNG,256,256,L,1,"(256, 256)",10.0,110.0,53.36,46.95,1628,1628,SUCCESS
+MRI00036,data/raw/mri_images/T1/MRI00036.png,data/pixel_images/mri/T1/MRI00036.png,PNG,PNG,256,256,L,1,"(256, 256)",14.0,114.0,57.96,47.42,1615,1615,SUCCESS
+MRI00037,data/raw/mri_images/T1/MRI00037.png,data/pixel_images/mri/T1/MRI00037.png,PNG,PNG,256,256,L,1,"(256, 256)",15.0,115.0,58.72,47.19,1603,1603,SUCCESS
+MRI00038,data/raw/mri_images/T1/MRI00038.png,data/pixel_images/mri/T1/MRI00038.png,PNG,PNG,256,256,L,1,"(256, 256)",8.0,108.0,51.95,47.41,1607,1607,SUCCESS
+MRI00039,data/raw/mri_images/T1/MRI00039.png,data/pixel_images/mri/T1/MRI00039.png,PNG,PNG,256,256,L,1,"(256, 256)",7.0,107.0,50.95,47.43,1594,1594,SUCCESS
+MRI00040,data/raw/mri_images/T1/MRI00040.png,data/pixel_images/mri/T1/MRI00040.png,PNG,PNG,256,256,L,1,"(256, 256)",9.0,109.0,52.36,46.93,1644,1644,SUCCESS
+MRI00041,data/raw/mri_images/T2/MRI00041.png,data/pixel_images/mri/T2/MRI00041.png,PNG,PNG,256,256,L,1,"(256, 256)",4.0,224.0,51.79,55.3,1653,1653,SUCCESS
+MRI00042,data/raw/mri_images/T2/MRI00042.png,data/pixel_images/mri/T2/MRI00042.png,PNG,PNG,256,256,L,1,"(256, 256)",16.0,236.0,62.97,53.98,1604,1604,SUCCESS
+MRI00043,data/raw/mri_images/T2/MRI00043.png,data/pixel_images/mri/T2/MRI00043.png,PNG,PNG,256,256,L,1,"(256, 256)",10.0,230.0,56.61,53.33,1639,1639,SUCCESS
+MRI00044,data/raw/mri_images/T2/MRI00044.png,data/pixel_images/mri/T2/MRI00044.png,PNG,PNG,256,256,L,1,"(256, 256)",14.0,234.0,62.01,55.68,1641,1641,SUCCESS
+MRI00045,data/raw/mri_images/T2/MRI00045.png,data/pixel_images/mri/T2/MRI00045.png,PNG,PNG,256,256,L,1,"(256, 256)",4.0,224.0,51.56,54.96,1640,1640,SUCCESS
+MRI00046,data/raw/mri_images/T2/MRI00046.png,data/pixel_images/mri/T2/MRI00046.png,PNG,PNG,256,256,L,1,"(256, 256)",12.0,232.0,58.6,53.3,1635,1635,SUCCESS
+MRI00047,data/raw/mri_images/T2/MRI00047.png,data/pixel_images/mri/T2/MRI00047.png,PNG,PNG,256,256,L,1,"(256, 256)",4.0,224.0,51.63,55.07,1604,1604,SUCCESS
+MRI00048,data/raw/mri_images/T2/MRI00048.png,data/pixel_images/mri/T2/MRI00048.png,PNG,PNG,256,256,L,1,"(256, 256)",15.0,235.0,61.44,53.1,1604,1604,SUCCESS
+MRI00049,data/raw/mri_images/T2/MRI00049.png,data/pixel_images/mri/T2/MRI00049.png,PNG,PNG,256,256,L,1,"(256, 256)",12.0,232.0,58.16,52.63,1584,1584,SUCCESS
+MRI00050,data/raw/mri_images/T2/MRI00050.png,data/pixel_images/mri/T2/MRI00050.png,PNG,PNG,256,256,L,1,"(256, 256)",7.0,227.0,53.61,53.38,1592,1592,SUCCESS
+MRI00051,data/raw/mri_images/T2/MRI00051.png,data/pixel_images/mri/T2/MRI00051.png,PNG,PNG,256,256,L,1,"(256, 256)",7.0,227.0,53.54,53.24,1607,1607,SUCCESS
+MRI00052,data/raw/mri_images/T2/MRI00052.png,data/pixel_images/mri/T2/MRI00052.png,PNG,PNG,256,256,L,1,"(256, 256)",6.0,226.0,53.53,54.87,1635,1635,SUCCESS
+MRI00053,data/raw/mri_images/T2/MRI00053.png,data/pixel_images/mri/T2/MRI00053.png,PNG,PNG,256,256,L,1,"(256, 256)",9.0,229.0,56.75,55.25,1610,1610,SUCCESS
+MRI00054,data/raw/mri_images/T2/MRI00054.png,data/pixel_images/mri/T2/MRI00054.png,PNG,PNG,256,256,L,1,"(256, 256)",5.0,225.0,52.81,55.36,1614,1614,SUCCESS
+MRI00055,data/raw/mri_images/T2/MRI00055.png,data/pixel_images/mri/T2/MRI00055.png,PNG,PNG,256,256,L,1,"(256, 256)",12.0,232.0,58.36,52.95,1581,1581,SUCCESS
+MRI00056,data/raw/mri_images/T2/MRI00056.png,data/pixel_images/mri/T2/MRI00056.png,PNG,PNG,256,256,L,1,"(256, 256)",16.0,236.0,62.61,53.32,1646,1646,SUCCESS
+MRI00057,data/raw/mri_images/T2/MRI00057.png,data/pixel_images/mri/T2/MRI00057.png,PNG,PNG,256,256,L,1,"(256, 256)",7.0,227.0,54.39,54.63,1593,1593,SUCCESS
+MRI00058,data/raw/mri_images/T2/MRI00058.png,data/pixel_images/mri/T2/MRI00058.png,PNG,PNG,256,256,L,1,"(256, 256)",10.0,230.0,57.9,55.5,1613,1613,SUCCESS
+MRI00059,data/raw/mri_images/T2/MRI00059.png,data/pixel_images/mri/T2/MRI00059.png,PNG,PNG,256,256,L,1,"(256, 256)",12.0,232.0,59.93,55.54,1647,1647,SUCCESS
+MRI00060,data/raw/mri_images/T2/MRI00060.png,data/pixel_images/mri/T2/MRI00060.png,PNG,PNG,256,256,L,1,"(256, 256)",7.0,227.0,53.3,52.82,1614,1614,SUCCESS
+MRI00061,data/raw/mri_images/T2/MRI00061.png,data/pixel_images/mri/T2/MRI00061.png,PNG,PNG,256,256,L,1,"(256, 256)",4.0,224.0,51.49,54.83,1620,1620,SUCCESS
+MRI00062,data/raw/mri_images/T2/MRI00062.png,data/pixel_images/mri/T2/MRI00062.png,PNG,PNG,256,256,L,1,"(256, 256)",7.0,227.0,54.94,55.59,1650,1650,SUCCESS
+MRI00063,data/raw/mri_images/T2/MRI00063.png,data/pixel_images/mri/T2/MRI00063.png,PNG,PNG,256,256,L,1,"(256, 256)",7.0,227.0,54.43,54.74,1646,1646,SUCCESS
+MRI00064,data/raw/mri_images/T2/MRI00064.png,data/pixel_images/mri/T2/MRI00064.png,PNG,PNG,256,256,L,1,"(256, 256)",9.0,229.0,55.88,53.85,1589,1589,SUCCESS
+MRI00065,data/raw/mri_images/T2/MRI00065.png,data/pixel_images/mri/T2/MRI00065.png,PNG,PNG,256,256,L,1,"(256, 256)",9.0,229.0,55.78,53.63,1632,1632,SUCCESS
+MRI00066,data/raw/mri_images/T2/MRI00066.png,data/pixel_images/mri/T2/MRI00066.png,PNG,PNG,256,256,L,1,"(256, 256)",13.0,233.0,60.12,54.23,1636,1636,SUCCESS
+MRI00067,data/raw/mri_images/T2/MRI00067.png,data/pixel_images/mri/T2/MRI00067.png,PNG,PNG,256,256,L,1,"(256, 256)",12.0,232.0,59.79,55.27,1680,1680,SUCCESS
+MRI00068,data/raw/mri_images/T2/MRI00068.png,data/pixel_images/mri/T2/MRI00068.png,PNG,PNG,256,256,L,1,"(256, 256)",13.0,233.0,59.78,53.67,1616,1616,SUCCESS
+MRI00069,data/raw/mri_images/T2/MRI00069.png,data/pixel_images/mri/T2/MRI00069.png,PNG,PNG,256,256,L,1,"(256, 256)",6.0,226.0,52.47,53.14,1565,1565,SUCCESS
+MRI00070,data/raw/mri_images/T2/MRI00070.png,data/pixel_images/mri/T2/MRI00070.png,PNG,PNG,256,256,L,1,"(256, 256)",14.0,234.0,60.97,53.95,1635,1635,SUCCESS
+MRI00071,data/raw/mri_images/T2/MRI00071.png,data/pixel_images/mri/T2/MRI00071.png,PNG,PNG,256,256,L,1,"(256, 256)",8.0,228.0,55.17,54.28,1644,1644,SUCCESS
+MRI00072,data/raw/mri_images/T2/MRI00072.png,data/pixel_images/mri/T2/MRI00072.png,PNG,PNG,256,256,L,1,"(256, 256)",12.0,232.0,59.45,54.75,1623,1623,SUCCESS
+MRI00073,data/raw/mri_images/T2/MRI00073.png,data/pixel_images/mri/T2/MRI00073.png,PNG,PNG,256,256,L,1,"(256, 256)",6.0,226.0,52.79,53.63,1646,1646,SUCCESS
+MRI00074,data/raw/mri_images/T2/MRI00074.png,data/pixel_images/mri/T2/MRI00074.png,PNG,PNG,256,256,L,1,"(256, 256)",14.0,234.0,61.56,54.92,1643,1643,SUCCESS
+MRI00075,data/raw/mri_images/T2/MRI00075.png,data/pixel_images/mri/T2/MRI00075.png,PNG,PNG,256,256,L,1,"(256, 256)",9.0,229.0,56.28,54.49,1605,1605,SUCCESS
+MRI00076,data/raw/mri_images/T2/MRI00076.png,data/pixel_images/mri/T2/MRI00076.png,PNG,PNG,256,256,L,1,"(256, 256)",9.0,229.0,55.61,53.31,1622,1622,SUCCESS
+MRI00077,data/raw/mri_images/T2/MRI00077.png,data/pixel_images/mri/T2/MRI00077.png,PNG,PNG,256,256,L,1,"(256, 256)",5.0,225.0,52.54,54.88,1646,1646,SUCCESS
+MRI00078,data/raw/mri_images/T2/MRI00078.png,data/pixel_images/mri/T2/MRI00078.png,PNG,PNG,256,256,L,1,"(256, 256)",9.0,229.0,57.23,56.0,1667,1667,SUCCESS
+MRI00079,data/raw/mri_images/T2/MRI00079.png,data/pixel_images/mri/T2/MRI00079.png,PNG,PNG,256,256,L,1,"(256, 256)",8.0,228.0,54.55,53.24,1614,1614,SUCCESS
+MRI00080,data/raw/mri_images/T2/MRI00080.png,data/pixel_images/mri/T2/MRI00080.png,PNG,PNG,256,256,L,1,"(256, 256)",10.0,230.0,56.43,53.02,1626,1626,SUCCESS

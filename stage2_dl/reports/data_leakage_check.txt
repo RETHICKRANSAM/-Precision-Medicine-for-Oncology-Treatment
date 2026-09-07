@@ -1,0 +1,16 @@
+==================================================
+STAGE 02 DEEP LEARNING DATASET LEAKAGE AUDIT REPORT
+==================================================
+
+Total Unique Patients: 196
+Train Patients (70%): 137
+Validation Patients (15%): 29
+Test Patients (15%): 30
+
+PATIENT-LEVEL OVERLAP CHECK:
+  Train vs Validation Patient Overlap: 0
+  Train vs Test Patient Overlap: 0
+  Validation vs Test Patient Overlap: 0
+
+DATA LEAKAGE CHECK STATUS: PASS
+==================================================

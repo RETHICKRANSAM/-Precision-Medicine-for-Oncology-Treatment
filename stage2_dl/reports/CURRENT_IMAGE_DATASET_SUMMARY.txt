@@ -1,0 +1,76 @@
+========================================
+CURRENT STAGE 02 IMAGE DATASET
+========================================
+
+TOTAL IMAGES:
+750
+
+TOTAL PATIENTS:
+196
+
+IMAGE MODALITIES:
+Histopathology, CT, MRI
+
+BODY PARTS / ORGANS:
+Brain, Breast, Colon, Liver, Lung, Prostate, Skin
+
+----------------------------------------
+HISTOPATHOLOGY
+----------------------------------------
+Images: 350
+Patients: 175
+Body Parts: Brain, Breast, Colon, Liver, Lung, Prostate, Skin
+Classes: Atypical, Benign, Inflammatory, Malignant, Necrotic
+
+----------------------------------------
+CT
+----------------------------------------
+Images: 200
+Patients: 56
+Body Parts: Brain, Breast, Colon, Liver, Lung, Prostate, Skin
+Classes: Normal, Progression, Tumor
+
+----------------------------------------
+MRI
+----------------------------------------
+Images: 200
+Patients: 58
+Body Parts: Brain, Breast, Colon, Liver, Lung, Prostate, Skin
+MRI Sequences: ADC, DWI, FLAIR, T1, T2
+
+----------------------------------------
+BODY PART SUMMARY
+----------------------------------------
+Body Part: Brain
+Images: 134
+Modalities: CT, Histopathology, MRI
+
+Body Part: Breast
+Images: 55
+Modalities: CT, Histopathology, MRI
+
+Body Part: Colon
+Images: 81
+Modalities: CT, Histopathology, MRI
+
+Body Part: Liver
+Images: 96
+Modalities: CT, Histopathology, MRI
+
+Body Part: Lung
+Images: 191
+Modalities: CT, Histopathology, MRI
+
+Body Part: Prostate
+Images: 103
+Modalities: CT, Histopathology, MRI
+
+Body Part: Skin
+Images: 83
+Modalities: CT, Histopathology, MRI
+
+Body Part: Unknown
+Images: 7
+Modalities: CT, Histopathology, MRI
+
+========================================

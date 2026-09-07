@@ -1,0 +1,14 @@
+Modality,Class_Name,Clean_Image_Count,Percentage
+ct,normal,65,8.67
+ct,progression,65,8.67
+ct,tumor,70,9.33
+histopathology,atypical,70,9.33
+histopathology,benign,70,9.33
+histopathology,inflammatory,70,9.33
+histopathology,malignant,70,9.33
+histopathology,necrotic,70,9.33
+mri,ADC,40,5.33
+mri,DWI,40,5.33
+mri,FLAIR,40,5.33
+mri,T1,40,5.33
+mri,T2,40,5.33

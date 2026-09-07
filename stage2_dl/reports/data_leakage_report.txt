@@ -1,0 +1,16 @@
+==================================================
+STAGE 02 PATIENT-LEVEL DATA LEAKAGE AUDIT REPORT
+==================================================
+
+Total Unique Patients: 196
+  Train Patients (70%): 137
+  Validation Patients (15%): 29
+  Test Patients (15%): 30
+
+PATIENT OVERLAP AUDIT:
+  Train ∩ Validation: 0
+  Train ∩ Test: 0
+  Validation ∩ Test: 0
+
+DATA LEAKAGE STATUS: PASS
+==================================================

@@ -1,0 +1,54 @@
+==================================================
+STAGE 02 DEEP LEARNING DATASET - VALIDATION REPORT
+==================================================
+
+DISCLAIMER:
+This is a SYNTHETIC / MOCK oncology dataset for academic project development only.
+Do not use real patient data. Synthetic data is not real clinical data.
+
+--- 1. STRUCTURAL VALIDATION ---
+Total Rows: 1000 (Expected: 1000)
+Total Columns: 35 (Expected: 35)
+Column Schema Matches Expected: True
+
+--- 2. DUPLICATE CHECK ---
+Exact Duplicate Rows Found: 20
+
+--- 3. MISSING VALUE ANALYSIS ---
+  Histopathology_Image_ID: 639 missing / incomplete values (63.9%)
+  Histopathology_Image_Path: 639 missing / incomplete values (63.9%)
+  Histopathology_Label: 638 missing / incomplete values (63.8%)
+  CT_Scan_ID: 796 missing / incomplete values (79.6%)
+  CT_Scan_Path: 795 missing / incomplete values (79.5%)
+  CT_Slice_Count: 796 missing / incomplete values (79.6%)
+  MRI_Scan_ID: 797 missing / incomplete values (79.7%)
+  MRI_Scan_Path: 796 missing / incomplete values (79.6%)
+  MRI_Sequence_Type: 797 missing / incomplete values (79.7%)
+  ctDNA_Level: 56 missing / incomplete values (5.6%)
+  Protein_Marker_Level: 57 missing / incomplete values (5.7%)
+  Progression_Status: 49 missing / incomplete values (4.9%)
+Total Columns with Missing Values: 12
+
+--- 4. NUMERIC CONTAMINATION & RANGE ANOMALIES ---
+Contaminated Tumor Volume entries (e.g. '25.4 cm3'): 117
+Contaminated ctDNA Level entries (e.g. 'copies/mL'): 124
+Contaminated Protein Marker Level entries (e.g. 'ng/mL'): 120
+Invalid Age values (< 0 or > 120): 2 (Values: [-5, 145])
+
+--- 5. CATEGORICAL CONSISTENCY CHECKS ---
+Unique Sex entries (Inconsistent): ['Male', 'Female', 'M', 'male', '  Male ', 'female', 'F', 'FEMALE']
+Unique Cancer Stage entries (Inconsistent): ['I', 'Stage II', 'Stage III', 'Stage IV', 'Stage I', 'stage iv', 'IV', '  Stage III ', 'stage i']
+Unique Histopathology Labels: ['Benign', '', 'Unknown', 'Malignant', '  Benign  ', 'benign', 'BENIGN', '  Malignant  ', 'malignant', 'MALIGNANT', 'ATYPICAL', 'Atypical', 'atypical', '  Atypical  ', 'Necrotic', 'NECROTIC', 'necrotic', '  Necrotic  ', 'Inflammatory', 'inflammatory', 'INFLAMMATORY', '  Inflammatory  ']
+
+--- 6. IMAGE FILE & PATH VALIDATION ---
+Histopathology Images: Valid on disk = 355, Broken paths = 6, Missing path refs = 639
+CT Scans: Valid on disk = 202, Broken paths = 3
+MRI Scans: Valid on disk = 202, Broken paths = 2
+
+--- 7. LONGITUDINAL SEQUENCE CONSISTENCY ---
+Unique Patients in Dataset: 196
+Patients with Multiple Longitudinal Timepoints: 196
+
+==================================================
+VALIDATION STATUS: ISSUES DETECTED (READY FOR CLEANING)
+==================================================
