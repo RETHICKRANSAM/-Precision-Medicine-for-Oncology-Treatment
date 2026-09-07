@@ -1,0 +1,895 @@
+[
+  {
+    "deployment_id": "DEP-11475",
+    "timestamp": "2026-09-05 15:23:18 UTC",
+    "version": "v1.13.13",
+    "commit_sha": "bab28ac",
+    "service_name": "auth-gateway",
+    "environment": "canary-prod",
+    "deployer": "david.kim",
+    "risk_score": 10,
+    "decision": "ALLOW",
+    "color": "emerald",
+    "status_text": "Approved & Deployed",
+    "key_factors": [
+      "All canary metrics within strict operational baselines."
+    ],
+    "verified_by": "auto-policy-engine",
+    "telemetry": {
+      "Error_Rate_Delta": 0.077,
+      "Latency_P95_ms": 53.9,
+      "Unit_Test_Failure_Rate": 0.0,
+      "Security_Critical_CVEs": 0
+    }
+  },
+  {
+    "deployment_id": "DEP-11476",
+    "timestamp": "2026-09-05 17:13:18 UTC",
+    "version": "v1.2.19",
+    "commit_sha": "64ccd40",
+    "service_name": "search-indexer",
+    "environment": "production-eu-central",
+    "deployer": "priya.sharma",
+    "risk_score": 100,
+    "decision": "BLOCK",
+    "color": "rose",
+    "status_text": "Halted & Quarantined",
+    "key_factors": [
+      "1 critical CVE security vulnerability detected.",
+      "Canary error rate spiked +9.12%.",
+      "Latency P95 elevated at 532.5ms."
+    ],
+    "verified_by": "auto-policy-engine",
+    "telemetry": {
+      "Error_Rate_Delta": 9.119,
+      "Latency_P95_ms": 532.5,
+      "Unit_Test_Failure_Rate": 14.0,
+      "Security_Critical_CVEs": 1
+    }
+  },
+  {
+    "deployment_id": "DEP-11477",
+    "timestamp": "2026-09-05 19:03:18 UTC",
+    "version": "v1.13.16",
+    "commit_sha": "9a28766",
+    "service_name": "notification-worker",
+    "environment": "staging-preprod",
+    "deployer": "david.kim",
+    "risk_score": 12,
+    "decision": "ALLOW",
+    "color": "emerald",
+    "status_text": "Approved & Deployed",
+    "key_factors": [
+      "All canary metrics within strict operational baselines."
+    ],
+    "verified_by": "auto-policy-engine",
+    "telemetry": {
+      "Error_Rate_Delta": 0.196,
+      "Latency_P95_ms": 94.8,
+      "Unit_Test_Failure_Rate": 0.0,
+      "Security_Critical_CVEs": 0
+    }
+  },
+  {
+    "deployment_id": "DEP-11478",
+    "timestamp": "2026-09-05 20:53:18 UTC",
+    "version": "v3.11.0",
+    "commit_sha": "c2f11af",
+    "service_name": "notification-worker",
+    "environment": "staging-preprod",
+    "deployer": "elena.rostova",
+    "risk_score": 14,
+    "decision": "ALLOW",
+    "color": "emerald",
+    "status_text": "Approved & Deployed",
+    "key_factors": [
+      "All canary metrics within strict operational baselines."
+    ],
+    "verified_by": "auto-policy-engine",
+    "telemetry": {
+      "Error_Rate_Delta": 0.038,
+      "Latency_P95_ms": 55.2,
+      "Unit_Test_Failure_Rate": 0.0,
+      "Security_Critical_CVEs": 0
+    }
+  },
+  {
+    "deployment_id": "DEP-11479",
+    "timestamp": "2026-09-05 22:43:18 UTC",
+    "version": "v1.13.5",
+    "commit_sha": "ec2b5c0",
+    "service_name": "auth-gateway",
+    "environment": "production-eu-central",
+    "deployer": "elena.rostova",
+    "risk_score": 5,
+    "decision": "ALLOW",
+    "color": "emerald",
+    "status_text": "Approved & Deployed",
+    "key_factors": [
+      "All canary metrics within strict operational baselines."
+    ],
+    "verified_by": "auto-policy-engine",
+    "telemetry": {
+      "Error_Rate_Delta": 0.0,
+      "Latency_P95_ms": 39.2,
+      "Unit_Test_Failure_Rate": 0.0,
+      "Security_Critical_CVEs": 0
+    }
+  },
+  {
+    "deployment_id": "DEP-11480",
+    "timestamp": "2026-09-06 00:33:18 UTC",
+    "version": "v1.8.14",
+    "commit_sha": "4f2833e",
+    "service_name": "auth-gateway",
+    "environment": "staging-preprod",
+    "deployer": "marcus.vance",
+    "risk_score": 20,
+    "decision": "ALLOW",
+    "color": "emerald",
+    "status_text": "Approved & Deployed",
+    "key_factors": [
+      "All canary metrics within strict operational baselines."
+    ],
+    "verified_by": "auto-policy-engine",
+    "telemetry": {
+      "Error_Rate_Delta": 0.165,
+      "Latency_P95_ms": 54.4,
+      "Unit_Test_Failure_Rate": 0.0,
+      "Security_Critical_CVEs": 0
+    }
+  },
+  {
+    "deployment_id": "DEP-11481",
+    "timestamp": "2026-09-06 02:23:18 UTC",
+    "version": "v1.7.25",
+    "commit_sha": "915c773",
+    "service_name": "analytics-pipeline",
+    "environment": "production-eu-central",
+    "deployer": "elena.rostova",
+    "risk_score": 6,
+    "decision": "ALLOW",
+    "color": "emerald",
+    "status_text": "Approved & Deployed",
+    "key_factors": [
+      "All canary metrics within strict operational baselines."
+    ],
+    "verified_by": "auto-policy-engine",
+    "telemetry": {
+      "Error_Rate_Delta": 0.112,
+      "Latency_P95_ms": 53.4,
+      "Unit_Test_Failure_Rate": 0.0,
+      "Security_Critical_CVEs": 0
+    }
+  },
+  {
+    "deployment_id": "DEP-11482",
+    "timestamp": "2026-09-06 04:13:18 UTC",
+    "version": "v3.6.0",
+    "commit_sha": "e550274",
+    "service_name": "notification-worker",
+    "environment": "canary-prod",
+    "deployer": "marcus.vance",
+    "risk_score": 9,
+    "decision": "ALLOW",
+    "color": "emerald",
+    "status_text": "Approved & Deployed",
+    "key_factors": [
+      "All canary metrics within strict operational baselines."
+    ],
+    "verified_by": "auto-policy-engine",
+    "telemetry": {
+      "Error_Rate_Delta": 0.15,
+      "Latency_P95_ms": 49.2,
+      "Unit_Test_Failure_Rate": 0.0,
+      "Security_Critical_CVEs": 0
+    }
+  },
+  {
+    "deployment_id": "DEP-11483",
+    "timestamp": "2026-09-06 06:03:18 UTC",
+    "version": "v3.3.15",
+    "commit_sha": "44b3cf6",
+    "service_name": "order-processing",
+    "environment": "production-us-east",
+    "deployer": "priya.sharma",
+    "risk_score": 3,
+    "decision": "ALLOW",
+    "color": "emerald",
+    "status_text": "Approved & Deployed",
+    "key_factors": [
+      "All canary metrics within strict operational baselines."
+    ],
+    "verified_by": "auto-policy-engine",
+    "telemetry": {
+      "Error_Rate_Delta": 0.049,
+      "Latency_P95_ms": 20.7,
+      "Unit_Test_Failure_Rate": 0.0,
+      "Security_Critical_CVEs": 0
+    }
+  },
+  {
+    "deployment_id": "DEP-11484",
+    "timestamp": "2026-09-06 07:53:18 UTC",
+    "version": "v3.5.6",
+    "commit_sha": "0d13cbb",
+    "service_name": "payment-service",
+    "environment": "canary-prod",
+    "deployer": "priya.sharma",
+    "risk_score": 10,
+    "decision": "ALLOW",
+    "color": "emerald",
+    "status_text": "Approved & Deployed",
+    "key_factors": [
+      "All canary metrics within strict operational baselines."
+    ],
+    "verified_by": "auto-policy-engine",
+    "telemetry": {
+      "Error_Rate_Delta": 0.06,
+      "Latency_P95_ms": 58.7,
+      "Unit_Test_Failure_Rate": 0.0,
+      "Security_Critical_CVEs": 0
+    }
+  },
+  {
+    "deployment_id": "DEP-11485",
+    "timestamp": "2026-09-06 09:43:18 UTC",
+    "version": "v1.9.29",
+    "commit_sha": "fd581bd",
+    "service_name": "payment-service",
+    "environment": "canary-prod",
+    "deployer": "ci-bot-auto",
+    "risk_score": 6,
+    "decision": "ALLOW",
+    "color": "emerald",
+    "status_text": "Approved & Deployed",
+    "key_factors": [
+      "All canary metrics within strict operational baselines."
+    ],
+    "verified_by": "auto-policy-engine",
+    "telemetry": {
+      "Error_Rate_Delta": 0.14,
+      "Latency_P95_ms": 55.1,
+      "Unit_Test_Failure_Rate": 0.0,
+      "Security_Critical_CVEs": 0
+    }
+  },
+  {
+    "deployment_id": "DEP-11486",
+    "timestamp": "2026-09-06 11:33:18 UTC",
+    "version": "v2.2.6",
+    "commit_sha": "1c4550b",
+    "service_name": "auth-gateway",
+    "environment": "production-us-east",
+    "deployer": "sarah.jenkins",
+    "risk_score": 11,
+    "decision": "ALLOW",
+    "color": "emerald",
+    "status_text": "Approved & Deployed",
+    "key_factors": [
+      "All canary metrics within strict operational baselines."
+    ],
+    "verified_by": "auto-policy-engine",
+    "telemetry": {
+      "Error_Rate_Delta": 0.086,
+      "Latency_P95_ms": 20.0,
+      "Unit_Test_Failure_Rate": 0.22,
+      "Security_Critical_CVEs": 0
+    }
+  },
+  {
+    "deployment_id": "DEP-11487",
+    "timestamp": "2026-09-06 13:23:18 UTC",
+    "version": "v3.3.28",
+    "commit_sha": "b753448",
+    "service_name": "user-profile",
+    "environment": "production-eu-central",
+    "deployer": "sarah.jenkins",
+    "risk_score": 52,
+    "decision": "PAUSE",
+    "color": "amber",
+    "status_text": "Awaiting Verification",
+    "key_factors": [
+      "All canary metrics within strict operational baselines."
+    ],
+    "verified_by": "pending",
+    "telemetry": {
+      "Error_Rate_Delta": 0.519,
+      "Latency_P95_ms": 147.6,
+      "Unit_Test_Failure_Rate": 2.07,
+      "Security_Critical_CVEs": 0
+    }
+  },
+  {
+    "deployment_id": "DEP-11488",
+    "timestamp": "2026-09-06 15:13:18 UTC",
+    "version": "v3.3.4",
+    "commit_sha": "724eb73",
+    "service_name": "search-indexer",
+    "environment": "canary-prod",
+    "deployer": "ci-bot-auto",
+    "risk_score": 100,
+    "decision": "BLOCK",
+    "color": "rose",
+    "status_text": "Halted & Quarantined",
+    "key_factors": [
+      "1 critical CVE security vulnerability detected.",
+      "Canary error rate spiked +7.54%.",
+      "Latency P95 elevated at 471.6ms."
+    ],
+    "verified_by": "auto-policy-engine",
+    "telemetry": {
+      "Error_Rate_Delta": 7.536,
+      "Latency_P95_ms": 471.6,
+      "Unit_Test_Failure_Rate": 15.36,
+      "Security_Critical_CVEs": 1
+    }
+  },
+  {
+    "deployment_id": "DEP-11489",
+    "timestamp": "2026-09-06 17:03:18 UTC",
+    "version": "v3.12.22",
+    "commit_sha": "cabef2e",
+    "service_name": "analytics-pipeline",
+    "environment": "canary-prod",
+    "deployer": "elena.rostova",
+    "risk_score": 8,
+    "decision": "ALLOW",
+    "color": "emerald",
+    "status_text": "Approved & Deployed",
+    "key_factors": [
+      "All canary metrics within strict operational baselines."
+    ],
+    "verified_by": "auto-policy-engine",
+    "telemetry": {
+      "Error_Rate_Delta": 0.0,
+      "Latency_P95_ms": 74.5,
+      "Unit_Test_Failure_Rate": 0.0,
+      "Security_Critical_CVEs": 0
+    }
+  },
+  {
+    "deployment_id": "DEP-11490",
+    "timestamp": "2026-09-06 18:53:18 UTC",
+    "version": "v3.15.11",
+    "commit_sha": "6f66ea0",
+    "service_name": "search-indexer",
+    "environment": "production-us-east",
+    "deployer": "elena.rostova",
+    "risk_score": 15,
+    "decision": "ALLOW",
+    "color": "emerald",
+    "status_text": "Approved & Deployed",
+    "key_factors": [
+      "All canary metrics within strict operational baselines."
+    ],
+    "verified_by": "auto-policy-engine",
+    "telemetry": {
+      "Error_Rate_Delta": 0.088,
+      "Latency_P95_ms": 75.6,
+      "Unit_Test_Failure_Rate": 0.0,
+      "Security_Critical_CVEs": 0
+    }
+  },
+  {
+    "deployment_id": "DEP-11491",
+    "timestamp": "2026-09-06 20:43:18 UTC",
+    "version": "v1.4.21",
+    "commit_sha": "59ee8b0",
+    "service_name": "payment-service",
+    "environment": "staging-preprod",
+    "deployer": "alex.chen",
+    "risk_score": 13,
+    "decision": "ALLOW",
+    "color": "emerald",
+    "status_text": "Approved & Deployed",
+    "key_factors": [
+      "All canary metrics within strict operational baselines."
+    ],
+    "verified_by": "auto-policy-engine",
+    "telemetry": {
+      "Error_Rate_Delta": 0.012,
+      "Latency_P95_ms": 109.1,
+      "Unit_Test_Failure_Rate": 0.0,
+      "Security_Critical_CVEs": 0
+    }
+  },
+  {
+    "deployment_id": "DEP-11492",
+    "timestamp": "2026-09-06 22:33:18 UTC",
+    "version": "v3.15.23",
+    "commit_sha": "e208de5",
+    "service_name": "auth-gateway",
+    "environment": "production-us-east",
+    "deployer": "marcus.vance",
+    "risk_score": 19,
+    "decision": "ALLOW",
+    "color": "emerald",
+    "status_text": "Approved & Deployed",
+    "key_factors": [
+      "All canary metrics within strict operational baselines."
+    ],
+    "verified_by": "auto-policy-engine",
+    "telemetry": {
+      "Error_Rate_Delta": 0.069,
+      "Latency_P95_ms": 69.5,
+      "Unit_Test_Failure_Rate": 0.0,
+      "Security_Critical_CVEs": 0
+    }
+  },
+  {
+    "deployment_id": "DEP-11493",
+    "timestamp": "2026-09-07 00:23:18 UTC",
+    "version": "v3.0.22",
+    "commit_sha": "e6a6b3a",
+    "service_name": "payment-service",
+    "environment": "staging-preprod",
+    "deployer": "marcus.vance",
+    "risk_score": 8,
+    "decision": "ALLOW",
+    "color": "emerald",
+    "status_text": "Approved & Deployed",
+    "key_factors": [
+      "All canary metrics within strict operational baselines."
+    ],
+    "verified_by": "auto-policy-engine",
+    "telemetry": {
+      "Error_Rate_Delta": 0.147,
+      "Latency_P95_ms": 56.0,
+      "Unit_Test_Failure_Rate": 0.0,
+      "Security_Critical_CVEs": 0
+    }
+  },
+  {
+    "deployment_id": "DEP-11494",
+    "timestamp": "2026-09-07 02:13:18 UTC",
+    "version": "v2.10.1",
+    "commit_sha": "a2c4762",
+    "service_name": "payment-service",
+    "environment": "canary-prod",
+    "deployer": "alex.chen",
+    "risk_score": 100,
+    "decision": "BLOCK",
+    "color": "rose",
+    "status_text": "Halted & Quarantined",
+    "key_factors": [
+      "3 critical CVE security vulnerability detected.",
+      "Canary error rate spiked +3.65%.",
+      "Latency P95 elevated at 480.3ms."
+    ],
+    "verified_by": "auto-policy-engine",
+    "telemetry": {
+      "Error_Rate_Delta": 3.653,
+      "Latency_P95_ms": 480.3,
+      "Unit_Test_Failure_Rate": 11.35,
+      "Security_Critical_CVEs": 3
+    }
+  },
+  {
+    "deployment_id": "DEP-11495",
+    "timestamp": "2026-09-07 04:03:18 UTC",
+    "version": "v2.14.23",
+    "commit_sha": "6571c06",
+    "service_name": "search-indexer",
+    "environment": "canary-prod",
+    "deployer": "elena.rostova",
+    "risk_score": 11,
+    "decision": "ALLOW",
+    "color": "emerald",
+    "status_text": "Approved & Deployed",
+    "key_factors": [
+      "All canary metrics within strict operational baselines."
+    ],
+    "verified_by": "auto-policy-engine",
+    "telemetry": {
+      "Error_Rate_Delta": 0.0,
+      "Latency_P95_ms": 66.9,
+      "Unit_Test_Failure_Rate": 0.0,
+      "Security_Critical_CVEs": 0
+    }
+  },
+  {
+    "deployment_id": "DEP-11496",
+    "timestamp": "2026-09-07 05:53:18 UTC",
+    "version": "v1.6.17",
+    "commit_sha": "6a2928c",
+    "service_name": "analytics-pipeline",
+    "environment": "canary-prod",
+    "deployer": "sarah.jenkins",
+    "risk_score": 9,
+    "decision": "ALLOW",
+    "color": "emerald",
+    "status_text": "Approved & Deployed",
+    "key_factors": [
+      "All canary metrics within strict operational baselines."
+    ],
+    "verified_by": "auto-policy-engine",
+    "telemetry": {
+      "Error_Rate_Delta": 0.119,
+      "Latency_P95_ms": 69.6,
+      "Unit_Test_Failure_Rate": 0.0,
+      "Security_Critical_CVEs": 0
+    }
+  },
+  {
+    "deployment_id": "DEP-11497",
+    "timestamp": "2026-09-07 07:43:18 UTC",
+    "version": "v3.10.23",
+    "commit_sha": "1f33cd2",
+    "service_name": "user-profile",
+    "environment": "canary-prod",
+    "deployer": "marcus.vance",
+    "risk_score": 11,
+    "decision": "ALLOW",
+    "color": "emerald",
+    "status_text": "Approved & Deployed",
+    "key_factors": [
+      "All canary metrics within strict operational baselines."
+    ],
+    "verified_by": "auto-policy-engine",
+    "telemetry": {
+      "Error_Rate_Delta": 0.0,
+      "Latency_P95_ms": 75.0,
+      "Unit_Test_Failure_Rate": 0.0,
+      "Security_Critical_CVEs": 0
+    }
+  },
+  {
+    "deployment_id": "DEP-11498",
+    "timestamp": "2026-09-07 09:33:18 UTC",
+    "version": "v3.13.15",
+    "commit_sha": "0b41e69",
+    "service_name": "auth-gateway",
+    "environment": "production-us-east",
+    "deployer": "priya.sharma",
+    "risk_score": 12,
+    "decision": "ALLOW",
+    "color": "emerald",
+    "status_text": "Approved & Deployed",
+    "key_factors": [
+      "All canary metrics within strict operational baselines."
+    ],
+    "verified_by": "auto-policy-engine",
+    "telemetry": {
+      "Error_Rate_Delta": 0.111,
+      "Latency_P95_ms": 90.9,
+      "Unit_Test_Failure_Rate": 0.0,
+      "Security_Critical_CVEs": 0
+    }
+  },
+  {
+    "deployment_id": "DEP-11499",
+    "timestamp": "2026-09-07 11:23:18 UTC",
+    "version": "v2.12.22",
+    "commit_sha": "ef5fffa",
+    "service_name": "analytics-pipeline",
+    "environment": "canary-prod",
+    "deployer": "ci-bot-auto",
+    "risk_score": 8,
+    "decision": "ALLOW",
+    "color": "emerald",
+    "status_text": "Approved & Deployed",
+    "key_factors": [
+      "All canary metrics within strict operational baselines."
+    ],
+    "verified_by": "auto-policy-engine",
+    "telemetry": {
+      "Error_Rate_Delta": 0.067,
+      "Latency_P95_ms": 65.9,
+      "Unit_Test_Failure_Rate": 0.0,
+      "Security_Critical_CVEs": 0
+    }
+  },
+  {
+    "deployment_id": "DEP-10026",
+    "timestamp": "2026-09-07 09:53:18 UTC",
+    "version": "v3.0.0",
+    "commit_sha": "1a2b3c4",
+    "service_name": "payment-service",
+    "environment": "canary-prod",
+    "deployer": "sarah.jenkins",
+    "risk_score": 7,
+    "decision": "ALLOW",
+    "color": "emerald",
+    "status_text": "Deployment Cleared for Production",
+    "key_factors": [
+      "All canary telemetry within optimal operational baselines."
+    ],
+    "verified_by": "auto-policy-engine",
+    "telemetry": {
+      "Anomalous_Egress_MB": 20.0,
+      "Auth_Failure_Spike": 0.2,
+      "Changed_Files_Count": 6,
+      "Error_Rate_Delta": 0.02,
+      "Integration_Test_Passed": 1,
+      "Latency_P95_ms": 50.0,
+      "Latency_P99_ms": 75.0,
+      "Lines_Delta": 180,
+      "Security_Critical_CVEs": 0,
+      "Security_High_CVEs": 0,
+      "Unit_Test_Failure_Rate": 0.0
+    },
+    "radar_signals": {
+      "Error Rate": 0,
+      "Latency": 12,
+      "Test Failures": 0,
+      "Vulnerabilities": 0,
+      "Network / Auth": 4,
+      "Code Blast Radius": 12
+    }
+  },
+  {
+    "deployment_id": "DEP-10027",
+    "timestamp": "2026-09-07 09:53:18 UTC",
+    "version": "v3.0.1",
+    "commit_sha": "5e6f7a8",
+    "service_name": "auth-gateway",
+    "environment": "canary-prod",
+    "deployer": "marcus.vance",
+    "risk_score": 83,
+    "decision": "BLOCK",
+    "color": "rose",
+    "status_text": "Release Halted - Unsafe Telemetry Detected",
+    "key_factors": [
+      "2 Critical Security CVE vulnerability flag(s) present.",
+      "Elevated canary error rate delta: +1.20%.",
+      "Anomalous auth failure spike: +35.0%.",
+      "Suspicious network egress bandwidth: 210.0 MB."
+    ],
+    "verified_by": "auto-policy-engine",
+    "telemetry": {
+      "Anomalous_Egress_MB": 210.0,
+      "Auth_Failure_Spike": 35.0,
+      "Changed_Files_Count": 25,
+      "Error_Rate_Delta": 1.2,
+      "Integration_Test_Passed": 1,
+      "Latency_P95_ms": 160.0,
+      "Latency_P99_ms": 280.0,
+      "Lines_Delta": 1500,
+      "Security_Critical_CVEs": 2,
+      "Security_High_CVEs": 3,
+      "Unit_Test_Failure_Rate": 0.0
+    },
+    "radar_signals": {
+      "Error Rate": 18,
+      "Latency": 40,
+      "Test Failures": 0,
+      "Vulnerabilities": 100,
+      "Network / Auth": 100,
+      "Code Blast Radius": 67
+    }
+  },
+  {
+    "deployment_id": "DEP-10028",
+    "timestamp": "2026-09-07 09:53:18 UTC",
+    "version": "v2.5.0-rc2",
+    "commit_sha": "e29ba71",
+    "service_name": "search-indexer",
+    "environment": "canary-prod",
+    "deployer": "alex.chen",
+    "risk_score": 49,
+    "decision": "ALLOW",
+    "color": "emerald",
+    "status_text": "Deployment Cleared for Production",
+    "key_factors": [
+      "High P95 latency: 230.0ms exceeding 200ms threshold."
+    ],
+    "verified_by": "auto-policy-engine",
+    "telemetry": {
+      "Error_Rate_Delta": 0.45,
+      "Latency_P95_ms": 230.0,
+      "Latency_P99_ms": 420.0,
+      "Unit_Test_Failure_Rate": 1.2,
+      "Integration_Test_Passed": 1,
+      "Security_Critical_CVEs": 0,
+      "Security_High_CVEs": 1,
+      "Anomalous_Egress_MB": 65.0,
+      "Auth_Failure_Spike": 7.5,
+      "Changed_Files_Count": 24,
+      "Lines_Delta": 1150
+    },
+    "radar_signals": {
+      "Error Rate": 6,
+      "Latency": 57,
+      "Test Failures": 9,
+      "Vulnerabilities": 12,
+      "Network / Auth": 28,
+      "Code Blast Radius": 59
+    }
+  },
+  {
+    "deployment_id": "DEP-10029",
+    "timestamp": "2026-09-07 09:53:18 UTC",
+    "version": "v3.0.2",
+    "commit_sha": "9b0c1d2",
+    "service_name": "search-indexer",
+    "environment": "canary-prod",
+    "deployer": "alex.chen",
+    "risk_score": 48,
+    "decision": "ALLOW",
+    "color": "emerald",
+    "status_text": "Manual Override (ALLOW): Cold start warmup latency spike verified on single pod; canary node stable.",
+    "key_factors": [
+      "High P95 latency: 220.0ms exceeding 200ms threshold.",
+      "Manual Override by sarah.lead-sre: Cold start warmup latency spike verified on single pod; canary node stable."
+    ],
+    "verified_by": "sarah.lead-sre (Override)",
+    "telemetry": {
+      "Anomalous_Egress_MB": 50.0,
+      "Auth_Failure_Spike": 6.0,
+      "Changed_Files_Count": 15,
+      "Error_Rate_Delta": 0.6,
+      "Integration_Test_Passed": 1,
+      "Latency_P95_ms": 220.0,
+      "Latency_P99_ms": 380.0,
+      "Lines_Delta": 800,
+      "Security_Critical_CVEs": 0,
+      "Security_High_CVEs": 1,
+      "Unit_Test_Failure_Rate": 1.0
+    },
+    "radar_signals": {
+      "Error Rate": 9,
+      "Latency": 55,
+      "Test Failures": 8,
+      "Vulnerabilities": 12,
+      "Network / Auth": 22,
+      "Code Blast Radius": 38
+    }
+  },
+  {
+    "deployment_id": "DEP-10030",
+    "timestamp": "2026-09-07 09:59:18 UTC",
+    "version": "v3.0.0",
+    "commit_sha": "1a2b3c4",
+    "service_name": "payment-service",
+    "environment": "canary-prod",
+    "deployer": "sarah.jenkins",
+    "risk_score": 7,
+    "decision": "ALLOW",
+    "color": "emerald",
+    "status_text": "Deployment Cleared for Production",
+    "key_factors": [
+      "All canary telemetry within optimal operational baselines."
+    ],
+    "verified_by": "auto-policy-engine",
+    "telemetry": {
+      "Anomalous_Egress_MB": 20.0,
+      "Auth_Failure_Spike": 0.2,
+      "Changed_Files_Count": 6,
+      "Error_Rate_Delta": 0.02,
+      "Integration_Test_Passed": 1,
+      "Latency_P95_ms": 50.0,
+      "Latency_P99_ms": 75.0,
+      "Lines_Delta": 180,
+      "Security_Critical_CVEs": 0,
+      "Security_High_CVEs": 0,
+      "Unit_Test_Failure_Rate": 0.0
+    },
+    "radar_signals": {
+      "Error Rate": 0,
+      "Latency": 12,
+      "Test Failures": 0,
+      "Vulnerabilities": 0,
+      "Network / Auth": 4,
+      "Code Blast Radius": 12
+    }
+  },
+  {
+    "deployment_id": "DEP-10031",
+    "timestamp": "2026-09-07 09:59:18 UTC",
+    "version": "v3.0.1",
+    "commit_sha": "5e6f7a8",
+    "service_name": "auth-gateway",
+    "environment": "canary-prod",
+    "deployer": "marcus.vance",
+    "risk_score": 83,
+    "decision": "BLOCK",
+    "color": "rose",
+    "status_text": "Release Halted - Unsafe Telemetry Detected",
+    "key_factors": [
+      "2 Critical Security CVE vulnerability flag(s) present.",
+      "Elevated canary error rate delta: +1.20%.",
+      "Anomalous auth failure spike: +35.0%.",
+      "Suspicious network egress bandwidth: 210.0 MB."
+    ],
+    "verified_by": "auto-policy-engine",
+    "telemetry": {
+      "Anomalous_Egress_MB": 210.0,
+      "Auth_Failure_Spike": 35.0,
+      "Changed_Files_Count": 25,
+      "Error_Rate_Delta": 1.2,
+      "Integration_Test_Passed": 1,
+      "Latency_P95_ms": 160.0,
+      "Latency_P99_ms": 280.0,
+      "Lines_Delta": 1500,
+      "Security_Critical_CVEs": 2,
+      "Security_High_CVEs": 3,
+      "Unit_Test_Failure_Rate": 0.0
+    },
+    "radar_signals": {
+      "Error Rate": 18,
+      "Latency": 40,
+      "Test Failures": 0,
+      "Vulnerabilities": 100,
+      "Network / Auth": 100,
+      "Code Blast Radius": 67
+    }
+  },
+  {
+    "deployment_id": "DEP-10032",
+    "timestamp": "2026-09-07 09:59:18 UTC",
+    "version": "v2.5.0-rc2",
+    "commit_sha": "e29ba71",
+    "service_name": "search-indexer",
+    "environment": "canary-prod",
+    "deployer": "alex.chen",
+    "risk_score": 49,
+    "decision": "ALLOW",
+    "color": "emerald",
+    "status_text": "Deployment Cleared for Production",
+    "key_factors": [
+      "High P95 latency: 230.0ms exceeding 200ms threshold."
+    ],
+    "verified_by": "auto-policy-engine",
+    "telemetry": {
+      "Error_Rate_Delta": 0.45,
+      "Latency_P95_ms": 230.0,
+      "Latency_P99_ms": 420.0,
+      "Unit_Test_Failure_Rate": 1.2,
+      "Integration_Test_Passed": 1,
+      "Security_Critical_CVEs": 0,
+      "Security_High_CVEs": 1,
+      "Anomalous_Egress_MB": 65.0,
+      "Auth_Failure_Spike": 7.5,
+      "Changed_Files_Count": 24,
+      "Lines_Delta": 1150
+    },
+    "radar_signals": {
+      "Error Rate": 6,
+      "Latency": 57,
+      "Test Failures": 9,
+      "Vulnerabilities": 12,
+      "Network / Auth": 28,
+      "Code Blast Radius": 59
+    }
+  },
+  {
+    "deployment_id": "DEP-10033",
+    "timestamp": "2026-09-07 09:59:18 UTC",
+    "version": "v3.0.2",
+    "commit_sha": "9b0c1d2",
+    "service_name": "search-indexer",
+    "environment": "canary-prod",
+    "deployer": "alex.chen",
+    "risk_score": 48,
+    "decision": "ALLOW",
+    "color": "emerald",
+    "status_text": "Manual Override (ALLOW): Cold start warmup latency spike verified on single pod; canary node stable.",
+    "key_factors": [
+      "High P95 latency: 220.0ms exceeding 200ms threshold.",
+      "Manual Override by sarah.lead-sre: Cold start warmup latency spike verified on single pod; canary node stable."
+    ],
+    "verified_by": "sarah.lead-sre (Override)",
+    "telemetry": {
+      "Anomalous_Egress_MB": 50.0,
+      "Auth_Failure_Spike": 6.0,
+      "Changed_Files_Count": 15,
+      "Error_Rate_Delta": 0.6,
+      "Integration_Test_Passed": 1,
+      "Latency_P95_ms": 220.0,
+      "Latency_P99_ms": 380.0,
+      "Lines_Delta": 800,
+      "Security_Critical_CVEs": 0,
+      "Security_High_CVEs": 1,
+      "Unit_Test_Failure_Rate": 1.0
+    },
+    "radar_signals": {
+      "Error Rate": 9,
+      "Latency": 55,
+      "Test Failures": 8,
+      "Vulnerabilities": 12,
+      "Network / Auth": 22,
+      "Code Blast Radius": 38
+    }
+  }
+]

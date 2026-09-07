@@ -1,0 +1,10 @@
+column,leakage_risk,reason,action
+Patient_ID,HIGH,"Unique identifier — not predictive, causes memorisation",EXCLUDE from features; use for grouping only
+Risk_Score,HIGH,Appears derived from risk/toxicity information,EXCLUDE
+Toxicity_Score,HIGH,Toxicity_Risk is derived from Toxicity_Score thresholds,EXCLUDE
+Treatment_Response,HIGH,Post-treatment outcome — not available at prediction time,EXCLUDE
+Clinical_Note,MODERATE,Free text recorded after clinical events; may contain outcome info,EXCLUDE
+Treatment_Drug,MODERATE,Post-assignment information; not available pre-treatment,EXCLUDE from primary model
+Dosage_mg,MODERATE,Post-assignment information; unknown at prediction time,EXCLUDE from primary model
+Treatment_Adherence_Pct,HIGH,Future treatment adherence — impossible to know at prediction time,EXCLUDE
+Encounter_Date,LOW,Temporal field; not directly predictive,EXCLUDE from features

@@ -1,0 +1,131 @@
+/* Risk Monitor - SOC Dark Cyber-Command Glassmorphism Styles */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg-primary: #070a13;
+  --bg-secondary: #0d1222;
+  --glass-bg: rgba(15, 23, 42, 0.65);
+  --glass-card: rgba(17, 24, 39, 0.72);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-border-highlight: rgba(56, 189, 248, 0.25);
+  
+  --color-allow: #10b981;
+  --color-allow-glow: rgba(16, 185, 129, 0.35);
+  --color-pause: #f59e0b;
+  --color-pause-glow: rgba(245, 158, 11, 0.35);
+  --color-block: #f43f5e;
+  --color-block-glow: rgba(244, 63, 94, 0.40);
+  
+  --accent-cyan: #38bdf8;
+  --accent-blue: #6366f1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--bg-primary);
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.08) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(99, 102, 241, 0.08) 0px, transparent 50%),
+    radial-gradient(at 50% 100%, rgba(15, 23, 42, 0.8) 0px, transparent 60%);
+  background-attachment: fixed;
+  color: #f1f5f9;
+  min-height: 100vh;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Glassmorphism Containers */
+.glass-panel {
+  background: var(--glass-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  transition: all 0.25s ease-in-out;
+}
+
+.glass-panel:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.glass-header {
+  background: rgba(10, 15, 29, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.glass-badge {
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Animated Glow Rings */
+.glow-allow {
+  box-shadow: 0 0 25px var(--color-allow-glow);
+  border-color: var(--color-allow) !important;
+}
+
+.glow-pause {
+  box-shadow: 0 0 25px var(--color-pause-glow);
+  border-color: var(--color-pause) !important;
+}
+
+.glow-block {
+  box-shadow: 0 0 30px var(--color-block-glow);
+  border-color: var(--color-block) !important;
+}
+
+/* Circular Gauge Animation */
+.gauge-circle {
+  transition: stroke-dashoffset 1s ease-in-out, stroke 0.5s ease;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0f19;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Radar & Chart Canvas */
+.chart-container {
+  position: relative;
+  width: 100%;
+  height: 240px;
+}
+
+/* Pulse animation */
+@keyframes pulse-slow {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(0.98); }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s infinite ease-in-out;
+}
+
+/* Table Hover */
+.audit-row {
+  transition: background-color 0.15s ease;
+}
+.audit-row:hover {
+  background-color: rgba(30, 41, 59, 0.5);
+}

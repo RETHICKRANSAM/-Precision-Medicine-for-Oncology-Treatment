@@ -1,0 +1,4 @@
+Modality,Raw_Count,Clean_Count,Format,Dimensions,Channels,Color_Space,Mean_Intensity,Mean_Std,Mean_Entropy,Mean_Laplacian_Var,Target_Task
+Histopathology,350,350,PNG,256x256,3,RGB,179.55,40.33,6.47,676.0,5-Class Tissue Classification (CNN)
+CT Radiologic,200,59,PNG,256x256,1,Grayscale,57.65,45.44,3.46,375.8,3-Class Tumor Progression (Vision Backbone)
+MRI Scans,200,24,PNG,256x256,1,Grayscale,52.51,50.87,2.48,176.0,5-Sequence Multi-Parametric Assessment
