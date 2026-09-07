@@ -1,8 +1,6 @@
 name: Deploy Risk Monitor Dashboard to GitHub Pages
 
 on:
-  push:
-    branches: [ "main", "master" ]
   workflow_dispatch:
 
 permissions:
