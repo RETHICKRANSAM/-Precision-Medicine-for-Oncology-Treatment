@@ -1,0 +1,870 @@
+{
+  "shape": {
+    "rows": 5000,
+    "columns": 12
+  },
+  "columns": [
+    "patient_id",
+    "note_type",
+    "clinical_note",
+    "urgency",
+    "gene_mutation",
+    "drug_name",
+    "dosage_level",
+    "adverse_event",
+    "symptom_text",
+    "annotation_status",
+    "has_missing_fields",
+    "clinical_note_placeholder"
+  ],
+  "dtypes": {
+    "patient_id": "object",
+    "note_type": "object",
+    "clinical_note": "object",
+    "urgency": "object",
+    "gene_mutation": "object",
+    "drug_name": "object",
+    "dosage_level": "object",
+    "adverse_event": "object",
+    "symptom_text": "object",
+    "annotation_status": "object",
+    "has_missing_fields": "bool",
+    "clinical_note_placeholder": "bool"
+  },
+  "column_roles": {
+    "id_cols": [
+      "patient_id"
+    ],
+    "target_col": "urgency",
+    "primary_text": "clinical_note",
+    "secondary_text": [
+      "symptom_text",
+      "adverse_event"
+    ],
+    "categorical_cols": [
+      "note_type",
+      "gene_mutation",
+      "drug_name",
+      "dosage_level",
+      "adverse_event",
+      "symptom_text",
+      "annotation_status"
+    ],
+    "boolean_cols": [
+      "has_missing_fields",
+      "clinical_note_placeholder"
+    ]
+  },
+  "data_quality": {
+    "missing_counts": {
+      "patient_id": {
+        "Missing_Count": 0,
+        "Missing_Percentage": 0.0
+      },
+      "note_type": {
+        "Missing_Count": 0,
+        "Missing_Percentage": 0.0
+      },
+      "clinical_note": {
+        "Missing_Count": 0,
+        "Missing_Percentage": 0.0
+      },
+      "urgency": {
+        "Missing_Count": 0,
+        "Missing_Percentage": 0.0
+      },
+      "gene_mutation": {
+        "Missing_Count": 0,
+        "Missing_Percentage": 0.0
+      },
+      "drug_name": {
+        "Missing_Count": 0,
+        "Missing_Percentage": 0.0
+      },
+      "dosage_level": {
+        "Missing_Count": 0,
+        "Missing_Percentage": 0.0
+      },
+      "adverse_event": {
+        "Missing_Count": 0,
+        "Missing_Percentage": 0.0
+      },
+      "symptom_text": {
+        "Missing_Count": 0,
+        "Missing_Percentage": 0.0
+      },
+      "annotation_status": {
+        "Missing_Count": 0,
+        "Missing_Percentage": 0.0
+      },
+      "has_missing_fields": {
+        "Missing_Count": 0,
+        "Missing_Percentage": 0.0
+      },
+      "clinical_note_placeholder": {
+        "Missing_Count": 0,
+        "Missing_Percentage": 0.0
+      }
+    },
+    "empty_string_counts": {
+      "patient_id": 0,
+      "note_type": 0,
+      "clinical_note": 0,
+      "urgency": 0,
+      "gene_mutation": 0,
+      "drug_name": 0,
+      "dosage_level": 0,
+      "adverse_event": 0,
+      "symptom_text": 0,
+      "annotation_status": 0
+    },
+    "whitespace_only_counts": {
+      "patient_id": 0,
+      "note_type": 0,
+      "clinical_note": 0,
+      "urgency": 0,
+      "gene_mutation": 0,
+      "drug_name": 0,
+      "dosage_level": 0,
+      "adverse_event": 0,
+      "symptom_text": 0,
+      "annotation_status": 0
+    },
+    "exact_duplicates": 0,
+    "duplicate_notes": 451,
+    "unique_notes": 4549,
+    "id_duplicates": {
+      "patient_id": 0
+    },
+    "target_missing": 0,
+    "placeholder_count": 0,
+    "has_missing_fields_count": 2832
+  },
+  "text_quality": {
+    "min_char_len": 80,
+    "max_char_len": 145,
+    "mean_char_len": 112.46,
+    "median_char_len": 112.0,
+    "min_word_count": 12,
+    "max_word_count": 23,
+    "mean_word_count": 17.37,
+    "median_word_count": 18.0,
+    "mean_avg_word_len": 5.13,
+    "mean_sent_count": 2.73,
+    "mean_avg_sent_len": 9.03,
+    "short_texts_count": 0,
+    "long_texts_count": 0,
+    "empty_or_near_empty_count": 0,
+    "repeated_chars_count": 0,
+    "excessive_punct_count": 736,
+    "excessive_ws_count": 0,
+    "url_count": 0,
+    "email_count": 0,
+    "hashtag_count": 0,
+    "mention_count": 0,
+    "number_records_count": 2705,
+    "emoji_count": 0,
+    "html_count": 0,
+    "corrupted_count": 0,
+    "non_ascii_count": 0
+  },
+  "text_distributions": {
+    "char_skew": 0.06,
+    "char_kurt": -0.414,
+    "word_skew": -0.297,
+    "word_kurt": -0.267,
+    "char_iqr_bounds": [
+      82.5,
+      142.5
+    ],
+    "word_iqr_bounds": [
+      11.5,
+      23.5
+    ],
+    "char_outliers_high": 2,
+    "char_outliers_low": 1,
+    "word_outliers_high": 0,
+    "word_outliers_low": 0
+  },
+  "vocabulary": {
+    "total_tokens_raw": 86845,
+    "vocab_size_raw": 132,
+    "type_token_ratio_raw": 0.0015,
+    "hapax_count": 0,
+    "rare_words_count": 0,
+    "stopword_proportion": 0.0819,
+    "top_10_words": [
+      [
+        "pt",
+        3649
+      ],
+      [
+        "ae",
+        2862
+      ],
+      [
+        "mg",
+        2497
+      ],
+      [
+        "mutation",
+        1917
+      ],
+      [
+        "dose",
+        1828
+      ],
+      [
+        "current",
+        1467
+      ],
+      [
+        "nsclc",
+        1400
+      ],
+      [
+        "not",
+        1388
+      ],
+      [
+        "reports",
+        1326
+      ],
+      [
+        "egfr",
+        1162
+      ]
+    ],
+    "top_20_words": [
+      [
+        "pt",
+        3649
+      ],
+      [
+        "ae",
+        2862
+      ],
+      [
+        "mg",
+        2497
+      ],
+      [
+        "mutation",
+        1917
+      ],
+      [
+        "dose",
+        1828
+      ],
+      [
+        "current",
+        1467
+      ],
+      [
+        "nsclc",
+        1400
+      ],
+      [
+        "not",
+        1388
+      ],
+      [
+        "reports",
+        1326
+      ],
+      [
+        "egfr",
+        1162
+      ],
+      [
+        "fatigue",
+        1117
+      ],
+      [
+        "symptoms",
+        1086
+      ],
+      [
+        "no",
+        1078
+      ],
+      [
+        "daily",
+        1072
+      ],
+      [
+        "treatment",
+        1069
+      ],
+      [
+        "med",
+        1069
+      ],
+      [
+        "day",
+        1043
+      ],
+      [
+        "rash",
+        1037
+      ],
+      [
+        "fusion",
+        787
+      ],
+      [
+        "kras",
+        781
+      ]
+    ],
+    "top_30_words": [
+      [
+        "pt",
+        3649
+      ],
+      [
+        "ae",
+        2862
+      ],
+      [
+        "mg",
+        2497
+      ],
+      [
+        "mutation",
+        1917
+      ],
+      [
+        "dose",
+        1828
+      ],
+      [
+        "current",
+        1467
+      ],
+      [
+        "nsclc",
+        1400
+      ],
+      [
+        "not",
+        1388
+      ],
+      [
+        "reports",
+        1326
+      ],
+      [
+        "egfr",
+        1162
+      ],
+      [
+        "fatigue",
+        1117
+      ],
+      [
+        "symptoms",
+        1086
+      ],
+      [
+        "no",
+        1078
+      ],
+      [
+        "daily",
+        1072
+      ],
+      [
+        "treatment",
+        1069
+      ],
+      [
+        "med",
+        1069
+      ],
+      [
+        "day",
+        1043
+      ],
+      [
+        "rash",
+        1037
+      ],
+      [
+        "fusion",
+        787
+      ],
+      [
+        "kras",
+        781
+      ],
+      [
+        "g12c",
+        781
+      ],
+      [
+        "l858r",
+        778
+      ],
+      [
+        "nurse",
+        740
+      ],
+      [
+        "intake",
+        740
+      ],
+      [
+        "feeling",
+        740
+      ],
+      [
+        "noted",
+        740
+      ],
+      [
+        "as",
+        740
+      ],
+      [
+        "of",
+        730
+      ],
+      [
+        "trial",
+        727
+      ],
+      [
+        "screening",
+        727
+      ]
+    ],
+    "top_bigrams": [
+      [
+        "kras g12c",
+        781
+      ],
+      [
+        "egfr l858r",
+        778
+      ],
+      [
+        "nurse intake",
+        740
+      ],
+      [
+        "intake pt",
+        740
+      ],
+      [
+        "pt feeling",
+        740
+      ],
+      [
+        "current med",
+        740
+      ],
+      [
+        "noted as",
+        740
+      ],
+      [
+        "trial screening",
+        727
+      ],
+      [
+        "prior current",
+        727
+      ],
+      [
+        "current drug",
+        727
+      ]
+    ],
+    "top_trigrams": [
+      [
+        "nurse intake pt",
+        740
+      ],
+      [
+        "intake pt feeling",
+        740
+      ],
+      [
+        "prior current drug",
+        727
+      ],
+      [
+        "pathology nsclc specimen",
+        702
+      ],
+      [
+        "nsclc specimen molecular",
+        702
+      ],
+      [
+        "clinical correlation req",
+        702
+      ],
+      [
+        "correlation req d",
+        702
+      ],
+      [
+        "req d pt",
+        702
+      ],
+      [
+        "d pt has",
+        702
+      ],
+      [
+        "pt w nsclc",
+        698
+      ]
+    ]
+  },
+  "target_distribution": {
+    "High": {
+      "Count": 1451,
+      "Percentage (%)": 29.02
+    },
+    "Low": {
+      "Count": 1395,
+      "Percentage (%)": 27.9
+    },
+    "Moderate": {
+      "Count": 1392,
+      "Percentage (%)": 27.84
+    },
+    "Unknown": {
+      "Count": 762,
+      "Percentage (%)": 15.24
+    }
+  },
+  "imbalance_ratio": 1.9,
+  "class_text_stats": {
+    "High": {
+      "doc_count": 1451,
+      "mean_char_len": 112.42,
+      "median_char_len": 112.0,
+      "std_char_len": 10.3,
+      "mean_word_count": 17.35,
+      "median_word_count": 18.0,
+      "std_word_count": 1.75,
+      "mean_avg_word_len": 5.13
+    },
+    "Low": {
+      "doc_count": 1395,
+      "mean_char_len": 112.33,
+      "median_char_len": 112.0,
+      "std_char_len": 10.23,
+      "mean_word_count": 17.35,
+      "median_word_count": 18.0,
+      "std_word_count": 1.8,
+      "mean_avg_word_len": 5.13
+    },
+    "Moderate": {
+      "doc_count": 1392,
+      "mean_char_len": 112.56,
+      "median_char_len": 112.0,
+      "std_char_len": 10.1,
+      "mean_word_count": 17.39,
+      "median_word_count": 18.0,
+      "std_word_count": 1.77,
+      "mean_avg_word_len": 5.12
+    },
+    "Unknown": {
+      "doc_count": 762,
+      "mean_char_len": 112.57,
+      "median_char_len": 112.0,
+      "std_char_len": 10.0,
+      "mean_word_count": 17.4,
+      "median_word_count": 18.0,
+      "std_word_count": 1.87,
+      "mean_avg_word_len": 5.14
+    }
+  },
+  "class_top_words": {
+    "Moderate": {
+      "pt": 1002,
+      "ae": 802,
+      "mg": 672,
+      "mutation": 525,
+      "dose": 502,
+      "current": 400,
+      "nsclc": 390,
+      "reports": 365,
+      "fatigue": 328,
+      "egfr": 324
+    },
+    "Low": {
+      "pt": 1014,
+      "ae": 796,
+      "mg": 700,
+      "mutation": 554,
+      "dose": 510,
+      "current": 414,
+      "nsclc": 397,
+      "reports": 373,
+      "egfr": 312,
+      "med": 308
+    },
+    "High": {
+      "pt": 1063,
+      "ae": 829,
+      "mg": 732,
+      "mutation": 562,
+      "dose": 543,
+      "current": 420,
+      "reports": 416,
+      "nsclc": 405,
+      "egfr": 354,
+      "fatigue": 344
+    },
+    "Unknown": {
+      "pt": 570,
+      "ae": 435,
+      "mg": 393,
+      "mutation": 276,
+      "dose": 273,
+      "current": 233,
+      "nsclc": 208,
+      "med": 173,
+      "treatment": 172,
+      "egfr": 172
+    }
+  },
+  "class_distinctive_terms": {
+    "Moderate": {
+      "pt": 0.1936,
+      "ae": 0.1681,
+      "mg": 0.1439,
+      "nsclc": 0.1396,
+      "mutation": 0.1347,
+      "dose": 0.1281,
+      "current": 0.1101,
+      "reports": 0.1035,
+      "symptoms": 0.0986,
+      "fatigue": 0.0966
+    },
+    "Low": {
+      "pt": 0.1804,
+      "mg": 0.1556,
+      "ae": 0.1485,
+      "nsclc": 0.1365,
+      "dose": 0.1293,
+      "mutation": 0.1282,
+      "reports": 0.1018,
+      "egfr": 0.0968,
+      "fatigue": 0.0966,
+      "daily": 0.0946
+    },
+    "High": {
+      "pt": 0.1753,
+      "ae": 0.1564,
+      "mg": 0.1531,
+      "mutation": 0.1336,
+      "nsclc": 0.1259,
+      "dose": 0.1168,
+      "current": 0.1065,
+      "egfr": 0.1026,
+      "fatigue": 0.1018,
+      "rash": 0.0981
+    },
+    "Unknown": {
+      "mg": 0.1794,
+      "pt": 0.1749,
+      "ae": 0.1727,
+      "mutation": 0.133,
+      "dose": 0.133,
+      "current": 0.1156,
+      "daily": 0.1031,
+      "day": 0.1027,
+      "egfr": 0.1025,
+      "symptoms": 0.1008
+    }
+  },
+  "before_after": [
+    {
+      "Metric": "Total Row Count",
+      "Before_Cleaning": 5000.0,
+      "After_Cleaning": 5000.0
+    },
+    {
+      "Metric": "Missing Values (clinical_note)",
+      "Before_Cleaning": 0.0,
+      "After_Cleaning": 0.0
+    },
+    {
+      "Metric": "Duplicate Notes Count",
+      "Before_Cleaning": 451.0,
+      "After_Cleaning": 600.0
+    },
+    {
+      "Metric": "Unique Notes Count",
+      "Before_Cleaning": 4549.0,
+      "After_Cleaning": 4400.0
+    },
+    {
+      "Metric": "Mean Character Length",
+      "Before_Cleaning": 112.46,
+      "After_Cleaning": 105.46
+    },
+    {
+      "Metric": "Median Character Length",
+      "Before_Cleaning": 112.0,
+      "After_Cleaning": 105.0
+    },
+    {
+      "Metric": "Mean Word Count",
+      "Before_Cleaning": 17.37,
+      "After_Cleaning": 17.37
+    },
+    {
+      "Metric": "Median Word Count",
+      "Before_Cleaning": 18.0,
+      "After_Cleaning": 18.0
+    },
+    {
+      "Metric": "Total Tokens",
+      "Before_Cleaning": 86845.0,
+      "After_Cleaning": 86845.0
+    },
+    {
+      "Metric": "Vocabulary Size (Unique Tokens)",
+      "Before_Cleaning": 132.0,
+      "After_Cleaning": 131.0
+    },
+    {
+      "Metric": "Vocabulary Richness (TTR)",
+      "Before_Cleaning": 0.0015,
+      "After_Cleaning": 0.0015
+    }
+  ],
+  "unique_cat_summary": {
+    "note_type": {
+      "n_unique": 7,
+      "distribution": {
+        "Progress Note": 740,
+        "Trial Note": 731,
+        "Surgical Pathology": 721,
+        "Clinical Note": 719,
+        "Nurse Intake": 705,
+        "Oncology Consultation": 702,
+        "Pathology Report": 682
+      }
+    },
+    "gene_mutation": {
+      "n_unique": 10,
+      "distribution": {
+        "EGFR L858R": 776,
+        "KRAS G12C": 776,
+        "Unknown": 727,
+        "ALK fusion": 425,
+        "MET amplification": 419,
+        "TP53 mutation": 388,
+        "BRAF V600E": 383,
+        "EGFR exon 19 del": 378,
+        "ROS1 fusion": 374,
+        "STK11 mutation": 354
+      }
+    },
+    "drug_name": {
+      "n_unique": 12,
+      "distribution": {
+        "Osimertinib": 782,
+        "Cisplatin": 436,
+        "Gefitinib": 427,
+        "Unknown": 393,
+        "Sotorasib": 391,
+        "Carboplatin": 382,
+        "Dabrafenib": 378,
+        "Erlotinib": 374,
+        "Trametinib": 365,
+        "Crizotinib": 364,
+        "Pembrolizumab": 362,
+        "Alectinib": 346
+      }
+    },
+    "dosage_level": {
+      "n_unique": 9,
+      "distribution": {
+        "80 mg/day": 872,
+        "Unknown": 832,
+        "150 mg/day": 796,
+        "5 mg BID": 475,
+        "250 mg/day": 429,
+        "2 mg/kg": 417,
+        "200 mg/day": 407,
+        "600 mg BID": 387,
+        "300 mg BID": 385
+      }
+    },
+    "adverse_event": {
+      "n_unique": 11,
+      "distribution": {
+        "None Reported": 1150,
+        "Fatigue": 422,
+        "Fever": 403,
+        "Thrombocytopenia": 390,
+        "Mucositis": 385,
+        "Nausea": 384,
+        "Hepatotoxicity": 381,
+        "Diarrhea": 380,
+        "Rash": 379,
+        "Dyspnea": 371,
+        "Neutropenia": 355
+      }
+    },
+    "symptom_text": {
+      "n_unique": 13,
+      "distribution": {
+        "Shortness Of Breath": 713,
+        "Mild Fatigue": 394,
+        "Chest Discomfort": 375,
+        "Persistent Cough": 364,
+        "Fatigue + Cough": 362,
+        "Skin Rash": 359,
+        "Loss Of Appetite": 358,
+        "No New Symptoms": 352,
+        "Severe Diarrhea": 351,
+        "Nausea After Treatment": 348,
+        "Fever And Chills": 345,
+        "Rash Worsening": 342,
+        "Not Specified": 337
+      }
+    },
+    "annotation_status": {
+      "n_unique": 4,
+      "distribution": {
+        "pending": 1686,
+        "unreviewed": 1685,
+        "reviewed": 843,
+        "annotated": 786
+      }
+    },
+    "urgency": {
+      "n_unique": 4,
+      "distribution": {
+        "High": 1451,
+        "Low": 1395,
+        "Moderate": 1392,
+        "Unknown": 762
+      }
+    },
+    "has_missing_fields": {
+      "n_unique": 2,
+      "distribution": {
+        "True": 2832,
+        "False": 2168
+      }
+    },
+    "clinical_note_placeholder": {
+      "n_unique": 1,
+      "distribution": {
+        "False": 5000
+      }
+    }
+  }
+}
