@@ -1,0 +1,4 @@
+Model,Old_Accuracy,Old_Macro_F1,New_Accuracy,New_Macro_F1,New_Balanced_Accuracy,New_High_Recall,Leakage_Free,Audit_Notes
+SVM_TFIDF,0.3489,0.3489,0.7877,0.7869,0.7955,0.8589,"YES (Pure clinical_note, No Tags)",Uncalibrated noisy label run (random uniform noise target)
+BiLSTM,0.3248,0.3239,0.953,0.9534,0.9533,0.9597,"YES (Pure clinical_note, No Tags)",Uncalibrated noisy label run (random uniform noise target)
+ClinicalBERT,0.3149,0.287,0.8565,0.8564,0.8638,0.9395,"YES (Pure clinical_note, No Tags)",Uncalibrated noisy label run (random uniform noise target)

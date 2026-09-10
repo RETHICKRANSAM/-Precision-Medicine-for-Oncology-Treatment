@@ -1,0 +1,6 @@
+Model,Test Accuracy,CV Accuracy Mean,CV Accuracy Std,Balanced Accuracy,Macro Precision,Macro Recall,Macro F1,Weighted F1
+XGBoost,0.9178,0.9319,0.0058,0.5778,0.5321,0.5778,0.5513,0.9214
+Decision Tree,0.9089,0.9207,0.0055,0.5744,0.5205,0.5744,0.5421,0.9139
+Random Forest,0.9012,0.9294,0.0033,0.5715,0.5115,0.5715,0.5346,0.9076
+SVM,0.8408,0.8613,0.007,0.5241,0.4549,0.5241,0.4749,0.8576
+Logistic Regression,0.7895,0.8006,0.0109,0.5322,0.4367,0.5322,0.4499,0.8208

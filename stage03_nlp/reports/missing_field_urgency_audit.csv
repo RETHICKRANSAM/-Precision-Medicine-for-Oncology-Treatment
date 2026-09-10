@@ -1,0 +1,4 @@
+has_missing_fields,total_records,High_count,High_pct,Low_count,Low_pct,Moderate_count,Moderate_pct
+False,2168,774,35.7,564,26.01,830,38.28
+True,2832,736,25.99,1103,38.95,993,35.06
+Total,5000,1510,0.0,1667,0.0,1823,0.0

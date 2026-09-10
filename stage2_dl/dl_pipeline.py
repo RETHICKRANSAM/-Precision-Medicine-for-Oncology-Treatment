@@ -298,22 +298,30 @@ class BasicBlock(nn.Module):
         out += res
         return self.relu(out)
 
-class LightweightResNet18(nn.Module):
+class ResNet18(nn.Module):
     def __init__(self, num_classes=5):
         super().__init__()
-        self.conv1 = nn.Conv2d(3, 32, kernel_size=7, stride=2, padding=3, bias=False)
-        self.bn1 = nn.BatchNorm2d(32)
+        self.conv1 = nn.Conv2d(3, 64, kernel_size=7, stride=2, padding=3, bias=False)
+        self.bn1 = nn.BatchNorm2d(64)
         self.relu = nn.ReLU(inplace=True)
         self.maxpool = nn.MaxPool2d(kernel_size=3, stride=2, padding=1)
 
-        self.layer1 = nn.Sequential(BasicBlock(32, 32), BasicBlock(32, 32))
-        self.layer2 = nn.Sequential(BasicBlock(32, 64, stride=2), BasicBlock(64, 64))
-        self.layer3 = nn.Sequential(BasicBlock(64, 128, stride=2), BasicBlock(128, 128))
-        self.layer4 = nn.Sequential(BasicBlock(128, 256, stride=2), BasicBlock(256, 256))
+        self.layer1 = nn.Sequential(BasicBlock(64, 64), BasicBlock(64, 64))
+        self.layer2 = nn.Sequential(BasicBlock(64, 128, stride=2), BasicBlock(128, 128))
+        self.layer3 = nn.Sequential(BasicBlock(128, 256, stride=2), BasicBlock(256, 256))
+        self.layer4 = nn.Sequential(BasicBlock(256, 512, stride=2), BasicBlock(512, 512))
 
         self.avgpool = nn.AdaptiveAvgPool2d((1, 1))
         self.dropout = nn.Dropout(0.3)
-        self.fc = nn.Linear(256, num_classes)
+        self.fc = nn.Linear(512, num_classes)
+
+        # Standard Kaiming / He normal weight initialization
+        for m in self.modules():
+            if isinstance(m, nn.Conv2d):
+                nn.init.kaiming_normal_(m.weight, mode='fan_out', nonlinearity='relu')
+            elif isinstance(m, nn.BatchNorm2d):
+                nn.init.constant_(m.weight, 1)
+                nn.init.constant_(m.bias, 0)
 
     def forward(self, x):
         x = self.maxpool(self.relu(self.bn1(self.conv1(x))))
@@ -326,7 +334,7 @@ class LightweightResNet18(nn.Module):
         x = self.dropout(x)
         return self.fc(x)
 
-cnn_model = LightweightResNet18(num_classes=len(VALID_HISTO_CLASSES)).to(DEVICE)
+cnn_model = ResNet18(num_classes=len(VALID_HISTO_CLASSES)).to(DEVICE)
 
 # Compute class weights for loss
 class_counts = [int((train_img_df["Target_Idx"] == i).sum()) for i in range(len(VALID_HISTO_CLASSES))]
@@ -963,6 +971,13 @@ df_comparison = pd.DataFrame(comparison_rows)
 comparison_csv_path = os.path.join(REPORTS_DIR, "dl_model_comparison.csv")
 df_comparison.to_csv(comparison_csv_path, index=False)
 print(f"[+] Saved comparison table to: {comparison_csv_path}")
+
+# Also export to root reports directory
+root_reports_dir = os.path.join(os.path.dirname(BASE_DIR), "reports")
+os.makedirs(root_reports_dir, exist_ok=True)
+root_comp_path = os.path.join(root_reports_dir, "dl_model_comparison.csv")
+df_comparison.to_csv(root_comp_path, index=False)
+print(f"[+] Saved comparison table to: {root_comp_path}")
 
 # Determine best model based on primary metric: Macro F1
 best_idx = df_comparison["Macro F1"].idxmax()

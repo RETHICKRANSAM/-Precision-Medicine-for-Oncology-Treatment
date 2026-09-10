@@ -1030,6 +1030,7 @@ def main():
     banner(17, "MODEL COMPARISON")
 
     comparison_rows = []
+    ml_comparison_rows = []
     for name in ["Logistic Regression", "Decision Tree", "Random Forest", "XGBoost", "SVM"]:
         row = {
             "Model": name,
@@ -1043,6 +1044,19 @@ def main():
         }
         comparison_rows.append(row)
 
+        ml_row = {
+            "Model": name,
+            "Test Accuracy": round(test_results[name]["accuracy"], 4),
+            "CV Accuracy Mean": round(cv_results[name]["accuracy"]["mean"], 4),
+            "CV Accuracy Std": round(cv_results[name]["accuracy"]["std"], 4),
+            "Balanced Accuracy": round(test_results[name]["balanced_accuracy"], 4),
+            "Macro Precision": round(test_results[name]["macro_precision"], 4),
+            "Macro Recall": round(test_results[name]["macro_recall"], 4),
+            "Macro F1": round(test_results[name]["macro_f1"], 4),
+            "Weighted F1": round(test_results[name]["weighted_f1"], 4),
+        }
+        ml_comparison_rows.append(ml_row)
+
     comparison_df = pd.DataFrame(comparison_rows)
     # Sort by CV Macro F1 (extract mean)
     comparison_df["_sort_key"] = [cv_results[name]["macro_f1"]["mean"]
@@ -1054,6 +1068,12 @@ def main():
     comparison_path = os.path.join(REPORTS_DIR, "model_comparison.csv")
     comparison_df.to_csv(comparison_path, index=False)
     print(f"\n  Saved → {comparison_path}")
+
+    ml_comparison_df = pd.DataFrame(ml_comparison_rows)
+    ml_comparison_df = ml_comparison_df.sort_values("Macro F1", ascending=False)
+    ml_comp_path = os.path.join(REPORTS_DIR, "ml_model_comparison.csv")
+    ml_comparison_df.to_csv(ml_comp_path, index=False)
+    print(f"  Saved → {ml_comp_path}")
 
     # ──────────────────────────────────────────
     # Step 18 — SELECT BEST MODEL

@@ -1,0 +1,4 @@
+Model,Dataset,Accuracy,Macro Precision,Macro Recall,Macro F1,Weighted F1,Balanced Accuracy
+CNN (ResNet-18),Histopathology Microscopy Images (346 samples),1.0,1.0,1.0,1.0,1.0,1.0
+BiLSTM,"Temporal Biomarker Sequences (196 patients, 5 timepoints)",1.0,1.0,1.0,1.0,1.0,1.0
+Tabular Transformer,Cleaned Clinical Encounters (980 encounters),1.0,1.0,1.0,1.0,1.0,1.0

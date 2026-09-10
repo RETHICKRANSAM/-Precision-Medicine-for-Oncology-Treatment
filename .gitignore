@@ -24,3 +24,14 @@ desktop.ini
 # IDE files
 .vscode/
 .idea/
+
+# Large Model Weights (>100MB GitHub limit)
+*.safetensors
+*.bin
+stage03_nlp/models/clinicalbert_leakage_free/model.safetensors
+stage03_nlp/models/clinicalbert_model/model.safetensors
+stage03_nlp/models/pretrained_bio_clinicalbert/
+
+# Scratch & Temporary files
+scratch/
+test_chunk.bin

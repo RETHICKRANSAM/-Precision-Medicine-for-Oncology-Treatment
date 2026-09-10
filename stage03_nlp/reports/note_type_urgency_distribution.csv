@@ -1,0 +1,9 @@
+note_type,total_records,High_count,High_pct,Low_count,Low_pct,Moderate_count,Moderate_pct
+Clinical Note,719,206,28.65,242,33.66,271,37.69
+Nurse Intake,705,214,30.35,245,34.75,246,34.89
+Oncology Consultation,702,220,31.34,244,34.76,238,33.9
+Pathology Report,682,205,30.06,211,30.94,266,39.0
+Progress Note,740,219,29.59,248,33.51,273,36.89
+Surgical Pathology,721,213,29.54,234,32.45,274,38.0
+Trial Note,731,233,31.87,243,33.24,255,34.88
+Total,5000,1510,0.0,1667,0.0,1823,0.0

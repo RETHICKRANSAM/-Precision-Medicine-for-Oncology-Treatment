@@ -1,0 +1,227 @@
+cleaned_clinical_note,number_of_occurrences,unique_urgency_labels,label_count,has_label_conflict,patient_ids
+pathology nsclc specimen molecular egfr l858r clinical correlation req d pt has fever and chills,18,High; Low; Moderate,3,True,P01302; P01573; P01961; P02711; P02800
+pathology nsclc specimen molecular alk fusion clinical correlation req d pt has rash worsening,11,High; Low; Moderate,3,True,P00343; P00853; P01565; P01862; P02320
+pathology nsclc specimen molecular egfr l858r clinical correlation req d pt has mild fatigue,10,Low; Moderate,2,True,P01908; P02270; P02541; P02635; P02814
+pathology nsclc specimen molecular egfr l858r clinical correlation req d pt has shortness of breath,10,High; Moderate,2,True,P00272; P00471; P00573; P00690; P02201
+pathology nsclc specimen molecular braf v600e clinical correlation req d pt has nausea after treatment,9,High; Low; Moderate,3,True,P00625; P01393; P01518; P03179; P03362
+pathology nsclc specimen molecular alk fusion clinical correlation req d pt has skin rash,8,Low; Moderate,2,True,P00033; P00617; P01017; P01024; P01055
+pathology nsclc specimen molecular egfr l858r clinical correlation req d pt has chest discomfort,8,High; Low; Moderate,3,True,P01390; P02420; P02571; P02757; P03162
+pathology nsclc specimen molecular kras-g12c clinical correlation req d pt has shortness of breath,8,High; Moderate,2,True,P00400; P00712; P01195; P01952; P02139
+pathology nsclc specimen molecular braf v600e clinical correlation req d pt has persistent cough,7,High; Moderate,2,True,P02186; P02902; P03061; P03447; P03470
+pathology nsclc specimen molecular egfr l858r clinical correlation req d pt has nausea after treatment,7,Low; Moderate,2,True,P00501; P01248; P01598; P01741; P01880
+pathology nsclc specimen molecular egfr l858r clinical correlation req d pt has rash worsening,7,Low; Moderate,2,True,P00265; P01028; P02042; P04182; P04186
+pathology nsclc specimen molecular kras g12c clinical correlation req d pt has persistent cough,7,High; Low; Moderate,3,True,P01071; P01318; P01371; P01849; P02434
+pathology nsclc specimen molecular met amplification clinical correlation req d pt has no new symptoms,7,Low; Moderate,2,True,P00407; P00427; P01971; P02463; P03663
+pathology nsclc specimen molecular met amplification clinical correlation req d pt has rash worsening,7,High; Low; Moderate,3,True,P00006; P01255; P01659; P02677; P02717
+pathology nsclc specimen molecular tp53 mutation clinical correlation req d pt has persistent cough,7,High; Moderate,2,True,P00923; P01721; P03252; P03830; P03875
+pathology nsclc specimen molecular alk fusion clinical correlation req d pt has fatigue cough,6,High; Moderate,2,True,P01438; P01651; P01930; P02530; P03604
+pathology nsclc specimen molecular alk fusion clinical correlation req d pt has persistent cough,6,High; Low; Moderate,3,True,P00505; P00758; P02282; P03620; P04027
+pathology nsclc specimen molecular braf v600e clinical correlation req d pt has mild fatigue,6,Low; Moderate,2,True,P00316; P00508; P02069; P03553; P04404
+pathology nsclc specimen molecular braf v600e clinical correlation req d pt has rash worsening,6,High; Low; Moderate,3,True,P00037; P00038; P01471; P01692; P01888
+pathology nsclc specimen molecular egfr exon 19 del clinical correlation req d pt has fatigue cough,6,Low; Moderate,2,True,P00510; P02880; P03815; P03865; P04208
+pathology nsclc specimen molecular egfr exon 19 del clinical correlation req d pt has fever and chills,6,High; Moderate,2,True,P00161; P00552; P04224; P04238; P04637
+pathology nsclc specimen molecular egfr exon 19 del clinical correlation req d pt has loss of appetite,6,High; Low; Moderate,3,True,P00206; P01545; P03128; P03454; P04405
+pathology nsclc specimen molecular egfr l858r clinical correlation req d pt has sob,6,High; Moderate,2,True,P00482; P00862; P03380; P03430; P03790
+pathology nsclc specimen molecular kras g12c clinical correlation req d pt has nausea after treatment,6,High; Moderate,2,True,P00837; P00977; P01485; P02715; P02789
+pathology nsclc specimen molecular not available clinical correlation req d pt has shortness of breath,6,High; Low; Moderate,3,True,P01629; P02120; P02774; P03055; P04035
+pathology nsclc specimen molecular tp53 mutation clinical correlation req d pt has nausea after treatment,6,High; Moderate,2,True,P00016; P00093; P00170; P02385; P03526
+pathology nsclc specimen molecular unknown clinical correlation req d pt has chest discomfort,6,High; Low; Moderate,3,True,P01605; P01689; P02928; P03783; P03929
+pathology nsclc specimen molecular unknown clinical correlation req d pt has fever and chills,6,High; Low; Moderate,3,True,P00576; P00740; P01608; P02896; P03099
+pathology nsclc specimen molecular alk fusion clinical correlation req d pt has mild fatigue,5,High; Low; Moderate,3,True,P00873; P02783; P03558; P03559; P03658
+pathology nsclc specimen molecular alk fusion clinical correlation req d pt has no new symptoms,5,Low; Moderate,2,True,P00166; P02931; P03170; P03468; P04321
+pathology nsclc specimen molecular braf v600e clinical correlation req d pt has chest discomfort,5,High; Moderate,2,True,P01249; P03842; P04063; P04432; P04609
+pathology nsclc specimen molecular braf v600e clinical correlation req d pt has shortness of breath,5,High; Moderate,2,True,P00691; P02326; P02407; P02907; P04125
+pathology nsclc specimen molecular egfr exon 19 del clinical correlation req d pt has nausea after treatment,5,Low; Moderate,2,True,P00176; P00511; P00967; P01627; P04046
+pathology nsclc specimen molecular egfr exon 19 del clinical correlation req d pt has severe diarrhea,5,High; Low; Moderate,3,True,P00662; P01010; P01290; P04223; P04827
+pathology nsclc specimen molecular egfr l858r clinical correlation req d pt has loss of appetite,5,High; Low; Moderate,3,True,P02369; P02570; P03239; P04240; P04527
+pathology nsclc specimen molecular egfr l858r clinical correlation req d pt has severe diarrhea,5,High; Low; Moderate,3,True,P01196; P01375; P02285; P02969; P04873
+pathology nsclc specimen molecular kras g12c clinical correlation req d pt has loss of appetite,5,High; Moderate,2,True,P00990; P01539; P01992; P03066; P04013
+pathology nsclc specimen molecular kras-g12c clinical correlation req d pt has skin rash,5,Low; Moderate,2,True,P00938; P02006; P02379; P03872; P04556
+pathology nsclc specimen molecular kras-g12c clinical correlation req d pt has sob,5,High; Moderate,2,True,P00323; P02577; P02593; P03092; P04114
+pathology nsclc specimen molecular met amplification clinical correlation req d pt has chest discomfort,5,High; Moderate,2,True,P00538; P02393; P02446; P03419; P03769
+pathology nsclc specimen molecular met amplification clinical correlation req d pt has loss of appetite,5,High; Moderate,2,True,P01033; P02026; P03425; P03803; P04324
+pathology nsclc specimen molecular met amplification clinical correlation req d pt has not documented,5,Low; Moderate,2,True,P01016; P01294; P02487; P03747; P03800
+pathology nsclc specimen molecular met amplification clinical correlation req d pt has persistent cough,5,High; Low; Moderate,3,True,P02582; P02600; P02735; P04002; P04782
+pathology nsclc specimen molecular not available clinical correlation req d pt has fever and chills,5,High; Low; Moderate,3,True,P00951; P01031; P01415; P03976; P04109
+pathology nsclc specimen molecular not available clinical correlation req d pt has loss of appetite,5,Low; Moderate,2,True,P00656; P00860; P01630; P03279; P04785
+pathology nsclc specimen molecular ros1 fusion clinical correlation req d pt has fever and chills,5,High; Low; Moderate,3,True,P00153; P01063; P02391; P02843; P04741
+pathology nsclc specimen molecular ros1 fusion clinical correlation req d pt has persistent cough,5,Low; Moderate,2,True,P00310; P00901; P02764; P03694; P03959
+pathology nsclc specimen molecular stk11 mutation clinical correlation req d pt has persistent cough,5,High; Moderate,2,True,P00032; P01110; P01922; P02172; P03770
+pathology nsclc specimen molecular stk11 mutation clinical correlation req d pt has skin rash,5,High; Low,2,True,P02041; P03001; P03121; P03130; P04828
+pathology nsclc specimen molecular alk fusion clinical correlation req d pt has chest discomfort,4,High; Moderate,2,True,P01046; P02115; P02856; P03056
+pathology nsclc specimen molecular alk fusion clinical correlation req d pt has shortness of breath,4,High; Moderate,2,True,P01116; P01389; P03520; P04602
+pathology nsclc specimen molecular braf v600e clinical correlation req d pt has no new symptoms,4,Low; Moderate,2,True,P00531; P01526; P03310; P04997
+pathology nsclc specimen molecular braf v600e clinical correlation req d pt has severe diarrhea,4,High; Moderate,2,True,P00897; P01058; P01422; P01865
+pathology nsclc specimen molecular egfr exon 19 del clinical correlation req d pt has rash worsening,4,Low; Moderate,2,True,P00370; P00613; P03041; P03132
+pathology nsclc specimen molecular egfr exon 19 del clinical correlation req d pt has shortness of breath,4,High; Moderate,2,True,P00669; P03166; P03579; P04376
+pathology nsclc specimen molecular egfr l858r clinical correlation req d pt has fatigue cough,4,Low; Moderate,2,True,P00322; P02424; P04218; P04387
+pathology nsclc specimen molecular egfr l858r clinical correlation req d pt has persistent cough,4,Low; Moderate,2,True,P00514; P03999; P04339; P04978
+pathology nsclc specimen molecular kras g12c clinical correlation req d pt has severe diarrhea,4,High; Moderate,2,True,P00174; P02046; P03882; P03923
+pathology nsclc specimen molecular kras-g12c clinical correlation req d pt has persistent cough,4,High; Moderate,2,True,P01383; P01869; P02299; P04794
+pathology nsclc specimen molecular kras-g12c clinical correlation req d pt has severe diarrhea,4,High; Moderate,2,True,P02132; P02727; P03404; P04227
+pathology nsclc specimen molecular met amplification clinical correlation req d pt has fatigue cough,4,High; Moderate,2,True,P01544; P02817; P03049; P04285
+pathology nsclc specimen molecular met amplification clinical correlation req d pt has fever and chills,4,High; Moderate,2,True,P01281; P03642; P03836; P03989
+pathology nsclc specimen molecular met amplification clinical correlation req d pt has mild fatigue,4,Low; Moderate,2,True,P01553; P03101; P03993; P04958
+pathology nsclc specimen molecular met amplification clinical correlation req d pt has skin rash,4,Low; Moderate,2,True,P00672; P01959; P02283; P03833
+pathology nsclc specimen molecular not available clinical correlation req d pt has chest discomfort,4,High; Moderate,2,True,P01433; P02787; P03184; P04666
+pathology nsclc specimen molecular ros1 fusion clinical correlation req d pt has chest discomfort,4,High; Moderate,2,True,P01309; P01795; P02467; P02863
+pathology nsclc specimen molecular ros1 fusion clinical correlation req d pt has fatigue cough,4,Low; Moderate,2,True,P00082; P00600; P01285; P02705
+pathology nsclc specimen molecular stk11 mutation clinical correlation req d pt has loss of appetite,4,High; Moderate,2,True,P02147; P03821; P03983; P04588
+pathology nsclc specimen molecular stk11 mutation clinical correlation req d pt has mild fatigue,4,High; Low; Moderate,3,True,P02281; P02307; P04118; P04235
+pathology nsclc specimen molecular stk11 mutation clinical correlation req d pt has nausea after treatment,4,High; Moderate,2,True,P00645; P03314; P03337; P04270
+pathology nsclc specimen molecular stk11 mutation clinical correlation req d pt has no new symptoms,4,Low; Moderate,2,True,P01844; P02749; P03044; P04540
+pathology nsclc specimen molecular stk11 mutation clinical correlation req d pt has severe diarrhea,4,High; Moderate,2,True,P00142; P00332; P01161; P02904
+pathology nsclc specimen molecular unknown clinical correlation req d pt has fatigue cough,4,Low; Moderate,2,True,P02094; P02310; P03919; P04132
+pathology nsclc specimen molecular unknown clinical correlation req d pt has nausea after treatment,4,Low; Moderate,2,True,P00270; P01100; P01963; P02475
+pathology nsclc specimen molecular unknown clinical correlation req d pt has persistent cough,4,Low; Moderate,2,True,P01640; P01763; P02090; P02790
+nurse intake pt feeling sob current med dabrafenib 200 mg/day mutation noted as braf v600e ae none reported,3,Low; Moderate,2,True,P03596; P03597; P03598
+pathology nsclc specimen molecular alk fusion clinical correlation req d pt has loss of appetite,3,High; Moderate,2,True,P01928; P01958; P03117
+pathology nsclc specimen molecular alk fusion clinical correlation req d pt has not documented,3,Low; Moderate,2,True,P01045; P02060; P03639
+pathology nsclc specimen molecular braf v600e clinical correlation req d pt has fatigue cough,3,High; Moderate,2,True,P03854; P03974; P04370
+pathology nsclc specimen molecular braf v600e clinical correlation req d pt has loss of appetite,3,High; Moderate,2,True,P00477; P01203; P01802
+pathology nsclc specimen molecular braf v600e clinical correlation req d pt has sob,3,High; Moderate,2,True,P00005; P01734; P02245
+pathology nsclc specimen molecular egfr exon 19 del clinical correlation req d pt has chest discomfort,3,High; Moderate,2,True,P02687; P03785; P03862
+pathology nsclc specimen molecular egfr exon 19 del clinical correlation req d pt has mild fatigue,3,High; Moderate,2,True,P01529; P01530; P04629
+pathology nsclc specimen molecular egfr exon 19 del clinical correlation req d pt has sob,3,High; Moderate,2,True,P00335; P02614; P03617
+pathology nsclc specimen molecular kras g12c clinical correlation req d pt has not documented,3,Low; Moderate,2,True,P02196; P03796; P04818
+pathology nsclc specimen molecular met amplification clinical correlation req d pt has nausea after treatment,3,Low; Moderate,2,True,P00353; P03079; P04601
+pathology nsclc specimen molecular ros1 fusion clinical correlation req d pt has loss of appetite,3,Low; Moderate,2,True,P02470; P02742; P04231
+pathology nsclc specimen molecular stk11 mutation clinical correlation req d pt has not documented,3,Low; Moderate,2,True,P03611; P04202; P04632
+pathology nsclc specimen molecular tp53 mutation clinical correlation req d pt has skin rash,3,High; Moderate,2,True,P00762; P01107; P04563
+pathology nsclc specimen molecular unknown clinical correlation req d pt has severe diarrhea,3,Low; Moderate,2,True,P01048; P02304; P04080
+nurse intake pt feeling chest discomfort current med pembrolizumab dose not recorded mutation noted as met amplification ae diarrhea,2,High; Low,2,True,P04428; P04429
+nurse intake pt feeling chest discomfort current med sotorasib n/a mutation noted as not available ae neutropenia,2,High; Moderate,2,True,P00337; P00338
+nurse intake pt feeling fever and chills current med unknown med 2 mg/kg mutation noted as not available ae hepatotoxicity,2,High; Low,2,True,P01714; P01715
+nurse intake pt feeling not documented current med unknown med 250 mg od mutation noted as met amplification ae fatigue,2,High; Low,2,True,P02290; P02291
+nurse intake pt feeling sob current med alectinib dose not recorded mutation noted as tp53 mutation ae fatigue,2,High; Low,2,True,P04402; P04403
+nurse intake pt feeling sob current med unknown med 2 mg/kg mutation noted as kras g12c ae neutropenia,2,High; Moderate,2,True,P02199; P02200
+oncology f/u pt says fatigue cough genomic panel stk11 mutation tx erlotinib dose not recorded ae hepatotoxicity,2,High; Low,2,True,P04133; P04134
+oncology f/u pt says nausea after treatment genomic panel braf v600e tx alectinib 600 mg bid ae mucositis,2,High; Moderate,2,True,P01690; P01691
+oncology f/u pt says no new symptoms genomic panel alk fusion tx crizotinib 200 mg/day ae neutropenia,2,High; Moderate,2,True,P03152; P03153
+oncology f/u pt says no new symptoms genomic panel kras g12c tx osimertinib n/a ae thrombocytopenia,2,Low; Moderate,2,True,P00128; P00129
+oncology f/u pt says not documented genomic panel kras-g12c tx crizotinib 250 mg od ae thrombocytopenia,2,High; Moderate,2,True,P01286; P01287
+oncology f/u pt says not documented genomic panel kras-g12c tx osimertinib 150mg/day ae none reported,2,Low; Moderate,2,True,P03416; P03417
+oncology f/u pt says rash worsening genomic panel alk fusion tx sotorasib dose not recorded ae fatigue,2,Low; Moderate,2,True,P03312; P03313
+oncology f/u pt says shortness of breath genomic panel met amplification tx erlotinib 250 mg od ae none reported,2,Low; Moderate,2,True,P00619; P00620
+pathology nsclc specimen molecular egfr l858r clinical correlation req d pt has skin rash,2,Low; Moderate,2,True,P01534; P03724
+pathology nsclc specimen molecular kras g12c clinical correlation req d pt has fatigue cough,2,High; Moderate,2,True,P01379; P02332
+pathology nsclc specimen molecular kras g12c clinical correlation req d pt has skin rash,2,Low; Moderate,2,True,P03939; P04354
+pathology nsclc specimen molecular kras-g12c clinical correlation req d pt has fatigue cough,2,High; Moderate,2,True,P00076; P01877
+pathology nsclc specimen molecular not available clinical correlation req d pt has nausea after treatment,2,Low; Moderate,2,True,P03151; P04368
+pathology nsclc specimen molecular not available clinical correlation req d pt has rash worsening,2,Low; Moderate,2,True,P04737; P04878
+pathology nsclc specimen molecular not available clinical correlation req d pt has sob,2,Low; Moderate,2,True,P02002; P02888
+pathology nsclc specimen molecular ros1 fusion clinical correlation req d pt has severe diarrhea,2,Low; Moderate,2,True,P03936; P04139
+pathology nsclc specimen molecular stk11 mut clinical correlation req d pt has not documented,2,Low; Moderate,2,True,P04474; P04504
+pathology nsclc specimen molecular stk11 mutation clinical correlation req d pt has rash worsening,2,High; Moderate,2,True,P00768; P02769
+pathology nsclc specimen molecular tp53 mut clinical correlation req d pt has mild fatigue,2,Low; Moderate,2,True,P00667; P04893
+pathology nsclc specimen molecular tp53 mutation clinical correlation req d pt has mild fatigue,2,Low; Moderate,2,True,P00719; P04077
+patient is on alectinib 2 mg/kg biopsy notes braf v600e c/o no new symptoms adverse event hepatotoxicity,2,Low; Moderate,2,True,P01588; P01589
+patient is on osimertinib 2 mg/kg biopsy notes braf v600e c/o skin rash adverse event none,2,High; Low,2,True,P01551; P01552
+patient is on trametinib 80mg daily biopsy notes egfr exon 19 del c/o fever and chills adverse event dyspnea,2,High; Low,2,True,P01993; P01994
+progress note - alk fusion treatment alectinib dose 300mg twice daily pt reports mild fatigue no/possible fever,2,Low; Moderate,2,True,P03750; P03751
+progress note - egfr exon 19 del treatment osimertinib dose n/a pt reports severe diarrhea no/possible thrombocytopenia,2,High; Low,2,True,P01567; P01568
+progress note - kras g12c treatment crizotinib dose 200 mg/day pt reports mild fatigue no/possible diarrhea,2,High; Moderate,2,True,P02797; P02798
+progress note - kras g12c treatment osimertinib dose 2 mg/kg pt reports fatigue cough no/possible nausea,2,Low; Moderate,2,True,P04107; P04108
+progress note - kras-g12c treatment gefitinib dose 150mg/day pt reports no new symptoms no/possible not documented,2,High; Low,2,True,P04780; P04781
+progress note - kras-g12c treatment sotorasib dose 80mg daily pt reports no new symptoms no/possible fatigue,2,Low; Moderate,2,True,P00863; P00864
+progress note - not available treatment gefitinib dose 150mg/day pt reports fever and chills no/possible dyspnea,2,Low; Moderate,2,True,P04543; P04544
+progress note - ros1 fusion treatment dabrafenib dose 5 mg bid pt reports nausea after treatment no/possible fatigue,2,Low; Moderate,2,True,P03349; P03350
+progress note - unknown treatment cisplatin dose 300mg twice daily pt reports nausea after treatment no/possible thrombocytopenia,2,High; Moderate,2,True,P03250; P03251
+pt is on pembrolizumab 80 mg daily biopsy notes unknown c/o no new symptoms adverse event fever,2,High; Low,2,True,P04711; P04712
+pt w/ nsclc mut egfr l858r started pembrolizumab 80mg daily reports no new symptoms ae none reported,2,High; Low,2,True,P02387; P02388
+pt w/ nsclc mutation egfr l858r started erlotinib 200 mg/day reports sob ae dyspnea,2,High; Moderate,2,True,P01635; P01636
+pt w/ nsclc mutation kras g12c started osimertinib 80mg daily reports fever and chills ae diarrhea,2,High; Moderate,2,True,P04195; P04196
+pt w/ nsclc mutation kras-g12c started dabrafenib 150 mg / day reports fatigue cough ae hepatotoxicity,2,High; Low,2,True,P00879; P00880
+pt w/ nsclc mutation stk11 mutation started trametinib 150mg/day reports skin rash ae not documented,2,High; Low,2,True,P00260; P00261
+pt w/ nsclc mutation tp53 mutation started cisplatin 200 mg/day reports not documented ae none reported,2,Low; Moderate,2,True,P01698; P01699
+pt w/ nsclc mutation tp53 mutation started osimertinib 80 mg daily reports nausea after treatment ae nausea,2,Low; Moderate,2,True,P02135; P02136
+trial screening egfr exon 19 del prior/current drug carboplatin dose 300mg twice daily symptoms rash worsening ae fatigue,2,Low; Moderate,2,True,P03303; P03304
+trial screening egfr exon 19 del prior/current drug dabrafenib dose 150 mg / day symptoms severe diarrhea ae dyspnea,2,Low; Moderate,2,True,P01815; P01816
+trial screening egfr l858r prior/current drug carboplatin dose 2 mg/kg symptoms sob ae mucositis,2,High; Low,2,True,P04944; P04945
+trial screening egfr l858r prior/current drug crizotinib dose 600 mg bid symptoms no new symptoms ae nausea,2,High; Low,2,True,P04756; P04757
+trial screening egfr l858r prior/current drug dabrafenib dose 80 mg daily symptoms mild fatigue ae nausea,2,Low; Moderate,2,True,P01237; P01238
+trial screening egfr l858r prior/current drug osimertinib dose dose not recorded symptoms no new symptoms ae none,2,High; Low,2,True,P02839; P02840
+trial screening kras g12c prior/current drug osimertinib dose 5 mg bid symptoms shortness of breath ae none reported,2,High; Moderate,2,True,P04005; P04006
+trial screening stk11 mutation prior/current drug cisplatin dose 200 mg/day symptoms chest discomfort ae hepatotoxicity,2,High; Moderate,2,True,P00785; P00786
+pathology nsclc specimen molecular egfr l858r clinical correlation req d pt has not documented,11,Low,1,False,P00454; P00729; P00831; P01839; P02639
+pathology nsclc specimen molecular egfr exon 19 del clinical correlation req d pt has skin rash,8,Low,1,False,P01112; P01736; P02464; P03523; P03666
+pathology nsclc specimen molecular kras g12c clinical correlation req d pt has shortness of breath,8,High,1,False,P00218; P00289; P00991; P01231; P02028
+pathology nsclc specimen molecular egfr exon 19 del clinical correlation req d pt has not documented,7,Low,1,False,P00836; P01173; P01532; P03013; P03411
+pathology nsclc specimen molecular ros1 fusion clinical correlation req d pt has mild fatigue,7,Low,1,False,P00247; P01165; P01178; P02690; P03497
+pathology nsclc specimen molecular egfr l858r clinical correlation req d pt has no new symptoms,6,Low,1,False,P00978; P02630; P03717; P03755; P04158
+pathology nsclc specimen molecular ros1 fusion clinical correlation req d pt has not documented,6,Low,1,False,P00438; P00939; P01800; P01924; P03633
+pathology nsclc specimen molecular tp53 mutation clinical correlation req d pt has chest discomfort,6,High,1,False,P01641; P01896; P02591; P03057; P04230
+pathology nsclc specimen molecular tp53 mutation clinical correlation req d pt has fever and chills,6,High,1,False,P00237; P00943; P01159; P01881; P03884
+pathology nsclc specimen molecular unknown clinical correlation req d pt has rash worsening,6,Low,1,False,P01612; P01639; P01686; P01956; P03522
+pathology nsclc specimen molecular unknown clinical correlation req d pt has skin rash,6,Low,1,False,P01524; P02404; P02500; P02719; P03867
+pathology nsclc specimen molecular kras-g12c clinical correlation req d pt has chest discomfort,5,High,1,False,P02131; P02511; P03307; P04157; P04533
+pathology nsclc specimen molecular not available clinical correlation req d pt has not documented,5,Low,1,False,P01999; P03472; P03709; P04154; P04946
+pathology nsclc specimen molecular not available clinical correlation req d pt has skin rash,5,Low,1,False,P00039; P01155; P01943; P02229; P03594
+pathology nsclc specimen molecular unknown clinical correlation req d pt has not documented,5,Low,1,False,P01243; P03852; P04172; P04395; P04744
+pathology nsclc specimen molecular alk fusion clinical correlation req d pt has nausea after treatment,4,Moderate,1,False,P00012; P01304; P01336; P03357
+pathology nsclc specimen molecular alk fusion clinical correlation req d pt has sob,4,High,1,False,P00677; P01341; P04286; P04410
+pathology nsclc specimen molecular kras-g12c clinical correlation req d pt has fever and chills,4,High,1,False,P00475; P01397; P01558; P03692
+pathology nsclc specimen molecular kras-g12c clinical correlation req d pt has rash worsening,4,Moderate,1,False,P00236; P02551; P02609; P03585
+pathology nsclc specimen molecular ros1 fusion clinical correlation req d pt has skin rash,4,Low,1,False,P00017; P01799; P01822; P01932
+pathology nsclc specimen molecular ros1 fusion clinical correlation req d pt has sob,4,Moderate,1,False,P02213; P02474; P03540; P04966
+pathology nsclc specimen molecular tp53 mutation clinical correlation req d pt has loss of appetite,4,High,1,False,P00609; P01230; P01758; P04903
+pathology nsclc specimen molecular tp53 mutation clinical correlation req d pt has rash worsening,4,High,1,False,P00902; P00995; P01778; P02626
+pathology nsclc specimen molecular alk fusion clinical correlation req d pt has fever and chills,3,High,1,False,P00676; P01464; P03023
+pathology nsclc specimen molecular alk fusion clinical correlation req d pt has severe diarrhea,3,High,1,False,P00955; P03536; P03590
+pathology nsclc specimen molecular kras g12c clinical correlation req d pt has chest discomfort,3,High,1,False,P00498; P01465; P04925
+pathology nsclc specimen molecular kras g12c clinical correlation req d pt has mild fatigue,3,Moderate,1,False,P00841; P03689; P04510
+pathology nsclc specimen molecular stk11 mut clinical correlation req d pt has loss of appetite,3,High,1,False,P01276; P03392; P04936
+pathology nsclc specimen molecular stk11 mutation clinical correlation req d pt has shortness of breath,3,High,1,False,P02228; P02884; P04655
+pathology nsclc specimen molecular tp53 mutation clinical correlation req d pt has fatigue cough,3,High,1,False,P00969; P02150; P02860
+pathology nsclc specimen molecular tp53 mutation clinical correlation req d pt has no new symptoms,3,Moderate,1,False,P00727; P03267; P04164
+nurse intake pt feeling fatigue cough current med osimertinib 80 mg daily mut noted as alk fusion ae not documented,2,Moderate,1,False,P03656; P03657
+nurse intake pt feeling loss of appetite current med gefitinib 250 mg od mutation noted as tp53 mutation ae neutropenia,2,High,1,False,P04973; P04974
+nurse intake pt feeling mild fatigue current med osimertinib 200 mg/day mutation noted as tp53 mutation ae nausea,2,Moderate,1,False,P02477; P02478
+nurse intake pt feeling severe diarrhea current med alectinib n/a mutation noted as egfr l858r ae dyspnea,2,Moderate,1,False,P02706; P02707
+nurse intake pt feeling skin rash current med crizotinib dose not recorded mutation noted as unknown ae hepatotoxicity,2,Low,1,False,P02750; P02751
+oncology f/u pt says chest discomfort genomic panel egfr exon 19 del tx alectinib dose not recorded ae none,2,Moderate,1,False,P01648; P01649
+oncology f/u pt says fatigue cough genomic panel egfr exon 19 del tx trametinib 5 mg bid ae neutropenia,2,High,1,False,P04374; P04375
+oncology f/u pt says nausea after treatment genomic panel egfr l858r tx carboplatin 80mg daily ae thrombocytopenia,2,Moderate,1,False,P01482; P04996
+oncology f/u pt says rash worsening genomic panel egfr l858r tx dabrafenib dose not recorded ae mucositis,2,Moderate,1,False,P00410; P04360
+pathology nsclc specimen molecular egfr exon 19 del clinical correlation req d pt has no new symptoms,2,Low,1,False,P01644; P03217
+pathology nsclc specimen molecular egfr exon 19 del clinical correlation req d pt has persistent cough,2,Low,1,False,P02031; P04073
+pathology nsclc specimen molecular kras g12c clinical correlation req d pt has fever and chills,2,High,1,False,P00682; P03982
+pathology nsclc specimen molecular kras-g12c clinical correlation req d pt has loss of appetite,2,High,1,False,P00281; P01150
+pathology nsclc specimen molecular kras-g12c clinical correlation req d pt has no new symptoms,2,Low,1,False,P00417; P01964
+pathology nsclc specimen molecular met amplification clinical correlation req d pt has shortness of breath,2,High,1,False,P01423; P03652
+pathology nsclc specimen molecular met amplification clinical correlation req d pt has sob,2,High,1,False,P00942; P03233
+pathology nsclc specimen molecular not available clinical correlation req d pt has fatigue cough,2,Low,1,False,P00031; P03333
+pathology nsclc specimen molecular not available clinical correlation req d pt has mild fatigue,2,Low,1,False,P03453; P04004
+pathology nsclc specimen molecular not available clinical correlation req d pt has persistent cough,2,Low,1,False,P00352; P04266
+pathology nsclc specimen molecular not available clinical correlation req d pt has severe diarrhea,2,Low,1,False,P00444; P01549
+pathology nsclc specimen molecular ros1 fusion clinical correlation req d pt has nausea after treatment,2,Low,1,False,P00217; P01594
+pathology nsclc specimen molecular ros1 fusion clinical correlation req d pt has no new symptoms,2,Low,1,False,P02249; P03488
+pathology nsclc specimen molecular ros1 fusion clinical correlation req d pt has rash worsening,2,Moderate,1,False,P03347; P04841
+pathology nsclc specimen molecular stk11 mut clinical correlation req d pt has skin rash,2,Moderate,1,False,P01702; P04116
+pathology nsclc specimen molecular stk11 mutation clinical correlation req d pt has chest discomfort,2,High,1,False,P01362; P03375
+pathology nsclc specimen molecular stk11 mutation clinical correlation req d pt has fever and chills,2,High,1,False,P00881; P04329
+pathology nsclc specimen molecular tp53 mutation clinical correlation req d pt has severe diarrhea,2,High,1,False,P01701; P04760
+pathology nsclc specimen molecular tp53 mutation clinical correlation req d pt has shortness of breath,2,High,1,False,P04185; P04594
+pathology nsclc specimen molecular tp53 mutation clinical correlation req d pt has sob,2,High,1,False,P02940; P04349
+pathology nsclc specimen molecular unknown clinical correlation req d pt has no new symptoms,2,Low,1,False,P00685; P01806
+pathology nsclc specimen molecular unknown clinical correlation req d pt has shortness of breath,2,Moderate,1,False,P00649; P04126
+patient is on osimertinib n/a biopsy notes egfr exon 19 del c/o no new symptoms adverse event neutropenia,2,Low,1,False,P02612; P02613
+patient is on pembrolizumab 80 mg daily biopsy notes met amplification c/o persistent cough adverse event none,2,Low,1,False,P01929; P03021
+patient is on trametinib n/a biopsy notes egfr l858r c/o mild fatigue adverse event hepatotoxicity,2,Moderate,1,False,P03518; P03519
+patient is on unknown med 250 mg od biopsy notes ros1 fusion c/o rash worsening adverse event thrombocytopenia,2,Moderate,1,False,P01000; P01723
+progress note - alk fusion treatment pembrolizumab dose 80mg daily pt reports nausea after treatment no/possible mucositis,2,Moderate,1,False,P01883; P01884
+progress note - alk fusion treatment trametinib dose 250 mg od pt reports fatigue cough no/possible fatigue,2,Moderate,1,False,P01854; P02623
+progress note - egfr l858r treatment osimertinib dose 2 mg/kg pt reports not documented no/possible neutropenia,2,Low,1,False,P00121; P00122
+progress note - kras g12c treatment gefitinib dose 600 mg bid pt reports loss of appetite no/possible fever,2,High,1,False,P04054; P04055
+progress note - stk11 mutation treatment osimertinib dose 250 mg od pt reports nausea after treatment no/possible fatigue,2,Moderate,1,False,P00595; P01215
+pt w/ nsclc mutation egfr exon 19 del started dabrafenib 2 mg/kg reports rash worsening ae thrombocytopenia,2,Moderate,1,False,P00834; P00835
+pt w/ nsclc mutation egfr l858r started cisplatin 250 mg od reports rash worsening ae thrombocytopenia,2,Moderate,1,False,P03462; P03463
+pt w/ nsclc mutation egfr l858r started sotorasib 150mg/day reports shortness of breath ae none reported,2,Moderate,1,False,P00597; P00598
+pt w/ nsclc mutation kras-g12c started cisplatin 80mg daily reports sob ae hepatotoxicity,2,High,1,False,P02399; P02400
+pt w/ nsclc mutation kras-g12c started pembrolizumab 5 mg bid reports sob ae rash,2,High,1,False,P00428; P02808
+pt w/ nsclc mutation not available started erlotinib 80mg daily reports fever and chills ae none reported,2,Low,1,False,P02371; P02372
+pt w/ nsclc mutation ros1 fusion started unknown med 250 mg od reports shortness of breath ae nausea,2,Moderate,1,False,P02410; P02411
+pt w/ nsclc mutation tp53 mutation started cisplatin 300mg twice daily reports shortness of breath ae dyspnea,2,High,1,False,P04889; P04890
+trial screening egfr l858r prior/current drug cisplatin dose dose not recorded symptoms no new symptoms ae nausea,2,Low,1,False,P03299; P03300
+trial screening not available prior/current drug sotorasib dose 5 mg bid symptoms severe diarrhea ae dyspnea,2,Moderate,1,False,P01011; P01012
+trial screening ros1 fusion prior/current drug alectinib dose 300mg twice daily symptoms rash worsening ae dyspnea,2,Low,1,False,P00425; P02425

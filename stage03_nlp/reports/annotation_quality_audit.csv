@@ -1,0 +1,6 @@
+annotation_status,total_records,High_count,High_pct,Low_count,Low_pct,Moderate_count,Moderate_pct
+annotated,786,238,30.28,261,33.21,287,36.51
+pending,1686,531,31.49,542,32.15,613,36.36
+reviewed,843,248,29.42,289,34.28,306,36.3
+unreviewed,1685,493,29.26,575,34.12,617,36.62
+Total,5000,1510,0.0,1667,0.0,1823,0.0
