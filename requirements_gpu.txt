@@ -1,0 +1,18 @@
+# Stage 04 SLM: Cloud GPU Training & Evaluation Requirements
+# Designed for NVIDIA GPU instances (A100, H100, L4, T4, RTX 3090/4090, Google Colab, Kaggle, Lambda Labs)
+# NOTE: flash-attn and torchaudio are strictly NOT required. Standard PyTorch SDPA / eager attention is used.
+
+torch>=2.2.0
+transformers>=4.40.0
+peft>=0.10.0
+accelerate>=0.28.0
+datasets>=2.18.0
+rouge-score>=0.1.2
+scikit-learn>=1.4.0
+pandas>=2.0.0
+numpy>=1.24.0
+pydantic>=2.0.0
+fastapi>=0.110.0
+uvicorn>=0.28.0
+tqdm>=4.66.0
+safetensors>=0.4.2

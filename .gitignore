@@ -25,9 +25,14 @@ desktop.ini
 .vscode/
 .idea/
 
+# Checkpoints
+**/checkpoint-*/
+
 # Large Model Weights (>100MB GitHub limit)
 *.safetensors
 *.bin
+!stage04_slm/model/adapter/*.safetensors
+!stage4_slm/models/qwen2.5_0.5b_lora_cpu/adapter_model.safetensors
 stage03_nlp/models/clinicalbert_leakage_free/model.safetensors
 stage03_nlp/models/clinicalbert_model/model.safetensors
 stage03_nlp/models/pretrained_bio_clinicalbert/

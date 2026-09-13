@@ -1,0 +1,226 @@
+[
+  {
+    "step": 0,
+    "train_loss": null,
+    "val_loss": 2.0989,
+    "lr": 0.0002,
+    "elapsed_seconds": 0.0
+  },
+  {
+    "step": 1,
+    "train_loss": 2.0639,
+    "val_loss": null,
+    "lr": 4.55e-06,
+    "elapsed_seconds": 67.9
+  },
+  {
+    "step": 2,
+    "train_loss": 2.262,
+    "val_loss": null,
+    "lr": 9.09e-06,
+    "elapsed_seconds": 78.1
+  },
+  {
+    "step": 3,
+    "train_loss": 1.9357,
+    "val_loss": null,
+    "lr": 1.36e-05,
+    "elapsed_seconds": 88.7
+  },
+  {
+    "step": 4,
+    "train_loss": 1.563,
+    "val_loss": null,
+    "lr": 1.82e-05,
+    "elapsed_seconds": 99.3
+  },
+  {
+    "step": 5,
+    "train_loss": 1.6761,
+    "val_loss": null,
+    "lr": 2.27e-05,
+    "elapsed_seconds": 110.4
+  },
+  {
+    "step": 6,
+    "train_loss": 1.939,
+    "val_loss": null,
+    "lr": 2.73e-05,
+    "elapsed_seconds": 121.4
+  },
+  {
+    "step": 7,
+    "train_loss": 2.1838,
+    "val_loss": null,
+    "lr": 3.18e-05,
+    "elapsed_seconds": 132.4
+  },
+  {
+    "step": 8,
+    "train_loss": 1.5402,
+    "val_loss": null,
+    "lr": 3.64e-05,
+    "elapsed_seconds": 144.5
+  },
+  {
+    "step": 9,
+    "train_loss": 1.6354,
+    "val_loss": null,
+    "lr": 4.09e-05,
+    "elapsed_seconds": 156.8
+  },
+  {
+    "step": 10,
+    "train_loss": 1.1861,
+    "val_loss": null,
+    "lr": 4.55e-05,
+    "elapsed_seconds": 169.0
+  },
+  {
+    "step": 11,
+    "train_loss": 1.2955,
+    "val_loss": null,
+    "lr": 5e-05,
+    "elapsed_seconds": 181.5
+  },
+  {
+    "step": 12,
+    "train_loss": 0.9375,
+    "val_loss": null,
+    "lr": 5.45e-05,
+    "elapsed_seconds": 192.7
+  },
+  {
+    "step": 13,
+    "train_loss": 1.1853,
+    "val_loss": null,
+    "lr": 5.91e-05,
+    "elapsed_seconds": 204.5
+  },
+  {
+    "step": 14,
+    "train_loss": 0.8665,
+    "val_loss": null,
+    "lr": 6.36e-05,
+    "elapsed_seconds": 216.7
+  },
+  {
+    "step": 15,
+    "train_loss": 0.6485,
+    "val_loss": null,
+    "lr": 6.82e-05,
+    "elapsed_seconds": 227.9
+  },
+  {
+    "step": 16,
+    "train_loss": 0.8121,
+    "val_loss": null,
+    "lr": 7.27e-05,
+    "elapsed_seconds": 239.4
+  },
+  {
+    "step": 17,
+    "train_loss": 0.7082,
+    "val_loss": null,
+    "lr": 7.73e-05,
+    "elapsed_seconds": 251.4
+  },
+  {
+    "step": 18,
+    "train_loss": 0.557,
+    "val_loss": null,
+    "lr": 8.18e-05,
+    "elapsed_seconds": 262.4
+  },
+  {
+    "step": 19,
+    "train_loss": 0.5392,
+    "val_loss": null,
+    "lr": 8.64e-05,
+    "elapsed_seconds": 274.2
+  },
+  {
+    "step": 20,
+    "train_loss": 0.5661,
+    "val_loss": null,
+    "lr": 9.09e-05,
+    "elapsed_seconds": 285.8
+  },
+  {
+    "step": 21,
+    "train_loss": 0.4188,
+    "val_loss": null,
+    "lr": 9.55e-05,
+    "elapsed_seconds": 298.0
+  },
+  {
+    "step": 22,
+    "train_loss": 0.3744,
+    "val_loss": null,
+    "lr": 0.0001,
+    "elapsed_seconds": 310.0
+  },
+  {
+    "step": 23,
+    "train_loss": 0.3634,
+    "val_loss": null,
+    "lr": 0.000105,
+    "elapsed_seconds": 322.6
+  },
+  {
+    "step": 24,
+    "train_loss": 0.2075,
+    "val_loss": null,
+    "lr": 0.000109,
+    "elapsed_seconds": 334.9
+  },
+  {
+    "step": 25,
+    "train_loss": 0.2294,
+    "val_loss": 0.2062,
+    "lr": 0.000114,
+    "elapsed_seconds": 346.3
+  },
+  {
+    "step": 26,
+    "train_loss": 0.1404,
+    "val_loss": null,
+    "lr": 0.000118,
+    "elapsed_seconds": 424.5
+  },
+  {
+    "step": 27,
+    "train_loss": 0.2081,
+    "val_loss": null,
+    "lr": 0.000123,
+    "elapsed_seconds": 437.2
+  },
+  {
+    "step": 28,
+    "train_loss": 0.2063,
+    "val_loss": null,
+    "lr": 0.000127,
+    "elapsed_seconds": 448.9
+  },
+  {
+    "step": 29,
+    "train_loss": 0.19,
+    "val_loss": null,
+    "lr": 0.000132,
+    "elapsed_seconds": 461.5
+  },
+  {
+    "step": 30,
+    "train_loss": 0.1953,
+    "val_loss": null,
+    "lr": 0.000136,
+    "elapsed_seconds": 473.1
+  },
+  {
+    "step": 31,
+    "train_loss": 0.157,
+    "val_loss": null,
+    "lr": 0.000141,
+    "elapsed_seconds": 485.5
+  }
+]

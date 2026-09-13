@@ -1,0 +1,2 @@
+Model,Adapter,Samples_Evaluated,Total_Time_s,Avg_Time_Per_Sample_s,ROUGE-1,ROUGE-2,ROUGE-L,Drug_Preservation_%,Mutation_Preservation_%,Dosage_Preservation_%,AE_Preservation_%,Empty_Rate_%
+Qwen2.5-0.5B-Instruct + LoRA,stage4_slm/models/qwen2.5_0.5b_lora_cpu,447,3417.78,7.64,0.8716,0.7793,0.8515,99.75,96.68,70.39,88.14,0.0

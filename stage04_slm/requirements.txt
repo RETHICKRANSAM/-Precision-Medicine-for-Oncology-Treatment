@@ -1,0 +1,10 @@
+# Stage 04 — SLM Clinical Summarization Dependencies
+# Only packages directly required by Stage 04 inference, guardrails, API, and tests
+torch>=2.0.0
+transformers>=4.40.0
+peft>=0.10.0
+accelerate>=0.28.0
+fastapi>=0.110.0
+uvicorn>=0.28.0
+pydantic>=2.0.0
+pytest>=8.0.0
