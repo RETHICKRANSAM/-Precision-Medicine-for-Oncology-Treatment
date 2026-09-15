@@ -36,11 +36,35 @@ def print_banner(host: str, port: int):
     print("  Press Ctrl+C to terminate the command center server.\n")
 
 
+def is_port_available(host: str, port: int) -> bool:
+    import socket
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+        try:
+            s.bind((host, port))
+            return True
+        except OSError:
+            return False
+
+
 def main():
+    import argparse
     import uvicorn
 
-    host = "127.0.0.1"
-    port = 8000
+    parser = argparse.ArgumentParser(description="OncoNexus Command Center Launcher")
+    parser.add_argument("--host", default="127.0.0.1", help="Host address (default: 127.0.0.1)")
+    parser.add_argument("--port", type=int, default=8000, help="Port number (default: 8000)")
+    args = parser.parse_args()
+
+    host = args.host
+    port = args.port
+
+    if not is_port_available(host, port):
+        print(f"\n[!] Warning: Port {port} is currently in use or closing.")
+        alt_port = port + 1
+        while not is_port_available(host, alt_port) and alt_port < port + 10:
+            alt_port += 1
+        print(f"[*] Automatically binding to available port {alt_port} instead.\n")
+        port = alt_port
 
     print_banner(host, port)
 
