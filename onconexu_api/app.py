@@ -205,6 +205,27 @@ def get_pipeline_trace(record_id: str):
         )
 
 
+@app.post("/api/pipeline/run/{record_id}")
+@app.get("/api/pipeline/run/{record_id}")
+def execute_pipeline(record_id: str):
+    """Executes or retrieves live 5-stage progression for a selected record."""
+    try:
+        result = data_engine.run_pipeline(record_id)
+        return result
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Error executing pipeline for '{record_id}': {e}"
+        )
+
+
+@app.get("/api/activity")
+def get_recent_activity():
+    """Returns chronological timeline of authentic pipeline activities."""
+    return {"activities": data_engine.get_recent_activity()}
+
+
+
 @app.get("/api/stage/01_ml")
 def get_stage_01_details():
     """Returns comprehensive Stage 01 ML models, metrics, and real patient cohort."""

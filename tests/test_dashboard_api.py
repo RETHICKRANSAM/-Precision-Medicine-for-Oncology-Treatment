@@ -187,3 +187,23 @@ def test_static_index():
     assert response.status_code == 200
     assert "ONCONEXUS" in response.text
     assert "Multi-Stage Precision Oncology Intelligence" in response.text
+
+
+def test_api_pipeline_run():
+    """Verify pipeline execution endpoint runs through 5 stages."""
+    response = client.post("/api/pipeline/run/SCEN-BATCH-0001")
+    assert response.status_code == 200
+    data = response.json()
+    assert data["status"] == "Success"
+    assert data["record_id"] == "SCEN-BATCH-0001"
+    assert len(data["pipeline_stages"]) == 5
+
+
+def test_api_activity():
+    """Verify activity timeline endpoint returns real audit logs."""
+    response = client.get("/api/activity")
+    assert response.status_code == 200
+    data = response.json()
+    assert "activities" in data
+    assert len(data["activities"]) >= 4
+
