@@ -8,7 +8,8 @@
 let activeRecordId = "SCEN-BATCH-0001";
 let activeRecordData = null;
 let allRecords = [];
-let activeStageKey = "01_ml";
+let activeStageKey = "05_genai"; // default focus on Stage 05 GenAI
+let stageCache = {};
 let charts = {};
 
 // DOM Elements
@@ -18,14 +19,21 @@ const filterChips = document.querySelectorAll(".chip-filter");
 const btnRunPipeline = document.getElementById("btn-run-pipeline");
 const btnRefresh = document.getElementById("btn-refresh");
 
-// Drawer Elements
-const stageDrawer = document.getElementById("stage-drawer");
-const drawerBackdrop = document.getElementById("drawer-backdrop");
-const drawerClose = document.getElementById("drawer-close");
-const drawerBadge = document.getElementById("drawer-badge");
-const drawerTitle = document.getElementById("drawer-title");
-const drawerBody = document.getElementById("drawer-body");
-const drawerTabBtns = document.querySelectorAll(".drawer-tab-btn");
+// Header & Pill Elements
+const pipelineStatusText = document.getElementById("pipeline-status-text");
+const headerSelectedId = document.getElementById("header-selected-id");
+const sbStatusDot = document.getElementById("sb-status-dot");
+const recIdTag = document.getElementById("rec-id-tag");
+const recCancerTag = document.getElementById("rec-cancer-tag");
+const recMutationTag = document.getElementById("rec-mutation-tag");
+const recDrugTag = document.getElementById("rec-drug-tag");
+const recSeverityBadge = document.getElementById("rec-severity-badge");
+
+// Embedded Active Stage Panel Elements
+const activePanelBadge = document.getElementById("active-panel-badge");
+const activePanelTitle = document.getElementById("active-panel-title");
+const panelBodyArea = document.getElementById("panel-body-area");
+const stageTabBtns = document.querySelectorAll(".stage-tab-btn");
 
 // Modal Elements
 const modalAllScenarios = document.getElementById("modal-all-scenarios");
@@ -33,25 +41,7 @@ const modalScenariosClose = document.getElementById("modal-scenarios-close");
 const btnViewAllScenarios = document.getElementById("btn-view-all-scenarios");
 const allScenariosTbody = document.getElementById("all-scenarios-tbody");
 
-// Summary & Status Elements
-const pipelineStatusText = document.getElementById("pipeline-status-text");
-const sbStatusDot = document.getElementById("sb-status-dot");
-const sbStatusVal = document.getElementById("sb-status-val");
-const recIdTag = document.getElementById("rec-id-tag");
-const recCancerTag = document.getElementById("rec-cancer-tag");
-const recMutationTag = document.getElementById("rec-mutation-tag");
-const recDrugTag = document.getElementById("rec-drug-tag");
-const recSeverityBadge = document.getElementById("rec-severity-badge");
-
-// Mid-Deck Journey Elements
-const journeyTitle = document.getElementById("journey-title");
-const journeyS1 = document.getElementById("journey-s1");
-const journeyS2 = document.getElementById("journey-s2");
-const journeyS3 = document.getElementById("journey-s3");
-const journeyS4 = document.getElementById("journey-s4");
-const journeyS5 = document.getElementById("journey-s5");
-
-// Recent Scenarios & Activity
+// Lower Deck Elements
 const recentScenariosTbody = document.getElementById("recent-scenarios-tbody");
 const activityList = document.getElementById("activity-list");
 
@@ -84,17 +74,14 @@ async function fetchHealth() {
     }
 
     if (data.supabase && data.supabase.connected) {
-      sbStatusVal.textContent = `Supabase Synced (${data.supabase.total_records})`;
       sbStatusDot.className = "dot dot-green";
       document.getElementById("kpi-supabase").textContent = data.supabase.total_records;
     } else {
-      sbStatusVal.textContent = "Supabase Offline";
       sbStatusDot.className = "dot";
       document.getElementById("kpi-supabase").textContent = "N/A";
     }
   } catch (e) {
     pipelineStatusText.textContent = "API Offline";
-    sbStatusVal.textContent = "Unavailable";
   }
 }
 
@@ -123,7 +110,7 @@ async function fetchRecords(filterSev = "") {
       }
       loadRecord(activeRecordId);
     } else {
-      selectRecord.innerHTML = `<option value="">No matching records</option>`;
+      selectRecord.innerHTML = `<option value="">Select a patient or scenario to begin pipeline analysis.</option>`;
     }
 
     // Populate Recent Scenarios list
@@ -140,6 +127,7 @@ async function fetchRecords(filterSev = "") {
 async function loadRecord(recordId) {
   activeRecordId = recordId;
   recIdTag.textContent = recordId;
+  headerSelectedId.textContent = recordId;
 
   try {
     const res = await fetch(`/api/pipeline/trace/${encodeURIComponent(recordId)}`);
@@ -171,13 +159,8 @@ async function loadRecord(recordId) {
     document.getElementById("card-out-04").textContent = `Faithful Summary (${s4.safety_status || 'PASS'})`;
     document.getElementById("card-out-05").textContent = `${s5.severity || 'Mild'} Validated Scenario`;
 
-    // Update Mid-Deck Journey Preview Box
-    journeyTitle.textContent = `Patient Journey: ${recordId}`;
-    journeyS1.textContent = `${s1.toxicity_risk || 'Low'} Risk (Score: ${s1.risk_score || 0.28})`;
-    journeyS2.textContent = `${s2.Histopathology_Label || 'Malignant'} &bull; ${s2.Progression_Risk || 'Moderate'} Progression Risk`;
-    journeyS3.textContent = `${s3.urgency || 'High'} Urgency &bull; ${s3.gene_mutation || 'TP53'} &bull; ${s3.drug_name || 'Carboplatin'}`;
-    journeyS4.textContent = s4.generated_summary || "Faithful clinical summary generated with zero unprescribed medications.";
-    journeyS5.textContent = s5.patient_scenario || "The patient presents with Stage 4 Breast Cancer harboring TP53...";
+    // Render active stage detail panel
+    await renderActiveStagePanel(activeStageKey);
 
   } catch (err) {
     console.error("Error loading record trace:", err);
@@ -197,29 +180,35 @@ async function executeLivePipeline() {
   showToast(`Initiating 5-Stage Precision Oncology Analysis for ${activeRecordId}...`);
 
   const stageKeys = ["01", "02", "03", "04", "05"];
-  const stageNames = ["ML Toxicity", "DL Progression", "NLP Text Analysis", "SLM Summarization", "GenAI Scenario"];
+  const stageCodes = ["01_ml", "02_dl", "03_nlp", "04_slm", "05_genai"];
 
   for (let i = 0; i < stageKeys.length; i++) {
     const key = stageKeys[i];
+    const code = stageCodes[i];
     const statusEl = document.getElementById(`status-${key}`);
     const cardEl = document.getElementById(`card-stage-${key}`);
+    const progEl = document.getElementById(`prog-${key}`);
 
     // Set processing
     cardEl.classList.add("active-stage");
+    progEl.className = "prog-node processing";
     statusEl.innerHTML = `<span class="dot dot-cyan" style="animation: pulse 0.5s infinite;"></span> Processing...`;
 
-    await new Promise(r => setTimeout(r, 220));
+    // Switch active stage preview as it processes
+    await switchActiveStage(code);
+
+    await new Promise(r => setTimeout(r, 240));
 
     // Set completed
     statusEl.innerHTML = `<span class="dot dot-green"></span> Completed`;
-    cardEl.classList.remove("active-stage");
+    progEl.className = "prog-node active";
   }
 
   // Real backend call
   try {
     await fetch(`/api/pipeline/run/${encodeURIComponent(activeRecordId)}`, { method: "POST" });
   } catch (e) {
-    // Non-blocking fallback
+    // Non-blocking
   }
 
   await loadRecord(activeRecordId);
@@ -236,72 +225,89 @@ async function executeLivePipeline() {
 }
 
 // -----------------------------------------------------------------------------
-// 5. STAGE DETAIL INSPECTOR DRAWER
+// 5. ACTIVE STAGE DETAIL PANEL (EMBEDDED, SWITCHABLE)
 // -----------------------------------------------------------------------------
-window.openStageDrawer = async function(stageKey) {
+window.switchActiveStage = async function(stageKey) {
   activeStageKey = stageKey;
-  stageDrawer.classList.add("open");
-  drawerBackdrop.classList.add("open");
 
-  // Highlight drawer tab
-  drawerTabBtns.forEach(btn => {
+  // Update card active classes
+  document.querySelectorAll(".stage-card").forEach(c => c.classList.remove("active-stage"));
+  const cardMap = {
+    "01_ml": "card-stage-01",
+    "02_dl": "card-stage-02",
+    "03_nlp": "card-stage-03",
+    "04_slm": "card-stage-04",
+    "05_genai": "card-stage-05"
+  };
+  const targetCard = document.getElementById(cardMap[stageKey]);
+  if (targetCard) targetCard.classList.add("active-stage");
+
+  // Update tab active classes
+  stageTabBtns.forEach(btn => {
     btn.classList.toggle("active", btn.getAttribute("data-stage") === stageKey);
   });
 
-  drawerBody.innerHTML = `<div class="text-muted" style="padding: 20px; text-align: center;">Loading stage details...</div>`;
-
-  try {
-    const res = await fetch(`/api/stage/${stageKey}`);
-    const data = await res.json();
-
-    if (stageKey === "01_ml") {
-      drawerBadge.textContent = "STAGE 01 — ML";
-      drawerTitle.textContent = "Risk Prediction Analysis";
-      renderMLDrawer(data);
-    } else if (stageKey === "02_dl") {
-      drawerBadge.textContent = "STAGE 02 — DL";
-      drawerTitle.textContent = "Deep Learning Analysis";
-      renderDLDrawer(data);
-    } else if (stageKey === "03_nlp") {
-      drawerBadge.textContent = "STAGE 03 — NLP";
-      drawerTitle.textContent = "Clinical Text Analysis";
-      renderNLPDrawer(data);
-    } else if (stageKey === "04_slm") {
-      drawerBadge.textContent = "STAGE 04 — SLM";
-      drawerTitle.textContent = "Clinical Summarization";
-      renderSLMDrawer(data);
-    } else if (stageKey === "05_genai") {
-      drawerBadge.textContent = "STAGE 05 — GenAI";
-      drawerTitle.textContent = "Compound Scenario Generation";
-      renderGenAIDrawer(data);
-    }
-  } catch (e) {
-    drawerBody.innerHTML = `<div class="text-muted" style="padding: 20px;">Error loading stage details: ${e.message}</div>`;
-  }
+  await renderActiveStagePanel(stageKey);
 };
 
-function closeStageDrawer() {
-  stageDrawer.classList.remove("open");
-  drawerBackdrop.classList.remove("open");
+async function renderActiveStagePanel(stageKey) {
+  panelBodyArea.innerHTML = `<div class="text-muted" style="padding: 20px; text-align: center;">Loading stage details...</div>`;
+
+  // Fetch stage data if not cached
+  if (!stageCache[stageKey]) {
+    try {
+      const res = await fetch(`/api/stage/${stageKey}`);
+      stageCache[stageKey] = await res.json();
+    } catch (e) {
+      panelBodyArea.innerHTML = `<div class="text-muted">Error loading stage info: ${e.message}</div>`;
+      return;
+    }
+  }
+
+  const stageData = stageCache[stageKey];
+
+  if (stageKey === "01_ml") {
+    activePanelBadge.textContent = "STAGE 01 — ML";
+    activePanelTitle.textContent = "ML ANALYSIS";
+    renderMLPanel(stageData);
+  } else if (stageKey === "02_dl") {
+    activePanelBadge.textContent = "STAGE 02 — DL";
+    activePanelTitle.textContent = "DL ANALYSIS";
+    renderDLPanel(stageData);
+  } else if (stageKey === "03_nlp") {
+    activePanelBadge.textContent = "STAGE 03 — NLP";
+    activePanelTitle.textContent = "NLP ANALYSIS";
+    renderNLPPanel(stageData);
+  } else if (stageKey === "04_slm") {
+    activePanelBadge.textContent = "STAGE 04 — SLM";
+    activePanelTitle.textContent = "CLINICAL SUMMARY";
+    renderSLMPanel(stageData);
+  } else if (stageKey === "05_genai") {
+    activePanelBadge.textContent = "STAGE 05 — GenAI";
+    activePanelTitle.textContent = "COMPOUND SCENARIO";
+    renderGenAIPanel(stageData);
+  }
 }
 
-function renderMLDrawer(ml) {
+// Stage 01: ML Detail
+function renderMLPanel(ml) {
   const traceS1 = activeRecordData?.stages[0] || {};
   const inData = traceS1.input?.data || {};
   const outData = traceS1.output?.data || {};
+  const toxRisk = outData.toxicity_risk || 'Low';
 
-  drawerBody.innerHTML = `
+  panelBodyArea.innerHTML = `
     <div style="display: flex; justify-content: space-between; align-items: center;">
-      <span class="badge-source">STAGE 01 ANALYSIS</span>
+      <span class="badge-source">ML ANALYSIS</span>
       <span class="badge-sev badge-mild" style="color: var(--green-primary);">Status: ✓ Completed</span>
     </div>
 
     <!-- Input Features -->
-    <div style="background: rgba(0,0,0,0.3); padding: 14px; border-radius: 8px; border: 1px solid var(--border-subtle);">
-      <h4 style="font-size: 0.76rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 8px;">
+    <div style="background: rgba(0,0,0,0.3); padding: 12px 14px; border-radius: 8px; border: 1px solid var(--border-subtle);">
+      <h4 style="font-size: 0.74rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 6px;">
         INPUT FEATURES (25 Clinical Variables)
       </h4>
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 0.8rem;">
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; font-size: 0.78rem;">
         <div>Cancer Type: <strong>${inData.Cancer_Type || 'Breast Cancer'}</strong></div>
         <div>Stage: <strong>${inData.Cancer_Stage || '4'}</strong></div>
         <div>Age / Sex: <strong>${inData.Age || 65} / ${inData.Sex || 'Female'}</strong></div>
@@ -313,16 +319,30 @@ function renderMLDrawer(ml) {
       </div>
     </div>
 
-    <!-- Risk Result -->
-    <div style="background: rgba(6, 182, 212, 0.08); padding: 14px; border-radius: 8px; border: 1px solid rgba(6, 182, 212, 0.2);">
-      <h4 style="font-size: 0.76rem; color: var(--cyan-light); text-transform: uppercase; margin-bottom: 6px;">
-        RISK PREDICTION RESULT
-      </h4>
-      <div style="font-size: 1.15rem; font-weight: 700; color: #fff;">
-        Toxicity Risk: <span class="text-green">${outData.toxicity_risk || 'Low'}</span>
+    <!-- Risk Result & Risk Class -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+      <div style="background: rgba(6, 182, 212, 0.08); padding: 12px 14px; border-radius: 8px; border: 1px solid rgba(6, 182, 212, 0.2);">
+        <h4 style="font-size: 0.72rem; color: var(--cyan-light); text-transform: uppercase; margin-bottom: 4px;">
+          RISK RESULT
+        </h4>
+        <div style="font-size: 1.15rem; font-weight: 700; color: #fff;">
+          Toxicity Risk: <span class="${toxRisk === 'High' ? 'text-amber' : 'text-green'}">${toxRisk}</span>
+        </div>
+        <div style="font-size: 0.78rem; color: var(--text-secondary); margin-top: 2px;">
+          Risk Score: <strong class="text-cyan">${outData.risk_score || 0.28}</strong> &bull; Toxicity Score: <strong>${outData.toxicity_score || 2}</strong>
+        </div>
       </div>
-      <div style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 4px;">
-        Risk Score: <strong class="text-cyan">${outData.risk_score || 0.28}</strong> &bull; Toxicity Index: <strong>${outData.toxicity_score || 2}</strong>
+
+      <div style="background: rgba(16, 185, 129, 0.08); padding: 12px 14px; border-radius: 8px; border: 1px solid rgba(16, 185, 129, 0.2);">
+        <h4 style="font-size: 0.72rem; color: var(--green-primary); text-transform: uppercase; margin-bottom: 4px;">
+          RISK CLASS
+        </h4>
+        <div style="font-size: 1.15rem; font-weight: 700; color: #fff;">
+          Classification: <span class="text-green">${toxRisk} Toxicity Class</span>
+        </div>
+        <div style="font-size: 0.78rem; color: var(--text-secondary); margin-top: 2px;">
+          Safety Threshold: <span class="text-green">&lt; Tolerable Toxic Boundary</span>
+        </div>
       </div>
     </div>
 
@@ -333,47 +353,56 @@ function renderMLDrawer(ml) {
         Model: ${ml.best_model || 'XGBoost Classifier'}<br>
         Test Accuracy: ${(ml.test_metrics?.XGBoost?.accuracy * 100 || 91.8).toFixed(1)}%<br>
         Weighted F1: ${(ml.test_metrics?.XGBoost?.weighted_f1 || 0.921).toFixed(3)}<br>
-        Validation Split: Patient-Stratified GroupShuffleSplit (Zero Data Leakage)<br>
-        Total Audited Patients: ${ml.patient_count || 3893}
+        Validation Strategy: Patient-Stratified GroupShuffleSplit (Zero Data Leakage)<br>
+        Audited Patients: ${ml.patient_count || 3893}
       </div>
     </details>
   `;
 }
 
-function renderDLDrawer(dl) {
+// Stage 02: DL Detail
+function renderDLPanel(dl) {
   const traceS2 = activeRecordData?.stages[1] || {};
   const inData = traceS2.input?.data || {};
   const outData = traceS2.output?.data || {};
 
-  drawerBody.innerHTML = `
+  panelBodyArea.innerHTML = `
     <div style="display: flex; justify-content: space-between; align-items: center;">
-      <span class="badge-source">STAGE 02 ANALYSIS</span>
+      <span class="badge-source">DL ANALYSIS</span>
       <span class="badge-sev badge-mild" style="color: var(--green-primary);">Status: ✓ Completed</span>
     </div>
 
     <!-- Input -->
-    <div style="background: rgba(0,0,0,0.3); padding: 14px; border-radius: 8px; border: 1px solid var(--border-subtle);">
-      <h4 style="font-size: 0.76rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 8px;">
+    <div style="background: rgba(0,0,0,0.3); padding: 12px 14px; border-radius: 8px; border: 1px solid var(--border-subtle);">
+      <h4 style="font-size: 0.74rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 6px;">
         INPUT MODALITIES
       </h4>
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 0.8rem;">
-        <div>Biopsy Tissue: <strong>${inData.Tissue_Type || 'Core Needle Biopsy'}</strong></div>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; font-size: 0.78rem;">
+        <div>Tissue Biopsy: <strong>${inData.Tissue_Type || 'Core Needle Biopsy'}</strong></div>
         <div>Anatomical Site: <strong>${inData.Organ_Site || 'Breast / Lung'}</strong></div>
-        <div style="grid-column: span 2;">Biomarker Timepoints: <strong>Day 0, Day 14, Day 28, Day 56, Day 84</strong></div>
         <div>ctDNA Level: <strong class="text-cyan">${inData.ctDNA_Level || 5.8}</strong></div>
+        <div style="grid-column: span 3; color: var(--text-muted);">Longitudinal Timepoints: Day 0, Day 14, Day 28, Day 56, Day 84</div>
       </div>
     </div>
 
     <!-- Prediction -->
-    <div style="background: rgba(6, 182, 212, 0.08); padding: 14px; border-radius: 8px; border: 1px solid rgba(6, 182, 212, 0.2);">
-      <h4 style="font-size: 0.76rem; color: var(--cyan-light); text-transform: uppercase; margin-bottom: 6px;">
+    <div style="background: rgba(6, 182, 212, 0.08); padding: 12px 14px; border-radius: 8px; border: 1px solid rgba(6, 182, 212, 0.2);">
+      <h4 style="font-size: 0.72rem; color: var(--cyan-light); text-transform: uppercase; margin-bottom: 4px;">
         DEEP LEARNING PREDICTION
       </h4>
-      <div style="font-size: 1.05rem; font-weight: 700; color: #fff;">
-        Tissue Classification: <span class="text-cyan">${outData.Histopathology_Label || 'Malignant'}</span>
-      </div>
-      <div style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 4px;">
-        Progression Risk: <strong class="text-amber">${outData.Progression_Risk || 'Moderate'}</strong> &bull; Status: <strong>${outData.Progression_Status || 'Stable Disease'}</strong>
+      <div style="display: flex; gap: 24px; align-items: center;">
+        <div>
+          <span style="font-size: 0.72rem; color: var(--text-muted); display: block;">Tissue Pathology:</span>
+          <strong class="text-cyan" style="font-size: 1.05rem;">${outData.Histopathology_Label || 'Malignant'}</strong>
+        </div>
+        <div>
+          <span style="font-size: 0.72rem; color: var(--text-muted); display: block;">Progression Risk:</span>
+          <strong class="text-amber" style="font-size: 1.05rem;">${outData.Progression_Risk || 'Moderate'}</strong>
+        </div>
+        <div>
+          <span style="font-size: 0.72rem; color: var(--text-muted); display: block;">Progression Status:</span>
+          <strong style="color: #fff; font-size: 1.05rem;">${outData.Progression_Status || 'Stable Disease'}</strong>
+        </div>
       </div>
     </div>
 
@@ -381,47 +410,48 @@ function renderDLDrawer(dl) {
     <details class="tech-details-accordion">
       <summary class="tech-details-summary">Technical Details ▼</summary>
       <div class="tech-details-content">
-        Architectures: ResNet-18 (Microscopy), BiLSTM (Kinetics), Tabular Transformer<br>
+        Architectures: ResNet-18 (CNN), BiLSTM (Kinetics), Tabular Transformer<br>
         Classification F1: 1.0 (Zero Leakage Holdout Split)<br>
-        Dataset Scope: 346 Microscopy Samples, 196 Longitudinal Patient Sequences
+        Microscopy Image Cohort: 346 Samples &bull; Longitudinal Patient Sequences: 196
       </div>
     </details>
   `;
 }
 
-function renderNLPDrawer(nlp) {
+// Stage 03: NLP Detail
+function renderNLPPanel(nlp) {
   const traceS3 = activeRecordData?.stages[2] || {};
   const inData = traceS3.input?.data || {};
   const outData = traceS3.output?.data || {};
 
-  drawerBody.innerHTML = `
+  panelBodyArea.innerHTML = `
     <div style="display: flex; justify-content: space-between; align-items: center;">
-      <span class="badge-source">STAGE 03 ANALYSIS</span>
+      <span class="badge-source">NLP ANALYSIS</span>
       <span class="badge-sev badge-mild" style="color: var(--green-primary);">Status: ✓ Completed</span>
     </div>
 
     <!-- Clinical Text -->
-    <div style="background: rgba(0,0,0,0.3); padding: 14px; border-radius: 8px; border: 1px solid var(--border-subtle);">
-      <h4 style="font-size: 0.76rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 6px;">
-        SOURCE CLINICAL REPORT
+    <div style="background: rgba(0,0,0,0.3); padding: 12px 14px; border-radius: 8px; border: 1px solid var(--border-subtle);">
+      <h4 style="font-size: 0.74rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 4px;">
+        CLINICAL TEXT (SOURCE REPORT)
       </h4>
       <p style="font-size: 0.82rem; color: #f8fafc; line-height: 1.45;">
-        ${inData.source_clinical_note || 'Patient presenting for oncology follow-up on targeted therapy.'}
+        ${inData.source_clinical_note || 'patient is on cisplatin (80mg daily); biopsy notes met amplification. c/o severe diarrhea; adverse event = thrombocytopenia.'}
       </p>
     </div>
 
     <!-- Extracted Information -->
-    <div style="background: rgba(6, 182, 212, 0.08); padding: 14px; border-radius: 8px; border: 1px solid rgba(6, 182, 212, 0.2);">
-      <h4 style="font-size: 0.76rem; color: var(--cyan-light); text-transform: uppercase; margin-bottom: 8px;">
+    <div style="background: rgba(6, 182, 212, 0.08); padding: 12px 14px; border-radius: 8px; border: 1px solid rgba(6, 182, 212, 0.2);">
+      <h4 style="font-size: 0.72rem; color: var(--cyan-light); text-transform: uppercase; margin-bottom: 6px;">
         EXTRACTED INFORMATION (MEDICAL NER)
       </h4>
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 0.8rem;">
-        <div>Clinical Urgency: <strong class="text-amber">${outData.urgency || 'High'}</strong></div>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; font-size: 0.78rem;">
+        <div>Urgency: <strong class="text-amber">${outData.urgency || 'High'}</strong></div>
         <div>Gene Mutation: <strong class="text-purple">${outData.gene_mutation || 'TP53'}</strong></div>
-        <div>Antineoplastic Drug: <strong>${outData.drug_name || 'Carboplatin'}</strong></div>
-        <div>Prescribed Dose: <strong>${outData.dosage_level || '50 mg/day'}</strong></div>
+        <div>Drug: <strong>${outData.drug_name || 'Carboplatin'}</strong></div>
+        <div>Dosage: <strong>${outData.dosage_level || '50 mg/day'}</strong></div>
         <div>Adverse Event: <span style="color: #fca5a5;">${outData.adverse_event || 'Thrombocytopenia'}</span></div>
-        <div>Reported Symptoms: <strong>${outData.symptom_text || 'Fatigue, Rash'}</strong></div>
+        <div>Symptoms: <strong>${outData.symptom_text || 'Fatigue, Rash'}</strong></div>
       </div>
     </div>
 
@@ -431,43 +461,44 @@ function renderNLPDrawer(nlp) {
       <div class="tech-details-content">
         NLP Models: Bio_ClinicalBERT & BiLSTM<br>
         Classification Macro F1: 0.9534 &bull; Accuracy: 95.3%<br>
-        Holdout Evaluation: 829 Unstructured Clinical Notes
+        Holdout Test Notes: 829 Annotated Encounters
       </div>
     </details>
   `;
 }
 
-function renderSLMDrawer(slm) {
+// Stage 04: SLM Detail
+function renderSLMPanel(slm) {
   const traceS4 = activeRecordData?.stages[3] || {};
   const inData = traceS4.input?.data || {};
   const outData = traceS4.output?.data || {};
 
-  drawerBody.innerHTML = `
+  panelBodyArea.innerHTML = `
     <div style="display: flex; justify-content: space-between; align-items: center;">
-      <span class="badge-source">STAGE 04 SUMMARY</span>
+      <span class="badge-source">CLINICAL SUMMARY</span>
       <span class="badge-sev badge-mild" style="color: var(--green-primary);">Status: ✓ Completed</span>
     </div>
 
-    <!-- Source Report -->
-    <div style="background: rgba(0,0,0,0.3); padding: 14px; border-radius: 8px; border: 1px solid var(--border-subtle);">
-      <h4 style="font-size: 0.76rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 6px;">
+    <!-- Source Clinical Report -->
+    <div style="background: rgba(0,0,0,0.3); padding: 12px 14px; border-radius: 8px; border: 1px solid var(--border-subtle);">
+      <h4 style="font-size: 0.74rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 4px;">
         SOURCE CLINICAL REPORT
       </h4>
       <p style="font-size: 0.82rem; color: #f8fafc; line-height: 1.45;">
-        ${inData.source_report || 'Trial screening EGFR L858R prior/current drug Osimertinib...'}
+        ${inData.source_report || 'Trial screening EGFR L858R prior/current drug Osimertinib dose 80mg daily symptoms rash ae none reported'}
       </p>
     </div>
 
     <!-- Generated Summary -->
-    <div style="background: rgba(139, 92, 246, 0.08); padding: 14px; border-radius: 8px; border: 1px solid rgba(139, 92, 246, 0.25);">
-      <h4 style="font-size: 0.76rem; color: #c084fc; text-transform: uppercase; margin-bottom: 6px;">
-        GENERATED CLINICAL SUMMARY (FAITHFUL)
+    <div style="background: rgba(139, 92, 246, 0.08); padding: 12px 14px; border-radius: 8px; border: 1px solid rgba(139, 92, 246, 0.25);">
+      <h4 style="font-size: 0.72rem; color: #c084fc; text-transform: uppercase; margin-bottom: 4px;">
+        GENERATED SUMMARY (FAITHFUL)
       </h4>
       <p style="font-size: 0.84rem; color: #f8fafc; line-height: 1.5;">
-        ${outData.generated_summary || 'This trial note documents a patient receiving Osimertinib with an EGFR mutation and mild rash.'}
+        ${outData.generated_summary || 'This trial note documents a patient receiving Osimertinib at 80 mg/day with an EGFR mutation. Reported symptoms include mild rash with no adverse events noted.'}
       </p>
-      <div style="font-size: 0.76rem; color: var(--green-primary); margin-top: 8px;">
-        ✓ Safety validation passed &bull; Zero unprescribed drugs or dosage hallucinations
+      <div style="font-size: 0.76rem; color: var(--green-primary); margin-top: 6px;">
+        ✓ Safety validation passed &bull; Zero hallucinated medications or unprescribed dosages
       </div>
     </div>
 
@@ -477,68 +508,71 @@ function renderSLMDrawer(slm) {
       <div class="tech-details-content">
         Model: Qwen/Qwen2.5-0.5B-Instruct + LoRA (r=16, alpha=32)<br>
         Safety Pass Rate: 87.92% (393 / 447 Holdout Notes)<br>
-        Mean ROUGE-L: 0.774 &bull; Guardrail: Post-Generation Hallucination Filter
+        Mean ROUGE-L: 0.774 &bull; Guardrail: Post-Generation Hallucination & Consistency Filter
       </div>
     </details>
   `;
 }
 
-function renderGenAIDrawer(genai) {
+// Stage 05: GenAI Detail (VIP)
+function renderGenAIPanel(genai) {
   const traceS5 = activeRecordData?.stages[4] || {};
   const seeds = traceS5.input?.data || {};
   const outData = traceS5.output?.data || {};
+  const severity = outData.severity || 'Mild';
 
-  drawerBody.innerHTML = `
+  panelBodyArea.innerHTML = `
     <div style="display: flex; justify-content: space-between; align-items: center;">
-      <span class="badge-source">STAGE 05 COMPOUND SCENARIO</span>
-      <span class="badge-sev badge-mild" style="color: var(--green-primary);">Status: ✓ Completed</span>
+      <span class="badge-source">COMPOUND SCENARIO</span>
+      <span class="badge-sev badge-${severity.toLowerCase()}">${severity} Severity</span>
     </div>
 
-    <!-- Scenario ID & Severity -->
-    <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(0,0,0,0.3); padding: 12px 14px; border-radius: 8px;">
+    <!-- Scenario ID & Validation -->
+    <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(0,0,0,0.3); padding: 10px 14px; border-radius: 8px;">
       <div>
-        <span style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; display: block;">Scenario ID:</span>
-        <strong style="font-family: var(--font-mono); font-size: 1.05rem; color: var(--cyan-light);">${outData.scenario_id || activeRecordId}</strong>
+        <span style="font-size: 0.68rem; color: var(--text-muted); text-transform: uppercase;">Scenario ID:</span>
+        <strong style="font-family: var(--font-mono); font-size: 1rem; color: var(--cyan-light); margin-left: 8px;">${outData.scenario_id || activeRecordId}</strong>
       </div>
-      <span class="badge-sev badge-${(outData.severity || 'mild').toLowerCase()}">${outData.severity || 'Mild'} Severity</span>
+      <span style="color: var(--green-primary); font-size: 0.78rem; font-weight: 700;">✓ Validation Passed (95.43% Seed Preservation)</span>
     </div>
 
-    <!-- Synthesized Scenario -->
-    <div style="background: rgba(0,0,0,0.35); padding: 14px; border-radius: 8px; border: 1px solid var(--border-subtle);">
-      <h4 style="font-size: 0.76rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 6px;">
-        SYNTHESIZED CLINICAL SCENARIO NARRATIVE
+    <!-- Generated Scenario Narrative -->
+    <div style="background: rgba(0,0,0,0.35); padding: 12px 14px; border-radius: 8px; border: 1px solid var(--border-subtle);">
+      <h4 style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 4px;">
+        GENERATED SCENARIO NARRATIVE
       </h4>
       <p style="font-size: 0.84rem; color: #f1f5f9; line-height: 1.55;">
-        ${outData.patient_scenario || 'The patient presents with Stage 4 Breast Cancer harboring TP53...'}
+        ${outData.patient_scenario || 'The patient presents with Stage 4 Breast Cancer harboring TP53, currently undergoing evaluation while on Carboplatin...'}
       </p>
     </div>
 
-    <!-- Compound Interactions -->
-    <div style="background: rgba(6, 182, 212, 0.08); padding: 14px; border-radius: 8px; border: 1px solid rgba(6, 182, 212, 0.2);">
-      <h4 style="font-size: 0.76rem; color: var(--cyan-light); text-transform: uppercase; margin-bottom: 6px;">
-        COMPOUND DRUG-BIOMARKER INTERACTIONS
-      </h4>
-      <ul style="padding-left: 16px; font-size: 0.8rem; color: #f1f5f9; display: flex; flex-direction: column; gap: 4px;">
-        ${(outData.compound_interactions || []).map(item => `<li>${item}</li>`).join("")}
-      </ul>
-    </div>
+    <!-- Compound Interactions & Potential Risk Context -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+      <div style="background: rgba(6, 182, 212, 0.08); padding: 12px 14px; border-radius: 8px; border: 1px solid rgba(6, 182, 212, 0.2);">
+        <h4 style="font-size: 0.72rem; color: var(--cyan-light); text-transform: uppercase; margin-bottom: 6px;">
+          COMPOUND INTERACTIONS
+        </h4>
+        <ul style="padding-left: 14px; font-size: 0.78rem; color: #f1f5f9; display: flex; flex-direction: column; gap: 4px;">
+          ${(outData.compound_interactions || []).map(item => `<li>${item}</li>`).join("")}
+        </ul>
+      </div>
 
-    <!-- Potential Risk Context -->
-    <div style="background: rgba(245, 158, 11, 0.08); padding: 14px; border-radius: 8px; border: 1px solid rgba(245, 158, 11, 0.25);">
-      <h4 style="font-size: 0.76rem; color: #fcd34d; text-transform: uppercase; margin-bottom: 6px;">
-        POTENTIAL CLINICAL RISK CONTEXT
-      </h4>
-      <ul style="padding-left: 16px; font-size: 0.8rem; color: #f1f5f9; display: flex; flex-direction: column; gap: 4px;">
-        ${(outData.potential_risk_context || []).map(item => `<li>${item}</li>`).join("")}
-      </ul>
+      <div style="background: rgba(245, 158, 11, 0.08); padding: 12px 14px; border-radius: 8px; border: 1px solid rgba(245, 158, 11, 0.25);">
+        <h4 style="font-size: 0.72rem; color: #fcd34d; text-transform: uppercase; margin-bottom: 6px;">
+          POTENTIAL RISK CONTEXT
+        </h4>
+        <ul style="padding-left: 14px; font-size: 0.78rem; color: #f1f5f9; display: flex; flex-direction: column; gap: 4px;">
+          ${(outData.potential_risk_context || []).map(item => `<li>${item}</li>`).join("")}
+        </ul>
+      </div>
     </div>
 
     <!-- Seed Conditions Sample -->
-    <div style="background: rgba(0,0,0,0.25); padding: 14px; border-radius: 8px;">
-      <h4 style="font-size: 0.74rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 8px;">
-        PRESERVED SEED PARAMETERS (33 Total)
+    <div style="background: rgba(0,0,0,0.25); padding: 10px 14px; border-radius: 8px;">
+      <h4 style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 6px;">
+        SEED CONDITIONS (33 Clinical Parameters)
       </h4>
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px; font-size: 0.76rem;">
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; font-size: 0.74rem;">
         ${Object.entries(seeds).slice(0, 8).map(([k, v]) => `
           <div><span style="color: var(--text-muted);">${k}:</span> <strong>${v}</strong></div>
         `).join("")}
@@ -549,7 +583,7 @@ function renderGenAIDrawer(genai) {
     <details class="tech-details-accordion">
       <summary class="tech-details-summary">Technical Details ▼</summary>
       <div class="tech-details-content">
-        Generative Model: Qwen/Qwen2.5-0.5B-Instruct<br>
+        Model: Qwen/Qwen2.5-0.5B-Instruct<br>
         Prompt Strategy: v1.1 Deterministic Clinical Conditioning<br>
         Validation Pass Rate: 100% &bull; Seed Preservation Rate: 95.43%<br>
         Contradiction Rate: 0% &bull; Unsupported Claim Rate: 0%
@@ -589,7 +623,7 @@ async function fetchRecentActivity() {
     const data = await res.json();
     const items = data.activities || [];
 
-    activityList.innerHTML = items.map(act => `
+    activityList.innerHTML = items.slice(0, 4).map(act => `
       <li class="activity-item">
         <span class="activity-dot"></span>
         <div class="activity-content">
@@ -774,16 +808,6 @@ function setupEventListeners() {
   btnRunPipeline.addEventListener("click", executeLivePipeline);
   btnRefresh.addEventListener("click", initDashboard);
 
-  // Drawer events
-  drawerClose.addEventListener("click", closeStageDrawer);
-  drawerBackdrop.addEventListener("click", closeStageDrawer);
-
-  drawerTabBtns.forEach(btn => {
-    btn.addEventListener("click", () => {
-      openStageDrawer(btn.getAttribute("data-stage"));
-    });
-  });
-
   // Modal events
   btnViewAllScenarios.addEventListener("click", openAllScenariosModal);
   modalScenariosClose.addEventListener("click", () => modalAllScenarios.classList.remove("open"));
@@ -793,7 +817,6 @@ function setupEventListeners() {
 
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
-      closeStageDrawer();
       modalAllScenarios.classList.remove("open");
     }
   });

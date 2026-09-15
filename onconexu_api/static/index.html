@@ -14,7 +14,7 @@
 <body>
 
   <!-- ===================================================================== -->
-  <!-- TOP COMMAND BAR                                                       -->
+  <!-- HEADER: ONCONEXUS                                                     -->
   <!-- ===================================================================== -->
   <header class="cmd-topbar">
     <div class="topbar-inner">
@@ -44,8 +44,8 @@
 
         <div class="status-chip" id="supabase-chip">
           <span class="dot dot-green" id="sb-status-dot"></span>
-          <span class="chip-label">Database:</span>
-          <strong id="sb-status-val">Supabase Synced (20)</strong>
+          <span class="chip-label">Selected:</span>
+          <strong id="header-selected-id" class="mono-cyan">SCEN-BATCH-0001</strong>
         </div>
 
         <button id="btn-run-pipeline" class="btn-primary-glow" title="Execute full 5-stage pipeline for active record">
@@ -66,36 +66,36 @@
   </header>
 
   <!-- ===================================================================== -->
-  <!-- COMPACT SAFETY NOTICE                                                 -->
+  <!-- COMPACT SAFETY DISCLAIMER                                             -->
   <!-- ===================================================================== -->
   <div class="safety-banner">
     <div class="safety-inner">
       <span class="safety-tag">CLINICAL NOTICE</span>
       <span class="safety-text">
-        Research & decision-support system. AI-generated outputs (SLM summaries & GenAI compound scenarios) must be verified against source clinical data and are not a substitute for professional clinical judgment.
+        Research and decision-support system. AI-generated outputs must be verified against source information and are not a substitute for professional clinical judgment.
       </span>
     </div>
   </div>
 
   <!-- ===================================================================== -->
-  <!-- DASHBOARD MAIN BODY                                                   -->
+  <!-- DASHBOARD MAIN COMMAND CENTER VIEWPORT                                -->
   <!-- ===================================================================== -->
   <main class="dashboard-viewport">
 
-    <!-- 1. SEARCH & SELECTION BAR -->
+    <!-- 1. TOP: PATIENT / SCENARIO SELECTOR AREA -->
     <section class="patient-selector-card">
       <div class="selector-row">
         <div class="search-input-wrap">
           <svg class="search-ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
           </svg>
-          <input type="text" id="input-search" placeholder="Search patient ID, scenario ID, cancer type, drug, mutation..." />
+          <input type="text" id="input-search" placeholder="Search Patient / Scenario (ID, cancer type, drug, mutation)..." />
         </div>
 
         <div class="select-dropdown-wrap">
-          <label for="select-record">Active Scenario / Patient:</label>
+          <label for="select-record">Select Scenario:</label>
           <select id="select-record" class="custom-select">
-            <option value="">Loading records...</option>
+            <option value="">Select a patient or scenario to begin pipeline analysis.</option>
           </select>
         </div>
 
@@ -118,208 +118,155 @@
       </div>
     </section>
 
-    <!-- 2. FIVE-STAGE PIPELINE CARDS (CLICKABLE) -->
+    <!-- 2. MAIN: 5-STAGE PIPELINE (CLICKABLE, NO MODEL NAMES) -->
     <section class="pipeline-flow-section">
       <div class="flow-header">
         <div class="flow-title-wrap">
-          <span class="section-kicker">END-TO-END PIPELINE</span>
-          <h2 class="flow-title">Multi-Stage Oncology Intelligence Flow</h2>
+          <span class="section-kicker">ONCONEXUS PIPELINE</span>
+          <h2 class="flow-title">Five-Stage Oncology Intelligence Architecture</h2>
         </div>
-        <span class="flow-hint">Click any stage card to open its detail panel</span>
+        <div class="progress-bar-indicator">
+          <span id="prog-01" class="prog-node active">01 ML ✓</span>
+          <span class="prog-arrow">&rarr;</span>
+          <span id="prog-02" class="prog-node active">02 DL ✓</span>
+          <span class="prog-arrow">&rarr;</span>
+          <span id="prog-03" class="prog-node active">03 NLP ✓</span>
+          <span class="prog-arrow">&rarr;</span>
+          <span id="prog-04" class="prog-node active">04 SLM ✓</span>
+          <span class="prog-arrow">&rarr;</span>
+          <span id="prog-05" class="prog-node active">05 GenAI ✓</span>
+        </div>
       </div>
 
+      <!-- 5 Horizontal Interactive Stage Cards -->
       <div class="stages-grid" id="stages-grid">
         <!-- Stage 1: ML -->
-        <div class="stage-card" id="card-stage-01" onclick="openStageDrawer('01_ml')">
+        <div class="stage-card" id="card-stage-01" onclick="switchActiveStage('01_ml')">
           <div class="card-top">
             <span class="stage-num">01 ML</span>
             <span class="status-dot-label" id="status-01">
-              <span class="dot dot-green"></span> Completed
+              <span class="dot dot-green"></span> Ready
             </span>
           </div>
           <h3 class="card-name">Risk Prediction</h3>
-          <p class="card-desc">Oncology Toxicity Risk Stratification</p>
+          <p class="card-desc">Toxicity Risk Prediction</p>
           <div class="card-io">
             <div class="io-item"><span class="io-k">IN:</span> <span class="io-v">25 Clinical Features</span></div>
             <div class="io-item"><span class="io-k">OUT:</span> <span class="io-v" id="card-out-01">Low Toxicity Risk</span></div>
           </div>
-          <div class="card-action">Inspect ML Details &rarr;</div>
+          <div class="card-action">Inspect Stage &rarr;</div>
         </div>
 
         <div class="connector-arrow">&rarr;</div>
 
         <!-- Stage 2: DL -->
-        <div class="stage-card" id="card-stage-02" onclick="openStageDrawer('02_dl')">
+        <div class="stage-card" id="card-stage-02" onclick="switchActiveStage('02_dl')">
           <div class="card-top">
             <span class="stage-num">02 DL</span>
             <span class="status-dot-label" id="status-02">
-              <span class="dot dot-green"></span> Completed
+              <span class="dot dot-green"></span> Ready
             </span>
           </div>
-          <h3 class="card-name">Deep Learning</h3>
+          <h3 class="card-name">Deep Learning Analysis</h3>
           <p class="card-desc">Histopathology & Progression Risk</p>
           <div class="card-io">
             <div class="io-item"><span class="io-k">IN:</span> <span class="io-v">Histology & ctDNA Sequences</span></div>
             <div class="io-item"><span class="io-k">OUT:</span> <span class="io-v" id="card-out-02">Moderate Progression Risk</span></div>
           </div>
-          <div class="card-action">Inspect DL Details &rarr;</div>
+          <div class="card-action">Inspect Stage &rarr;</div>
         </div>
 
         <div class="connector-arrow">&rarr;</div>
 
         <!-- Stage 3: NLP -->
-        <div class="stage-card" id="card-stage-03" onclick="openStageDrawer('03_nlp')">
+        <div class="stage-card" id="card-stage-03" onclick="switchActiveStage('03_nlp')">
           <div class="card-top">
             <span class="stage-num">03 NLP</span>
             <span class="status-dot-label" id="status-03">
-              <span class="dot dot-green"></span> Completed
+              <span class="dot dot-green"></span> Ready
             </span>
           </div>
-          <h3 class="card-name">Text Analysis</h3>
-          <p class="card-desc">Clinical Urgency & Medical NER</p>
+          <h3 class="card-name">Clinical Text Analysis</h3>
+          <p class="card-desc">Urgency Triage & Medical NER</p>
           <div class="card-io">
             <div class="io-item"><span class="io-k">IN:</span> <span class="io-v">Unstructured Clinical Note</span></div>
             <div class="io-item"><span class="io-k">OUT:</span> <span class="io-v" id="card-out-03">High Urgency + Extracted NER</span></div>
           </div>
-          <div class="card-action">Inspect NLP Details &rarr;</div>
+          <div class="card-action">Inspect Stage &rarr;</div>
         </div>
 
         <div class="connector-arrow">&rarr;</div>
 
         <!-- Stage 4: SLM -->
-        <div class="stage-card" id="card-stage-04" onclick="openStageDrawer('04_slm')">
+        <div class="stage-card" id="card-stage-04" onclick="switchActiveStage('04_slm')">
           <div class="card-top">
             <span class="stage-num">04 SLM</span>
             <span class="status-dot-label" id="status-04">
-              <span class="dot dot-green"></span> Completed
+              <span class="dot dot-green"></span> Ready
             </span>
           </div>
-          <h3 class="card-name">Summarization</h3>
+          <h3 class="card-name">Clinical Summarization</h3>
           <p class="card-desc">Faithful Clinical Summarization</p>
           <div class="card-io">
             <div class="io-item"><span class="io-k">IN:</span> <span class="io-v">Narrative + NER Context</span></div>
             <div class="io-item"><span class="io-k">OUT:</span> <span class="io-v" id="card-out-04">Faithful Summary (PASS)</span></div>
           </div>
-          <div class="card-action">Inspect SLM Details &rarr;</div>
+          <div class="card-action">Inspect Stage &rarr;</div>
         </div>
 
         <div class="connector-arrow">&rarr;</div>
 
         <!-- Stage 5: GenAI -->
-        <div class="stage-card stage-card-highlight" id="card-stage-05" onclick="openStageDrawer('05_genai')">
+        <div class="stage-card stage-card-highlight active-stage" id="card-stage-05" onclick="switchActiveStage('05_genai')">
           <div class="card-top">
             <span class="stage-num stage-num-gold">05 GenAI</span>
             <span class="status-dot-label" id="status-05">
-              <span class="dot dot-purple"></span> Completed
+              <span class="dot dot-purple"></span> Ready
             </span>
           </div>
-          <h3 class="card-name">Compound Scenarios</h3>
+          <h3 class="card-name">Compound Scenario Generation</h3>
           <p class="card-desc">Combinatorial Scenario Generation</p>
           <div class="card-io">
             <div class="io-item"><span class="io-k">IN:</span> <span class="io-v">33 Clinical Seeds</span></div>
             <div class="io-item"><span class="io-k">OUT:</span> <span class="io-v" id="card-out-05">Validated Compound Scenario</span></div>
           </div>
-          <div class="card-action action-gold">Inspect GenAI Details &rarr;</div>
+          <div class="card-action action-gold">Inspect Stage &rarr;</div>
         </div>
       </div>
     </section>
 
-    <!-- 3. DASHBOARD MID-DECK: RESULT OVERVIEW & COMPACT ANALYTICS -->
-    <section class="dashboard-mid-deck">
-
-      <!-- LEFT: ACTIVE PIPELINE RESULT SUMMARY -->
-      <div class="deck-card active-journey-card">
-        <div class="card-heading-row">
-          <div>
-            <span class="badge-source">Active Pipeline Journey</span>
-            <h3 class="heading-title" id="journey-title">Patient Journey: SCEN-BATCH-0001</h3>
-          </div>
-          <button class="btn-sm-cyan" onclick="openStageDrawer('05_genai')">Inspect GenAI Scenario</button>
+    <!-- 3. ACTIVE STAGE DETAIL PANEL (DYNAMICALLY SWITCHES ON STAGE CLICK) -->
+    <section class="stage-detail-panel-card" id="stage-detail-panel-card">
+      <div class="panel-header-bar">
+        <div class="panel-header-left">
+          <span class="panel-stage-badge" id="active-panel-badge">STAGE 05</span>
+          <h3 class="panel-stage-title" id="active-panel-title">COMPOUND SCENARIO</h3>
         </div>
 
-        <div class="journey-preview-box">
-          <div class="preview-line">
-            <span class="line-label">1. Toxicity Risk:</span>
-            <strong class="text-green" id="journey-s1">Low Risk (Score: 0.28)</strong>
-          </div>
-          <div class="preview-line">
-            <span class="line-label">2. Tissue & Progression:</span>
-            <strong class="text-cyan" id="journey-s2">Malignant &bull; Moderate Progression Risk</strong>
-          </div>
-          <div class="preview-line">
-            <span class="line-label">3. Urgency & NER:</span>
-            <strong class="text-amber" id="journey-s3">High Urgency &bull; TP53 &bull; Carboplatin</strong>
-          </div>
-          <div class="preview-line">
-            <span class="line-label">4. SLM Summary:</span>
-            <span class="text-muted" id="journey-s4">Faithful clinical summary generated with zero unprescribed medications.</span>
-          </div>
-          <div class="preview-line preview-highlight">
-            <span class="line-label">5. GenAI Compound Scenario:</span>
-            <p class="scenario-snippet" id="journey-s5">
-              The patient presents with Stage 4 Breast Cancer harboring TP53, currently undergoing evaluation while on Carboplatin...
-            </p>
-          </div>
+        <!-- Quick Stage Switcher Tabs -->
+        <div class="stage-tabs-pill">
+          <button class="stage-tab-btn" data-stage="01_ml" onclick="switchActiveStage('01_ml')">01 ML</button>
+          <button class="stage-tab-btn" data-stage="02_dl" onclick="switchActiveStage('02_dl')">02 DL</button>
+          <button class="stage-tab-btn" data-stage="03_nlp" onclick="switchActiveStage('03_nlp')">03 NLP</button>
+          <button class="stage-tab-btn" data-stage="04_slm" onclick="switchActiveStage('04_slm')">04 SLM</button>
+          <button class="stage-tab-btn active" data-stage="05_genai" onclick="switchActiveStage('05_genai')">05 GenAI</button>
         </div>
       </div>
 
-      <!-- RIGHT: COMPACT ANALYTICS & METRICS -->
-      <div class="deck-card analytics-compact-card">
-        <div class="card-heading-row">
-          <div>
-            <span class="badge-source">Project Metrics</span>
-            <h3 class="heading-title">Live Oncology Analytics</h3>
-          </div>
-          <span class="mono-tag" id="dataset-count-tag">3,893 Patients</span>
-        </div>
-
-        <!-- 4 KPI Badges -->
-        <div class="kpi-grid">
-          <div class="kpi-chip">
-            <span class="kpi-label">Total Scenarios</span>
-            <strong class="kpi-val" id="kpi-scenarios">20</strong>
-          </div>
-          <div class="kpi-chip">
-            <span class="kpi-label">Validation Pass</span>
-            <strong class="kpi-val text-green">100%</strong>
-          </div>
-          <div class="kpi-chip">
-            <span class="kpi-label">Seed Preservation</span>
-            <strong class="kpi-val text-cyan">95.43%</strong>
-          </div>
-          <div class="kpi-chip">
-            <span class="kpi-label">Database Synced</span>
-            <strong class="kpi-val text-purple" id="kpi-supabase">20</strong>
-          </div>
-        </div>
-
-        <!-- 2 Compact Visual Charts -->
-        <div class="mini-charts-row">
-          <div class="mini-chart-box">
-            <div class="mini-chart-title">ML Toxicity Risk Distribution</div>
-            <div class="canvas-wrap">
-              <canvas id="mini-chart-risk"></canvas>
-            </div>
-          </div>
-          <div class="mini-chart-box">
-            <div class="mini-chart-title">GenAI Scenario Severity</div>
-            <div class="canvas-wrap">
-              <canvas id="mini-chart-severity"></canvas>
-            </div>
-          </div>
-        </div>
+      <!-- Dynamic Stage Content Area -->
+      <div class="panel-body-area" id="panel-body-area">
+        <!-- Rendered via JS based on selected stage -->
       </div>
-
     </section>
 
-    <!-- 4. DASHBOARD LOWER-DECK: RECENT SCENARIOS & RECENT ACTIVITY -->
+    <!-- 4. DASHBOARD LOWER DECK: RECENT SCENARIOS & COMPACT ANALYTICS -->
     <section class="dashboard-lower-deck">
 
-      <!-- RECENT SCENARIOS (COMPACT TABLE) -->
+      <!-- RECENT SCENARIOS (COMPACT TABLE WITH VIEW ALL) -->
       <div class="deck-card recent-scenarios-card">
         <div class="card-heading-row">
           <div>
-            <span class="badge-source">GenAI Repository</span>
+            <span class="badge-source">GenAI Scenario Repository</span>
             <h3 class="heading-title">Recent Compound Scenarios</h3>
           </div>
           <button class="btn-ghost-sm" id="btn-view-all-scenarios">View All Scenarios &rarr;</button>
@@ -343,52 +290,64 @@
         </div>
       </div>
 
-      <!-- RECENT ACTIVITY TIMELINE -->
-      <div class="deck-card activity-timeline-card">
+      <!-- COMPACT ANALYTICS & TIMELINE -->
+      <div class="deck-card analytics-compact-card">
         <div class="card-heading-row">
           <div>
-            <span class="badge-source">Audit Log</span>
-            <h3 class="heading-title">Recent Pipeline Activity</h3>
+            <span class="badge-source">Project Metrics & Audit</span>
+            <h3 class="heading-title">Live Empirical Analytics</h3>
           </div>
-          <span class="live-pulse-badge"><span class="dot dot-green"></span> Live</span>
+          <span class="mono-tag">3,893 Patients</span>
         </div>
 
-        <ul class="activity-list" id="activity-list">
-          <!-- Rendered via JS with real timestamps -->
-        </ul>
+        <!-- 4 KPI Chips -->
+        <div class="kpi-grid">
+          <div class="kpi-chip">
+            <span class="kpi-label">Total Scenarios</span>
+            <strong class="kpi-val" id="kpi-scenarios">20</strong>
+          </div>
+          <div class="kpi-chip">
+            <span class="kpi-label">Validation Pass</span>
+            <strong class="kpi-val text-green">100%</strong>
+          </div>
+          <div class="kpi-chip">
+            <span class="kpi-label">Seed Preservation</span>
+            <strong class="kpi-val text-cyan">95.43%</strong>
+          </div>
+          <div class="kpi-chip">
+            <span class="kpi-label">Supabase Synced</span>
+            <strong class="kpi-val text-purple" id="kpi-supabase">20</strong>
+          </div>
+        </div>
+
+        <!-- 2 Mini Charts -->
+        <div class="mini-charts-row">
+          <div class="mini-chart-box">
+            <div class="mini-chart-title">ML Toxicity Risk Distribution</div>
+            <div class="canvas-wrap">
+              <canvas id="mini-chart-risk"></canvas>
+            </div>
+          </div>
+          <div class="mini-chart-box">
+            <div class="mini-chart-title">GenAI Scenario Severity Breakdown</div>
+            <div class="canvas-wrap">
+              <canvas id="mini-chart-severity"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Compact Activity Timeline (3 lines) -->
+        <div class="activity-mini-wrap">
+          <div class="mini-chart-title" style="text-align: left; margin-top: 6px;">Recent Pipeline Activity</div>
+          <ul class="activity-list" id="activity-list">
+            <!-- Rendered via JS -->
+          </ul>
+        </div>
       </div>
 
     </section>
 
   </main>
-
-  <!-- ===================================================================== -->
-  <!-- SLIDE-OUT STAGE DETAIL DRAWER                                         -->
-  <!-- ===================================================================== -->
-  <aside class="stage-drawer" id="stage-drawer">
-    <div class="drawer-header">
-      <div class="drawer-title-wrap">
-        <span class="drawer-stage-badge" id="drawer-badge">STAGE 01</span>
-        <h2 class="drawer-title" id="drawer-title">ML Risk Prediction</h2>
-      </div>
-      <button class="drawer-close-btn" id="drawer-close" title="Close detail drawer">&times;</button>
-    </div>
-
-    <!-- Stage Toggle Tabs inside Drawer -->
-    <div class="drawer-tabs">
-      <button class="drawer-tab-btn" data-stage="01_ml">01 ML</button>
-      <button class="drawer-tab-btn" data-stage="02_dl">02 DL</button>
-      <button class="drawer-tab-btn" data-stage="03_nlp">03 NLP</button>
-      <button class="drawer-tab-btn" data-stage="04_slm">04 SLM</button>
-      <button class="drawer-tab-btn" data-stage="05_genai">05 GenAI</button>
-    </div>
-
-    <!-- Drawer Dynamic Content Body -->
-    <div class="drawer-body" id="drawer-body">
-      <!-- Injected dynamically -->
-    </div>
-  </aside>
-  <div class="drawer-backdrop" id="drawer-backdrop"></div>
 
   <!-- ===================================================================== -->
   <!-- MODAL: VIEW ALL SCENARIOS                                             -->
@@ -397,8 +356,8 @@
     <div class="modal-card">
       <div class="modal-header">
         <div>
-          <span class="modal-kicker">SUPABASE & GENAI REPOSITORY</span>
-          <h3 class="modal-title">All Certified Compound Oncology Scenarios</h3>
+          <span class="modal-kicker">SUPABASE POSTGRES REPOSITORY</span>
+          <h3 class="modal-title">All Certified Compound Oncology Scenarios (public.generated_scenarios)</h3>
         </div>
         <button class="modal-close-btn" id="modal-scenarios-close">&times;</button>
       </div>
