@@ -1,0 +1,10 @@
+column_name,actual_null_count,actual_null_pct,empty_string_count,whitespace_only_count,explicit_unknown_count,explicit_unknown_pct,explicit_none_reported_count,explicit_none_reported_pct,total_sparse_or_unknown_count,total_sparse_or_unknown_pct,nature_of_shorthand
+clinical_report,0,0.0,0,0,0,0.0,0,0.0,0,0.0,Fully populated
+summary,0,0.0,0,0,0,0.0,0,0.0,0,0.0,Fully populated
+ner,0,0.0,0,0,0,0.0,0,0.0,0,0.0,Fully populated
+gene_mutation,0,0.0,0,0,759,15.98,0,0.0,759,15.98,Legitimate clinical shorthand / intentional absence
+drug_name,0,0.0,0,0,835,17.58,0,0.0,835,17.58,Legitimate clinical shorthand / intentional absence
+dosage_level,0,0.0,0,0,1221,25.71,0,0.0,1221,25.71,Legitimate clinical shorthand / intentional absence
+adverse_event,0,0.0,0,0,0,0.0,1469,30.93,1469,30.93,Legitimate clinical shorthand / intentional absence
+symptom_text,0,0.0,0,0,0,0.0,0,0.0,0,0.0,Fully populated
+urgency,0,0.0,0,0,730,15.37,0,0.0,730,15.37,Legitimate clinical shorthand / intentional absence

@@ -1,0 +1,126 @@
+row_index,clinical_report_snippet,summary_snippet,issue_count,flagged_reasons
+137,Trial screening STK11 mutation prior/current drug Crizotinib...,This trial note documents a patient receiving Crizotinib wit...,1,Repeated consecutive token: dose
+161,Progress note - EGFR exon 19 del treatment Sotorasib dose do...,This progress note documents a patient receiving Sotorasib w...,1,Repeated consecutive token: dose
+211,Progress note - unknown treatment Dabrafenib dose dose not r...,This progress note documents a patient receiving Dabrafenib....,1,Repeated consecutive token: dose
+222,Progress note - KRAS G12C treatment Sotorasib dose dose not ...,This progress note documents a patient receiving Sotorasib w...,1,Repeated consecutive token: dose
+232,Progress note - ROS1 fusion treatment Cisplatin dose dose no...,This progress note documents a patient receiving Cisplatin w...,1,Repeated consecutive token: dose
+367,Progress note - ALK fusion treatment Alectinib dose dose not...,This progress note documents a patient receiving Alectinib w...,1,Repeated consecutive token: dose
+395,Trial screening STK11 mutation prior/current drug unknown me...,This trial note documents a patient on medication with a STK...,1,Repeated consecutive token: dose
+429,Trial screening EGFR L858R prior/current drug Gefitinib dose...,This trial note documents a patient receiving Gefitinib with...,1,Repeated consecutive token: dose
+462,Trial screening not available prior/current drug Trametinib ...,This trial note documents a patient receiving Trametinib. Re...,1,Repeated consecutive token: dose
+716,Trial screening EGFR exon 19 del prior/current drug Gefitini...,This trial note documents a patient receiving Gefitinib with...,1,Repeated consecutive token: dose
+730,Progress note - EGFR exon 19 del treatment Erlotinib dose do...,This progress note documents a patient receiving Erlotinib w...,1,Repeated consecutive token: dose
+847,Trial screening EGFR exon 19 del prior/current drug Crizotin...,This trial note documents a patient receiving Crizotinib wit...,1,Repeated consecutive token: dose
+856,Progress note - BRAF V600E treatment Dabrafenib dose dose no...,This progress note documents a patient receiving Dabrafenib ...,1,Repeated consecutive token: dose
+863,Trial screening BRAF V600E prior/current drug Gefitinib dose...,This trial note documents a patient receiving Gefitinib with...,1,Repeated consecutive token: dose
+922,Progress note - stk11 mut treatment Carboplatin dose dose no...,This progress note documents a patient receiving Carboplatin...,1,Repeated consecutive token: dose
+954,Trial screening tp53 mut prior/current drug Alectinib dose d...,This trial note documents a patient receiving Alectinib with...,1,Repeated consecutive token: dose
+964,Progress note - kras-g12c treatment unknown med dose dose no...,This progress note documents a patient on medication with a ...,1,Repeated consecutive token: dose
+992,Trial screening ALK fusion prior/current drug Osimertinib do...,This trial note documents a patient receiving Osimertinib wi...,1,Repeated consecutive token: dose
+994,Trial screening unknown prior/current drug Cisplatin dose do...,This trial note documents a patient receiving Cisplatin. Rep...,1,Repeated consecutive token: dose
+1093,Progress note - kras-g12c treatment Erlotinib dose dose not ...,This progress note documents a patient receiving Erlotinib w...,1,Repeated consecutive token: dose
+1114,Progress note - EGFR exon 19 del treatment Gefitinib dose do...,This progress note documents a patient receiving Gefitinib w...,1,Repeated consecutive token: dose
+1157,Trial screening unknown prior/current drug Osimertinib dose ...,This trial note documents a patient receiving Osimertinib. R...,1,Repeated consecutive token: dose
+1236,Progress note - unknown treatment Osimertinib dose dose not ...,This progress note documents a patient receiving Osimertinib...,1,Repeated consecutive token: dose
+1248,Progress note - BRAF V600E treatment Trametinib dose dose no...,This progress note documents a patient receiving Trametinib ...,1,Repeated consecutive token: dose
+1252,Trial screening KRAS G12C prior/current drug Gefitinib dose ...,This trial note documents a patient receiving Gefitinib with...,1,Repeated consecutive token: dose
+1277,Trial screening kras-g12c prior/current drug Sotorasib dose ...,This trial note documents a patient receiving Sotorasib with...,1,Repeated consecutive token: dose
+1335,Trial screening ROS1 fusion prior/current drug Osimertinib d...,This trial note documents a patient receiving Osimertinib wi...,1,Repeated consecutive token: dose
+1427,Trial screening ALK fusion prior/current drug Cisplatin dose...,This trial note documents a patient receiving Cisplatin with...,1,Repeated consecutive token: dose
+1436,Progress note - TP53 mutation treatment Sotorasib dose dose ...,This progress note documents a patient receiving Sotorasib w...,1,Repeated consecutive token: dose
+1468,Trial screening unknown prior/current drug Crizotinib dose d...,This trial note documents a patient receiving Crizotinib. Re...,1,Repeated consecutive token: dose
+1477,Trial screening not available prior/current drug Gefitinib d...,This trial note documents a patient receiving Gefitinib. Rep...,1,Repeated consecutive token: dose
+1484,Progress note - KRAS G12C treatment Carboplatin dose dose no...,This progress note documents a patient receiving Carboplatin...,1,Repeated consecutive token: dose
+1680,Progress note - not available treatment Alectinib dose dose ...,This progress note documents a patient receiving Alectinib. ...,1,Repeated consecutive token: dose
+1698,Trial screening tp53 mut prior/current drug Trametinib dose ...,This trial note documents a patient receiving Trametinib wit...,1,Repeated consecutive token: dose
+1716,Progress note - ALK fusion treatment Osimertinib dose dose n...,This progress note documents a patient receiving Osimertinib...,1,Repeated consecutive token: dose
+1745,Progress note - TP53 mutation treatment Cisplatin dose dose ...,This progress note documents a patient receiving Cisplatin w...,1,Repeated consecutive token: dose
+1778,Progress note - KRAS G12C treatment Alectinib dose dose not ...,This progress note documents a patient receiving Alectinib w...,1,Repeated consecutive token: dose
+1835,Trial screening STK11 mutation prior/current drug Erlotinib ...,This trial note documents a patient receiving Erlotinib with...,1,Repeated consecutive token: dose
+1846,Trial screening kras-g12c prior/current drug Sotorasib dose ...,This trial note documents a patient receiving Sotorasib with...,1,Repeated consecutive token: dose
+1863,Trial screening EGFR L858R prior/current drug Trametinib dos...,This trial note documents a patient receiving Trametinib wit...,1,Repeated consecutive token: dose
+1870,Trial screening STK11 mutation prior/current drug Carboplati...,This trial note documents a patient receiving Carboplatin wi...,1,Repeated consecutive token: dose
+1949,Trial screening BRAF V600E prior/current drug Osimertinib do...,This trial note documents a patient receiving Osimertinib wi...,1,Repeated consecutive token: dose
+2022,Trial screening EGFR exon 19 del prior/current drug Trametin...,This trial note documents a patient receiving Trametinib wit...,1,Repeated consecutive token: dose
+2038,Progress note - STK11 mutation treatment Pembrolizumab dose ...,This progress note documents a patient receiving Pembrolizum...,1,Repeated consecutive token: dose
+2084,Trial screening unknown prior/current drug Alectinib dose do...,This trial note documents a patient receiving Alectinib. Rep...,1,Repeated consecutive token: dose
+2100,Progress note - ROS1 fusion treatment Cisplatin dose dose no...,This progress note documents a patient receiving Cisplatin w...,1,Repeated consecutive token: dose
+2101,Progress note - ALK fusion treatment Trametinib dose dose no...,This progress note documents a patient receiving Trametinib ...,1,Repeated consecutive token: dose
+2117,Progress note - EGFR L858R treatment Osimertinib dose dose n...,This progress note documents a patient receiving Osimertinib...,1,Repeated consecutive token: dose
+2134,Trial screening KRAS G12C prior/current drug unknown med dos...,This trial note documents a patient on medication with a KRA...,1,Repeated consecutive token: dose
+2139,Progress note - ROS1 fusion treatment Pembrolizumab dose dos...,This progress note documents a patient receiving Pembrolizum...,1,Repeated consecutive token: dose
+2196,Progress note - EGFR L858R treatment unknown med dose dose n...,This progress note documents a patient on medication with an...,1,Repeated consecutive token: dose
+2296,Trial screening kras-g12c prior/current drug Osimertinib dos...,This trial note documents a patient receiving Osimertinib wi...,1,Repeated consecutive token: dose
+2336,Trial screening MET amplification prior/current drug Carbopl...,This trial note documents a patient receiving Carboplatin wi...,1,Repeated consecutive token: dose
+2390,Progress note - MET amplification treatment Gefitinib dose d...,This progress note documents a patient receiving Gefitinib w...,1,Repeated consecutive token: dose
+2463,Trial screening BRAF V600E prior/current drug Osimertinib do...,This trial note documents a patient receiving Osimertinib wi...,1,Repeated consecutive token: dose
+2468,Trial screening TP53 mutation prior/current drug Trametinib ...,This trial note documents a patient receiving Trametinib wit...,1,Repeated consecutive token: dose
+2473,Trial screening MET amplification prior/current drug Osimert...,This trial note documents a patient receiving Osimertinib wi...,1,Repeated consecutive token: dose
+2547,Progress note - EGFR L858R treatment Erlotinib dose dose not...,This progress note documents a patient receiving Erlotinib w...,1,Repeated consecutive token: dose
+2558,Trial screening BRAF V600E prior/current drug Cisplatin dose...,This trial note documents a patient receiving Cisplatin with...,1,Repeated consecutive token: dose
+2568,Trial screening ROS1 fusion prior/current drug Erlotinib dos...,This trial note documents a patient receiving Erlotinib with...,1,Repeated consecutive token: dose
+2573,Progress note - ALK fusion treatment Cisplatin dose dose not...,This progress note documents a patient receiving Cisplatin w...,1,Repeated consecutive token: dose
+2652,Trial screening unknown prior/current drug Osimertinib dose ...,This trial note documents a patient receiving Osimertinib. N...,1,Repeated consecutive token: dose
+2669,Trial screening unknown prior/current drug Carboplatin dose ...,This trial note documents a patient receiving Carboplatin. R...,1,Repeated consecutive token: dose
+2763,Trial screening EGFR L858R prior/current drug Osimertinib do...,This trial note documents a patient receiving Osimertinib wi...,1,Repeated consecutive token: dose
+2764,Trial screening egfr l858r prior/current drug osimertinib do...,This trial note documents a patient receiving Osimertinib wi...,1,Repeated consecutive token: dose
+2782,Trial screening KRAS G12C prior/current drug Crizotinib dose...,This trial note documents a patient receiving Crizotinib wit...,1,Repeated consecutive token: dose
+2823,Progress note - not available treatment Trametinib dose dose...,This progress note documents a patient receiving Trametinib....,1,Repeated consecutive token: dose
+2834,Trial screening MET amplification prior/current drug unknown...,This trial note documents a patient on medication with a MET...,1,Repeated consecutive token: dose
+2873,Progress note - EGFR L858R treatment unknown med dose dose n...,This progress note documents a patient on medication with an...,1,Repeated consecutive token: dose
+2874,Progress note - kras-g12c treatment Gefitinib dose dose not ...,This progress note documents a patient receiving Gefitinib w...,1,Repeated consecutive token: dose
+2896,Progress note - EGFR exon 19 del treatment Osimertinib dose ...,This progress note documents a patient receiving Osimertinib...,1,Repeated consecutive token: dose
+2902,Progress note - BRAF V600E treatment unknown med dose dose n...,This progress note documents a patient on medication with a ...,1,Repeated consecutive token: dose
+2930,Trial screening not available prior/current drug Osimertinib...,This trial note documents a patient receiving Osimertinib. R...,1,Repeated consecutive token: dose
+3079,Progress note - MET amplification treatment Gefitinib dose d...,This progress note documents a patient receiving Gefitinib w...,1,Repeated consecutive token: dose
+3120,Progress note - unknown treatment Crizotinib dose dose not r...,This progress note documents a patient receiving Crizotinib....,1,Repeated consecutive token: dose
+3154,Progress note - MET amplification treatment Crizotinib dose ...,This progress note documents a patient receiving Crizotinib ...,1,Repeated consecutive token: dose
+3189,Progress note - ALK fusion treatment Crizotinib dose dose no...,This progress note documents a patient receiving Crizotinib ...,1,Repeated consecutive token: dose
+3198,Trial screening EGFR L858R prior/current drug Cisplatin dose...,This trial note documents a patient receiving Cisplatin with...,1,Repeated consecutive token: dose
+3199,Trial screening egfr l858r prior/current drug cisplatin dose...,This trial note documents a patient receiving Cisplatin with...,1,Repeated consecutive token: dose
+3216,Trial screening EGFR exon 19 del prior/current drug Alectini...,This trial note documents a patient receiving Alectinib with...,1,Repeated consecutive token: dose
+3263,Trial screening not available prior/current drug Sotorasib d...,This trial note documents a patient receiving Sotorasib. Rep...,1,Repeated consecutive token: dose
+3336,Trial screening unknown prior/current drug Sotorasib dose do...,This trial note documents a patient receiving Sotorasib. Rep...,1,Repeated consecutive token: dose
+3361,Trial screening ALK fusion prior/current drug Erlotinib dose...,This trial note documents a patient receiving Erlotinib with...,1,Repeated consecutive token: dose
+3382,Trial screening not available prior/current drug Osimertinib...,This trial note documents a patient receiving Osimertinib. R...,1,Repeated consecutive token: dose
+3428,Trial screening KRAS G12C prior/current drug Gefitinib dose ...,This trial note documents a patient receiving Gefitinib with...,1,Repeated consecutive token: dose
+3491,Progress note - MET amplification treatment Osimertinib dose...,This progress note documents a patient receiving Osimertinib...,1,Repeated consecutive token: dose
+3513,Progress note - MET amplification treatment unknown med dose...,This progress note documents a patient on medication with a ...,1,Repeated consecutive token: dose
+3515,Progress note - EGFR L858R treatment Crizotinib dose dose no...,This progress note documents a patient receiving Crizotinib ...,1,Repeated consecutive token: dose
+3539,Progress note - not available treatment Carboplatin dose dos...,This progress note documents a patient receiving Carboplatin...,1,Repeated consecutive token: dose
+3584,Progress note - kras-g12c treatment Osimertinib dose dose no...,This progress note documents a patient receiving Osimertinib...,1,Repeated consecutive token: dose
+3627,Trial screening EGFR exon 19 del prior/current drug Osimerti...,This trial note documents a patient receiving Osimertinib wi...,1,Repeated consecutive token: dose
+3653,Trial screening ALK fusion prior/current drug Pembrolizumab ...,This trial note documents a patient receiving Pembrolizumab ...,1,Repeated consecutive token: dose
+3731,Trial screening EGFR exon 19 del prior/current drug Erlotini...,This trial note documents a patient receiving Erlotinib with...,1,Repeated consecutive token: dose
+3796,Progress note - TP53 mutation treatment Alectinib dose dose ...,This progress note documents a patient receiving Alectinib w...,1,Repeated consecutive token: dose
+3820,Progress note - kras-g12c treatment Osimertinib dose dose no...,This progress note documents a patient receiving Osimertinib...,1,Repeated consecutive token: dose
+3824,Trial screening ALK fusion prior/current drug Alectinib dose...,This trial note documents a patient receiving Alectinib with...,1,Repeated consecutive token: dose
+3839,Progress note - KRAS G12C treatment Cisplatin dose dose not ...,This progress note documents a patient receiving Cisplatin w...,1,Repeated consecutive token: dose
+3841,Progress note - not available treatment Erlotinib dose dose ...,This progress note documents a patient receiving Erlotinib. ...,1,Repeated consecutive token: dose
+3913,Trial screening ALK fusion prior/current drug Cisplatin dose...,This trial note documents a patient receiving Cisplatin with...,1,Repeated consecutive token: dose
+3941,Trial screening not available prior/current drug Cisplatin d...,This trial note documents a patient receiving Cisplatin. Rep...,1,Repeated consecutive token: dose
+3976,Progress note - ROS1 fusion treatment Alectinib dose dose no...,This progress note documents a patient receiving Alectinib w...,1,Repeated consecutive token: dose
+4007,Trial screening tp53 mut prior/current drug unknown med dose...,This trial note documents a patient on medication with a TP5...,1,Repeated consecutive token: dose
+4090,Progress note - EGFR L858R treatment Carboplatin dose dose n...,This progress note documents a patient receiving Carboplatin...,1,Repeated consecutive token: dose
+4094,Progress note - kras-g12c treatment Sotorasib dose dose not ...,This progress note documents a patient receiving Sotorasib w...,1,Repeated consecutive token: dose
+4147,Trial screening kras-g12c prior/current drug Cisplatin dose ...,This trial note documents a patient receiving Cisplatin with...,1,Repeated consecutive token: dose
+4153,Trial screening ROS1 fusion prior/current drug Osimertinib d...,This trial note documents a patient receiving Osimertinib wi...,1,Repeated consecutive token: dose
+4184,Trial screening TP53 mutation prior/current drug Osimertinib...,This trial note documents a patient receiving Osimertinib wi...,1,Repeated consecutive token: dose
+4192,Progress note - ALK fusion treatment Alectinib dose dose not...,This progress note documents a patient receiving Alectinib w...,1,Repeated consecutive token: dose
+4271,Trial screening EGFR L858R prior/current drug Gefitinib dose...,This trial note documents a patient receiving Gefitinib with...,1,Repeated consecutive token: dose
+4326,Progress note - ROS1 fusion treatment Osimertinib dose dose ...,This progress note documents a patient receiving Osimertinib...,1,Repeated consecutive token: dose
+4352,Trial screening EGFR L858R prior/current drug Trametinib dos...,This trial note documents a patient receiving Trametinib wit...,1,Repeated consecutive token: dose
+4440,Trial screening KRAS G12C prior/current drug Crizotinib dose...,This trial note documents a patient receiving Crizotinib wit...,1,Repeated consecutive token: dose
+4441,Progress note - EGFR L858R treatment Erlotinib dose dose not...,This progress note documents a patient receiving Erlotinib w...,1,Repeated consecutive token: dose
+4464,Trial screening KRAS G12C prior/current drug unknown med dos...,This trial note documents a patient on medication with a KRA...,1,Repeated consecutive token: dose
+4497,Trial screening MET amplification prior/current drug Alectin...,This trial note documents a patient receiving Alectinib with...,1,Repeated consecutive token: dose
+4514,Trial screening KRAS G12C prior/current drug Dabrafenib dose...,This trial note documents a patient receiving Dabrafenib wit...,1,Repeated consecutive token: dose
+4617,Trial screening not available prior/current drug Crizotinib ...,This trial note documents a patient receiving Crizotinib. Re...,1,Repeated consecutive token: dose
+4643,Progress note - EGFR L858R treatment Carboplatin dose dose n...,This progress note documents a patient receiving Carboplatin...,1,Repeated consecutive token: dose
+4650,Progress note - ALK fusion treatment Erlotinib dose dose not...,This progress note documents a patient receiving Erlotinib w...,1,Repeated consecutive token: dose
+4675,Progress note - ALK fusion treatment Trametinib dose dose no...,This progress note documents a patient receiving Trametinib ...,1,Repeated consecutive token: dose
+4684,Progress note - MET amplification treatment Crizotinib dose ...,This progress note documents a patient receiving Crizotinib ...,1,Repeated consecutive token: dose
+4686,Progress note - MET amplification treatment Erlotinib dose d...,This progress note documents a patient receiving Erlotinib w...,1,Repeated consecutive token: dose
+4701,Progress note - EGFR L858R treatment Sotorasib dose dose not...,This progress note documents a patient receiving Sotorasib w...,1,Repeated consecutive token: dose
+4721,Progress note - EGFR L858R treatment Pembrolizumab dose dose...,This progress note documents a patient receiving Pembrolizum...,1,Repeated consecutive token: dose
+4722,Progress note - MET amplification treatment Alectinib dose d...,This progress note documents a patient receiving Alectinib w...,1,Repeated consecutive token: dose

@@ -1,0 +1,17 @@
+# Categorical Distribution Report
+
+## 1. Categorical Summary Table
+| categorical_column | total_count | unique_count | most_common_category | least_common_category | explicit_unknown_count | explicit_unknown_pct | explicit_none_reported_count | explicit_none_reported_pct |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| gene_mutation | 4749 | 10 | Unknown (759, 16.0%) | STK11 mutation (332, 7.0%) | 759 | 15.98 | 0 | 0.0 |
+| drug_name | 4749 | 12 | Unknown (835, 17.6%) | Alectinib (281, 5.9%) | 835 | 17.58 | 0 | 0.0 |
+| dosage_level | 4749 | 9 | Unknown (1221, 25.7%) | 600 mg BID (310, 6.5%) | 1221 | 25.71 | 0 | 0.0 |
+| adverse_event | 4749 | 11 | None Reported (1469, 30.9%) | Neutropenia (286, 6.0%) | 0 | 0.0 | 1469 | 30.93 |
+| symptom_text | 4749 | 13 | Shortness Of Breath (679, 14.3%) | Not Specified (316, 6.7%) | 0 | 0.0 | 0 | 0.0 |
+| urgency | 4749 | 4 | High (1372, 28.9%) | Unknown (730, 15.4%) | 730 | 15.37 | 0 | 0.0 |
+
+## 2. Key Findings by Attribute
+- **gene_mutation:** EGFR L858R, KRAS G12C, and BRAF V600E represent dominant oncology markers.
+- **drug_name:** Targeted therapies (Erlotinib, Cisplatin, Pembrolizumab) form the core treatment cohort.
+- **adverse_event:** 'None Reported' constitutes 30.9% of records; specific toxicities include Rash, Diarrhea, Mucositis, Thrombocytopenia.
+- **urgency:** Moderate and Low constitute the majority; 15.4% marked Unknown.

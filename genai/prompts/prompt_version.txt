@@ -1,0 +1,5 @@
+Prompt Version: v1.1
+Created: 2026-09-15
+Model Target: Qwen/Qwen2.5-0.5B-Instruct
+Task: SLM Compound Scenario Generator (Precision Oncology)
+Description: Parameterized oncology seed-condition interaction prompt with strict JSON output formatting, comprehensive seed value preservation, explicit field checklists, and severity calibration across Mild, Moderate, Severe, and Wildcard profiles.

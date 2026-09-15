@@ -1,0 +1,3 @@
+text_scope,total_tokens,unique_tokens_vocab_size,type_token_ratio_ttr,hapax_legomena_count,hapax_percentage,average_sentence_length_words,average_word_length_chars,top_frequent_tokens
+clinical_report (INPUT),82824,132,0.0016,0,0.0,17.52,5.1,"pt (3398), ae (2862), mg (2497), mutation (1885), dose (1828)"
+summary (TARGET),119318,96,0.0008,0,0.0,12.6,5.43,"with (7976), a (7323), reported (5258), an (4857), symptoms (4777)"

@@ -1,0 +1,13 @@
+metric,value
+Source File Name,genai_cleaned_master.csv
+Source File Path,C:\Users\venka\OneDrive\Documents\gen ai eda\genai_cleaned_master.csv
+Total Rows,4749
+Total Columns,9
+Numeric Columns Count,0
+Text / Categorical Columns Count,9
+Memory Usage (KB),4017.65
+Target GenAI Task,Clinical Text Summarization
+Model Input Feature,clinical_report
+Model Target Feature,summary
+Excluded Auxiliary Features,"ner, gene_mutation, drug_name, dosage_level, adverse_event, symptom_text, urgency"
+Patient_ID Status,NOT PRESENT (Explicitly excluded/removed upstream)
