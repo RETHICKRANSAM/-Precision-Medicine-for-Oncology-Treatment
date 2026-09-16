@@ -28,7 +28,11 @@ AUDIT_TRAIL_FILE = os.path.join(DATA_DIR, "audit_trail.json")
 if MODELS_DIR not in sys.path:
     sys.path.append(MODELS_DIR)
 
-from risk_predictor import RiskInferenceEngine
+try:
+    from risk_monitor.models.risk_predictor import RiskInferenceEngine
+except ImportError:
+    from risk_predictor import RiskInferenceEngine
+
 
 app = Flask(__name__, static_folder=FRONTEND_DIR)
 CORS(app)
