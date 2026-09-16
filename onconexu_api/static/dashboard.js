@@ -12,6 +12,187 @@ let activeStageKey = "05_genai"; // default focus on Stage 05 GenAI
 let stageCache = {};
 let charts = {};
 
+// -----------------------------------------------------------------------------
+// SECURE API KEY AUTHENTICATION
+// -----------------------------------------------------------------------------
+const DEFAULT_API_KEY = "onconexu-precision-key-2026";
+let currentApiKey = localStorage.getItem("onconexu_api_key") || DEFAULT_API_KEY;
+
+function getApiKey() {
+  return currentApiKey;
+}
+
+function setApiKey(key) {
+  currentApiKey = (key || "").trim();
+  localStorage.setItem("onconexu_api_key", currentApiKey);
+  updateApiKeyUI(true);
+}
+
+function updateApiKeyUI(isValid = true) {
+  const badgeText = document.getElementById("apikey-badge-text");
+  const statusDot = document.getElementById("apikey-status-dot");
+  if (badgeText && statusDot) {
+    if (isValid && currentApiKey) {
+      badgeText.textContent = "Active";
+      badgeText.className = "text-green";
+      statusDot.className = "dot dot-green";
+    } else {
+      badgeText.textContent = "Unauthorized";
+      badgeText.className = "text-amber";
+      statusDot.className = "dot dot-rose";
+    }
+  }
+}
+
+async function authFetch(url, options = {}) {
+  options.headers = options.headers || {};
+  const key = getApiKey();
+
+  if (options.headers instanceof Headers) {
+    if (!options.headers.has("X-API-Key")) {
+      options.headers.set("X-API-Key", key);
+    }
+  } else {
+    if (!options.headers["X-API-Key"]) {
+      options.headers["X-API-Key"] = key;
+    }
+  }
+
+  const res = await fetch(url, options);
+  if (res.status === 401) {
+    updateApiKeyUI(false);
+    showToast("API Key unauthorized. Please configure a valid API key.", "error");
+    openApiKeyModal("Invalid or missing API key. Please update your key to connect to the backend.");
+  } else if (res.ok && url.startsWith("/api/")) {
+    updateApiKeyUI(true);
+  }
+  return res;
+}
+
+// Modal Controllers
+function openApiKeyModal(errorMsg = "") {
+  const modal = document.getElementById("modal-apikey");
+  const input = document.getElementById("inp-apikey");
+  const alertBox = document.getElementById("apikey-alert-box");
+
+  if (input) input.value = getApiKey();
+  if (alertBox) {
+    if (errorMsg) {
+      alertBox.textContent = errorMsg;
+      alertBox.className = "form-error-banner";
+      alertBox.classList.remove("hidden");
+    } else {
+      alertBox.classList.add("hidden");
+    }
+  }
+
+  if (modal) modal.classList.add("open");
+}
+window.openApiKeyModal = openApiKeyModal;
+
+function closeApiKeyModal() {
+  const modal = document.getElementById("modal-apikey");
+  if (modal) modal.classList.remove("open");
+}
+window.closeApiKeyModal = closeApiKeyModal;
+
+function toggleKeyVisibility() {
+  const input = document.getElementById("inp-apikey");
+  const btn = document.getElementById("btn-toggle-key");
+  if (input && btn) {
+    if (input.type === "password") {
+      input.type = "text";
+      btn.textContent = "Hide";
+    } else {
+      input.type = "password";
+      btn.textContent = "Show";
+    }
+  }
+}
+window.toggleKeyVisibility = toggleKeyVisibility;
+
+async function testApiKeyConnection() {
+  const input = document.getElementById("inp-apikey");
+  const alertBox = document.getElementById("apikey-alert-box");
+  const testBtn = document.getElementById("btn-test-apikey");
+  const candidateKey = (input?.value || "").trim();
+
+  if (!candidateKey) {
+    if (alertBox) {
+      alertBox.textContent = "Please enter an API Key to test.";
+      alertBox.className = "form-error-banner";
+      alertBox.classList.remove("hidden");
+    }
+    return;
+  }
+
+  if (testBtn) testBtn.textContent = "Testing...";
+  try {
+    const res = await fetch("/api/auth/verify", {
+      headers: { "X-API-Key": candidateKey }
+    });
+
+    if (res.ok) {
+      if (alertBox) {
+        alertBox.textContent = "✓ Authentication Success: Valid OncoNexus API Key connected to backend!";
+        alertBox.className = "form-success-banner";
+        alertBox.classList.remove("hidden");
+      }
+    } else {
+      const err = await res.json().catch(() => ({}));
+      if (alertBox) {
+        alertBox.textContent = `✗ Authentication Failed (HTTP 401): ${err.detail || "Unauthorized key"}`;
+        alertBox.className = "form-error-banner";
+        alertBox.classList.remove("hidden");
+      }
+    }
+  } catch (e) {
+    if (alertBox) {
+      alertBox.textContent = `Network error testing key: ${e.message}`;
+      alertBox.className = "form-error-banner";
+      alertBox.classList.remove("hidden");
+    }
+  } finally {
+    if (testBtn) testBtn.textContent = "Test Connection";
+  }
+}
+window.testApiKeyConnection = testApiKeyConnection;
+
+async function saveApiKeyFromModal() {
+  const input = document.getElementById("inp-apikey");
+  const key = (input?.value || "").trim();
+  if (!key) {
+    showToast("API Key cannot be empty.", "error");
+    return;
+  }
+
+  setApiKey(key);
+  showToast("OncoNexus API Key updated. Reconnecting to backend...");
+  closeApiKeyModal();
+
+  // Refresh data with new key
+  stageCache = {};
+  await fetchHealth();
+  await fetchRecords();
+  await fetchAnalytics();
+}
+window.saveApiKeyFromModal = saveApiKeyFromModal;
+
+function resetDefaultApiKey() {
+  const input = document.getElementById("inp-apikey");
+  if (input) input.value = DEFAULT_API_KEY;
+  setApiKey(DEFAULT_API_KEY);
+  const alertBox = document.getElementById("apikey-alert-box");
+  if (alertBox) {
+    alertBox.textContent = "Reset to default OncoNexus API Key.";
+    alertBox.className = "form-success-banner";
+    alertBox.classList.remove("hidden");
+  }
+}
+window.resetDefaultApiKey = resetDefaultApiKey;
+
+
+
 // DOM Elements
 const inputSearch = document.getElementById("input-search");
 const selectRecord = document.getElementById("select-record");
@@ -66,7 +247,7 @@ async function initDashboard() {
 // -----------------------------------------------------------------------------
 async function fetchHealth() {
   try {
-    const res = await fetch("/api/health");
+    const res = await authFetch("/api/health");
     const data = await res.json();
 
     if (data.status === "Healthy") {
@@ -93,7 +274,7 @@ async function fetchRecords(filterSev = "") {
     let url = "/api/records";
     if (filterSev) url += `?severity=${encodeURIComponent(filterSev)}`;
 
-    const res = await fetch(url);
+    const res = await authFetch(url);
     const data = await res.json();
     allRecords = data.records || [];
 
@@ -130,7 +311,7 @@ async function loadRecord(recordId) {
   headerSelectedId.textContent = recordId;
 
   try {
-    const res = await fetch(`/api/pipeline/trace/${encodeURIComponent(recordId)}`);
+    const res = await authFetch(`/api/pipeline/trace/${encodeURIComponent(recordId)}`);
     if (!res.ok) throw new Error("Trace unavailable");
     const trace = await res.json();
     activeRecordData = trace;
@@ -206,7 +387,7 @@ async function executeLivePipeline() {
 
   // Real backend call
   try {
-    await fetch(`/api/pipeline/run/${encodeURIComponent(activeRecordId)}`, { method: "POST" });
+    await authFetch(`/api/pipeline/run/${encodeURIComponent(activeRecordId)}`, { method: "POST" });
   } catch (e) {
     // Non-blocking
   }
@@ -256,7 +437,7 @@ async function renderActiveStagePanel(stageKey) {
   // Fetch stage data if not cached
   if (!stageCache[stageKey]) {
     try {
-      const res = await fetch(`/api/stage/${stageKey}`);
+      const res = await authFetch(`/api/stage/${stageKey}`);
       stageCache[stageKey] = await res.json();
     } catch (e) {
       panelBodyArea.innerHTML = `<div class="text-muted">Error loading stage info: ${e.message}</div>`;
@@ -628,7 +809,7 @@ function renderRecentScenarios(records) {
 // -----------------------------------------------------------------------------
 async function fetchRecentActivity() {
   try {
-    const res = await fetch("/api/activity");
+    const res = await authFetch("/api/activity");
     const data = await res.json();
     const items = data.activities || [];
 
@@ -652,7 +833,7 @@ async function fetchRecentActivity() {
 // -----------------------------------------------------------------------------
 async function fetchAnalytics() {
   try {
-    const res = await fetch("/api/analytics");
+    const res = await authFetch("/api/analytics");
     const data = await res.json();
 
     document.getElementById("kpi-scenarios").textContent = Object.values(data.genai_severity || {}).reduce((a, b) => a + b, 0) || 20;
@@ -730,7 +911,7 @@ async function openAllScenariosModal() {
   allScenariosTbody.innerHTML = `<tr><td colspan="6" class="text-muted">Loading Supabase scenarios...</td></tr>`;
 
   try {
-    const res = await fetch("/api/supabase/scenarios");
+    const res = await authFetch("/api/supabase/scenarios");
     const data = await res.json();
     const rows = data.records || [];
 
@@ -1058,7 +1239,7 @@ async function executeNewPatientPipeline(payload) {
 
   try {
     // Send actual clinical payload to real backend endpoint
-    const response = await fetch("/api/pipeline/run", {
+    const response = await authFetch("/api/pipeline/run", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload)
@@ -1249,10 +1430,24 @@ function setupEventListeners() {
     });
   }
 
+  // API Key Modal events
+  const btnOpenApiKey = document.getElementById("btn-open-apikey");
+  const btnCloseApiKey = document.getElementById("modal-apikey-close");
+  const modalApiKey = document.getElementById("modal-apikey");
+
+  if (btnOpenApiKey) btnOpenApiKey.addEventListener("click", () => openApiKeyModal());
+  if (btnCloseApiKey) btnCloseApiKey.addEventListener("click", closeApiKeyModal);
+  if (modalApiKey) {
+    modalApiKey.addEventListener("click", (e) => {
+      if (e.target === modalApiKey) closeApiKeyModal();
+    });
+  }
+
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
       modalAllScenarios.classList.remove("open");
       closeNewScenarioModal();
+      closeApiKeyModal();
     }
   });
 }

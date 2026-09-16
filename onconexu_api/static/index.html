@@ -48,6 +48,13 @@
           <strong id="header-selected-id" class="mono-cyan">SCEN-BATCH-0001</strong>
         </div>
 
+        <div class="status-chip chip-clickable" id="btn-open-apikey" title="Click to view or configure API Key authentication" onclick="openApiKeyModal()">
+          <span class="dot dot-green" id="apikey-status-dot"></span>
+          <span class="chip-label">API Key:</span>
+          <strong id="apikey-badge-text" class="text-green">Active</strong>
+        </div>
+
+
         <button id="btn-open-new-scenario" class="btn-secondary-glow" title="Enter new clinical data and run complete 5-stage pipeline">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
             <line x1="12" y1="5" x2="12" y2="19"></line>
@@ -721,10 +728,53 @@
     </div>
   </div>
 
+  <!-- MODAL: API KEY AUTHENTICATION -->
+  <div class="modal-backdrop" id="modal-apikey">
+    <div class="modal-card modal-card-small">
+      <div class="modal-header">
+        <div>
+          <h3 class="modal-title">API Key Authentication</h3>
+          <p class="modal-subtitle">Secure connection between OncoNexus Frontend and Backend REST API</p>
+        </div>
+        <button class="modal-close" id="modal-apikey-close" onclick="closeApiKeyModal()">&times;</button>
+      </div>
+
+      <div class="modal-body" style="padding: 18px 22px;">
+        <p style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 16px;">
+          All 5 stages (ML, DL, NLP, SLM, GenAI) and Supabase endpoints require an authorized 
+          <code style="background: rgba(56,189,248,0.12); color: var(--cyan-light); padding: 2px 6px; border-radius: 4px; font-size: 0.8rem;">X-API-Key</code> 
+          header for secure inference and telemetry transmission.
+        </p>
+
+        <div class="form-group" style="margin-bottom: 14px;">
+          <label for="inp-apikey" style="display: flex; justify-content: space-between; font-size: 0.8rem; font-weight: 600; color: var(--text-primary); margin-bottom: 6px;">
+            <span>OncoNexus API Key</span>
+            <span id="key-security-indicator" style="color: var(--green-primary); font-size: 0.75rem;">Verified</span>
+          </label>
+          <div style="display: flex; gap: 8px;">
+            <input type="password" id="inp-apikey" class="form-input" style="flex: 1; font-family: var(--font-mono); font-size: 0.85rem; padding: 8px 12px; background: rgba(15,23,42,0.8); border: 1px solid var(--border-color); border-radius: 6px; color: var(--text-primary);" placeholder="Enter X-API-Key..." />
+            <button type="button" class="btn-ghost" id="btn-toggle-key" onclick="toggleKeyVisibility()" style="padding: 0 12px; font-size: 0.8rem; border: 1px solid var(--border-color); border-radius: 6px; color: var(--text-secondary);">Show</button>
+          </div>
+        </div>
+
+        <div id="apikey-alert-box" class="form-error-banner hidden" style="margin-bottom: 14px; font-size: 0.8rem; padding: 8px 12px; border-radius: 6px;"></div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-top: 18px;">
+          <button type="button" class="btn-ghost" onclick="resetDefaultApiKey()" style="font-size: 0.78rem; color: var(--text-secondary);">Reset to Default</button>
+          <div style="display: flex; gap: 8px;">
+            <button type="button" class="btn-secondary-glow" onclick="testApiKeyConnection()" id="btn-test-apikey" style="font-size: 0.8rem; padding: 7px 14px;">Test Connection</button>
+            <button type="button" class="btn-primary-glow" onclick="saveApiKeyFromModal()" id="btn-save-apikey" style="font-size: 0.8rem; padding: 7px 16px;">Save & Connect</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- TOAST NOTIFICATION CONTAINER -->
   <div class="toast-container" id="toast-container"></div>
 
-  <!-- Controller Script -->
-  <script src="/static/dashboard.js"></script>
+  <!-- Controller Script with Cache Buster -->
+  <script src="/static/dashboard.js?v=auth3"></script>
+
 </body>
 </html>

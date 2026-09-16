@@ -11,7 +11,7 @@ from pathlib import Path
 from typing import Optional, Dict, Any
 from datetime import datetime, timezone
 
-from fastapi import FastAPI, HTTPException, Query, status, Body
+from fastapi import FastAPI, HTTPException, Query, status, Body, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse, JSONResponse
@@ -23,12 +23,16 @@ if str(PROJECT_ROOT) not in sys.path:
 
 from onconexu_api.data_engine import data_engine
 
+# OncoNexus Secure API Key configuration
+ONCONEXUS_API_KEY = os.getenv("ONCONEXUS_API_KEY", "onconexu-precision-key-2026")
+
 app = FastAPI(
     title="OncoNexus — Multi-Stage Precision Oncology Intelligence",
     description=(
         "Production-grade intelligence command center for Personalized Precision Medicine. "
         "Coordinates 5 authentic AI stages: ML (Toxicity Risk) -> DL (Multi-Modal Progression) "
         "-> NLP (Urgency & Medical NER) -> SLM (Clinical Summarization) -> GenAI (Compound Scenarios). "
+        "Protected via OncoNexus API Key Authentication. "
         "Research and decision-support system only. Not for direct clinical diagnosis."
     ),
     version="1.0.0"
@@ -43,9 +47,59 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
+@app.middleware("http")
+async def api_key_auth_middleware(request: Request, call_next):
+    """
+    Enforces API key authentication across all /api/ endpoints.
+    Allows root static frontend files and CORS preflights without authorization.
+    Accepts API key via:
+    - 'X-API-Key' header
+    - 'Authorization: Bearer <key>' header
+    """
+    path = request.url.path
+
+    # Allow static web assets and HTML root page
+    if not path.startswith("/api/"):
+        return await call_next(request)
+
+    # Allow CORS preflight OPTIONS requests
+    if request.method == "OPTIONS":
+        return await call_next(request)
+
+    # Extract API key
+    api_key = request.headers.get("X-API-Key")
+    if not api_key:
+        auth_header = request.headers.get("Authorization", "")
+        if auth_header.startswith("Bearer "):
+            api_key = auth_header[7:].strip()
+
+    if not api_key or api_key != ONCONEXUS_API_KEY:
+        return JSONResponse(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            content={
+                "error": "Unauthorized",
+                "detail": "Invalid or missing OncoNexus API key. Please provide a valid 'X-API-Key' or 'Authorization: Bearer <key>' header."
+            }
+        )
+
+    return await call_next(request)
+
+
 # ------------------------------------------------------------------------------
 # REST API ENDPOINTS
 # ------------------------------------------------------------------------------
+
+@app.get("/api/auth/verify")
+def verify_api_key():
+    """Validates that the provided API key is active and authorized."""
+    return {
+        "status": "Authenticated",
+        "authenticated": True,
+        "service": "OncoNexus Precision Oncology Command Center",
+        "timestamp": datetime.now(timezone.utc).isoformat()
+    }
+
 
 @app.get("/api/health")
 def get_health():

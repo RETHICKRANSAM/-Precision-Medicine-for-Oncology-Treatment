@@ -27,13 +27,44 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
-from onconexu_api.app import app
+from onconexu_api.app import app, ONCONEXUS_API_KEY
 
-client = TestClient(app)
+client = TestClient(app, headers={"X-API-Key": ONCONEXUS_API_KEY})
+
+
+def test_api_key_unauthorized_missing():
+    """Verify requests without X-API-Key are rejected with HTTP 401."""
+    raw_client = TestClient(app)
+    response = raw_client.get("/api/health")
+    assert response.status_code == 401
+    assert "detail" in response.json()
+
+
+def test_api_key_unauthorized_invalid():
+    """Verify requests with incorrect X-API-Key are rejected with HTTP 401."""
+    raw_client = TestClient(app, headers={"X-API-Key": "invalid-secret-key"})
+    response = raw_client.get("/api/health")
+    assert response.status_code == 401
+
+
+def test_api_key_authorized_bearer():
+    """Verify requests with Authorization: Bearer <key> are accepted with HTTP 200."""
+    bearer_client = TestClient(app, headers={"Authorization": f"Bearer {ONCONEXUS_API_KEY}"})
+    response = bearer_client.get("/api/health")
+    assert response.status_code == 200
+
+
+def test_api_auth_verify_endpoint():
+    """Verify /api/auth/verify confirms active API key connection."""
+    response = client.get("/api/auth/verify")
+    assert response.status_code == 200
+    data = response.json()
+    assert data["authenticated"] is True
 
 
 def test_api_health():
     """Verify health endpoint reports system status and 5 stages."""
+
     response = client.get("/api/health")
     assert response.status_code == 200
     data = response.json()
