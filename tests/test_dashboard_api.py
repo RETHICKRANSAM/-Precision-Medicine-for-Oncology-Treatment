@@ -207,3 +207,53 @@ def test_api_activity():
     assert "activities" in data
     assert len(data["activities"]) >= 4
 
+
+def test_api_new_patient_pipeline_run_valid():
+    """Verify POST /api/pipeline/run executes authentic 5-stage pipeline for new patient."""
+    test_payload = {
+        "cancer_type": "Breast Cancer",
+        "cancer_stage": "Stage 3",
+        "ctdna_level": 82.5,
+        "tumor_marker": 4.7,
+        "creatinine": 1.4,
+        "symptoms": "fatigue, nausea",
+        "organ_involvement": "liver",
+        "gene_mutation": "TP53",
+        "age": 58,
+        "gender": "Female",
+        "prior_therapies": 1,
+        "drug_name": "Doxorubicin",
+    }
+    response = client.post("/api/pipeline/run", json=test_payload)
+    assert response.status_code == 200
+    data = response.json()
+    assert data["status"] == "Success"
+    assert "SCEN-NEW-" in data["record_id"]
+    assert "pipeline_context" in data
+    ctx = data["pipeline_context"]
+    assert ctx["ml_result"] is not None
+    assert ctx["dl_result"] is not None
+    assert ctx["nlp_result"] is not None
+    assert ctx["slm_result"] is not None
+    assert ctx["genai_result"] is not None
+    assert ctx["unified_intelligence"] is not None
+    assert "scenario" in data
+    assert data["scenario"]["is_new_scenario"] is True
+    assert data["scenario"]["cancer_type"] == "Breast Cancer"
+    assert data["scenario"]["cancer_stage"] == "Stage 3"
+
+
+def test_api_new_patient_pipeline_run_validation_error():
+    """Verify POST /api/pipeline/run fails gracefully on missing required fields or invalid numeric bounds."""
+    # Missing cancer_type
+    bad_payload = {
+        "cancer_stage": "Stage 3",
+        "ctdna_level": -10.0,
+        "tumor_marker": 4.7,
+        "creatinine": 1.4,
+        "symptoms": "fatigue"
+    }
+    response = client.post("/api/pipeline/run", json=bad_payload)
+    assert response.status_code == 422
+
+

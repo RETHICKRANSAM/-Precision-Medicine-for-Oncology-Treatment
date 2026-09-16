@@ -5,11 +5,20 @@ Includes clinical prototype safety disclaimers.
 """
 
 import os
+import sys
 import joblib
 import json
 import torch
 import numpy as np
 from typing import List, Dict, Any, Union
+
+# Safe UTF-8 output on Windows consoles with international path names
+if hasattr(sys.stdout, "reconfigure"):
+    try:
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+        sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
 
 from stage03_nlp.src.preprocessing import ClinicalVocab, ID2LABEL, LABEL2ID, MAX_SEQ_LEN, normalize_clinical_text
 from stage03_nlp.src.train_bilstm import ClinicalBiLSTM

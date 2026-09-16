@@ -48,6 +48,14 @@
           <strong id="header-selected-id" class="mono-cyan">SCEN-BATCH-0001</strong>
         </div>
 
+        <button id="btn-open-new-scenario" class="btn-secondary-glow" title="Enter new clinical data and run complete 5-stage pipeline">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg>
+          + New Patient Scenario
+        </button>
+
         <button id="btn-run-pipeline" class="btn-primary-glow" title="Execute full 5-stage pipeline for active record">
           <svg class="icon-play" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
             <polygon points="5 3 19 12 5 21 5 3"></polygon>
@@ -115,6 +123,23 @@
         <span class="record-stat" id="rec-mutation-tag">Mutation: TP53</span>
         <span class="record-stat" id="rec-drug-tag">Drug: Carboplatin (50mg)</span>
         <span class="badge-sev badge-mild" id="rec-severity-badge">Mild Severity</span>
+      </div>
+
+      <!-- NEW PATIENT / SCENARIO OVERVIEW (Displays only values actually entered) -->
+      <div class="patient-overview-card hidden" id="patient-overview-card">
+        <div class="overview-header">
+          <div class="overview-title-wrap">
+            <span class="badge-new-scenario" id="overview-badge">NEWLY GENERATED SCENARIO</span>
+            <h3 class="overview-id" id="overview-scenario-id">SCEN-NEW-001</h3>
+            <span class="overview-cancer-pill" id="overview-cancer-tag">Breast Cancer &bull; Stage 3</span>
+          </div>
+          <div class="overview-actions">
+            <button class="btn-xs-outline" id="btn-reopen-modal">Modify Input</button>
+          </div>
+        </div>
+        <div class="overview-chips-grid" id="overview-chips-grid">
+          <!-- Dynamically populated with ONLY entered values -->
+        </div>
       </div>
     </section>
 
@@ -259,7 +284,93 @@
       </div>
     </section>
 
-    <!-- 4. DASHBOARD LOWER DECK: RECENT SCENARIOS & COMPACT ANALYTICS -->
+    <!-- 4. UNIFIED PATIENT INTELLIGENCE SECTION (COMBINED DECISION-SUPPORT REVIEW) -->
+    <section class="unified-intelligence-section" id="unified-intelligence-card">
+      <div class="unified-header-bar">
+        <div class="unified-title-left">
+          <span class="pulse-icon">&diams;</span>
+          <div>
+            <span class="section-kicker">DECISION-SUPPORT SYNTHESIS</span>
+            <h2 class="unified-title">Unified Patient Intelligence</h2>
+          </div>
+        </div>
+        <div class="unified-header-right">
+          <span class="badge-unified-status" id="unified-status-badge">&check; Multi-Stage Alignment Verified</span>
+        </div>
+      </div>
+
+      <div class="unified-cards-grid">
+        <!-- Column 1: Multi-Disciplinary Risks & Biomarkers -->
+        <div class="unified-panel">
+          <div class="unified-panel-head">
+            <span class="panel-kicker">CROSS-STAGE SIGNALS</span>
+            <h4>Clinical Risk & Triage Signals</h4>
+          </div>
+          <div class="unified-panel-body" id="unified-signals-body">
+            <!-- Dynamically populated -->
+            <div class="signal-row">
+              <span class="signal-label">ML Toxicity Risk:</span>
+              <span class="signal-val mono-cyan" id="u-ml-risk">Low (0.9996)</span>
+            </div>
+            <div class="signal-row">
+              <span class="signal-label">DL Progression Risk:</span>
+              <span class="signal-val" id="u-dl-prog">Moderate (Tabular Assessed)</span>
+            </div>
+            <div class="signal-row">
+              <span class="signal-label">NLP Clinical Urgency:</span>
+              <span class="signal-val badge-urgency-high" id="u-nlp-urgency">High</span>
+            </div>
+            <div class="signal-row">
+              <span class="signal-label">Biomarker Baseline:</span>
+              <span class="signal-val" id="u-biomarkers">ctDNA 82.5 ng/mL &bull; Creatinine 1.4 mg/dL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2: Clinical Summary (SLM) -->
+        <div class="unified-panel">
+          <div class="unified-panel-head">
+            <span class="panel-kicker">FAITHFUL SYNTHESIS (STAGE 04 SLM)</span>
+            <h4>Clinical Progress Summary</h4>
+          </div>
+          <div class="unified-panel-body">
+            <p class="unified-text" id="u-slm-summary">
+              Loading synthesized clinical narrative...
+            </p>
+            <div class="guardrail-verify-tag">
+              <span class="tag-icon">&check;</span>
+              <span>Guardrail Safety Verified: Zero Hallucinated Drugs</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 3: Compound Scenario (Stage 05 GenAI) -->
+        <div class="unified-panel unified-panel-wide">
+          <div class="unified-panel-head">
+            <span class="panel-kicker">COMPOUND SCENARIO (STAGE 05 GENAI)</span>
+            <h4>Validated Complex Oncology Scenario & Interaction Context</h4>
+          </div>
+          <div class="unified-panel-body">
+            <p class="unified-text" id="u-genai-scenario">
+              Loading validated compound patient scenario narrative...
+            </p>
+            <div class="interactions-box">
+              <span class="box-label">Pharmacological & Biomarker Interactions:</span>
+              <ul class="interactions-list" id="u-interactions-list">
+                <!-- Dynamically populated -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="unified-disclaimer-foot">
+        <span class="alert-icon">&triangle;</span>
+        <span>Decision-support information. Human clinical review required. AI-generated outputs must be verified against source clinical records and are not a substitute for professional medical judgment.</span>
+      </div>
+    </section>
+
+    <!-- 5. DASHBOARD LOWER DECK: RECENT SCENARIOS & COMPACT ANALYTICS -->
     <section class="dashboard-lower-deck">
 
       <!-- RECENT SCENARIOS (COMPACT TABLE WITH VIEW ALL) -->
@@ -377,6 +488,235 @@
             <!-- Rendered via JS -->
           </tbody>
         </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- MODAL: NEW PATIENT SCENARIO INPUT PANEL                               -->
+  <!-- ===================================================================== -->
+  <div class="modal-backdrop" id="modal-new-scenario">
+    <div class="modal-card modal-card-large">
+      <div class="modal-header">
+        <div>
+          <span class="modal-kicker">INTERACTIVE CLINICAL DATA INTAKE</span>
+          <h3 class="modal-title">+ New Patient Scenario Input</h3>
+          <p class="modal-subtitle">Enter clinical, biomarker, and symptom seed conditions to run the complete 5-stage pipeline.</p>
+        </div>
+        <div class="modal-header-actions">
+          <button class="btn-xs-outline" id="btn-prefill-testcase" title="Prefill the test scenario: Breast Cancer, Stage 3, ctDNA 82.5, Creatinine 1.4, TP53">
+            &star; Prefill Test Scenario
+          </button>
+          <button class="modal-close-btn" id="modal-new-scenario-close">&times;</button>
+        </div>
+      </div>
+
+      <div class="modal-body-form">
+        <!-- Validation Error Banner (hidden by default) -->
+        <div class="form-error-alert hidden" id="new-scenario-error-box">
+          <span class="error-icon">&cross;</span>
+          <div id="new-scenario-error-msg">Please correct validation errors below.</div>
+        </div>
+
+        <form id="form-new-scenario" onsubmit="return false;">
+          <!-- SECTION 1: PATIENT PROFILE & SEVERITY -->
+          <div class="form-fieldset">
+            <legend class="fieldset-legend">1. Patient Profile &amp; Disease Characterization</legend>
+            <div class="form-row-grid">
+              <div class="form-group">
+                <label for="inp-scenario-id">Scenario ID <span class="req">*</span></label>
+                <input type="text" id="inp-scenario-id" value="SCEN-NEW-0001" placeholder="e.g. SCEN-NEW-0001" required />
+              </div>
+              <div class="form-group">
+                <label for="inp-cancer-type">Cancer Type <span class="req">*</span></label>
+                <input type="text" id="inp-cancer-type" value="Breast Cancer" list="cancer-types-list" placeholder="e.g. Breast Cancer" required />
+                <datalist id="cancer-types-list">
+                  <option value="Breast Cancer" />
+                  <option value="Non-Small Cell Lung Cancer" />
+                  <option value="Colorectal Cancer" />
+                  <option value="Melanoma" />
+                  <option value="Pancreatic Cancer" />
+                  <option value="Ovarian Cancer" />
+                </datalist>
+              </div>
+              <div class="form-group">
+                <label for="inp-cancer-stage">Cancer Stage <span class="req">*</span></label>
+                <select id="inp-cancer-stage" required>
+                  <option value="Stage 1">Stage 1</option>
+                  <option value="Stage 2">Stage 2</option>
+                  <option value="Stage 3" selected>Stage 3</option>
+                  <option value="Stage 4">Stage 4</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="inp-patient-age">Patient Age</label>
+                <input type="number" id="inp-patient-age" value="62" min="1" max="120" />
+              </div>
+              <div class="form-group">
+                <label for="inp-patient-sex">Patient Sex</label>
+                <select id="inp-patient-sex">
+                  <option value="Female" selected>Female</option>
+                  <option value="Male">Male</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="inp-target-severity">Target Scenario Severity</label>
+                <select id="inp-target-severity">
+                  <option value="Mild">Mild</option>
+                  <option value="Moderate">Moderate</option>
+                  <option value="Severe" selected>Severe</option>
+                  <option value="Wildcard">Wildcard</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- SECTION 2: BIOMARKERS & GENOMICS -->
+          <div class="form-fieldset">
+            <legend class="fieldset-legend">2. Molecular &amp; Liquid Biomarkers</legend>
+            <div class="form-row-grid">
+              <div class="form-group">
+                <label for="inp-ctdna">ctDNA Level (ng/mL) <span class="req">*</span></label>
+                <input type="number" step="0.1" id="inp-ctdna" value="82.5" placeholder="e.g. 82.5" required />
+              </div>
+              <div class="form-group">
+                <label for="inp-tumor-marker">Tumor Marker (U/mL) <span class="req">*</span></label>
+                <input type="number" step="0.1" id="inp-tumor-marker" value="4.7" placeholder="e.g. 4.7" required />
+              </div>
+              <div class="form-group">
+                <label for="inp-gene-mutation">Gene Mutation</label>
+                <input type="text" id="inp-gene-mutation" value="TP53" list="mutations-list" placeholder="e.g. TP53" />
+                <datalist id="mutations-list">
+                  <option value="TP53" />
+                  <option value="EGFR L858R" />
+                  <option value="EGFR exon 19 del" />
+                  <option value="KRAS G12C" />
+                  <option value="ALK fusion" />
+                  <option value="BRAF V600E" />
+                  <option value="STK11" />
+                </datalist>
+              </div>
+              <div class="form-group">
+                <label for="inp-tmb">TMB (mut/Mb)</label>
+                <input type="number" step="0.1" id="inp-tmb" value="12.0" placeholder="e.g. 12.0" />
+              </div>
+              <div class="form-group">
+                <label for="inp-egfr-expr">EGFR Expression</label>
+                <input type="number" step="0.1" id="inp-egfr-expr" value="1.2" placeholder="e.g. 1.2" />
+              </div>
+              <div class="form-group">
+                <label for="inp-kras-expr">KRAS Expression</label>
+                <input type="number" step="0.1" id="inp-kras-expr" value="0.8" placeholder="e.g. 0.8" />
+              </div>
+            </div>
+          </div>
+
+          <!-- SECTION 3: ORGAN INVOLVEMENT & LAB PANEL -->
+          <div class="form-fieldset">
+            <legend class="fieldset-legend">3. Organ Status &amp; Laboratory Panel</legend>
+            <div class="form-row-grid">
+              <div class="form-group">
+                <label for="inp-creatinine">Creatinine (mg/dL) <span class="req">*</span></label>
+                <input type="number" step="0.1" id="inp-creatinine" value="1.4" placeholder="e.g. 1.4" required />
+              </div>
+              <div class="form-group">
+                <label for="inp-organ-involvement">Organ Involvement</label>
+                <input type="text" id="inp-organ-involvement" value="liver" list="organs-list" placeholder="e.g. liver" />
+                <datalist id="organs-list">
+                  <option value="liver" />
+                  <option value="lung" />
+                  <option value="bone" />
+                  <option value="brain" />
+                  <option value="adrenal" />
+                  <option value="lymph nodes" />
+                </datalist>
+              </div>
+              <div class="form-group">
+                <label for="inp-bilirubin">Total Bilirubin (mg/dL)</label>
+                <input type="number" step="0.1" id="inp-bilirubin" value="1.1" placeholder="e.g. 1.1" />
+              </div>
+              <div class="form-group">
+                <label for="inp-alt">ALT (U/L)</label>
+                <input type="number" id="inp-alt" value="35" placeholder="e.g. 35" />
+              </div>
+              <div class="form-group">
+                <label for="inp-ast">AST (U/L)</label>
+                <input type="number" id="inp-ast" value="42" placeholder="e.g. 42" />
+              </div>
+              <div class="form-group">
+                <label for="inp-wbc">WBC Count (K/uL)</label>
+                <input type="number" step="0.1" id="inp-wbc" value="6.8" placeholder="e.g. 6.8" />
+              </div>
+              <div class="form-group">
+                <label for="inp-platelets">Platelet Count (K/uL)</label>
+                <input type="number" id="inp-platelets" value="210" placeholder="e.g. 210" />
+              </div>
+              <div class="form-group">
+                <label for="inp-hemoglobin">Hemoglobin (g/dL)</label>
+                <input type="number" step="0.1" id="inp-hemoglobin" value="11.2" placeholder="e.g. 11.2" />
+              </div>
+              <div class="form-group">
+                <label for="inp-bp">Systolic BP (mmHg)</label>
+                <input type="number" id="inp-bp" value="125" placeholder="e.g. 125" />
+              </div>
+              <div class="form-group">
+                <label for="inp-hr">Heart Rate (bpm)</label>
+                <input type="number" id="inp-hr" value="78" placeholder="e.g. 78" />
+              </div>
+              <div class="form-group">
+                <label for="inp-temp">Temperature (&deg;C)</label>
+                <input type="number" step="0.1" id="inp-temp" value="37.1" placeholder="e.g. 37.1" />
+              </div>
+              <div class="form-group">
+                <label for="inp-o2">Oxygen Saturation (%)</label>
+                <input type="number" id="inp-o2" value="98" min="50" max="100" placeholder="e.g. 98" />
+              </div>
+            </div>
+          </div>
+
+          <!-- SECTION 4: CLINICAL SYMPTOMS & TREATMENT -->
+          <div class="form-fieldset">
+            <legend class="fieldset-legend">4. Symptoms, Comorbidities &amp; Pharmacotherapy</legend>
+            <div class="form-row-grid">
+              <div class="form-group form-group-span2">
+                <label for="inp-symptoms">Reported Symptoms <span class="req">*</span></label>
+                <input type="text" id="inp-symptoms" value="fatigue, nausea" placeholder="e.g. fatigue, nausea, dyspnea" required />
+              </div>
+              <div class="form-group form-group-span2">
+                <label for="inp-comorbidities">Comorbidities</label>
+                <input type="text" id="inp-comorbidities" value="Hypertension" placeholder="e.g. Hypertension, Type 2 Diabetes, None" />
+              </div>
+              <div class="form-group">
+                <label for="inp-treatment-drug">Current Drug</label>
+                <input type="text" id="inp-treatment-drug" value="Carboplatin" placeholder="e.g. Carboplatin, Osimertinib" />
+              </div>
+              <div class="form-group">
+                <label for="inp-dosage">Dosage (mg)</label>
+                <input type="number" id="inp-dosage" value="150" placeholder="e.g. 150" />
+              </div>
+              <div class="form-group">
+                <label for="inp-adverse-event">Adverse Event</label>
+                <input type="text" id="inp-adverse-event" value="Nausea" placeholder="e.g. Nausea, Thrombocytopenia, None" />
+              </div>
+              <div class="form-group">
+                <label for="inp-prior-therapies">Prior Lines of Therapy</label>
+                <input type="number" id="inp-prior-therapies" value="1" min="0" max="10" />
+              </div>
+            </div>
+          </div>
+
+          <!-- ACTION BUTTONS -->
+          <div class="modal-form-actions">
+            <button type="button" class="btn-ghost" id="btn-cancel-new-scenario">Cancel</button>
+            <button type="button" class="btn-primary-glow btn-submit-pipeline" id="btn-submit-new-scenario">
+              <svg class="icon-play" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+              Run Complete Analysis
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   </div>

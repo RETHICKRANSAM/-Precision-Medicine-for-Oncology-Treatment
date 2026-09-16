@@ -8,10 +8,10 @@ Integrates live Supabase synchronization for verified compound scenarios.
 import os
 import sys
 from pathlib import Path
-from typing import Optional
+from typing import Optional, Dict, Any
 from datetime import datetime, timezone
 
-from fastapi import FastAPI, HTTPException, Query, status
+from fastapi import FastAPI, HTTPException, Query, status, Body
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse, JSONResponse
@@ -205,10 +205,51 @@ def get_pipeline_trace(record_id: str):
         )
 
 
+@app.post("/api/pipeline/run")
+def execute_new_scenario_pipeline(payload: Dict[str, Any] = Body(...)):
+    """
+    Executes the genuine 5-stage precision oncology pipeline on user-entered clinical data:
+    ML -> DL -> NLP -> SLM -> GenAI.
+    Returns complete pipeline_context with real model outputs and unified patient intelligence.
+    """
+    try:
+        # Validate critical required clinical fields
+        required_keys = ["cancer_type", "cancer_stage", "ctdna_level", "tumor_marker", "creatinine", "symptoms"]
+        missing = [k for k in required_keys if k not in payload or payload[k] is None or str(payload[k]).strip() == ""]
+        if missing:
+            raise HTTPException(
+                status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+                detail=f"Missing required clinical parameters: {', '.join(missing)}"
+            )
+        
+        # Validate numeric bounds
+        try:
+            ctdna = float(payload.get("ctdna_level"))
+            tm = float(payload.get("tumor_marker"))
+            creat = float(payload.get("creatinine"))
+            if ctdna < 0 or tm < 0 or creat <= 0:
+                raise ValueError("ctDNA, Tumor Marker, and Creatinine must be positive clinical values.")
+        except (ValueError, TypeError) as ve:
+            raise HTTPException(
+                status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+                detail=f"Invalid numeric value: {ve}"
+            )
+
+        context = data_engine.run_new_patient_pipeline(payload)
+        return context
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Pipeline execution error: {e}"
+        )
+
+
 @app.post("/api/pipeline/run/{record_id}")
 @app.get("/api/pipeline/run/{record_id}")
 def execute_pipeline(record_id: str):
-    """Executes or retrieves live 5-stage progression for a selected record."""
+    """Executes or retrieves live 5-stage progression for a selected existing record."""
     try:
         result = data_engine.run_pipeline(record_id)
         return result
