@@ -19,19 +19,19 @@ if sys.stderr.encoding != 'utf-8':
     sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8', errors='replace')
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PROJECT_ROOT = os.path.dirname(BASE_DIR)
 FRONTEND_DIR = os.path.join(BASE_DIR, "frontend")
 DATA_DIR = os.path.join(BASE_DIR, "data")
 MODELS_DIR = os.path.join(BASE_DIR, "models")
 AUDIT_TRAIL_FILE = os.path.join(DATA_DIR, "audit_trail.json")
 
-# Add models directory to path
-if MODELS_DIR not in sys.path:
-    sys.path.append(MODELS_DIR)
+# Ensure project root and models directory are in sys.path for standalone or module execution
+for path in [PROJECT_ROOT, MODELS_DIR]:
+    if path not in sys.path:
+        sys.path.insert(0, path)
 
-try:
-    from risk_monitor.models.risk_predictor import RiskInferenceEngine
-except ImportError:
-    from risk_predictor import RiskInferenceEngine
+from risk_monitor.models.risk_predictor import RiskInferenceEngine
+
 
 
 app = Flask(__name__, static_folder=FRONTEND_DIR)
