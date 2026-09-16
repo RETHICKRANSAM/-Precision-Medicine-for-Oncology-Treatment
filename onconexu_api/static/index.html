@@ -3,552 +3,840 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OncoNexus | Multi-Stage Precision Oncology Intelligence</title>
-  <meta name="description" content="OncoNexus Precision Oncology AI Command Center connecting ML, DL, NLP, SLM, and GenAI stages." />
+  <title>Oncology Command Center — ONCONEXUS | AI-Powered Precision Oncology</title>
+  <meta name="description" content="Oncology Command Center — ONCONEXUS Multi-Stage Precision Oncology Intelligence connecting ML, DL, NLP, SLM, and GenAI stages." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/static/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/styles.css?v=occ3" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 </head>
-<body>
+<body class="occ-body">
 
   <!-- ===================================================================== -->
-  <!-- HEADER: ONCONEXUS                                                     -->
+  <!-- TOP APP BAR: ONCOLOGY COMMAND CENTER                                  -->
   <!-- ===================================================================== -->
-  <header class="cmd-topbar">
-    <div class="topbar-inner">
-      <div class="brand-block">
-        <div class="brand-badge">
-          <span class="pulse-ring"></span>
-          <span class="badge-icon">ON</span>
+  <header class="occ-topbar">
+    <div class="occ-topbar-left">
+      <div class="occ-ribbon-logo">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2C8.5 2 6 5 6 8.5C6 11.5 8 15 12 22C16 15 18 11.5 18 8.5C18 5 15.5 2 12 2Z"></path>
+          <path d="M8.5 9.5C9.5 8 10.5 7.5 12 7.5C13.5 7.5 14.5 8 15.5 9.5"></path>
+        </svg>
+      </div>
+      <div class="occ-title-block">
+        <h1 class="occ-brand-title">Oncology Command Center</h1>
+        <p class="occ-brand-subtitle">ONCONEXUS &bull; Multi-Stage Precision Oncology Intelligence</p>
+      </div>
+    </div>
+
+
+
+    <div class="occ-topbar-right">
+      <!-- Live System Status -->
+      <div class="occ-status-chip">
+        <span class="occ-dot-green"></span>
+        <span>System Online</span>
+      </div>
+
+      <!-- Live Clock -->
+      <div class="occ-clock-chip" id="occ-live-clock">
+        Sep 16, 2026 11:15
+      </div>
+
+      <!-- Notification Bell -->
+      <div class="occ-notif-btn" title="Clinical Notifications">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+          <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+        </svg>
+        <span class="occ-notif-badge">3</span>
+      </div>
+
+      <!-- Clinician Profile -->
+      <div class="occ-user-profile">
+        <div class="occ-user-avatar">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path>
+          </svg>
         </div>
-        <div class="brand-text">
-          <h1 class="app-title">ONCONEXUS</h1>
-          <p class="app-subtitle">Multi-Stage Precision Oncology Intelligence</p>
+        <div class="occ-user-meta">
+          <div class="occ-user-name">Dr. Sarah Mitchell</div>
+          <div class="occ-user-role">Medical Oncologist</div>
         </div>
       </div>
 
-      <div class="topbar-actions">
-        <div class="status-chip">
-          <span class="dot dot-green"></span>
-          <span class="chip-label">System:</span>
-          <strong>Online</strong>
-        </div>
-
-        <div class="status-chip">
-          <span class="dot dot-cyan"></span>
-          <span class="chip-label">Pipeline:</span>
-          <strong id="pipeline-status-text">5 Stages Ready</strong>
-        </div>
-
-        <div class="status-chip" id="supabase-chip">
-          <span class="dot dot-green" id="sb-status-dot"></span>
-          <span class="chip-label">Selected:</span>
-          <strong id="header-selected-id" class="mono-cyan">SCEN-BATCH-0001</strong>
-        </div>
-
-        <div class="status-chip chip-clickable" id="btn-open-apikey" title="Click to view or configure API Key authentication" onclick="openApiKeyModal()">
-          <span class="dot dot-green" id="apikey-status-dot"></span>
-          <span class="chip-label">API Key:</span>
-          <strong id="apikey-badge-text" class="text-green">Active</strong>
-        </div>
-
-
-        <button id="btn-open-new-scenario" class="btn-secondary-glow" title="Enter new clinical data and run complete 5-stage pipeline">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <line x1="12" y1="5" x2="12" y2="19"></line>
-            <line x1="5" y1="12" x2="19" y2="12"></line>
-          </svg>
-          + New Patient Scenario
-        </button>
-
-        <button id="btn-run-pipeline" class="btn-primary-glow" title="Execute full 5-stage pipeline for active record">
-          <svg class="icon-play" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-            <polygon points="5 3 19 12 5 21 5 3"></polygon>
-          </svg>
-          Run Pipeline
-        </button>
-
-        <button id="btn-refresh" class="btn-ghost" title="Refresh data from backend">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M23 4v6h-6"></path><path d="M1 20v-6h6"></path>
-            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
-          </svg>
-        </button>
+      <!-- API Key Topbar Status Chip -->
+      <div class="occ-apikey-pill" id="btn-open-apikey" onclick="openApiKeyModal()" title="OncoNexus API Key Authentication">
+        <span class="occ-key-icon">🔑</span>
+        <span id="apikey-badge-text">API Key: Active</span>
       </div>
     </div>
   </header>
 
   <!-- ===================================================================== -->
-  <!-- COMPACT SAFETY DISCLAIMER                                             -->
+  <!-- MAIN LAYOUT: SIDEBAR + MAIN WORKSPACE                                 -->
   <!-- ===================================================================== -->
-  <div class="safety-banner">
-    <div class="safety-inner">
-      <span class="safety-tag">CLINICAL NOTICE</span>
-      <span class="safety-text">
-        Research and decision-support system. AI-generated outputs must be verified against source information and are not a substitute for professional clinical judgment.
-      </span>
-    </div>
-  </div>
+  <div class="occ-shell">
 
-  <!-- ===================================================================== -->
-  <!-- DASHBOARD MAIN COMMAND CENTER VIEWPORT                                -->
-  <!-- ===================================================================== -->
-  <main class="dashboard-viewport">
-
-    <!-- 1. TOP: PATIENT / SCENARIO SELECTOR AREA -->
-    <section class="patient-selector-card">
-      <div class="selector-row">
-        <div class="search-input-wrap">
-          <svg class="search-ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+    <!-- LEFT NAVIGATION SIDEBAR -->
+    <aside class="occ-sidebar">
+      <nav class="occ-nav-list">
+        <a href="#overview" class="occ-nav-item active" id="nav-overview">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
           </svg>
-          <input type="text" id="input-search" placeholder="Search Patient / Scenario (ID, cancer type, drug, mutation)..." />
-        </div>
+          <span>Patient Overview</span>
+        </a>
 
-        <div class="select-dropdown-wrap">
-          <label for="select-record">Select Scenario:</label>
-          <select id="select-record" class="custom-select">
-            <option value="">Select a patient or scenario to begin pipeline analysis.</option>
+        <a href="#stages" class="occ-nav-item" id="nav-insights" onclick="openStageDrawer('01_ml')">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="m4.93 4.93 4.24 4.24"></path>
+            <path d="m14.83 9.17 4.24-4.24"></path>
+            <path d="m14.83 14.83 4.24 4.24"></path>
+            <path d="m9.17 14.83-4.24 4.24"></path>
+            <circle cx="12" cy="12" r="4"></circle>
+          </svg>
+          <span>Pipeline Insights</span>
+        </a>
+
+        <a href="#trials" class="occ-nav-item" onclick="openAllScenariosModal()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M10 2v7.31"></path>
+            <path d="M14 9.3V2"></path>
+            <path d="M8.5 2h7"></path>
+            <path d="M14 9.3a6.5 6.5 0 1 1-4 0"></path>
+            <path d="M5.52 16h12.96"></path>
+          </svg>
+          <span>Trial & Treatment Options</span>
+        </a>
+
+        <a href="#pharmacy" class="occ-nav-item" onclick="scrollToSection('pharmacy-card')">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"></path>
+            <path d="m8.5 8.5 7 7"></path>
+          </svg>
+          <span>Pharmacy / Inventory</span>
+        </a>
+
+        <a href="#guidelines" class="occ-nav-item" onclick="scrollToSection('sec-rationale')">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+          <span>Clinical Guidelines</span>
+        </a>
+
+        <a href="#history" class="occ-nav-item" onclick="scrollToSection('sec-workflow')">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 14 14"></polyline>
+          </svg>
+          <span>Patient History</span>
+        </a>
+
+        <a href="#reports" class="occ-nav-item" onclick="downloadReport()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          <span>Reports</span>
+        </a>
+
+        <a href="#settings" class="occ-nav-item" onclick="openApiKeyModal()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+          </svg>
+          <span>Settings</span>
+        </a>
+      </nav>
+
+      <!-- Bottom Human In The Loop Safety Anchor -->
+      <div class="occ-sidebar-footer">
+        <div class="occ-hitl-box">
+          <div class="occ-shield-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <div class="occ-hitl-text">
+            <strong>Human in the Loop</strong>
+            <p>All high-risk decisions require oncologist approval.</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- =================================================================== -->
+    <!-- MAIN CONTENT VIEWPORT                                               -->
+    <!-- =================================================================== -->
+    <main class="occ-main">
+
+      <!-- Patient & Scenario Selection Bar (Compact) -->
+      <div class="occ-selector-strip">
+        <div class="occ-selector-left">
+          <span class="occ-selector-label">Active Scenario:</span>
+          <select id="select-record" class="occ-scenario-select" onchange="loadRecord(this.value)">
+            <option value="SCEN-BATCH-0001">Patient A (ONC-45872) • NSCLC Stage IV</option>
           </select>
+          <button class="occ-btn-small" onclick="openAllScenariosModal()">View All (Supabase)</button>
         </div>
-
-        <div class="filter-chips" id="filter-chips">
-          <button class="chip-filter active" data-filter="">All</button>
-          <button class="chip-filter" data-filter="Mild">Mild</button>
-          <button class="chip-filter" data-filter="Moderate">Moderate</button>
-          <button class="chip-filter" data-filter="Severe">Severe</button>
-          <button class="chip-filter" data-filter="Wildcard">Wildcard</button>
-        </div>
-      </div>
-
-      <!-- Active Record Context Pill -->
-      <div class="active-record-pill" id="active-record-summary">
-        <span class="record-id-tag" id="rec-id-tag">SCEN-BATCH-0001</span>
-        <span class="record-stat" id="rec-cancer-tag">Breast Cancer (Stage 4)</span>
-        <span class="record-stat" id="rec-mutation-tag">Mutation: TP53</span>
-        <span class="record-stat" id="rec-drug-tag">Drug: Carboplatin (50mg)</span>
-        <span class="badge-sev badge-mild" id="rec-severity-badge">Mild Severity</span>
-      </div>
-
-      <!-- NEW PATIENT / SCENARIO OVERVIEW (Displays only values actually entered) -->
-      <div class="patient-overview-card hidden" id="patient-overview-card">
-        <div class="overview-header">
-          <div class="overview-title-wrap">
-            <span class="badge-new-scenario" id="overview-badge">NEWLY GENERATED SCENARIO</span>
-            <h3 class="overview-id" id="overview-scenario-id">SCEN-NEW-001</h3>
-            <span class="overview-cancer-pill" id="overview-cancer-tag">Breast Cancer &bull; Stage 3</span>
-          </div>
-          <div class="overview-actions">
-            <button class="btn-xs-outline" id="btn-reopen-modal">Modify Input</button>
-          </div>
-        </div>
-        <div class="overview-chips-grid" id="overview-chips-grid">
-          <!-- Dynamically populated with ONLY entered values -->
-        </div>
-      </div>
-    </section>
-
-    <!-- 2. MAIN: 5-STAGE PIPELINE (CLICKABLE, NO MODEL NAMES) -->
-    <section class="pipeline-flow-section">
-      <div class="flow-header">
-        <div class="flow-title-wrap">
-          <span class="section-kicker">ONCONEXUS PIPELINE</span>
-          <h2 class="flow-title">Five-Stage Oncology Intelligence Architecture</h2>
-        </div>
-        <div class="progress-bar-indicator">
-          <span id="prog-01" class="prog-node active">01 ML ✓</span>
-          <span class="prog-arrow">&rarr;</span>
-          <span id="prog-02" class="prog-node active">02 DL ✓</span>
-          <span class="prog-arrow">&rarr;</span>
-          <span id="prog-03" class="prog-node active">03 NLP ✓</span>
-          <span class="prog-arrow">&rarr;</span>
-          <span id="prog-04" class="prog-node active">04 SLM ✓</span>
-          <span class="prog-arrow">&rarr;</span>
-          <span id="prog-05" class="prog-node active">05 GenAI ✓</span>
+        <div class="occ-selector-right">
+          <button class="occ-btn-primary" id="btn-open-new-scenario" onclick="openNewScenarioModal()">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+            + New Patient Scenario
+          </button>
+          <button class="occ-btn-outline" id="btn-run-pipeline" onclick="executeLivePipeline()" title="Run 5-stage inference">
+            Run Pipeline
+          </button>
         </div>
       </div>
 
-      <!-- 5 Horizontal Interactive Stage Cards -->
-      <div class="stages-grid" id="stages-grid">
-        <!-- Stage 1: ML -->
-        <div class="stage-card" id="card-stage-01" onclick="switchActiveStage('01_ml')">
-          <div class="card-top">
-            <span class="stage-num">01 ML</span>
-            <span class="status-dot-label" id="status-01">
-              <span class="dot dot-green"></span> Ready
-            </span>
-          </div>
-          <h3 class="card-name">Risk Prediction</h3>
-          <p class="card-desc">Toxicity Risk Prediction</p>
-          <div class="card-io">
-            <div class="io-item"><span class="io-k">IN:</span> <span class="io-v">25 Clinical Features</span></div>
-            <div class="io-item"><span class="io-k">OUT:</span> <span class="io-v" id="card-out-01">Low Toxicity Risk</span></div>
-          </div>
-          <div class="card-action">Inspect Stage &rarr;</div>
-        </div>
-
-        <div class="connector-arrow">&rarr;</div>
-
-        <!-- Stage 2: DL -->
-        <div class="stage-card" id="card-stage-02" onclick="switchActiveStage('02_dl')">
-          <div class="card-top">
-            <span class="stage-num">02 DL</span>
-            <span class="status-dot-label" id="status-02">
-              <span class="dot dot-green"></span> Ready
-            </span>
-          </div>
-          <h3 class="card-name">Deep Learning Analysis</h3>
-          <p class="card-desc">Histopathology & Progression Risk</p>
-          <div class="card-io">
-            <div class="io-item"><span class="io-k">IN:</span> <span class="io-v">Histology & ctDNA Sequences</span></div>
-            <div class="io-item"><span class="io-k">OUT:</span> <span class="io-v" id="card-out-02">Moderate Progression Risk</span></div>
-          </div>
-          <div class="card-action">Inspect Stage &rarr;</div>
-        </div>
-
-        <div class="connector-arrow">&rarr;</div>
-
-        <!-- Stage 3: NLP -->
-        <div class="stage-card" id="card-stage-03" onclick="switchActiveStage('03_nlp')">
-          <div class="card-top">
-            <span class="stage-num">03 NLP</span>
-            <span class="status-dot-label" id="status-03">
-              <span class="dot dot-green"></span> Ready
-            </span>
-          </div>
-          <h3 class="card-name">Clinical Text Analysis</h3>
-          <p class="card-desc">Urgency Triage & Medical NER</p>
-          <div class="card-io">
-            <div class="io-item"><span class="io-k">IN:</span> <span class="io-v">Unstructured Clinical Note</span></div>
-            <div class="io-item"><span class="io-k">OUT:</span> <span class="io-v" id="card-out-03">High Urgency + Extracted NER</span></div>
-          </div>
-          <div class="card-action">Inspect Stage &rarr;</div>
-        </div>
-
-        <div class="connector-arrow">&rarr;</div>
-
-        <!-- Stage 4: SLM -->
-        <div class="stage-card" id="card-stage-04" onclick="switchActiveStage('04_slm')">
-          <div class="card-top">
-            <span class="stage-num">04 SLM</span>
-            <span class="status-dot-label" id="status-04">
-              <span class="dot dot-green"></span> Ready
-            </span>
-          </div>
-          <h3 class="card-name">Clinical Summarization</h3>
-          <p class="card-desc">Faithful Clinical Summarization</p>
-          <div class="card-io">
-            <div class="io-item"><span class="io-k">IN:</span> <span class="io-v">Narrative + NER Context</span></div>
-            <div class="io-item"><span class="io-k">OUT:</span> <span class="io-v" id="card-out-04">Faithful Summary (PASS)</span></div>
-          </div>
-          <div class="card-action">Inspect Stage &rarr;</div>
-        </div>
-
-        <div class="connector-arrow">&rarr;</div>
-
-        <!-- Stage 5: GenAI -->
-        <div class="stage-card stage-card-highlight active-stage" id="card-stage-05" onclick="switchActiveStage('05_genai')">
-          <div class="card-top">
-            <span class="stage-num stage-num-gold">05 GenAI</span>
-            <span class="status-dot-label" id="status-05">
-              <span class="dot dot-purple"></span> Ready
-            </span>
-          </div>
-          <h3 class="card-name">Compound Scenario Generation</h3>
-          <p class="card-desc">Combinatorial Scenario Generation</p>
-          <div class="card-io">
-            <div class="io-item"><span class="io-k">IN:</span> <span class="io-v">33 Clinical Seeds</span></div>
-            <div class="io-item"><span class="io-k">OUT:</span> <span class="io-v" id="card-out-05">Validated Compound Scenario</span></div>
-          </div>
-          <div class="card-action action-gold">Inspect Stage &rarr;</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 3. ACTIVE STAGE DETAIL PANEL (DYNAMICALLY SWITCHES ON STAGE CLICK) -->
-    <section class="stage-detail-panel-card" id="stage-detail-panel-card">
-      <div class="panel-header-bar">
-        <div class="panel-header-left">
-          <span class="panel-stage-badge" id="active-panel-badge">STAGE 05</span>
-          <h3 class="panel-stage-title" id="active-panel-title">COMPOUND SCENARIO</h3>
-        </div>
-
-        <!-- Quick Stage Switcher Tabs -->
-        <div class="stage-tabs-pill">
-          <button class="stage-tab-btn" data-stage="01_ml" onclick="switchActiveStage('01_ml')">01 ML</button>
-          <button class="stage-tab-btn" data-stage="02_dl" onclick="switchActiveStage('02_dl')">02 DL</button>
-          <button class="stage-tab-btn" data-stage="03_nlp" onclick="switchActiveStage('03_nlp')">03 NLP</button>
-          <button class="stage-tab-btn" data-stage="04_slm" onclick="switchActiveStage('04_slm')">04 SLM</button>
-          <button class="stage-tab-btn active" data-stage="05_genai" onclick="switchActiveStage('05_genai')">05 GenAI</button>
-        </div>
-      </div>
-
-      <!-- Dynamic Stage Content Area -->
-      <div class="panel-body-area" id="panel-body-area">
-        <!-- Rendered via JS based on selected stage -->
-      </div>
-    </section>
-
-    <!-- 4. UNIFIED PATIENT INTELLIGENCE SECTION (COMBINED DECISION-SUPPORT REVIEW) -->
-    <section class="unified-intelligence-section" id="unified-intelligence-card">
-      <div class="unified-header-bar">
-        <div class="unified-title-left">
-          <span class="pulse-icon">&diams;</span>
-          <div>
-            <span class="section-kicker">DECISION-SUPPORT SYNTHESIS</span>
-            <h2 class="unified-title">Unified Patient Intelligence</h2>
-          </div>
-        </div>
-        <div class="unified-header-right">
-          <span class="badge-unified-status" id="unified-status-badge">&check; Multi-Stage Alignment Verified</span>
-        </div>
-      </div>
-
-      <div class="unified-cards-grid">
-        <!-- Column 1: Multi-Disciplinary Risks & Biomarkers -->
-        <div class="unified-panel">
-          <div class="unified-panel-head">
-            <span class="panel-kicker">CROSS-STAGE SIGNALS</span>
-            <h4>Clinical Risk & Triage Signals</h4>
-          </div>
-          <div class="unified-panel-body" id="unified-signals-body">
-            <!-- Dynamically populated -->
-            <div class="signal-row">
-              <span class="signal-label">ML Toxicity Risk:</span>
-              <span class="signal-val mono-cyan" id="u-ml-risk">Low (0.9996)</span>
+      <!-- TIER 1: TOP PATIENT BANNER + ACTION REQUIRED PANEL -->
+      <section class="occ-tier1-grid">
+        
+        <!-- Left Banner Group (Patient Meta + Risk + Confidence + Status) -->
+        <div class="occ-vitals-quad">
+          
+          <!-- Card 1: Patient Identity -->
+          <div class="occ-card occ-card-patient">
+            <div class="occ-patient-avatar">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="#3b82f6">
+                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path>
+              </svg>
             </div>
-            <div class="signal-row">
-              <span class="signal-label">DL Progression Risk:</span>
-              <span class="signal-val" id="u-dl-prog">Moderate (Tabular Assessed)</span>
-            </div>
-            <div class="signal-row">
-              <span class="signal-label">NLP Clinical Urgency:</span>
-              <span class="signal-val badge-urgency-high" id="u-nlp-urgency">High</span>
-            </div>
-            <div class="signal-row">
-              <span class="signal-label">Biomarker Baseline:</span>
-              <span class="signal-val" id="u-biomarkers">ctDNA 82.5 ng/mL &bull; Creatinine 1.4 mg/dL</span>
+            <div class="occ-patient-info">
+              <div class="occ-patient-head">
+                <h2 class="occ-patient-name" id="occ-patient-name">Patient A</h2>
+                <span class="occ-badge-red" id="occ-patient-alert-badge">New Alert</span>
+                <span class="occ-badge-new-scenario hidden" id="overview-badge">NEW SCENARIO</span>
+              </div>
+              <div class="occ-patient-sub" id="occ-patient-sub">
+                Patient ID: <strong id="rec-id-tag">ONC-45872</strong> | Age: <strong id="rec-age-tag">62</strong> | Gender: <strong id="rec-gender-tag">Female</strong>
+              </div>
+              <div class="occ-patient-diagnosis" id="occ-patient-diagnosis">
+                Cancer Type: <strong id="rec-cancer-tag">Non-Small Cell Lung Cancer (NSCLC)</strong> | Stage: <strong id="rec-stage-tag">IV</strong>
+              </div>
+              <div class="occ-patient-visit">
+                Last Visit: <span id="rec-visit-tag">Sep 10, 2025</span> &bull; Mutation: <strong id="rec-mutation-tag" style="color: #8b5cf6;">TP53</strong>
+              </div>
             </div>
           </div>
+
+          <!-- Card 2: Overall Risk Level -->
+          <div class="occ-card occ-card-risk">
+            <div class="occ-risk-icon-wrap">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="#ef4444">
+                <path d="M12 2L1 21h22L12 2zm0 3.99L19.53 19H4.47L12 5.99zM11 10v4h2v-4h-2zm0 6v2h2v-2h-2z"></path>
+              </svg>
+            </div>
+            <div class="occ-risk-meta">
+              <div class="occ-card-micro-title">Overall Risk Level</div>
+              <div class="occ-risk-val text-red" id="occ-overall-risk-val">SEVERE</div>
+              <span class="occ-pill-sub-red" id="occ-risk-subtag">Requires Attention</span>
+            </div>
+          </div>
+
+          <!-- Card 3: Pipeline / System Confidence Gauge -->
+          <div class="occ-card occ-card-confidence">
+            <div class="occ-gauge-wrap">
+              <svg class="occ-gauge-svg" viewBox="0 0 36 36">
+                <path class="occ-gauge-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                <path class="occ-gauge-val" id="occ-gauge-val-path" stroke-dasharray="92, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                <text x="18" y="21.5" class="occ-gauge-text" id="occ-gauge-pct">92%</text>
+              </svg>
+            </div>
+            <div class="occ-confidence-meta">
+              <div class="occ-card-micro-title">Pipeline Confidence</div>
+              <div class="occ-conf-level" id="occ-conf-level">High</div>
+              <div class="occ-micro-note">Model Agreement</div>
+            </div>
+          </div>
+
+          <!-- Card 4: Recommendation Status -->
+          <div class="occ-card occ-card-rec-status">
+            <div class="occ-status-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2">
+                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                <path d="m9 14 2 2 4-4"></path>
+              </svg>
+            </div>
+            <div class="occ-rec-meta">
+              <div class="occ-card-micro-title">Recommendation Status</div>
+              <div class="occ-rec-status-val" id="occ-rec-status-val">Pending Approval</div>
+              <div class="occ-micro-note">Awaiting oncologist review</div>
+            </div>
+          </div>
+
         </div>
 
-        <!-- Column 2: Clinical Summary (SLM) -->
-        <div class="unified-panel">
-          <div class="unified-panel-head">
-            <span class="panel-kicker">FAITHFUL SYNTHESIS (STAGE 04 SLM)</span>
-            <h4>Clinical Progress Summary</h4>
+        <!-- Right Side: Action Required / Decision Panel -->
+        <div class="occ-card occ-card-action-panel">
+          <div class="occ-action-header">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#ef4444">
+              <path d="M12 2L1 21h22L12 2zm0 3.99L19.53 19H4.47L12 5.99zM11 10v4h2v-4h-2zm0 6v2h2v-2h-2z"></path>
+            </svg>
+            <span class="occ-action-title">Action Required</span>
           </div>
-          <div class="unified-panel-body">
-            <p class="unified-text" id="u-slm-summary">
-              Loading synthesized clinical narrative...
+
+          <div class="occ-decision-body">
+            <h3 class="occ-decision-heading">Decision Needed</h3>
+            <p class="occ-decision-desc">
+              High-risk + new progression detected. Please review and choose an action.
             </p>
-            <div class="guardrail-verify-tag">
-              <span class="tag-icon">&check;</span>
-              <span>Guardrail Safety Verified: Zero Hallucinated Drugs</span>
+
+            <button class="occ-btn-approve" onclick="handleApproveWorkflow()">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path>
+              </svg>
+              <span>APPROVE</span>
+              <span class="occ-btn-sublabel">Proceed with recommended workflow</span>
+            </button>
+
+            <button class="occ-btn-override" onclick="handleOverrideWorkflow()">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"></path>
+              </svg>
+              <span>OVERRIDE</span>
+              <span class="occ-btn-sublabel">Choose different action</span>
+            </button>
+
+            <div class="occ-extra-actions">
+              <div class="occ-extra-title">Additional Options</div>
+              <a href="javascript:void(0)" class="occ-extra-link" onclick="openStageDrawer('05_genai')">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                <span>View Pipeline Reasoning</span>
+              </a>
+              <a href="javascript:void(0)" class="occ-extra-link" onclick="downloadReport()">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+                <span>View Full Report (PDF)</span>
+              </a>
+              <a href="javascript:void(0)" class="occ-extra-link" onclick="addClinicalNotePrompt()">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+                <span>Add Notes</span>
+              </a>
             </div>
           </div>
         </div>
 
-        <!-- Column 3: Compound Scenario (Stage 05 GenAI) -->
-        <div class="unified-panel unified-panel-wide">
-          <div class="unified-panel-head">
-            <span class="panel-kicker">COMPOUND SCENARIO (STAGE 05 GENAI)</span>
-            <h4>Validated Complex Oncology Scenario & Interaction Context</h4>
+      </section>
+
+      <!-- TIER 2: 4 HORIZONTAL STAGE ALERT CARDS -->
+      <section class="occ-tier2-alerts">
+        
+        <!-- Card 1: Toxicity Risk (Stage 01 ML) -->
+        <div class="occ-alert-card occ-alert-red" onclick="openStageDrawer('01_ml')">
+          <div class="occ-alert-left">
+            <div class="occ-alert-icon-wrap occ-icon-red">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#ef4444">
+                <path d="M12 2L1 21h22L12 2zm0 3.99L19.53 19H4.47L12 5.99zM11 10v4h2v-4h-2zm0 6v2h2v-2h-2z"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="occ-alert-label">Toxicity Risk</div>
+              <div class="occ-alert-val" id="alert-ml-val">High</div>
+              <div class="occ-alert-sub" id="alert-ml-sub">Grade 3-4 risk detected</div>
+            </div>
           </div>
-          <div class="unified-panel-body">
-            <p class="unified-text" id="u-genai-scenario">
-              Loading validated compound patient scenario narrative...
-            </p>
-            <div class="interactions-box">
-              <span class="box-label">Pharmacological & Biomarker Interactions:</span>
-              <ul class="interactions-list" id="u-interactions-list">
-                <!-- Dynamically populated -->
-              </ul>
+          <span class="occ-alert-arrow">&rsaquo;</span>
+        </div>
+
+        <!-- Card 2: Vision Alerts (Stage 02 DL) -->
+        <div class="occ-alert-card occ-alert-blue" onclick="openStageDrawer('02_dl')">
+          <div class="occ-alert-left">
+            <div class="occ-alert-icon-wrap occ-icon-blue">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2">
+                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </div>
+            <div>
+              <div class="occ-alert-label">Vision Alerts</div>
+              <div class="occ-alert-val" id="alert-dl-val">Present</div>
+              <div class="occ-alert-sub" id="alert-dl-sub">Possible new lesion / progression</div>
+            </div>
+          </div>
+          <span class="occ-alert-arrow">&rsaquo;</span>
+        </div>
+
+        <!-- Card 3: Text Urgency (Stage 03 NLP) -->
+        <div class="occ-alert-card occ-alert-amber" onclick="openStageDrawer('03_nlp')">
+          <div class="occ-alert-left">
+            <div class="occ-alert-icon-wrap occ-icon-amber">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+              </svg>
+            </div>
+            <div>
+              <div class="occ-alert-label">Text Urgency</div>
+              <div class="occ-alert-val" id="alert-nlp-val">Critical</div>
+              <div class="occ-alert-sub" id="alert-nlp-sub">Urgent clinical note detected</div>
+            </div>
+          </div>
+          <span class="occ-alert-arrow">&rsaquo;</span>
+        </div>
+
+        <!-- Card 4: Trial & Drug Inventory (Stage 04/05 GenAI) -->
+        <div class="occ-alert-card occ-alert-purple" onclick="openStageDrawer('05_genai')">
+          <div class="occ-alert-left">
+            <div class="occ-alert-icon-wrap occ-icon-purple">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9333ea" stroke-width="2">
+                <path d="M10 2v7.31"></path>
+                <path d="M14 9.3V2"></path>
+                <path d="M8.5 2h7"></path>
+                <path d="M14 9.3a6.5 6.5 0 1 1-4 0"></path>
+                <path d="M5.52 16h12.96"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="occ-alert-label">Trial & Drug Inventory</div>
+              <div class="occ-alert-val" id="alert-genai-val">Available</div>
+              <div class="occ-alert-sub" id="alert-genai-sub">2 matching trials &bull; Drug in stock</div>
+            </div>
+          </div>
+          <span class="occ-alert-arrow">&rsaquo;</span>
+        </div>
+
+      </section>
+
+      <!-- TIER 3: PATIENT CLINICAL SUMMARY + KEY DATA + RECOMMENDED NEXT STEPS -->
+      <section class="occ-tier3-grid">
+        
+        <!-- Column 1: Patient Clinical Summary -->
+        <div class="occ-card occ-card-summary">
+          <div class="occ-summary-header">
+            <div class="occ-summary-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+              <span>Patient Clinical Summary</span>
+            </div>
+            <!-- Tabs -->
+            <div class="occ-summary-tabs">
+              <button class="occ-tab-btn active" onclick="switchSummaryTab('notes', this)">Clinical Notes</button>
+              <button class="occ-tab-btn" onclick="switchSummaryTab('biomarkers', this)">Biomarkers</button>
+              <button class="occ-tab-btn" onclick="switchSummaryTab('treatment', this)">Treatment History</button>
+              <button class="occ-tab-btn" onclick="switchSummaryTab('toxicity', this)">Toxicity History</button>
+            </div>
+          </div>
+
+          <div class="occ-summary-body" id="occ-summary-text">
+            Patient is a 62-year-old female with metastatic breast cancer, currently on Carboplatin. Recent ctDNA levels have increased from 12.4 to 82.5 copies/mL. New liver lesion noted on latest scan. Reports increased shortness of breath, fatigue, and persistent nausea. ECOG 2.<br><br>
+            <strong>Toxicity:</strong> Grade 3 rash (resolved), Grade 2 diarrhea (ongoing).<br>
+            <strong>Biomarkers:</strong> TP53 (mutated), ctDNA 82.5 ng/mL, Creatinine 1.4 mg/dL.
+          </div>
+        </div>
+
+        <!-- Column 2: Key Data at a Glance -->
+        <div class="occ-card occ-card-glance">
+          <div class="occ-card-head-simple">
+            <span>Key Data at a Glance</span>
+          </div>
+
+          <div class="occ-glance-list">
+            
+            <div class="occ-glance-row">
+              <div class="occ-glance-left">
+                <div class="occ-icon-pill occ-pill-green">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 2v7.31"></path><path d="M14 9.3V2"></path><path d="M8.5 2h7"></path><path d="M14 9.3a6.5 6.5 0 1 1-4 0"></path></svg>
+                </div>
+                <span>Latest ctDNA</span>
+              </div>
+              <div class="occ-glance-right">
+                <strong id="glance-ctdna-val">48.7 copies/mL</strong>
+                <span class="occ-sub-change" id="glance-ctdna-change">&uarr; (was 12.4)</span>
+              </div>
+            </div>
+
+            <div class="occ-glance-row">
+              <div class="occ-glance-left">
+                <div class="occ-icon-pill occ-pill-blue">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                </div>
+                <span>Latest Scan</span>
+              </div>
+              <div class="occ-glance-right">
+                <strong id="glance-scan-val">New lesion detected</strong>
+                <span class="occ-sub-change">(Chest CT - 2 days ago)</span>
+              </div>
+            </div>
+
+            <div class="occ-glance-row">
+              <div class="occ-glance-left">
+                <div class="occ-icon-pill occ-pill-amber">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                </div>
+                <span>Toxicity Grade</span>
+              </div>
+              <div class="occ-glance-right">
+                <strong id="glance-toxicity-val">3 (rash) / 2 (diarrhea)</strong>
+              </div>
+            </div>
+
+            <div class="occ-glance-row">
+              <div class="occ-glance-left">
+                <div class="occ-icon-pill occ-pill-blue">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                </div>
+                <span>Performance Status</span>
+              </div>
+              <div class="occ-glance-right">
+                <strong id="glance-ecog-val">ECOG 2</strong>
+              </div>
+            </div>
+
+            <div class="occ-glance-row">
+              <div class="occ-glance-left">
+                <div class="occ-icon-pill occ-pill-green">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                </div>
+                <span>Renal Function</span>
+              </div>
+              <div class="occ-glance-right">
+                <strong id="glance-renal-val">eGFR 68 mL/min</strong>
+              </div>
+            </div>
+
+            <div class="occ-glance-row">
+              <div class="occ-glance-left">
+                <div class="occ-icon-pill occ-pill-amber">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path></svg>
+                </div>
+                <span>Liver Function</span>
+              </div>
+              <div class="occ-glance-right">
+                <strong id="glance-liver-val">ALT 45 U/L (&uarr;)</strong>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Column 3: Recommended Next Steps -->
+        <div class="occ-card occ-card-steps">
+          <div class="occ-card-head-simple">
+            <span>Recommended Next Steps</span>
+          </div>
+
+          <div class="occ-steps-list">
+            <div class="occ-step-item">
+              <div class="occ-step-number">1</div>
+              <div class="occ-step-content">
+                <strong>Review relevant trial information</strong>
+                <p>Check eligibility and available slots</p>
+              </div>
+            </div>
+
+            <div class="occ-step-item">
+              <div class="occ-step-number">2</div>
+              <div class="occ-step-content">
+                <strong>Check required resources</strong>
+                <p>Confirm pharmacy and drug availability</p>
+              </div>
+            </div>
+
+            <div class="occ-step-item">
+              <div class="occ-step-number">3</div>
+              <div class="occ-step-content">
+                <strong>Escalate for approval</strong>
+                <p>Due to severe risk and new progression</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="occ-guideline-box">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line>
+            </svg>
+            <span>The pipeline has analyzed all available data and recommends the above workflow based on project guidelines and clinical rules.</span>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- TIER 4: BOTTOM 4-CARD DECK -->
+      <section class="occ-tier4-grid">
+        
+        <!-- Card 1: Decision Rationale -->
+        <div class="occ-card occ-card-deck-1" id="sec-rationale">
+          <div class="occ-deck-head">
+            <div class="occ-deck-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2">
+                <path d="M12 2a10 10 0 0 1 10 10c0 5.52-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2Z"></path>
+                <circle cx="12" cy="12" r="4"></circle>
+              </svg>
+              <span>Decision Rationale (Pipeline Reasoning)</span>
+            </div>
+            <a href="javascript:void(0)" class="occ-deck-link" onclick="openStageDrawer('05_genai')">View Details</a>
+          </div>
+
+          <p class="occ-rationale-text" id="occ-rationale-text">
+            The pipeline identified high toxicity risk, new progression alerts, and critical urgency from clinical notes. Based on trial availability and pharmacy inventory, the system recommends trial enrollment with close monitoring and escalation for oncologist approval due to severe risk factors.
+          </p>
+
+          <div class="occ-checklist">
+            <div class="occ-check-item">
+              <span class="occ-check-icon">&check;</span>
+              <span>Toxicity risk: <strong id="check-tox">High (Grade 3-4)</strong></span>
+            </div>
+            <div class="occ-check-item">
+              <span class="occ-check-icon">&check;</span>
+              <span>Vision alert: <strong id="check-vision">Present (new lesion)</strong></span>
+            </div>
+            <div class="occ-check-item">
+              <span class="occ-check-icon">&check;</span>
+              <span>Text urgency: <strong id="check-urgency">Critical</strong></span>
+            </div>
+            <div class="occ-check-item">
+              <span class="occ-check-icon">&check;</span>
+              <span>Trial availability: <strong id="check-trials">2 suitable trials found</strong></span>
+            </div>
+            <div class="occ-check-item">
+              <span class="occ-check-icon">&check;</span>
+              <span>Drug inventory: <strong id="check-inventory">Available</strong></span>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="unified-disclaimer-foot">
-        <span class="alert-icon">&triangle;</span>
-        <span>Decision-support information. Human clinical review required. AI-generated outputs must be verified against source clinical records and are not a substitute for professional medical judgment.</span>
-      </div>
-    </section>
-
-    <!-- 5. DASHBOARD LOWER DECK: RECENT SCENARIOS & COMPACT ANALYTICS -->
-    <section class="dashboard-lower-deck">
-
-      <!-- RECENT SCENARIOS (COMPACT TABLE WITH VIEW ALL) -->
-      <div class="deck-card recent-scenarios-card">
-        <div class="card-heading-row">
-          <div>
-            <span class="badge-source">GenAI Scenario Repository</span>
-            <h3 class="heading-title">Recent Compound Scenarios</h3>
-          </div>
-          <button class="btn-ghost-sm" id="btn-view-all-scenarios">View All Scenarios &rarr;</button>
-        </div>
-
-        <div class="table-wrap">
-          <table class="compact-table">
-            <thead>
-              <tr>
-                <th>Scenario ID</th>
-                <th>Severity</th>
-                <th>Preserved Seeds</th>
-                <th>Validation</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-            <tbody id="recent-scenarios-tbody">
-              <!-- Rendered via JS -->
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- COMPACT ANALYTICS & TIMELINE -->
-      <div class="deck-card analytics-compact-card">
-        <div class="card-heading-row">
-          <div>
-            <span class="badge-source">Project Metrics & Audit</span>
-            <h3 class="heading-title">Live Empirical Analytics</h3>
-          </div>
-          <span class="mono-tag">3,893 Patients</span>
-        </div>
-
-        <!-- 4 KPI Chips -->
-        <div class="kpi-grid">
-          <div class="kpi-chip">
-            <span class="kpi-label">Total Scenarios</span>
-            <strong class="kpi-val" id="kpi-scenarios">20</strong>
-          </div>
-          <div class="kpi-chip">
-            <span class="kpi-label">Validation Pass</span>
-            <strong class="kpi-val text-green">100%</strong>
-          </div>
-          <div class="kpi-chip">
-            <span class="kpi-label">Seed Preservation</span>
-            <strong class="kpi-val text-cyan">95.43%</strong>
-          </div>
-          <div class="kpi-chip">
-            <span class="kpi-label">Supabase Synced</span>
-            <strong class="kpi-val text-purple" id="kpi-supabase">20</strong>
-          </div>
-        </div>
-
-        <!-- 2 Mini Charts -->
-        <div class="mini-charts-row">
-          <div class="mini-chart-box">
-            <div class="mini-chart-title">ML Toxicity Risk Distribution</div>
-            <div class="canvas-wrap">
-              <canvas id="mini-chart-risk"></canvas>
+        <!-- Card 2: Live Workflow Status -->
+        <div class="occ-card occ-card-deck-2" id="sec-workflow">
+          <div class="occ-deck-head">
+            <div class="occ-deck-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="2">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+              </svg>
+              <span>Live Workflow Status</span>
             </div>
           </div>
-          <div class="mini-chart-box">
-            <div class="mini-chart-title">GenAI Scenario Severity Breakdown</div>
-            <div class="canvas-wrap">
-              <canvas id="mini-chart-severity"></canvas>
+
+          <div class="occ-timeline">
+            <div class="occ-time-item">
+              <span class="occ-time-dot done">&check;</span>
+              <div class="occ-time-content">
+                <strong>Patient data received</strong>
+                <p>New patient alert triggered</p>
+              </div>
+              <span class="occ-time-stamp">14:21</span>
+            </div>
+
+            <div class="occ-time-item">
+              <span class="occ-time-dot done">&check;</span>
+              <div class="occ-time-content">
+                <strong>Model reasoning</strong>
+                <p>Analyzing clinical data and tools</p>
+              </div>
+              <span class="occ-time-stamp">14:22</span>
+            </div>
+
+            <div class="occ-time-item">
+              <span class="occ-time-dot done">&check;</span>
+              <div class="occ-time-content">
+                <strong>Tool calls completed</strong>
+                <p>Trial registry, pharmacy, NLP, vision</p>
+              </div>
+              <span class="occ-time-stamp">14:24</span>
+            </div>
+
+            <div class="occ-time-item">
+              <span class="occ-time-dot done">&check;</span>
+              <div class="occ-time-content">
+                <strong>Recommendation generated</strong>
+                <p>Severe risk &ndash; trial + resource check</p>
+              </div>
+              <span class="occ-time-stamp">14:27</span>
+            </div>
+
+            <div class="occ-time-item">
+              <span class="occ-time-dot pending">&bull;</span>
+              <div class="occ-time-content">
+                <strong>Awaiting human approval</strong>
+                <p>Oncologist review required</p>
+              </div>
+              <span class="occ-time-stamp">14:32</span>
             </div>
           </div>
         </div>
 
-        <!-- Compact Activity Timeline (3 lines) -->
-        <div class="activity-mini-wrap">
-          <div class="mini-chart-title" style="text-align: left; margin-top: 6px;">Recent Pipeline Activity</div>
-          <ul class="activity-list" id="activity-list">
-            <!-- Rendered via JS -->
-          </ul>
+        <!-- Card 3: Available Trials -->
+        <div class="occ-card occ-card-deck-3" id="sec-trials">
+          <div class="occ-deck-head">
+            <div class="occ-deck-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path>
+              </svg>
+              <span>Available Trials</span>
+            </div>
+            <a href="javascript:void(0)" class="occ-deck-link" onclick="openAllScenariosModal()">View All &rarr;</a>
+          </div>
+
+          <div class="occ-trials-list" id="occ-trials-container">
+            
+            <div class="occ-trial-entry">
+              <div class="occ-trial-left">
+                <div class="occ-trial-code">TRIAL-001</div>
+                <div class="occ-trial-name">Phase II &ndash; KRAS Inhibitor</div>
+                <div class="occ-trial-tags">
+                  <span>NSCLC</span> &bull; <span>Stage IV</span> &bull; <span class="text-green">Open</span>
+                </div>
+                <div class="occ-trial-eligibility">Eligibility: <strong>78% match</strong></div>
+              </div>
+              <button class="occ-btn-trial-view" onclick="openStageDrawer('05_genai')">View Details</button>
+            </div>
+
+            <div class="occ-trial-entry">
+              <div class="occ-trial-left">
+                <div class="occ-trial-code">TRIAL-002</div>
+                <div class="occ-trial-name">Phase III &ndash; Immunotherapy Combo</div>
+                <div class="occ-trial-tags">
+                  <span>NSCLC</span> &bull; <span>Stage IV</span> &bull; <span class="text-green">Open</span>
+                </div>
+                <div class="occ-trial-eligibility">Eligibility: <strong>64% match</strong></div>
+              </div>
+              <button class="occ-btn-trial-view" onclick="openStageDrawer('05_genai')">View Details</button>
+            </div>
+
+            <div class="occ-trial-entry">
+              <div class="occ-trial-left">
+                <div class="occ-trial-code">TRIAL-003</div>
+                <div class="occ-trial-name">Phase II &ndash; Targeted Therapy</div>
+                <div class="occ-trial-tags">
+                  <span>NSCLC</span> &bull; <span>Stage IV</span> &bull; <span class="text-green">Open</span>
+                </div>
+                <div class="occ-trial-eligibility">Eligibility: <strong>52% match</strong></div>
+              </div>
+              <button class="occ-btn-trial-view" onclick="openStageDrawer('05_genai')">View Details</button>
+            </div>
+
+          </div>
         </div>
-      </div>
 
-    </section>
+        <!-- Card 4: Pharmacy & Inventory -->
+        <div class="occ-card occ-card-deck-4" id="pharmacy-card">
+          <div class="occ-deck-head">
+            <div class="occ-deck-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+              <span>Pharmacy & Inventory</span>
+            </div>
+            <a href="javascript:void(0)" class="occ-deck-link" onclick="showToast('Pharmacy formulary synced.')">View Details &rarr;</a>
+          </div>
 
-  </main>
+          <div class="occ-drug-list">
+            <div class="occ-drug-row">
+              <div class="occ-drug-info">
+                <strong id="drug-name-1">Pembrolizumab 100mg</strong>
+                <span id="drug-qty-1">Qty: 12 vials</span>
+              </div>
+              <span class="occ-badge-stock">&check; In Stock</span>
+            </div>
 
-  <!-- ===================================================================== -->
-  <!-- MODAL: VIEW ALL SCENARIOS                                             -->
-  <!-- ===================================================================== -->
-  <div class="modal-backdrop" id="modal-all-scenarios">
-    <div class="modal-card">
-      <div class="modal-header">
-        <div>
-          <span class="modal-kicker">SUPABASE POSTGRES REPOSITORY</span>
-          <h3 class="modal-title">All Certified Compound Oncology Scenarios (public.generated_scenarios)</h3>
+            <div class="occ-drug-row">
+              <div class="occ-drug-info">
+                <strong id="drug-name-2">Osimertinib 80mg</strong>
+                <span id="drug-qty-2">Qty: 30 tablets</span>
+              </div>
+              <span class="occ-badge-stock">&check; In Stock</span>
+            </div>
+          </div>
+
+          <div class="occ-resource-section">
+            <div class="occ-resource-title">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+              <span>Required Resources</span>
+            </div>
+            <div class="occ-resource-list">
+              <div class="occ-res-item">&check; Biopsy slot &ndash; Available (within 3 days)</div>
+              <div class="occ-res-item">&check; Radiology &ndash; Available</div>
+              <div class="occ-res-item">&check; Treatment chair &ndash; Available</div>
+            </div>
+          </div>
         </div>
-        <button class="modal-close-btn" id="modal-scenarios-close">&times;</button>
-      </div>
-      <div class="modal-body table-wrap">
-        <table class="compact-table" id="all-scenarios-table">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Scenario ID</th>
-              <th>Severity</th>
-              <th>Synthesized Clinical Narrative</th>
-              <th>Validation</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody id="all-scenarios-tbody">
-            <!-- Rendered via JS -->
-          </tbody>
-        </table>
-      </div>
-    </div>
+
+      </section>
+
+      <!-- BOTTOM SLOGAN BAR -->
+      <footer class="occ-footer-bar">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+        </svg>
+        <span>Better decisions. Personalized treatment. Improved outcomes.</span>
+      </footer>
+
+    </main>
+
   </div>
 
   <!-- ===================================================================== -->
-  <!-- MODAL: NEW PATIENT SCENARIO INPUT PANEL                               -->
+  <!-- MODAL 1: NEW PATIENT SCENARIO INPUT                                   -->
   <!-- ===================================================================== -->
   <div class="modal-backdrop" id="modal-new-scenario">
     <div class="modal-card modal-card-large">
       <div class="modal-header">
         <div>
-          <span class="modal-kicker">INTERACTIVE CLINICAL DATA INTAKE</span>
-          <h3 class="modal-title">+ New Patient Scenario Input</h3>
-          <p class="modal-subtitle">Enter clinical, biomarker, and symptom seed conditions to run the complete 5-stage pipeline.</p>
+          <h3 class="modal-title">New Patient Scenario Intake</h3>
+          <p class="modal-subtitle">Enter clinical, genomic, and laboratory values to run the complete 5-stage precision oncology pipeline.</p>
         </div>
-        <div class="modal-header-actions">
-          <button class="btn-xs-outline" id="btn-prefill-testcase" title="Prefill the test scenario: Breast Cancer, Stage 3, ctDNA 82.5, Creatinine 1.4, TP53">
-            &star; Prefill Test Scenario
-          </button>
-          <button class="modal-close-btn" id="modal-new-scenario-close">&times;</button>
-        </div>
+        <button class="modal-close" id="modal-new-scenario-close" onclick="closeNewScenarioModal()">&times;</button>
       </div>
 
-      <div class="modal-body-form">
-        <!-- Validation Error Banner (hidden by default) -->
-        <div class="form-error-alert hidden" id="new-scenario-error-box">
-          <span class="error-icon">&cross;</span>
-          <div id="new-scenario-error-msg">Please correct validation errors below.</div>
+      <div class="modal-body">
+        <div class="prefill-shortcut-bar">
+          <span class="shortcut-desc">Need a quick validated case?</span>
+          <button type="button" class="btn-sm-cyan" id="btn-prefill-testcase" onclick="prefillTestCase()">
+            Prefill Test Scenario (Breast Cancer, Stage 3, ctDNA 82.5, TP53)
+          </button>
         </div>
 
-        <form id="form-new-scenario" onsubmit="return false;">
-          <!-- SECTION 1: PATIENT PROFILE & SEVERITY -->
-          <div class="form-fieldset">
-            <legend class="fieldset-legend">1. Patient Profile &amp; Disease Characterization</legend>
-            <div class="form-row-grid">
+        <div id="new-scenario-error-box" class="form-error-alert hidden">
+          <span class="error-icon">&excl;</span>
+          <div id="new-scenario-error-msg">Please correct errors.</div>
+        </div>
+
+        <form id="form-new-scenario" onsubmit="event.preventDefault(); handleNewScenarioSubmit();">
+          <div class="form-sections-grid">
+            
+            <div class="form-section-card">
+              <h4 class="form-sec-title">1. Patient Profile</h4>
               <div class="form-group">
-                <label for="inp-scenario-id">Scenario ID <span class="req">*</span></label>
-                <input type="text" id="inp-scenario-id" value="SCEN-NEW-0001" placeholder="e.g. SCEN-NEW-0001" required />
+                <label for="inp-scenario-id">Scenario / Patient ID</label>
+                <input type="text" id="inp-scenario-id" value="SCEN-NEW-01" required />
+              </div>
+              <div class="form-group-row">
+                <div class="form-group">
+                  <label for="inp-patient-age">Age</label>
+                  <input type="number" id="inp-patient-age" value="62" min="1" max="120" required />
+                </div>
+                <div class="form-group">
+                  <label for="inp-patient-sex">Sex</label>
+                  <select id="inp-patient-sex">
+                    <option value="Female" selected>Female</option>
+                    <option value="Male">Male</option>
+                  </select>
+                </div>
               </div>
               <div class="form-group">
-                <label for="inp-cancer-type">Cancer Type <span class="req">*</span></label>
-                <input type="text" id="inp-cancer-type" value="Breast Cancer" list="cancer-types-list" placeholder="e.g. Breast Cancer" required />
-                <datalist id="cancer-types-list">
-                  <option value="Breast Cancer" />
-                  <option value="Non-Small Cell Lung Cancer" />
-                  <option value="Colorectal Cancer" />
-                  <option value="Melanoma" />
-                  <option value="Pancreatic Cancer" />
-                  <option value="Ovarian Cancer" />
-                </datalist>
+                <label for="inp-cancer-type">Cancer Type *</label>
+                <input type="text" id="inp-cancer-type" value="Breast Cancer" required />
               </div>
               <div class="form-group">
-                <label for="inp-cancer-stage">Cancer Stage <span class="req">*</span></label>
-                <select id="inp-cancer-stage" required>
+                <label for="inp-cancer-stage">Cancer Stage *</label>
+                <select id="inp-cancer-stage">
                   <option value="Stage 1">Stage 1</option>
                   <option value="Stage 2">Stage 2</option>
                   <option value="Stage 3" selected>Stage 3</option>
@@ -556,19 +844,7 @@
                 </select>
               </div>
               <div class="form-group">
-                <label for="inp-patient-age">Patient Age</label>
-                <input type="number" id="inp-patient-age" value="62" min="1" max="120" />
-              </div>
-              <div class="form-group">
-                <label for="inp-patient-sex">Patient Sex</label>
-                <select id="inp-patient-sex">
-                  <option value="Female" selected>Female</option>
-                  <option value="Male">Male</option>
-                  <option value="Other">Other</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="inp-target-severity">Target Scenario Severity</label>
+                <label for="inp-target-severity">Target Clinical Severity</label>
                 <select id="inp-target-severity">
                   <option value="Mild">Mild</option>
                   <option value="Moderate">Moderate</option>
@@ -577,149 +853,108 @@
                 </select>
               </div>
             </div>
-          </div>
 
-          <!-- SECTION 2: BIOMARKERS & GENOMICS -->
-          <div class="form-fieldset">
-            <legend class="fieldset-legend">2. Molecular &amp; Liquid Biomarkers</legend>
-            <div class="form-row-grid">
+            <div class="form-section-card">
+              <h4 class="form-sec-title">2. Genomic & Biomarkers</h4>
               <div class="form-group">
-                <label for="inp-ctdna">ctDNA Level (ng/mL) <span class="req">*</span></label>
-                <input type="number" step="0.1" id="inp-ctdna" value="82.5" placeholder="e.g. 82.5" required />
+                <label for="inp-ctdna">ctDNA Level (ng/mL) *</label>
+                <input type="number" step="0.1" id="inp-ctdna" value="82.5" required />
               </div>
               <div class="form-group">
-                <label for="inp-tumor-marker">Tumor Marker (U/mL) <span class="req">*</span></label>
-                <input type="number" step="0.1" id="inp-tumor-marker" value="4.7" placeholder="e.g. 4.7" required />
+                <label for="inp-tumor-marker">Tumor Marker Level (U/mL) *</label>
+                <input type="number" step="0.1" id="inp-tumor-marker" value="4.7" required />
               </div>
               <div class="form-group">
                 <label for="inp-gene-mutation">Gene Mutation</label>
-                <input type="text" id="inp-gene-mutation" value="TP53" list="mutations-list" placeholder="e.g. TP53" />
-                <datalist id="mutations-list">
-                  <option value="TP53" />
-                  <option value="EGFR L858R" />
-                  <option value="EGFR exon 19 del" />
-                  <option value="KRAS G12C" />
-                  <option value="ALK fusion" />
-                  <option value="BRAF V600E" />
-                  <option value="STK11" />
-                </datalist>
+                <input type="text" id="inp-gene-mutation" value="TP53" />
               </div>
-              <div class="form-group">
-                <label for="inp-tmb">TMB (mut/Mb)</label>
-                <input type="number" step="0.1" id="inp-tmb" value="12.0" placeholder="e.g. 12.0" />
-              </div>
-              <div class="form-group">
-                <label for="inp-egfr-expr">EGFR Expression</label>
-                <input type="number" step="0.1" id="inp-egfr-expr" value="1.2" placeholder="e.g. 1.2" />
-              </div>
-              <div class="form-group">
-                <label for="inp-kras-expr">KRAS Expression</label>
-                <input type="number" step="0.1" id="inp-kras-expr" value="0.8" placeholder="e.g. 0.8" />
+              <div class="form-group-row">
+                <div class="form-group">
+                  <label for="inp-tmb">TMB (mut/Mb)</label>
+                  <input type="number" step="0.1" id="inp-tmb" value="12.0" />
+                </div>
+                <div class="form-group">
+                  <label for="inp-egfr-expr">EGFR Expr</label>
+                  <input type="number" step="0.1" id="inp-egfr-expr" value="1.2" />
+                </div>
+                <div class="form-group">
+                  <label for="inp-kras-expr">KRAS Expr</label>
+                  <input type="number" step="0.1" id="inp-kras-expr" value="0.8" />
+                </div>
               </div>
             </div>
-          </div>
 
-          <!-- SECTION 3: ORGAN INVOLVEMENT & LAB PANEL -->
-          <div class="form-fieldset">
-            <legend class="fieldset-legend">3. Organ Status &amp; Laboratory Panel</legend>
-            <div class="form-row-grid">
+            <div class="form-section-card">
+              <h4 class="form-sec-title">3. Organ Function & Labs</h4>
               <div class="form-group">
-                <label for="inp-creatinine">Creatinine (mg/dL) <span class="req">*</span></label>
-                <input type="number" step="0.1" id="inp-creatinine" value="1.4" placeholder="e.g. 1.4" required />
+                <label for="inp-creatinine">Creatinine (mg/dL) *</label>
+                <input type="number" step="0.05" id="inp-creatinine" value="1.4" required />
               </div>
               <div class="form-group">
                 <label for="inp-organ-involvement">Organ Involvement</label>
-                <input type="text" id="inp-organ-involvement" value="liver" list="organs-list" placeholder="e.g. liver" />
-                <datalist id="organs-list">
-                  <option value="liver" />
-                  <option value="lung" />
-                  <option value="bone" />
-                  <option value="brain" />
-                  <option value="adrenal" />
-                  <option value="lymph nodes" />
-                </datalist>
+                <input type="text" id="inp-organ-involvement" value="liver" />
               </div>
-              <div class="form-group">
-                <label for="inp-bilirubin">Total Bilirubin (mg/dL)</label>
-                <input type="number" step="0.1" id="inp-bilirubin" value="1.1" placeholder="e.g. 1.1" />
+              <div class="form-group-row">
+                <div class="form-group">
+                  <label for="inp-bilirubin">Bilirubin</label>
+                  <input type="number" step="0.1" id="inp-bilirubin" value="1.1" />
+                </div>
+                <div class="form-group">
+                  <label for="inp-alt">ALT (U/L)</label>
+                  <input type="number" id="inp-alt" value="35" />
+                </div>
+                <div class="form-group">
+                  <label for="inp-ast">AST (U/L)</label>
+                  <input type="number" id="inp-ast" value="42" />
+                </div>
               </div>
-              <div class="form-group">
-                <label for="inp-alt">ALT (U/L)</label>
-                <input type="number" id="inp-alt" value="35" placeholder="e.g. 35" />
-              </div>
-              <div class="form-group">
-                <label for="inp-ast">AST (U/L)</label>
-                <input type="number" id="inp-ast" value="42" placeholder="e.g. 42" />
-              </div>
-              <div class="form-group">
-                <label for="inp-wbc">WBC Count (K/uL)</label>
-                <input type="number" step="0.1" id="inp-wbc" value="6.8" placeholder="e.g. 6.8" />
-              </div>
-              <div class="form-group">
-                <label for="inp-platelets">Platelet Count (K/uL)</label>
-                <input type="number" id="inp-platelets" value="210" placeholder="e.g. 210" />
-              </div>
-              <div class="form-group">
-                <label for="inp-hemoglobin">Hemoglobin (g/dL)</label>
-                <input type="number" step="0.1" id="inp-hemoglobin" value="11.2" placeholder="e.g. 11.2" />
-              </div>
-              <div class="form-group">
-                <label for="inp-bp">Systolic BP (mmHg)</label>
-                <input type="number" id="inp-bp" value="125" placeholder="e.g. 125" />
-              </div>
-              <div class="form-group">
-                <label for="inp-hr">Heart Rate (bpm)</label>
-                <input type="number" id="inp-hr" value="78" placeholder="e.g. 78" />
-              </div>
-              <div class="form-group">
-                <label for="inp-temp">Temperature (&deg;C)</label>
-                <input type="number" step="0.1" id="inp-temp" value="37.1" placeholder="e.g. 37.1" />
-              </div>
-              <div class="form-group">
-                <label for="inp-o2">Oxygen Saturation (%)</label>
-                <input type="number" id="inp-o2" value="98" min="50" max="100" placeholder="e.g. 98" />
+              <div class="form-group-row">
+                <div class="form-group">
+                  <label for="inp-wbc">WBC</label>
+                  <input type="number" step="0.1" id="inp-wbc" value="6.8" />
+                </div>
+                <div class="form-group">
+                  <label for="inp-platelets">Platelets</label>
+                  <input type="number" id="inp-platelets" value="210" />
+                </div>
+                <div class="form-group">
+                  <label for="inp-hemoglobin">Hemoglobin</label>
+                  <input type="number" step="0.1" id="inp-hemoglobin" value="11.2" />
+                </div>
               </div>
             </div>
-          </div>
 
-          <!-- SECTION 4: CLINICAL SYMPTOMS & TREATMENT -->
-          <div class="form-fieldset">
-            <legend class="fieldset-legend">4. Symptoms, Comorbidities &amp; Pharmacotherapy</legend>
-            <div class="form-row-grid">
-              <div class="form-group form-group-span2">
-                <label for="inp-symptoms">Reported Symptoms <span class="req">*</span></label>
-                <input type="text" id="inp-symptoms" value="fatigue, nausea" placeholder="e.g. fatigue, nausea, dyspnea" required />
-              </div>
-              <div class="form-group form-group-span2">
-                <label for="inp-comorbidities">Comorbidities</label>
-                <input type="text" id="inp-comorbidities" value="Hypertension" placeholder="e.g. Hypertension, Type 2 Diabetes, None" />
-              </div>
+            <div class="form-section-card">
+              <h4 class="form-sec-title">4. Symptoms & Medication</h4>
               <div class="form-group">
-                <label for="inp-treatment-drug">Current Drug</label>
-                <input type="text" id="inp-treatment-drug" value="Carboplatin" placeholder="e.g. Carboplatin, Osimertinib" />
+                <label for="inp-symptoms">Reported Symptoms *</label>
+                <input type="text" id="inp-symptoms" value="fatigue, nausea" required />
               </div>
-              <div class="form-group">
-                <label for="inp-dosage">Dosage (mg)</label>
-                <input type="number" id="inp-dosage" value="150" placeholder="e.g. 150" />
+              <div class="form-group-row">
+                <div class="form-group">
+                  <label for="inp-treatment-drug">Current Drug</label>
+                  <input type="text" id="inp-treatment-drug" value="Carboplatin" />
+                </div>
+                <div class="form-group">
+                  <label for="inp-dosage">Dose (mg)</label>
+                  <input type="number" id="inp-dosage" value="150" />
+                </div>
               </div>
               <div class="form-group">
                 <label for="inp-adverse-event">Adverse Event</label>
-                <input type="text" id="inp-adverse-event" value="Nausea" placeholder="e.g. Nausea, Thrombocytopenia, None" />
+                <input type="text" id="inp-adverse-event" value="Nausea" />
               </div>
               <div class="form-group">
                 <label for="inp-prior-therapies">Prior Lines of Therapy</label>
                 <input type="number" id="inp-prior-therapies" value="1" min="0" max="10" />
               </div>
             </div>
+
           </div>
 
-          <!-- ACTION BUTTONS -->
           <div class="modal-form-actions">
-            <button type="button" class="btn-ghost" id="btn-cancel-new-scenario">Cancel</button>
-            <button type="button" class="btn-primary-glow btn-submit-pipeline" id="btn-submit-new-scenario">
-              <svg class="icon-play" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                <polygon points="5 3 19 12 5 21 5 3"></polygon>
-              </svg>
+            <button type="button" class="btn-ghost" onclick="closeNewScenarioModal()">Cancel</button>
+            <button type="button" class="occ-btn-primary" id="btn-submit-new-scenario" onclick="handleNewScenarioSubmit()">
               Run Complete Analysis
             </button>
           </div>
@@ -728,53 +963,104 @@
     </div>
   </div>
 
-  <!-- MODAL: API KEY AUTHENTICATION -->
+  <!-- ===================================================================== -->
+  <!-- MODAL 2: API KEY AUTHENTICATION                                       -->
+  <!-- ===================================================================== -->
   <div class="modal-backdrop" id="modal-apikey">
     <div class="modal-card modal-card-small">
       <div class="modal-header">
         <div>
           <h3 class="modal-title">API Key Authentication</h3>
-          <p class="modal-subtitle">Secure connection between OncoNexus Frontend and Backend REST API</p>
+          <p class="modal-subtitle">Secure connection between Frontend and Backend REST API</p>
         </div>
-        <button class="modal-close" id="modal-apikey-close" onclick="closeApiKeyModal()">&times;</button>
+        <button class="modal-close" onclick="closeApiKeyModal()">&times;</button>
       </div>
-
       <div class="modal-body" style="padding: 18px 22px;">
-        <p style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 16px;">
-          All 5 stages (ML, DL, NLP, SLM, GenAI) and Supabase endpoints require an authorized 
-          <code style="background: rgba(56,189,248,0.12); color: var(--cyan-light); padding: 2px 6px; border-radius: 4px; font-size: 0.8rem;">X-API-Key</code> 
-          header for secure inference and telemetry transmission.
+        <p style="font-size: 0.82rem; color: #475569; line-height: 1.5; margin-bottom: 16px;">
+          All 5 stages (ML, DL, NLP, SLM, GenAI) require an authorized <code>X-API-Key</code> header.
         </p>
-
         <div class="form-group" style="margin-bottom: 14px;">
-          <label for="inp-apikey" style="display: flex; justify-content: space-between; font-size: 0.8rem; font-weight: 600; color: var(--text-primary); margin-bottom: 6px;">
+          <label for="inp-apikey" style="display: flex; justify-content: space-between; font-size: 0.8rem; font-weight: 600; margin-bottom: 6px;">
             <span>OncoNexus API Key</span>
-            <span id="key-security-indicator" style="color: var(--green-primary); font-size: 0.75rem;">Verified</span>
+            <span id="key-security-indicator" style="color: #10b981; font-size: 0.75rem;">Verified</span>
           </label>
           <div style="display: flex; gap: 8px;">
-            <input type="password" id="inp-apikey" class="form-input" style="flex: 1; font-family: var(--font-mono); font-size: 0.85rem; padding: 8px 12px; background: rgba(15,23,42,0.8); border: 1px solid var(--border-color); border-radius: 6px; color: var(--text-primary);" placeholder="Enter X-API-Key..." />
-            <button type="button" class="btn-ghost" id="btn-toggle-key" onclick="toggleKeyVisibility()" style="padding: 0 12px; font-size: 0.8rem; border: 1px solid var(--border-color); border-radius: 6px; color: var(--text-secondary);">Show</button>
+            <input type="password" id="inp-apikey" class="form-input" style="flex: 1; font-family: monospace; font-size: 0.85rem;" placeholder="Enter X-API-Key..." />
+            <button type="button" class="btn-ghost" id="btn-toggle-key" onclick="toggleKeyVisibility()">Show</button>
           </div>
         </div>
-
         <div id="apikey-alert-box" class="form-error-banner hidden" style="margin-bottom: 14px; font-size: 0.8rem; padding: 8px 12px; border-radius: 6px;"></div>
-
         <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-top: 18px;">
-          <button type="button" class="btn-ghost" onclick="resetDefaultApiKey()" style="font-size: 0.78rem; color: var(--text-secondary);">Reset to Default</button>
+          <button type="button" class="btn-ghost" onclick="resetDefaultApiKey()" style="font-size: 0.78rem;">Reset to Default</button>
           <div style="display: flex; gap: 8px;">
-            <button type="button" class="btn-secondary-glow" onclick="testApiKeyConnection()" id="btn-test-apikey" style="font-size: 0.8rem; padding: 7px 14px;">Test Connection</button>
-            <button type="button" class="btn-primary-glow" onclick="saveApiKeyFromModal()" id="btn-save-apikey" style="font-size: 0.8rem; padding: 7px 16px;">Save & Connect</button>
+            <button type="button" class="occ-btn-outline" onclick="testApiKeyConnection()" id="btn-test-apikey">Test Connection</button>
+            <button type="button" class="occ-btn-primary" onclick="saveApiKeyFromModal()" id="btn-save-apikey">Save & Connect</button>
           </div>
         </div>
       </div>
     </div>
   </div>
 
+  <!-- ===================================================================== -->
+  <!-- MODAL 3: VIEW ALL SCENARIOS (SUPABASE)                                -->
+  <!-- ===================================================================== -->
+  <div class="modal-backdrop" id="modal-all-scenarios">
+    <div class="modal-card modal-card-large">
+      <div class="modal-header">
+        <div>
+          <h3 class="modal-title">Live Clinical Scenario Repository</h3>
+          <p class="modal-subtitle">Direct live queries against Supabase <code>public.generated_scenarios</code></p>
+        </div>
+        <button class="modal-close" onclick="closeAllScenariosModal()">&times;</button>
+      </div>
+      <div class="modal-body" style="max-height: 520px; overflow-y: auto;">
+        <table class="occ-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Scenario ID</th>
+              <th>Severity</th>
+              <th>Clinical Scenario Preview</th>
+              <th>Validation</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="all-scenarios-tbody">
+            <tr><td colspan="6" style="text-align: center; color: #64748b;">Loading Supabase scenarios...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- SLIDE-OUT STAGE DETAIL DRAWER (FOR DEEP INSPECTION)                   -->
+  <!-- ===================================================================== -->
+  <div class="stage-drawer-backdrop" id="stage-drawer-backdrop" onclick="closeStageDrawer()"></div>
+  <aside class="stage-drawer" id="stage-drawer">
+    <div class="drawer-header">
+      <div>
+        <span class="drawer-badge" id="drawer-stage-badge">STAGE 01 &mdash; ML</span>
+        <h3 class="drawer-title" id="drawer-stage-title">Machine Learning Detail</h3>
+      </div>
+      <button class="drawer-close" onclick="closeStageDrawer()">&times;</button>
+    </div>
+    <div class="drawer-tabs">
+      <button class="drawer-tab-btn active" data-stage="01_ml" onclick="switchDrawerTab('01_ml')">01 ML</button>
+      <button class="drawer-tab-btn" data-stage="02_dl" onclick="switchDrawerTab('02_dl')">02 DL</button>
+      <button class="drawer-tab-btn" data-stage="03_nlp" onclick="switchDrawerTab('03_nlp')">03 NLP</button>
+      <button class="drawer-tab-btn" data-stage="04_slm" onclick="switchDrawerTab('04_slm')">04 SLM</button>
+      <button class="drawer-tab-btn" data-stage="05_genai" onclick="switchDrawerTab('05_genai')">05 GenAI</button>
+    </div>
+    <div class="drawer-body" id="drawer-body-area">
+      <!-- Dynamically filled with stage details -->
+    </div>
+  </aside>
+
   <!-- TOAST NOTIFICATION CONTAINER -->
   <div class="toast-container" id="toast-container"></div>
 
   <!-- Controller Script with Cache Buster -->
-  <script src="/static/dashboard.js?v=auth3"></script>
-
+  <script src="/static/dashboard.js?v=occ3"></script>
 </body>
 </html>
